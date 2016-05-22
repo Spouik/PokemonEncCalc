@@ -11,3 +11,10 @@ E:\Florent\Documents\Visual Studio 2013\Projects\PokemonEncCalc\PokemonEncCalc\o
 E:\Florent\Documents\Visual Studio 2013\Projects\PokemonEncCalc\PokemonEncCalc\obj\Debug\PokemonEncCalc.Data.frmFormSelect.resources
 D:\Florent\Documents\Visual Studio 2013\Projects\PokemonEncCalc\PokemonEncCalc\obj\Debug\PokemonEncCalc.exe
 D:\Florent\Documents\Visual Studio 2013\Projects\PokemonEncCalc\PokemonEncCalc\obj\Debug\PokemonEncCalc.pdb
+D:\Florent\Documents\Visual Studio 2013\Projects\PokemonEncCalc\PokemonEncCalc\bin\Debug\PokemonEncCalc.exe
+D:\Florent\Documents\Visual Studio 2013\Projects\PokemonEncCalc\PokemonEncCalc\bin\Debug\PokemonEncCalc.pdb
+D:\Florent\Documents\Visual Studio 2013\Projects\PokemonEncCalc\PokemonEncCalc\obj\Debug\PokemonEncCalc.csprojResolveAssemblyReference.cache
+D:\Florent\Documents\Visual Studio 2013\Projects\PokemonEncCalc\PokemonEncCalc\obj\Debug\PokemonEncCalc.frmFormSelect.resources
+D:\Florent\Documents\Visual Studio 2013\Projects\PokemonEncCalc\PokemonEncCalc\obj\Debug\PokemonEncCalc.frmMainPage.resources
+D:\Florent\Documents\Visual Studio 2013\Projects\PokemonEncCalc\PokemonEncCalc\obj\Debug\PokemonEncCalc.Properties.Resources.resources
+D:\Florent\Documents\Visual Studio 2013\Projects\PokemonEncCalc\PokemonEncCalc\obj\Debug\PokemonEncCalc.csproj.GenerateResource.Cache

@@ -73,10 +73,13 @@
     <Compile Include="AreaMap\AreaMapHGSS.cs" />
     <Compile Include="AreaMap\AreaMapORAS.cs" />
     <Compile Include="AreaMap\AreaMapXY.cs" />
-    <Compile Include="Data\FormSelect.cs">
+    <Compile Include="Forms\TranslatableForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Data\FormSelect.Designer.cs">
+    <Compile Include="Forms\FormSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormSelect.Designer.cs">
       <DependentUpon>FormSelect.cs</DependentUpon>
     </Compile>
     <Compile Include="Data\Utils.cs" />
@@ -98,7 +101,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="EncounterSlots\RegularSlots.cs" />
-    <EmbeddedResource Include="Data\FormSelect.resx">
+    <EmbeddedResource Include="Forms\FormSelect.resx">
       <DependentUpon>FormSelect.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\main.resx">

@@ -11,7 +11,7 @@ using System.IO;
 
 namespace PokemonEncCalc
 {
-    public partial class frmMainPage : Form
+    public partial class frmMainPage : TranslatableForm
     {
         // Current Slots : Should match with those displayed on the form
         EncounterSlot[] currentSlots = new EncounterSlot[12];
@@ -43,9 +43,12 @@ namespace PokemonEncCalc
 
         private void frmMainPage_Load(object sender, EventArgs e)
         {
+            Text = "Pokémon Encounter Calculator - Ver. " + Program.version;
             Utils.initializePokemonList();
+            Utils.changeLanguage(Properties.Settings.Default.Language);
             loadPokemonNames();
-            renameControls(Utils.controlText);
+            renameControls();
+            renameComboboxes();
             for (int a = 0; a < currentSlots.Length; a++)
             {
                 //currentSlots[a] = new EncounterSlot();
@@ -86,16 +89,18 @@ namespace PokemonEncCalc
         private void englishToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Properties.Settings.Default.Language = 1;
-            Utils.controlText = Utils.changeLanguage(1);
-            renameControls(Utils.controlText);
+            Utils.changeLanguage(1);
+            renameControls();
+            renameComboboxes();
             loadPokemonNames();
         }
 
         private void frenchToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Properties.Settings.Default.Language = 2;
-            Utils.controlText = Utils.changeLanguage(2);
-            renameControls(Utils.controlText);
+            Utils.changeLanguage(2);
+            renameControls();
+            renameComboboxes();
             loadPokemonNames();
         }
 
@@ -215,43 +220,19 @@ namespace PokemonEncCalc
         {
             int slot = 0;
             Int32.TryParse(((PictureBox)sender).Name.Substring(7), out slot);
-            Data.frmFormSelect formSelect = new Data.frmFormSelect();
+            frmFormSelect formSelect = new frmFormSelect();
             if (formSelect.ShowDialog(currentSlots[slot]) == DialogResult.OK)
-                currentSlots[slot] = Data.frmFormSelect.getResult();
+                currentSlots[slot] = frmFormSelect.getResult();
 
             ((PictureBox)sender).Image = (currentSlots[slot].Species.Form == 0) ? (Image)Properties.Resources.ResourceManager.GetObject("_" + currentSlots[slot].Species.NatID)
                                                                   : (Image)Properties.Resources.ResourceManager.GetObject("_" + currentSlots[slot].Species.NatID + "_" + currentSlots[slot].Species.Form);
 
         }
 
-        private void renameControls(string controlNames)
+
+
+        private void renameComboboxes()
         {
-
-            if (controlNames == null) return;  // if nothing to translate, abort function and don't translate user interface
-
-            List<string> controls = new List<string>();
-            controls.AddRange(controlNames.Split(new[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries));
-
-            //Remove comment lines. Empty lines already removed by the AddRange method.
-            controls.RemoveAll(s => s.StartsWith("!"));
-
-            foreach (string line in controls)
-            {
-                string[] stringSplit = line.Split(new[] { " = " }, StringSplitOptions.None);
-                if (stringSplit.Length < 2)
-                    continue; // Error : invalid format (expected "control = text")
-
-                string control = stringSplit[0];
-                string text = stringSplit[1];
-
-                // rename controls of frmMainPage
-                Control[] c = this.Controls.Find(control, true);
-                if (c.Length > 0)
-                    c[0].Text = text;
-
-
-            }
-
             // Rename Comboboxes
             // Version:
             translateComboBoxes(Program.mainForm.cboVersion, "versions" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR" })[Properties.Settings.Default.Language - 1]);

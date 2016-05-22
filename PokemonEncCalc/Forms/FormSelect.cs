@@ -8,9 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PokemonEncCalc.Data
+namespace PokemonEncCalc
 {
-    public partial class frmFormSelect : Form
+    public partial class frmFormSelect : TranslatableForm
     {
         private static EncounterSlot data;
         private static int[] allowedFormChanges = new int[] {   201,
@@ -28,31 +28,32 @@ namespace PokemonEncCalc.Data
         internal DialogResult ShowDialog(EncounterSlot slot)
         {
             data = slot;
-            return this.ShowDialog();
+            return ShowDialog();
         }
 
         private void FormSelect_Load(object sender, EventArgs e)
         {
+            renameControls();
             cboFormList.Items.Clear();
 
 
+            lblChooseFormText.Text = lblChooseFormText.Text.Replace("{1}", data.Species.getName());
             // Checks if form change allowed
             if (allowedFormChanges.Contains(data.Species.NatID))
             {
                 // Get form 0:
                 Pokemon form0 = Utils.PokemonList[data.Species.NatID - 1];
-                if (form0.FormNameEN.Equals(" "))
-                    cboFormList.Items.Add(form0.NameEN + "'s form");
-                else
-                    cboFormList.Items.Add(form0.FormNameEN);
+
+                cboFormList.Items.Add(form0.getFormName());
+
                 foreach (Pokemon p in form0.Forms)
-                    cboFormList.Items.Add(p.FormNameEN);
+                    cboFormList.Items.Add(p.getFormName());
 
                 cboFormList.SelectedIndex = data.Species.Form;
             }
             else
             {
-                cboFormList.Items.Add(data.Species.NameEN + "'s form");
+                cboFormList.Items.Add(data.Species.getFormName());
                 cboFormList.SelectedIndex = 0;
             }
         }
@@ -73,5 +74,8 @@ namespace PokemonEncCalc.Data
             pctMinisprite.Image = (cboFormList.SelectedIndex == 0) ? (Image)Properties.Resources.ResourceManager.GetObject("_" + data.Species.NatID)
                                                                   : (Image)Properties.Resources.ResourceManager.GetObject("_" + data.Species.NatID + "_" + cboFormList.SelectedIndex);
         }
+
+
+
     }
 }

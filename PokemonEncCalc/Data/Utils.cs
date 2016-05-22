@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace PokemonEncCalc
 {
@@ -41,7 +38,8 @@ namespace PokemonEncCalc
         internal static List<string> MapsOR;
         internal static List<string> MapsAS;
 
-        internal static string controlText;
+        internal static List<string> formList; // contains all forms to translate.
+        internal static List<List<string>> controlText;
 
 
         static readonly int[] FormIDs = new[] { 201,201,201,201,201,201,201,201,201,201,201,201,201,201,201,201,201,201,201,201,201,201,201,201,201,201,201,
@@ -78,12 +76,12 @@ namespace PokemonEncCalc
             NamesKR.AddRange(Properties.Resources.pokemonKR.Split(new [] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries));
 
             FormNamesEN.AddRange(Properties.Resources.formsEN.Split(new [] { '\r', '\n'}, StringSplitOptions.RemoveEmptyEntries));
-            FormNamesFR.AddRange(Properties.Resources.formsEN.Split(new[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries));
-            FormNamesDE.AddRange(Properties.Resources.formsEN.Split(new[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries));
-            FormNamesES.AddRange(Properties.Resources.formsEN.Split(new[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries));
-            FormNamesIT.AddRange(Properties.Resources.formsEN.Split(new[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries));
-            FormNamesJP.AddRange(Properties.Resources.formsEN.Split(new[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries));
-            FormNamesKR.AddRange(Properties.Resources.formsEN.Split(new[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries));
+            FormNamesFR.AddRange(Properties.Resources.formsFR.Split(new[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries));
+            FormNamesDE.AddRange(Properties.Resources.formsDE.Split(new[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries));
+            FormNamesES.AddRange(Properties.Resources.formsES.Split(new[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries));
+            FormNamesIT.AddRange(Properties.Resources.formsIT.Split(new[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries));
+            FormNamesJP.AddRange(Properties.Resources.formsJP.Split(new[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries));
+            FormNamesKR.AddRange(Properties.Resources.formsKR.Split(new[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries));
 
 
         }
@@ -119,7 +117,6 @@ namespace PokemonEncCalc
 
             }
             initializeForms();
-            controlText = changeLanguage(Properties.Settings.Default.Language);
         }
 
         private static void initializeForms()
@@ -156,7 +153,7 @@ namespace PokemonEncCalc
             //throw new NotImplementedException();
         }
 
-        internal static string changeLanguage(int langID)
+        internal static void changeLanguage(int langID)
         {
             string controlNames = "";
             switch (langID) {
@@ -193,7 +190,21 @@ namespace PokemonEncCalc
                 default:
                     break;
             }
-            return controlNames;
+
+            // 
+            List<string> listFormControls = new List<string>();
+            formList = new List<string>();
+            listFormControls.AddRange(controlNames.Split(new[] { "!!!" }, StringSplitOptions.RemoveEmptyEntries));
+            listFormControls.RemoveAt(0);
+            controlText = new List<List<string>>();
+            foreach(string s in listFormControls)
+            {
+                List<string> a = new List<string>();
+                a.AddRange(s.Split(new[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries));
+                formList.Add(a[0].Split(new[] {" = " }, StringSplitOptions.None)[0]);
+                a.RemoveAll(c => c.StartsWith("!"));
+                controlText.Add(a);
+            }
 
         }
 

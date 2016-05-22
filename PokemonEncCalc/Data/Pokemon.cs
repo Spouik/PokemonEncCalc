@@ -57,6 +57,37 @@ namespace PokemonEncCalc
         // alternative forms
         public List<Pokemon> Forms { get; }
 
+        public string getName()
+        {
+            switch (Properties.Settings.Default.Language)
+            {
+                case 1: return NameEN;
+                case 2: return NameFR;
+                case 3: return NameDE;
+                case 4: return NameES;
+                case 5: return NameIT;
+                case 6: return NameJP;
+                case 7: return NameKR;
+                default: return NameEN;
+            }
+        }
+
+        public string getFormName()
+        {
+            switch (Properties.Settings.Default.Language)
+            {
+                case 1: return FormNameEN == " " ? (NameEN + (NameEN.EndsWith("s") ? "'" : "'s") + " form") : FormNameEN;
+                case 2: return FormNameFR == " " ? ("Forme de " + NameFR) : FormNameFR;
+                case 3: return FormNameDE == " " ?  NameDE : FormNameDE ;
+                case 4: return FormNameES == " " ? ("Forma de " + NameES) : FormNameES;
+                case 5: return FormNameIT == " " ? ("Forma di" + NameIT) : FormNameIT;
+                case 6: return FormNameJP == " " ? (NameJP + "のすがた") : FormNameJP;
+                case 7: return FormNameKR == " " ? (NameKR + "의 모습") : FormNameKR;
+                default: return FormNameEN == " " ? (NameEN + (NameEN.EndsWith("s") ? "'" : "'s") + " form") : FormNameEN;
+            }
+        }
+
+
         /*
          * Constructor going to resource to instanciate object
          * resourceID is the Pokemon ID (national Pokedex)

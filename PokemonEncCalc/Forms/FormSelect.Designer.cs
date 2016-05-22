@@ -1,4 +1,4 @@
-﻿namespace PokemonEncCalc.Data
+﻿namespace PokemonEncCalc
 {
     partial class frmFormSelect
     {
