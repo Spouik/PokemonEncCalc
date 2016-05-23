@@ -88,7 +88,7 @@ namespace PokemonEncCalc
                 for (int i = 0; i < 12; i++)
                 {
                     species = (short)(BitConverter.ToInt16(grass, 2 * i) & 0x3FF);
-                    formid = (byte)(grass[2 * i + 1] << 2);
+                    formid = (byte)(grass[2 * i + 1] >> 2);
                     p = Utils.PokemonList[species - 1];
                     if (formid > 0)
                         if (p.FormCount() > formid)
@@ -101,7 +101,7 @@ namespace PokemonEncCalc
                 for (int i = 0; i < 12; i++)
                 {
                     species = (short)(BitConverter.ToInt16(day, 2 * i) & 0x3FF);
-                    formid = (byte)(day[2 * i + 1] << 2);
+                    formid = (byte)(day[2 * i + 1] >> 2);
                     p = Utils.PokemonList[species - 1];
                     if (formid > 0)
                         if (p.FormCount() > formid)
@@ -114,7 +114,7 @@ namespace PokemonEncCalc
                 for (int i = 0; i < 12; i++)
                 {
                     species = (short)(BitConverter.ToInt16(night, 2 * i) & 0x3FF);
-                    formid = (byte)(night[2 * i + 1] << 2);
+                    formid = (byte)(night[2 * i + 1] >> 2);
                     p = Utils.PokemonList[species - 1];
                     if (formid > 0)
                         if (p.FormCount() > formid)
@@ -128,7 +128,7 @@ namespace PokemonEncCalc
                 SwarmWalkSlots = new EncounterSlot[2];
             
                 species = (short)(BitConverter.ToInt16(swarmgrass, 0) & 0x3FF);
-                formid = (byte)(swarmgrass[1] << 2);
+                formid = (byte)(swarmgrass[1] >> 2);
                 p = Utils.PokemonList[species - 1];
                     if (formid > 0)
                         if (p.FormCount() > formid)
@@ -143,7 +143,7 @@ namespace PokemonEncCalc
                 for (int i = 0; i < 2; i++)
                 {
                     species = (short)(BitConverter.ToInt16(hoenn, 2 * i) & 0x3FF);
-                    formid = (byte)(hoenn[2 * i + 1] << 2);
+                    formid = (byte)(hoenn[2 * i + 1] >> 2);
                     p = Utils.PokemonList[species - 1];
                     if (formid > 0)
                         if (p.FormCount() > formid)
@@ -159,7 +159,7 @@ namespace PokemonEncCalc
                 for (int i = 0; i < 2; i++)
                 {
                     species = (short)(BitConverter.ToInt16(sinnoh, 2 * i) & 0x3FF);
-                    formid = (byte)(sinnoh[2 * i + 1] << 2);
+                    formid = (byte)(sinnoh[2 * i + 1] >> 2);
                     p = Utils.PokemonList[species - 1];
                     if (formid > 0)
                         if (p.FormCount() > formid)
@@ -178,7 +178,7 @@ namespace PokemonEncCalc
                 for (int i = 0; i < 5; i++)
                 {
                     species = (short)(BitConverter.ToInt16(surf, 4 * i + 2) & 0x3FF);
-                    formid = (byte)(surf[4 * i + 3] << 2);
+                    formid = (byte)(surf[4 * i + 3] >> 2);
                     p = Utils.PokemonList[species - 1];
                     if (formid > 0)
                         if (p.FormCount() > formid)
@@ -190,7 +190,7 @@ namespace PokemonEncCalc
                 // Surf swarm (Replaces slot 0 when active)
                 SwarmSurfSlots = new EncounterSlot[1];
                 species = (short)(BitConverter.ToInt16(swarmsurf, 0) & 0x3FF);
-                formid = (byte)(swarmsurf[1] << 2);
+                formid = (byte)(swarmsurf[1] >> 2);
                 p = Utils.PokemonList[species - 1];
                 if (formid > 0)
                     if (p.FormCount() > formid)
@@ -206,7 +206,7 @@ namespace PokemonEncCalc
                 for (int i = 0; i < 2; i++)
                 {
                     species = (short)(BitConverter.ToInt16(rocksmash, 4 * i + 2) & 0x3FF);
-                    formid = (byte)(rocksmash[4 * i + 3] << 2);
+                    formid = (byte)(rocksmash[4 * i + 3] >> 2);
                     p = Utils.PokemonList[species - 1];
                     if (formid > 0)
                         if (p.FormCount() > formid)
@@ -223,7 +223,7 @@ namespace PokemonEncCalc
                 for (int i = 0; i < 5; i++)
                 {
                     species = (short)(BitConverter.ToInt16(oldRod, 4 * i + 2) & 0x3FF);
-                    formid = (byte)(oldRod[4 * i + 3] << 2);
+                    formid = (byte)(oldRod[4 * i + 3] >> 2);
                     p = Utils.PokemonList[species - 1];
                     if (formid > 0)
                         if (p.FormCount() > formid)
@@ -237,7 +237,7 @@ namespace PokemonEncCalc
                 for (int i = 0; i < 5; i++)
                 {
                     species = (short)(BitConverter.ToInt16(goodRod, 4 * i + 2) & 0x3FF);
-                    formid = (byte)(goodRod[4 * i + 3] << 2);
+                    formid = (byte)(goodRod[4 * i + 3] >> 2);
                     p = Utils.PokemonList[species - 1];
                     if (formid > 0)
                         if (p.FormCount() > formid)
@@ -251,7 +251,7 @@ namespace PokemonEncCalc
                 for (int i = 0; i < 5; i++)
                 {
                     species = (short)(BitConverter.ToInt16(superRod, 4 * i + 2) & 0x3FF);
-                    formid = (byte)(superRod[4 * i + 3] << 2);
+                    formid = (byte)(superRod[4 * i + 3] >> 2);
                     p = Utils.PokemonList[species - 1];
                     if (formid > 0)
                         if (p.FormCount() > formid)
@@ -264,7 +264,7 @@ namespace PokemonEncCalc
                 NightGoodRodSlots = new EncounterSlot[1];
                 NightSuperRodSlots = new EncounterSlot[1];
                 species = (short)(BitConverter.ToInt16(nightfish, 0) & 0x3FF);
-                formid = (byte)(nightfish[1] << 2);
+                formid = (byte)(nightfish[1] >> 2);
                 p = Utils.PokemonList[species - 1];
                 if (formid > 0)
                     if (p.FormCount() > formid)
@@ -279,14 +279,14 @@ namespace PokemonEncCalc
                 SwarmSuperRodSlots = new EncounterSlot[5];
 
                 species = (short)(BitConverter.ToInt16(nightfish, 0) & 0x3FF);
-                formid = (byte)(nightfish[1] << 2);
+                formid = (byte)(nightfish[1] >> 2);
                 p = Utils.PokemonList[species - 1];
                 if (formid > 0)
                     if (p.FormCount() > formid)
                         if (p.Forms[formid] != null)
                             p = p.Forms[formid];
 
-                // Olf Rod
+                // Old Rod
                 SwarmOldRodSlots[0] = new EncounterSlot(p, oldRod[8], oldRod[9], percentOldRod[2]);
 
                 for (int i = 0, j = 0; i < 5; i++)

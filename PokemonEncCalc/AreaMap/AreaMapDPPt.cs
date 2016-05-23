@@ -82,7 +82,7 @@ namespace PokemonEncCalc
                 for (int i = 0; i < 12; i++)
                 {
                     species = (short)(BitConverter.ToInt16(grass, 8 * i + 4) & 0x3FF);
-                    formid = (byte)(grass[8 * i + 5] << 2);
+                    formid = (byte)(grass[8 * i + 5] >> 2);
                     p = Utils.PokemonList[species - 1];
                     if (formid > 0)
                         if (p.FormCount() > formid)
@@ -95,7 +95,7 @@ namespace PokemonEncCalc
                 Swarm = new EncounterSlot[2];
                 for(int s = 0; s < 2; s++) {
                     species = (short)(BitConverter.ToInt16(swarm, 4*s) & 0x3FF);
-                    formid = (byte)(swarm[4*s+1] << 2);
+                    formid = (byte)(swarm[4*s+1] >> 2);
                     p = Utils.PokemonList[species - 1];
                     if (formid > 0)
                         if (p.FormCount() > formid)
@@ -109,7 +109,7 @@ namespace PokemonEncCalc
                 for (int s = 0; s < 2; s++)
                 {
                     species = (short)(BitConverter.ToInt16(day, 4 * s) & 0x3FF);
-                    formid = (byte)(day[4 * s+1] << 2);
+                    formid = (byte)(day[4 * s+1] >> 2);
                     p = Utils.PokemonList[species - 1];
                     if (formid > 0)
                         if (p.FormCount() > formid)
@@ -122,7 +122,7 @@ namespace PokemonEncCalc
                 for (int s = 0; s < 2; s++)
                 {
                     species = (short)(BitConverter.ToInt16(night, 4 * s) & 0x3FF);
-                    formid = (byte)(night[4 * s+1] << 2);
+                    formid = (byte)(night[4 * s+1] >> 2);
                     p = Utils.PokemonList[species - 1];
                     if (formid > 0)
                         if (p.FormCount() > formid)
@@ -137,7 +137,7 @@ namespace PokemonEncCalc
                 for (int s = 0; s < 4; s++)
                 {
                     species = (short)(BitConverter.ToInt16(pokeRadar, 4 * s) & 0x3FF);
-                    formid = (byte)(pokeRadar[4 * s+1] << 2);
+                    formid = (byte)(pokeRadar[4 * s+1] >> 2);
                     p = Utils.PokemonList[species - 1];
                     if (formid > 0)
                         if (p.FormCount() > formid)
@@ -151,7 +151,7 @@ namespace PokemonEncCalc
                 for (int s = 0; s < 2; s++)
                 {
                     species = (short)(BitConverter.ToInt16(ruby, 4 * s) & 0x3FF);
-                    formid = (byte)(ruby[4 * s+1] << 2);
+                    formid = (byte)(ruby[4 * s+1] >> 2);
                     p = Utils.PokemonList[species - 1];
                     if (formid > 0)
                         if (p.FormCount() > formid)
@@ -164,7 +164,7 @@ namespace PokemonEncCalc
                 for (int s = 0; s < 2; s++)
                 {
                     species = (short)(BitConverter.ToInt16(sapphire, 4 * s) & 0x3FF);
-                    formid = (byte)(sapphire[4 * s+1] << 2);
+                    formid = (byte)(sapphire[4 * s+1] >> 2);
                     p = Utils.PokemonList[species - 1];
                     if (formid > 0)
                         if (p.FormCount() > formid)
@@ -177,7 +177,7 @@ namespace PokemonEncCalc
                 for (int s = 0; s < 2; s++)
                 {
                     species = (short)(BitConverter.ToInt16(emerald, 4 * s) & 0x3FF);
-                    formid = (byte)(emerald[4 * s+1] << 2);
+                    formid = (byte)(emerald[4 * s+1] >> 2);
                     p = Utils.PokemonList[species - 1];
                     if (formid > 0)
                         if (p.FormCount() > formid)
@@ -190,7 +190,7 @@ namespace PokemonEncCalc
                 for (int s = 0; s < 2; s++)
                 {
                     species = (short)(BitConverter.ToInt16(firered, 4 * s) & 0x3FF);
-                    formid = (byte)(firered[4 * s+1] << 2);
+                    formid = (byte)(firered[4 * s+1] >> 2);
                     p = Utils.PokemonList[species - 1];
                     if (formid > 0)
                         if (p.FormCount() > formid)
@@ -203,7 +203,7 @@ namespace PokemonEncCalc
                 for (int s = 0; s < 2; s++)
                 {
                     species = (short)(BitConverter.ToInt16(leafgreen, 4 * s) & 0x3FF);
-                    formid = (byte)(leafgreen[4 * s+1] << 2);
+                    formid = (byte)(leafgreen[4 * s+1] >> 2);
                     p = Utils.PokemonList[species - 1];
                     if (formid > 0)
                         if (p.FormCount() > formid)
@@ -219,7 +219,7 @@ namespace PokemonEncCalc
                 for (int i = 0; i < 5; i++)
                 {
                     short species = (short)(BitConverter.ToInt16(surf, 8 * i + 4) & 0x3FF);
-                    byte formid = (byte)(surf[8 * i + 5] << 2);
+                    byte formid = (byte)(surf[8 * i + 5] >> 2);
                     Pokemon p = Utils.PokemonList[species - 1];
                     if (formid > 0)
                         if (p.FormCount() > formid)
@@ -235,7 +235,7 @@ namespace PokemonEncCalc
                 for (int i = 0; i < 5; i++)
                 {
                     short species = (short)(BitConverter.ToInt16(oldRod, 8 * i + 4) & 0x3FF);
-                    byte formid = (byte)(oldRod[8 * i + 5] << 2);
+                    byte formid = (byte)(oldRod[8 * i + 5] >> 2);
                     Pokemon p = Utils.PokemonList[species - 1];
                     if (formid > 0)
                         if (p.FormCount() > formid)
@@ -251,7 +251,7 @@ namespace PokemonEncCalc
                 for (int i = 0; i < 5; i++)
                 {
                     short species = (short)(BitConverter.ToInt16(goodRod, 8 * i + 4) & 0x3FF);
-                    byte formid = (byte)(goodRod[8 * i + 5] << 2);
+                    byte formid = (byte)(goodRod[8 * i + 5] >> 2);
                     Pokemon p = Utils.PokemonList[species - 1];
                     if (formid > 0)
                         if (p.FormCount() > formid)
@@ -267,7 +267,7 @@ namespace PokemonEncCalc
                 for (int i = 0; i < 5; i++)
                 {
                     short species = (short)(BitConverter.ToInt16(superRod, 8 * i + 4) & 0x3FF);
-                    byte formid = (byte)(superRod[8 * i + 5] << 2);
+                    byte formid = (byte)(superRod[8 * i + 5] >> 2);
                     Pokemon p = Utils.PokemonList[species - 1];
                     if (formid > 0)
                         if (p.FormCount() > formid)

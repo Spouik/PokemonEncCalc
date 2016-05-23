@@ -463,6 +463,10 @@ namespace PokemonEncCalc
             loadSlotsPlatinum();
             loadSlotsHeartGold();
             loadSlotsSoulSilver();
+            loadSlotsBlack();
+            loadSlotsWhite();
+            loadSlotsBlack2();
+            loadSlotsWhite2();
         }
 
         private static void loadSlotsRuby()
@@ -585,6 +589,53 @@ namespace PokemonEncCalc
             }
         }
 
+        private static void loadSlotsBlack()
+        {
+            int mapCount = Properties.Resources.BlackSlots.Length / 232;
+            MapsBlack = new List<AreaMapGen5>();
+            for (int i = 0; i < mapCount; i++)
+            {
+                byte[] data = new byte[232];
+                data = Properties.Resources.BlackSlots.Skip(232 * i).Take(232).ToArray();
+                MapsBlack.Add(new AreaMapGen5(data, Version.Black, i));
+            }
+        }
+
+        private static void loadSlotsWhite()
+        {
+            int mapCount = Properties.Resources.WhiteSlots.Length / 232;
+            MapsWhite = new List<AreaMapGen5>();
+            for (int i = 0; i < mapCount; i++)
+            {
+                byte[] data = new byte[232];
+                data = Properties.Resources.WhiteSlots.Skip(232 * i).Take(232).ToArray();
+                MapsWhite.Add(new AreaMapGen5(data, Version.White, i));
+            }
+        }
+
+        private static void loadSlotsBlack2()
+        {
+            int mapCount = Properties.Resources.Black2Slots.Length / 232;
+            MapsBlack2 = new List<AreaMapGen5>();
+            for (int i = 0; i < mapCount; i++)
+            {
+                byte[] data = new byte[232];
+                data = Properties.Resources.Black2Slots.Skip(232 * i).Take(232).ToArray();
+                MapsBlack2.Add(new AreaMapGen5(data, Version.Black2, i));
+            }
+        }
+
+        private static void loadSlotsWhite2()
+        {
+            int mapCount = Properties.Resources.White2Slots.Length / 232;
+            MapsWhite2 = new List<AreaMapGen5>();
+            for (int i = 0; i < mapCount; i++)
+            {
+                byte[] data = new byte[232];
+                data = Properties.Resources.White2Slots.Skip(232 * i).Take(232).ToArray();
+                MapsWhite2.Add(new AreaMapGen5(data, Version.White2, i));
+            }
+        }
 
         #endregion
 
