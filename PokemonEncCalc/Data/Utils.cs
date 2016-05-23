@@ -461,6 +461,8 @@ namespace PokemonEncCalc
             loadSlotsDiamond();
             loadSlotsPearl();
             loadSlotsPlatinum();
+            loadSlotsHeartGold();
+            loadSlotsSoulSilver();
         }
 
         private static void loadSlotsRuby()
@@ -556,6 +558,30 @@ namespace PokemonEncCalc
                 byte[] data = new byte[424];
                 data = Properties.Resources.PlatinumSlots.Skip(424 * i).Take(424).ToArray();
                 MapsPlatinum.Add(new AreaMapDPPt(data, Version.Platinum, i));
+            }
+        }
+
+        private static void loadSlotsHeartGold()
+        {
+            int mapCount = Properties.Resources.HeartGoldSlots.Length / 196;
+            MapsHeartGold = new List<AreaMapHGSS>();
+            for (int i = 0; i < mapCount; i++)
+            {
+                byte[] data = new byte[196];
+                data = Properties.Resources.HeartGoldSlots.Skip(196 * i).Take(196).ToArray();
+                MapsHeartGold.Add(new AreaMapHGSS(data, Version.HeartGold, i));
+            }
+        }
+
+        private static void loadSlotsSoulSilver()
+        {
+            int mapCount = Properties.Resources.SoulSilverSlots.Length / 196;
+            MapsSoulSilver = new List<AreaMapHGSS>();
+            for (int i = 0; i < mapCount; i++)
+            {
+                byte[] data = new byte[196];
+                data = Properties.Resources.SoulSilverSlots.Skip(196 * i).Take(196).ToArray();
+                MapsSoulSilver.Add(new AreaMapHGSS(data, Version.SoulSilver, i));
             }
         }
 
