@@ -38,6 +38,60 @@ namespace PokemonEncCalc
         internal static List<string> MapsOR;
         internal static List<string> MapsAS;
 
+        // List of all maps from Gen 3 to Gen 6
+        internal static List<AreaMapGen3> MapsRuby;
+        internal static List<AreaMapGen3> MapsSapphire;
+        internal static List<AreaMapGen3> MapsEmerald;
+        internal static List<AreaMapGen3> MapsFireRed;
+        internal static List<AreaMapGen3> MapsLeafGreen;
+        internal static List<AreaMapDPPt> MapsDiamond;
+        internal static List<AreaMapDPPt> MapsPearl;
+        internal static List<AreaMapDPPt> MapsPlatinum;
+        internal static List<AreaMapHGSS> MapsHeartGold;
+        internal static List<AreaMapHGSS> MapsSoulSilver;
+        internal static List<AreaMapGen5> MapsBlack;
+        internal static List<AreaMapGen5> MapsWhite;
+        internal static List<AreaMapGen5> MapsBlack2;
+        internal static List<AreaMapGen5> MapsWhite2;
+        internal static List<AreaMapXY> MapsX;
+        internal static List<AreaMapXY> MapsY;
+        internal static List<AreaMapORAS> MapsOmegaRuby;
+        internal static List<AreaMapORAS> MapsAlphaSapphire;
+
+        // Map tables for gen4/gen5 games
+        internal static int[] mapTablesDP = new int[] { 178, 176, 177, 53, 179, 180, 181, 182, 54, 55, 8, 9, 23, 24, 25, 26, 27, 28, 63, 69,
+                                                        75, 112, 113, 114, 115, 118, 119, 121, 120, 122, 123, 124, 117, 0, 136, 137, 134, 7,
+                                                        4, 5, 6, 56, 57, 58, 22, 19, 11, 12, 15, 16, 17, 18, 13, 10, 21, 20, 3, 138, 139, 140,
+                                                        141, 142, 144, 143, 146, 145, 147, 148, 149, 150, 157, 156, 159, 158, 160, 161, 162, 163,
+                                                        164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 47, 51, 48, 49, 50, 52, 29, 59,
+                                                        106, 107, 108, 109, 110, 111, 151, 152, 153, 154, 155, 116, 2, 1, 125, 132 };
+
+        internal static int[] mapTablesPlat = new int[] { 178, 176, 177, 53, 179, 180, 181, 182, 54, 55, 8, 9, 23, 24, 25, 26, 27, 28, 63, 70, 69,
+                                                        75, 112, 113, 114, 115, 118, 119, 121, 120, 122, 123, 124, 117, 0, 136, 137, 134, 135, 7,
+                                                        4, 5, 6, 56, 57, 58, 22, 19, 11, 12, 15, 16, 17, 18, 13, 10, 21, 20, 3, 138, 139, 140, 141,
+                                                        142, 144, 143, 146, 145, 147, 148, 149, 150, 157, 156, 159, 158, 160, 161, 162, 163, 164, 165,
+                                                        166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 47, 51, 48, 49, 50, 52, 29, 59, 106, 107,
+                                                        108, 109, 110, 111, 151, 152, 153, 154, 155, 116, 2, 1, 125, 132 };
+
+        internal static int[] mapTablesHGSS = new int[] { 178, 176, 177, 53, 179, 180, 181, 182, 54, 55, 8, 9, 23, 24, 25, 26, 27, 28, 63, 70, 69, 75,
+                                                        112, 113, 114, 115, 118, 119, 121, 120, 122, 123, 124, 117, 0, 136, 137, 134, 135, 7, 4, 5, 6,
+                                                        56, 57, 58, 22, 19, 11, 12, 15, 16, 17, 18, 13, 10, 21, 20, 3, 138, 139, 140, 141, 142, 144,
+                                                        143, 146, 145, 147, 148, 149, 150, 157, 156, 159, 158, 160, 161, 162, 163, 164, 165, 166, 167,
+                                                        168, 169, 170, 171, 172, 173, 174, 175, 47, 51, 48, 49, 50, 52, 29, 59, 106, 107, 108, 109,
+                                                        110, 111, 151, 152, 153, 154, 155, 116, 2, 1, 125, 132 };
+
+        internal static int[] mapTablesBW = new int[] { 132, 133, 134, 141, 94, 144, 12, 14, 18, 33, 10, 11, 114, 2, 8, 9, 89, 90, 91, 92, 44, 45, 46,
+                                                        112, 43, 93, 47, 0, 100, 99, 98, 1, 101, 102, 103, 106, 107, 108, 115, 123, 131, 135, 137, 138,
+                                                        139, 140, 142, 143, 147, 145, 73, 74, 75, 77, 83, 88, 119, 120, 121, 122, 63, 67, 71, 72, 127,
+                                                        146, 104, 6, 7 };
+
+        internal static int[] mapTablesB2W2 = new int[] { 159, 64, 162, 15, 17, 21, 105, 106, 107, 13, 14, 62, 137, 2, 11, 12, 53, 54, 55, 23, 24, 25,
+                                                        117, 118, 135, 63, 85, 26, 72, 73, 74, 0, 7, 8, 6, 122, 121, 120, 68, 69, 119, 123, 155, 156,
+                                                        157, 158, 160, 161, 172, 163, 164, 124, 165, 173, 169, 170, 125, 128, 130, 131, 138, 146, 154,
+                                                        108, 95, 96, 97, 98, 99, 100, 101, 111, 116, 115, 114, 142, 143, 144, 145, 42, 46, 50, 51, 150,
+                                                        171, 126, 9, 10, 1, 70, 71 };
+
+
         internal static List<string> formList; // contains all forms to translate.
         internal static List<List<string>> controlText;
 
@@ -209,7 +263,7 @@ namespace PokemonEncCalc
         }
 
 
-
+        #region EncounterSlotCalculation
 
 
         //
@@ -391,6 +445,122 @@ namespace PokemonEncCalc
 
             return normalizedSlots;
         }
+
+        #endregion
+
+
+        #region EncounterSlotLoading
+
+        internal static void loadEncounterSlotData()
+        {
+            loadSlotsRuby();
+            loadSlotsSapphire();
+            loadSlotsEmerald();
+            loadSlotsFireRed();
+            loadSlotsLeafGreen();
+            loadSlotsDiamond();
+            loadSlotsPearl();
+            loadSlotsPlatinum();
+        }
+
+        private static void loadSlotsRuby()
+        {
+            int mapCount = Properties.Resources.RubySlots.Length / 128;
+            MapsRuby = new List<AreaMapGen3>();
+            for(int i = 0; i < mapCount; i++)
+            {
+                byte[] data = new byte[128];
+                data = Properties.Resources.RubySlots.Skip(128 * i).Take(128).ToArray();
+                MapsRuby.Add(new AreaMapGen3(data, Version.Ruby, i));
+            }
+        }
+
+        private static void loadSlotsSapphire()
+        {
+            int mapCount = Properties.Resources.SapphireSlots.Length / 128;
+            MapsSapphire = new List<AreaMapGen3>();
+            for (int i = 0; i < mapCount; i++)
+            {
+                byte[] data = new byte[128];
+                data = Properties.Resources.SapphireSlots.Skip(128 * i).Take(128).ToArray();
+                MapsSapphire.Add(new AreaMapGen3(data, Version.Sapphire, i));
+            }
+        }
+
+        private static void loadSlotsEmerald()
+        {
+            int mapCount = Properties.Resources.EmeraldSlots.Length / 128;
+            MapsEmerald = new List<AreaMapGen3>();
+            for (int i = 0; i < mapCount; i++)
+            {
+                byte[] data = new byte[128];
+                data = Properties.Resources.EmeraldSlots.Skip(128 * i).Take(128).ToArray();
+                MapsEmerald.Add(new AreaMapGen3(data, Version.Emerald, i));
+            }
+        }
+
+        private static void loadSlotsFireRed()
+        {
+            int mapCount = Properties.Resources.FireRedSlots.Length / 128;
+            MapsFireRed = new List<AreaMapGen3>();
+            for (int i = 0; i < mapCount; i++)
+            {
+                byte[] data = new byte[128];
+                data = Properties.Resources.FireRedSlots.Skip(128 * i).Take(128).ToArray();
+                MapsFireRed.Add(new AreaMapGen3(data, Version.FireRed, i));
+            }
+        }
+
+        private static void loadSlotsLeafGreen()
+        {
+            int mapCount = Properties.Resources.LeafGreenSlots.Length / 128;
+            MapsLeafGreen = new List<AreaMapGen3>();
+            for (int i = 0; i < mapCount; i++)
+            {
+                byte[] data = new byte[128];
+                data = Properties.Resources.LeafGreenSlots.Skip(128 * i).Take(128).ToArray();
+                MapsLeafGreen.Add(new AreaMapGen3(data, Version.LeafGreen, i));
+            }
+        }
+
+        private static void loadSlotsDiamond()
+        {
+            int mapCount = Properties.Resources.DiamondSlots.Length / 424;
+            MapsDiamond = new List<AreaMapDPPt>();
+            for (int i = 0; i < mapCount; i++)
+            {
+                byte[] data = new byte[424];
+                data = Properties.Resources.DiamondSlots.Skip(424 * i).Take(424).ToArray();
+                MapsDiamond.Add(new AreaMapDPPt(data, Version.Diamond, i));
+            }
+        }
+
+        private static void loadSlotsPearl()
+        {
+            int mapCount = Properties.Resources.PearlSlots.Length / 424;
+            MapsPearl = new List<AreaMapDPPt>();
+            for (int i = 0; i < mapCount; i++)
+            {
+                byte[] data = new byte[424];
+                data = Properties.Resources.PearlSlots.Skip(424 * i).Take(424).ToArray();
+                MapsPearl.Add(new AreaMapDPPt(data, Version.Pearl, i));
+            }
+        }
+
+        private static void loadSlotsPlatinum()
+        {
+            int mapCount = Properties.Resources.PlatinumSlots.Length / 424;
+            MapsPlatinum = new List<AreaMapDPPt>();
+            for (int i = 0; i < mapCount; i++)
+            {
+                byte[] data = new byte[424];
+                data = Properties.Resources.PlatinumSlots.Skip(424 * i).Take(424).ToArray();
+                MapsPlatinum.Add(new AreaMapDPPt(data, Version.Platinum, i));
+            }
+        }
+
+
+        #endregion
 
 
     }

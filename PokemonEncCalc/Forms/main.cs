@@ -44,7 +44,6 @@ namespace PokemonEncCalc
         private void frmMainPage_Load(object sender, EventArgs e)
         {
             Text = "Pokémon Encounter Calculator - Ver. " + Program.version;
-            Utils.initializePokemonList();
             Utils.changeLanguage(Properties.Settings.Default.Language);
             loadPokemonNames();
             renameControls();
@@ -54,17 +53,6 @@ namespace PokemonEncCalc
                 //currentSlots[a] = new EncounterSlot();
                 currentSlots[a].Percentage = percentage[a];
             }
-        }
-
-        private void loadPokemonData()
-        {
-            // Get number of Pokemon in the resource file (48-byte structures)
-            int nbPokemon = PokemonEncCalc.Properties.Resources.PokemonData.Length / 48;
-
-            for (int i = 0; i < nbPokemon; i++){
-
-            }
-
         }
 
         private void loadPokemonNames()
@@ -113,7 +101,7 @@ namespace PokemonEncCalc
                 return;
 
             int slot;
-            if (!Int32.TryParse(((ComboBox)sender).Name.Substring(7), out slot))
+            if (!int.TryParse(((ComboBox)sender).Name.Substring(7), out slot))
                 return;
 
             // Change Slot
@@ -235,29 +223,29 @@ namespace PokemonEncCalc
         {
             // Rename Comboboxes
             // Version:
-            translateComboBoxes(Program.mainForm.cboVersion, "versions" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR" })[Properties.Settings.Default.Language - 1]);
+            translateComboBoxes(cboVersion, "versions" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR" })[Properties.Settings.Default.Language - 1]);
             // Maps RS:
-            Utils.MapsRS = translateMaps(Program.mainForm.cboMapsRubySapp, "Maps_RS_" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR" })[Properties.Settings.Default.Language - 1], Utils.MapsRS);
+            Utils.MapsRS = translateMaps(cboMapsRubySapp, "Maps_RS_" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR" })[Properties.Settings.Default.Language - 1], Utils.MapsRS);
             // Maps E:
-            Utils.MapsEmer = translateMaps(Program.mainForm.cboMapsEmer, "Maps_E_" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR" })[Properties.Settings.Default.Language - 1], Utils.MapsEmer);
+            Utils.MapsEmer = translateMaps(cboMapsEmer, "Maps_E_" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR" })[Properties.Settings.Default.Language - 1], Utils.MapsEmer);
             // Maps FRLG:
-            Utils.MapsFRLG = translateMaps(Program.mainForm.cboMapsFireLeaf, "Maps_FRLG_" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR" })[Properties.Settings.Default.Language - 1], Utils.MapsFRLG);
+            Utils.MapsFRLG = translateMaps(cboMapsFireLeaf, "Maps_FRLG_" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR" })[Properties.Settings.Default.Language - 1], Utils.MapsFRLG);
             // Maps DP:
-            Utils.MapsDP = translateMaps(Program.mainForm.cboMapsDP, "Maps_DP_" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR" })[Properties.Settings.Default.Language - 1], Utils.MapsDP);
+            Utils.MapsDP = translateMaps(cboMapsDP, "Maps_DP_" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR" })[Properties.Settings.Default.Language - 1], Utils.MapsDP);
             // Maps Pt:
-            Utils.MapsPt = translateMaps(Program.mainForm.cboMapsPlat, "Maps_Pt_" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR" })[Properties.Settings.Default.Language - 1], Utils.MapsPt);
+            Utils.MapsPt = translateMaps(cboMapsPlat, "Maps_Pt_" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR" })[Properties.Settings.Default.Language - 1], Utils.MapsPt);
             // Maps HGSS:
-            Utils.MapsHGSS = translateMaps(Program.mainForm.cboMapsHGSS, "Maps_HGSS_" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR" })[Properties.Settings.Default.Language - 1], Utils.MapsHGSS);
+            Utils.MapsHGSS = translateMaps(cboMapsHGSS, "Maps_HGSS_" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR" })[Properties.Settings.Default.Language - 1], Utils.MapsHGSS);
             // Maps BW:
-            Utils.MapsBW = translateMaps(Program.mainForm.cboMapsBW, "Maps_BW_" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR" })[Properties.Settings.Default.Language - 1], Utils.MapsBW);
+            Utils.MapsBW = translateMaps(cboMapsBW, "Maps_BW_" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR" })[Properties.Settings.Default.Language - 1], Utils.MapsBW);
             // Maps B2W2:
-            Utils.MapsB2W2 = translateMaps(Program.mainForm.cboMapsB2W2, "Maps_B2W2_" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR" })[Properties.Settings.Default.Language - 1], Utils.MapsB2W2);
+            Utils.MapsB2W2 = translateMaps(cboMapsB2W2, "Maps_B2W2_" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR" })[Properties.Settings.Default.Language - 1], Utils.MapsB2W2);
             // Maps XY:
-            Utils.MapsXY = translateMaps(Program.mainForm.cboMapsXY, "Maps_XY_" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR" })[Properties.Settings.Default.Language - 1], Utils.MapsXY);
+            Utils.MapsXY = translateMaps(cboMapsXY, "Maps_XY_" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR" })[Properties.Settings.Default.Language - 1], Utils.MapsXY);
             // Maps OR:
-            Utils.MapsOR = translateMaps(Program.mainForm.cboMapsOR, "Maps_OR_" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR" })[Properties.Settings.Default.Language - 1], Utils.MapsOR);
+            Utils.MapsOR = translateMaps(cboMapsOR, "Maps_OR_" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR" })[Properties.Settings.Default.Language - 1], Utils.MapsOR);
             // Maps AS:
-            Utils.MapsAS = translateMaps(Program.mainForm.cboMapsAS, "Maps_AS_" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR" })[Properties.Settings.Default.Language - 1], Utils.MapsAS);
+            Utils.MapsAS = translateMaps(cboMapsAS, "Maps_AS_" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR" })[Properties.Settings.Default.Language - 1], Utils.MapsAS);
 
 
 

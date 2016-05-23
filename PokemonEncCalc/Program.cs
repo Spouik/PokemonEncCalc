@@ -10,8 +10,6 @@ namespace PokemonEncCalc
 
     static class Program
     {
-        // Declare all forms
-        internal static frmMainPage mainForm;
 
         internal readonly static string version = "5.6";
 
@@ -26,9 +24,11 @@ namespace PokemonEncCalc
             if (Properties.Settings.Default.Language == 0)
                 detectSystemLanguage();
 
-            // Instanciate all forms
-            mainForm = new frmMainPage();
-            Application.Run(mainForm);
+            // Load data
+            Utils.initializePokemonList();
+            Utils.loadEncounterSlotData();
+            
+            Application.Run(new frmMainPage());
         }
 
         static void detectSystemLanguage()

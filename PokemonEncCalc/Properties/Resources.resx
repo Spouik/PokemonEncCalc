@@ -4954,4 +4954,58 @@
   <data name="_678_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images\minisprites_s\678-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="AlphaSapphireSlots" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\AlphaSapphireSlots.dat;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Black2Slots" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\Black2Slots.dat;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="BlackSlots" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\BlackSlots.dat;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="DiamondSlots" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\DiamondSlots.dat;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="EmeraldSlots" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\EmeraldSlots.dat;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="FireRedSlots" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\FireRedSlots.dat;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="HeartGoldSlots" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\HeartGoldSlots.dat;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="LeafGreenSlots" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\LeafGreenSlots.dat;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="OmegaRubySlots" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\OmegaRubySlots.dat;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="PearlSlots" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\PearlSlots.dat;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="PlatinumSlots" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\PlatinumSlots.dat;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="RubySlots" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\RubySlots.dat;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="SapphireSlots" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\SapphireSlots.dat;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="SoulSilverSlots" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\SoulSilverSlots.dat;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="White2Slots" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\White2Slots.dat;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="WhiteSlots" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\WhiteSlots.dat;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="XSlots" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\XSlots.dat;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="YSlots" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\YSlots.dat;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

@@ -15673,6 +15673,66 @@ namespace PokemonEncCalc.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
+        internal static byte[] AlphaSapphireSlots {
+            get {
+                object obj = ResourceManager.GetObject("AlphaSapphireSlots", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Black2Slots {
+            get {
+                object obj = ResourceManager.GetObject("Black2Slots", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] BlackSlots {
+            get {
+                object obj = ResourceManager.GetObject("BlackSlots", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] DiamondSlots {
+            get {
+                object obj = ResourceManager.GetObject("DiamondSlots", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] EmeraldSlots {
+            get {
+                object obj = ResourceManager.GetObject("EmeraldSlots", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] FireRedSlots {
+            get {
+                object obj = ResourceManager.GetObject("FireRedSlots", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
         internal static byte[] FormsData {
             get {
                 object obj = ResourceManager.GetObject("FormsData", resourceCulture);
@@ -16934,6 +16994,16 @@ namespace PokemonEncCalc.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] HeartGoldSlots {
+            get {
+                object obj = ResourceManager.GetObject("HeartGoldSlots", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
         internal static System.Drawing.Icon icon {
@@ -16945,8 +17015,14 @@ namespace PokemonEncCalc.Properties {
         
         /// <summary>
         ///   Looks up a localized string similar to !- This document is used for controls texts of the app
+        ///!
         ///! Use exclamation mark to comment a line
+        ///!
+        ///! Use a triple exclamation mark (!!!) with 
+        ///! the name of the form as a separator
         ///!------------------------------------------------------
+        ///
+        ///!!!frmMainPage
         ///
         ///! Menu strips
         ///
@@ -16960,12 +17036,7 @@ namespace PokemonEncCalc.Properties {
         ///gboSlots = Encounter Slots data
         ///gboAutoFill = Map parameters
         ///
-        ///! Labels
-        ///
-        ///lblAreaDisp = Current map
-        ///lblEncounterTypeDisp = Encounter Type
-        ///lblGBASlotDisp = GBA Slot
-        ///lblHorde = H [rest of string was truncated]&quot;;.
+        ///! Labels        /// [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string interfaceEN {
             get {
@@ -16975,8 +17046,13 @@ namespace PokemonEncCalc.Properties {
         
         /// <summary>
         ///   Looks up a localized string similar to !- This document is used for controls texts of the app
+        ///
         ///! Use exclamation mark to comment a line
+        ///!
+        ///!
         ///!------------------------------------------------------
+        ///
+        ///!!!frmMainPage
         ///
         ///! Menu strips
         ///
@@ -16993,12 +17069,21 @@ namespace PokemonEncCalc.Properties {
         ///! Labels
         ///
         ///lblAreaDisp = Zone sélectionnée
-        ///lblEncounterTypeDisp = Type de rencontres
-        ///lblGBASlotDisp = Inser [rest of string was truncated]&quot;;.
+        ///lblEncounterTypeDisp = Type de rencontr [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string interfaceFR {
             get {
                 return ResourceManager.GetString("interfaceFR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] LeafGreenSlots {
+            get {
+                object obj = ResourceManager.GetObject("LeafGreenSlots", resourceCulture);
+                return ((byte[])(obj));
             }
         }
         
@@ -17862,6 +17947,36 @@ namespace PokemonEncCalc.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
+        internal static byte[] OmegaRubySlots {
+            get {
+                object obj = ResourceManager.GetObject("OmegaRubySlots", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] PearlSlots {
+            get {
+                object obj = ResourceManager.GetObject("PearlSlots", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] PlatinumSlots {
+            get {
+                object obj = ResourceManager.GetObject("PlatinumSlots", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
         internal static byte[] PokemonData {
             get {
                 object obj = ResourceManager.GetObject("PokemonData", resourceCulture);
@@ -18392,6 +18507,36 @@ namespace PokemonEncCalc.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] RubySlots {
+            get {
+                object obj = ResourceManager.GetObject("RubySlots", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] SapphireSlots {
+            get {
+                object obj = ResourceManager.GetObject("SapphireSlots", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] SoulSilverSlots {
+            get {
+                object obj = ResourceManager.GetObject("SoulSilverSlots", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap turnback {
@@ -18594,6 +18739,46 @@ namespace PokemonEncCalc.Properties {
         internal static string versionsKR {
             get {
                 return ResourceManager.GetString("versionsKR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] White2Slots {
+            get {
+                object obj = ResourceManager.GetObject("White2Slots", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] WhiteSlots {
+            get {
+                object obj = ResourceManager.GetObject("WhiteSlots", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] XSlots {
+            get {
+                object obj = ResourceManager.GetObject("XSlots", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] YSlots {
+            get {
+                object obj = ResourceManager.GetObject("YSlots", resourceCulture);
+                return ((byte[])(obj));
             }
         }
     }

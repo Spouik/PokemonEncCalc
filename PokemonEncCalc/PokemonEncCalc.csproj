@@ -11,6 +11,7 @@
     <AssemblyName>PokemonEncCalc</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -23,7 +24,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -126,9 +126,27 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\data\AlphaSapphireSlots.dat" />
+    <None Include="Resources\data\Black2Slots.dat" />
+    <None Include="Resources\data\BlackSlots.dat" />
+    <None Include="Resources\data\DiamondSlots.dat" />
+    <None Include="Resources\data\EmeraldSlots.dat" />
+    <None Include="Resources\data\FireRedSlots.dat" />
     <None Include="Resources\data\FormsData.dat" />
+    <None Include="Resources\data\HeartGoldSlots.dat" />
+    <None Include="Resources\data\LeafGreenSlots.dat" />
     <None Include="Resources\data\MegasData.dat" />
+    <None Include="Resources\data\OmegaRubySlots.dat" />
+    <None Include="Resources\data\PearlSlots.dat" />
+    <None Include="Resources\data\PlatinumSlots.dat" />
     <None Include="Resources\data\PokemonData.dat" />
+    <None Include="Resources\data\RubySlots.dat" />
+    <None Include="Resources\data\SapphireSlots.dat" />
+    <None Include="Resources\data\SoulSilverSlots.dat" />
+    <None Include="Resources\data\White2Slots.dat" />
+    <None Include="Resources\data\WhiteSlots.dat" />
+    <None Include="Resources\data\XSlots.dat" />
+    <None Include="Resources\data\YSlots.dat" />
     <None Include="Resources\herbe3g.ico" />
   </ItemGroup>
   <ItemGroup>
