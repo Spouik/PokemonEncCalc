@@ -467,6 +467,10 @@ namespace PokemonEncCalc
             loadSlotsWhite();
             loadSlotsBlack2();
             loadSlotsWhite2();
+            loadSlotsX();
+            loadSlotsY();
+            loadSlotsOmegaRuby();
+            loadSlotsAlphaSapphire();
         }
 
         private static void loadSlotsRuby()
@@ -634,6 +638,54 @@ namespace PokemonEncCalc
                 byte[] data = new byte[232];
                 data = Properties.Resources.White2Slots.Skip(232 * i).Take(232).ToArray();
                 MapsWhite2.Add(new AreaMapGen5(data, Version.White2, i));
+            }
+        }
+
+        private static void loadSlotsX()
+        {
+            int mapCount = Properties.Resources.XSlots.Length / 376;
+            MapsX = new List<AreaMapXY>();
+            for (int i = 0; i < mapCount; i++)
+            {
+                byte[] data = new byte[376];
+                data = Properties.Resources.XSlots.Skip(376 * i).Take(376).ToArray();
+                MapsX.Add(new AreaMapXY(data, Version.X, i));
+            }
+        }
+
+        private static void loadSlotsY()
+        {
+            int mapCount = Properties.Resources.YSlots.Length / 376;
+            MapsY = new List<AreaMapXY>();
+            for (int i = 0; i < mapCount; i++)
+            {
+                byte[] data = new byte[376];
+                data = Properties.Resources.YSlots.Skip(376 * i).Take(376).ToArray();
+                MapsY.Add(new AreaMapXY(data, Version.Y, i));
+            }
+        }
+
+        private static void loadSlotsOmegaRuby()
+        {
+            int mapCount = Properties.Resources.OmegaRubySlots.Length / 244;
+            MapsOmegaRuby = new List<AreaMapORAS>();
+            for (int i = 0; i < mapCount; i++)
+            {
+                byte[] data = new byte[244];
+                data = Properties.Resources.OmegaRubySlots.Skip(244 * i).Take(244).ToArray();
+                MapsOmegaRuby.Add(new AreaMapORAS(data, Version.OmegaRuby, i));
+            }
+        }
+
+        private static void loadSlotsAlphaSapphire()
+        {
+            int mapCount = Properties.Resources.AlphaSapphireSlots.Length / 244;
+            MapsAlphaSapphire = new List<AreaMapORAS>();
+            for (int i = 0; i < mapCount; i++)
+            {
+                byte[] data = new byte[244];
+                data = Properties.Resources.AlphaSapphireSlots.Skip(244 * i).Take(244).ToArray();
+                MapsAlphaSapphire.Add(new AreaMapORAS(data, Version.AlphaSapphire, i));
             }
         }
 
