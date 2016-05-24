@@ -8,6 +8,8 @@ namespace PokemonEncCalc
 {
     class EncounterSlot
     {
+        private EncounterSlot encounterSlot;
+
         public Pokemon Species { get; set; }
         public byte MinLevel { get; set; }
         public byte MaxLevel { get; set; }
@@ -21,5 +23,12 @@ namespace PokemonEncCalc
             Percentage = Math.Max(Math.Min(percent, 100), 0);
         }
 
+        public EncounterSlot(EncounterSlot encounterSlot)
+        {
+            Species = encounterSlot.Species;
+            MinLevel = encounterSlot.MinLevel;
+            MaxLevel = encounterSlot.MaxLevel;
+            Percentage = encounterSlot.Percentage;
+        }
     }
 }

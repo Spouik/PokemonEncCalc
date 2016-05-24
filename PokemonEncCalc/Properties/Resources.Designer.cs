@@ -15721,6 +15721,102 @@ namespace PokemonEncCalc.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to !
+        ///! Contains all encounter type and other encounter options strings
+        ///!
+        ///
+        ///!!! Encounter Type
+        ///
+        ///Walking
+        ///Surfing
+        ///Rock Smash
+        ///Fishing - Old Rod
+        ///Fishing - Good Rod
+        ///Fishing - Super Rod
+        ///Dark Grass
+        ///Shaking Grass / Dust / Shadows
+        ///Surfing - Rippling Water
+        ///Fishing - Rippling Water
+        ///Tall Grass
+        ///Red Flowers
+        ///Yellow Flowers
+        ///Purple Flowers
+        ///Shallow Water
+        ///Diving
+        ///
+        ///!!! 
+        ///
+        ///Static
+        ///Magnet Pull
+        ///Hustle / Pressure / Vital Spirit
+        ///Cute Charm
+        ///
+        ///!!!
+        ///
+        ///Swarm
+        ///No Swarm
+        ///
+        ///!!!
+        ///
+        ///Morning
+        ///Day
+        ///Night
+        ///
+        ///!!!
+        ///
+        ///Hoenn r [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string encounter_options_EN {
+            get {
+                return ResourceManager.GetString("encounter_options_EN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to !
+        ///! Contains all encounter type and other encounter options strings
+        ///!
+        ///
+        ///!!! Encounter Type
+        ///
+        ///En marchant
+        ///Par surf
+        ///Éclate-Roc
+        ///Par pêche - Canne
+        ///Par pêche - Super Canne
+        ///Par pêche - Méga Canne
+        ///Herbes sombres
+        ///Herbes mouvantes / Tas de poussière / Ombres
+        ///Surf - Tourbillons d&apos;eau
+        ///Pêche - Tourbillons d&apos;eau
+        ///Herbes hautes
+        ///Fleurs rouges
+        ///Fleurs jaunes
+        ///Fleurs mauves
+        ///Marécage
+        ///Plongée
+        ///
+        ///!!! 
+        ///
+        ///Statik
+        ///Magnépiège
+        ///Agitation / Pression / Esprit Vital
+        ///Joli Sourire
+        ///
+        ///!!!
+        ///
+        ///Troupeau
+        ///Sans troupeau
+        ///
+        ///! [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string encounter_options_FR {
+            get {
+                return ResourceManager.GetString("encounter_options_FR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
         internal static byte[] FireRedSlots {

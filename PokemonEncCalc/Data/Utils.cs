@@ -415,6 +415,7 @@ namespace PokemonEncCalc
 
         //
         // Normalize Encounter Slots: 100% scale & merge slots with same species.
+        // returns an empty list if there  is no Pokémon remaining
         //
 
         internal static List<EncounterSlot> normalizeSlots(List<EncounterSlot> slots)
@@ -439,6 +440,10 @@ namespace PokemonEncCalc
                 totalPercent += percent;
                 slots.RemoveAll(s => s.Species.Equals(e.Species));
             }
+
+            // 
+            if (totalPercent == 0)
+                return new List<EncounterSlot>();
 
             foreach (EncounterSlot a in normalizedSlots)
                 a.Percentage *= 100 / totalPercent;

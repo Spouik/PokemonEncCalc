@@ -15,10 +15,19 @@ namespace PokemonEncCalc
     {
         // Current Slots : Should match with those displayed on the form
         EncounterSlot[] currentSlots = new EncounterSlot[12];
+        EncounterType currentEncounterType = EncounterType.Walking;
         decimal[] percentage = { 20, 20, 10, 10, 10, 10, 5, 5, 4, 4, 1, 1 };
+
+        bool updatingSlots = false; //is true when slots are being updated automatically (prevents slot modification via controls during this time)
+
+        // Contains strings for encounter types and encounter options for the current language
+        // encounterOptions[0] contains all encounter types, while encounterOptions[1] contains abilities
+        // Subsequent entries contain other encounter options (swarm, time of day, seasons...)
+        List<List<string>> encounterOptions;
 
         public frmMainPage()
         {
+            loadEncounterOptions((Language)Properties.Settings.Default.Language);
             InitializeComponent();
             
         }
@@ -47,11 +56,38 @@ namespace PokemonEncCalc
             Utils.changeLanguage(Properties.Settings.Default.Language);
             loadPokemonNames();
             renameControls();
+            renameMenuStrip();
             renameComboboxes();
+            updateEncounterOptions();
             for (int a = 0; a < currentSlots.Length; a++)
             {
                 //currentSlots[a] = new EncounterSlot();
                 currentSlots[a].Percentage = percentage[a];
+            }
+        }
+
+        private void renameMenuStrip()
+        {
+            if (Utils.controlText[0] == null) return;  // if nothing to translate, abort function and don't translate user interface
+
+
+            foreach (string line in Utils.controlText[0])
+            {
+
+
+                string[] stringSplit = line.Split(new[] { " = " }, StringSplitOptions.None);
+                if (stringSplit.Length < 2)
+                    continue; // Error : invalid format (expected "control = text")
+
+                string control = stringSplit[0];
+                string text = stringSplit[1];
+
+                // rename menustrip items
+                Control[] c = mstMenu.Controls.Find(control, true);
+                if (c.Length > 0)
+                    c[0].Text = text;
+
+
             }
         }
 
@@ -78,7 +114,10 @@ namespace PokemonEncCalc
         {
             Properties.Settings.Default.Language = 1;
             Utils.changeLanguage(1);
+            loadEncounterOptions(Language.English);
+            updateEncounterOptions();
             renameControls();
+            renameMenuStrip();
             renameComboboxes();
             loadPokemonNames();
         }
@@ -87,7 +126,10 @@ namespace PokemonEncCalc
         {
             Properties.Settings.Default.Language = 2;
             Utils.changeLanguage(2);
+            loadEncounterOptions(Language.French);
+            updateEncounterOptions();
             renameControls();
+            renameMenuStrip();
             renameComboboxes();
             loadPokemonNames();
         }
@@ -104,6 +146,9 @@ namespace PokemonEncCalc
             if (!int.TryParse(((ComboBox)sender).Name.Substring(7), out slot))
                 return;
 
+            if (updatingSlots)
+                return;
+
             // Change Slot
             currentSlots[slot] = new EncounterSlot(Utils.PokemonList[((ComboBox)sender).SelectedIndex],
                                                     (byte)((NumericUpDown)gboSlots.Controls.Find("nudMinLv" + slot, true)[0]).Value,
@@ -118,10 +163,14 @@ namespace PokemonEncCalc
 
         private void cboVersion_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // Hide every map combobox
+            // Hide every map combobox and every option
             cboMapsRubySapp.Visible = cboMapsEmer.Visible = cboMapsFireLeaf.Visible = cboMapsDP.Visible
                 = cboMapsPlat.Visible = cboMapsHGSS.Visible = cboMapsBW.Visible = cboMapsB2W2.Visible
-                = cboMapsXY.Visible = cboMapsOR.Visible = cboMapsAS.Visible = false;
+                = cboMapsXY.Visible = cboMapsOR.Visible = cboMapsAS.Visible = pnlAbility.Visible = pnlDPPtOptions.Visible
+                = pnlHGSSOptions.Visible = pnlGen5Options.Visible = pnlLuckyPower.Visible = false;
+
+
+
 
             // Select map combobox to show based on selected version
             switch (cboVersion.SelectedIndex)
@@ -129,42 +178,60 @@ namespace PokemonEncCalc
                 case 0:
                 case 1:
                     cboMapsRubySapp.Visible = true;
+                    changeEncounterOptionsRubySapp();
                     break;
                 case 2:
                     cboMapsEmer.Visible = true;
+                    pnlAbility.Visible = true;
+                    changeEncounterOptionsEmerald();
                     break;
                 case 3:
                 case 4:
                     cboMapsFireLeaf.Visible = true;
+                    changeEncounterOptionsFireLeaf();
                     break;
                 case 5:
                 case 6:
                     cboMapsDP.Visible = true;
+                    pnlAbility.Visible = true;
+                    pnlDPPtOptions.Visible = true;
                     break;
                 case 7:
                     cboMapsPlat.Visible = true;
+                    pnlAbility.Visible = true;
+                    pnlDPPtOptions.Visible = true;
                     break;
                 case 8:
                 case 9:
                     cboMapsHGSS.Visible = true;
+                    pnlAbility.Visible = true;
+                    pnlHGSSOptions.Visible = true;
                     break;
                 case 10:
                 case 11:
                     cboMapsBW.Visible = true;
+                    pnlAbility.Visible = true;
+                    pnlGen5Options.Visible = true;
                     break;
                 case 12:
                 case 13:
                     cboMapsB2W2.Visible = true;
+                    pnlAbility.Visible = true;
+                    pnlGen5Options.Visible = true;
+                    pnlLuckyPower.Visible = true;
                     break;
                 case 14:
                 case 15:
                     cboMapsXY.Visible = true;
+                    pnlAbility.Visible = true;
                     break;
                 case 16:
                     cboMapsOR.Visible = true;
+                    pnlAbility.Visible = true;
                     break;
                 case 17:
                     cboMapsAS.Visible = true;
+                    pnlAbility.Visible = true;
                     break;
                 default:
                     break;
@@ -173,6 +240,9 @@ namespace PokemonEncCalc
 
         private void changeMinLevel(object sender, EventArgs e)
         {
+            if (updatingSlots)
+                return;
+
             if (!(sender is NumericUpDown))
                 return;
 
@@ -190,6 +260,8 @@ namespace PokemonEncCalc
 
         private void changeMaxLevel(object sender, EventArgs e)
         {
+            if (updatingSlots)
+                return;
 
             if (!(sender is NumericUpDown))
                 return;
@@ -225,27 +297,27 @@ namespace PokemonEncCalc
             // Version:
             translateComboBoxes(cboVersion, "versions" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR" })[Properties.Settings.Default.Language - 1]);
             // Maps RS:
-            Utils.MapsRS = translateMaps(cboMapsRubySapp, "Maps_RS_" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR" })[Properties.Settings.Default.Language - 1], Utils.MapsRS);
+            translateMaps(cboMapsRubySapp, "Maps_RS_" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR" })[Properties.Settings.Default.Language - 1], ref Utils.MapsRS);
             // Maps E:
-            Utils.MapsEmer = translateMaps(cboMapsEmer, "Maps_E_" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR" })[Properties.Settings.Default.Language - 1], Utils.MapsEmer);
+            translateMaps(cboMapsEmer, "Maps_E_" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR" })[Properties.Settings.Default.Language - 1], ref Utils.MapsEmer);
             // Maps FRLG:
-            Utils.MapsFRLG = translateMaps(cboMapsFireLeaf, "Maps_FRLG_" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR" })[Properties.Settings.Default.Language - 1], Utils.MapsFRLG);
+            translateMaps(cboMapsFireLeaf, "Maps_FRLG_" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR" })[Properties.Settings.Default.Language - 1], ref Utils.MapsFRLG);
             // Maps DP:
-            Utils.MapsDP = translateMaps(cboMapsDP, "Maps_DP_" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR" })[Properties.Settings.Default.Language - 1], Utils.MapsDP);
+            translateMaps(cboMapsDP, "Maps_DP_" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR" })[Properties.Settings.Default.Language - 1], ref Utils.MapsDP);
             // Maps Pt:
-            Utils.MapsPt = translateMaps(cboMapsPlat, "Maps_Pt_" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR" })[Properties.Settings.Default.Language - 1], Utils.MapsPt);
+            translateMaps(cboMapsPlat, "Maps_Pt_" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR" })[Properties.Settings.Default.Language - 1], ref Utils.MapsPt);
             // Maps HGSS:
-            Utils.MapsHGSS = translateMaps(cboMapsHGSS, "Maps_HGSS_" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR" })[Properties.Settings.Default.Language - 1], Utils.MapsHGSS);
+            translateMaps(cboMapsHGSS, "Maps_HGSS_" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR" })[Properties.Settings.Default.Language - 1], ref Utils.MapsHGSS);
             // Maps BW:
-            Utils.MapsBW = translateMaps(cboMapsBW, "Maps_BW_" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR" })[Properties.Settings.Default.Language - 1], Utils.MapsBW);
+            translateMaps(cboMapsBW, "Maps_BW_" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR" })[Properties.Settings.Default.Language - 1], ref Utils.MapsBW);
             // Maps B2W2:
-            Utils.MapsB2W2 = translateMaps(cboMapsB2W2, "Maps_B2W2_" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR" })[Properties.Settings.Default.Language - 1], Utils.MapsB2W2);
+            translateMaps(cboMapsB2W2, "Maps_B2W2_" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR" })[Properties.Settings.Default.Language - 1], ref Utils.MapsB2W2);
             // Maps XY:
-            Utils.MapsXY = translateMaps(cboMapsXY, "Maps_XY_" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR" })[Properties.Settings.Default.Language - 1], Utils.MapsXY);
+            translateMaps(cboMapsXY, "Maps_XY_" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR" })[Properties.Settings.Default.Language - 1], ref Utils.MapsXY);
             // Maps OR:
-            Utils.MapsOR = translateMaps(cboMapsOR, "Maps_OR_" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR" })[Properties.Settings.Default.Language - 1], Utils.MapsOR);
+            translateMaps(cboMapsOR, "Maps_OR_" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR" })[Properties.Settings.Default.Language - 1], ref Utils.MapsOR);
             // Maps AS:
-            Utils.MapsAS = translateMaps(cboMapsAS, "Maps_AS_" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR" })[Properties.Settings.Default.Language - 1], Utils.MapsAS);
+            translateMaps(cboMapsAS, "Maps_AS_" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR" })[Properties.Settings.Default.Language - 1], ref Utils.MapsAS);
 
 
 
@@ -259,7 +331,7 @@ namespace PokemonEncCalc
             combobox.SelectedIndex = value;
         }
 
-        private static List<string> translateMaps(ComboBox combobox, string resource, List<string> mapNames)
+        private static void translateMaps(ComboBox combobox, string resource, ref List<string> mapNames)
         {
             int value = 0;
             if (mapNames != null)
@@ -272,8 +344,366 @@ namespace PokemonEncCalc
                 combobox.SelectedItem = mapNames[value];
             else
                 combobox.SelectedIndex = 0;
-            return mapNames;
         }
+
+        private void chkLuckyPower_CheckedChanged(object sender, EventArgs e)
+        {
+            // Activate the lucky power combobox by checking this checkbox
+            cboLuckyPower.Enabled = chkLuckyPower.Checked;
+
+        }
+
+        private void loadEncounterOptions(Language l)
+        {
+            List<string> encounteroptionstrings = new List<string>();
+            encounterOptions = new List<List<string>>();
+            switch (l)
+            {
+                case Language.English:
+                    encounteroptionstrings.AddRange(Properties.Resources.encounter_options_EN.Split(new[] { "!!" }, StringSplitOptions.RemoveEmptyEntries));
+                    break;
+                case Language.French:
+                    encounteroptionstrings.AddRange(Properties.Resources.encounter_options_FR.Split(new[] { "!!" }, StringSplitOptions.RemoveEmptyEntries));
+                    break;
+                default:
+                    break;
+            }
+            foreach(string s in encounteroptionstrings)
+            {
+                List<string> list = new List<string>();
+                list.AddRange(s.Split(new[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries));
+                list.RemoveAll(a => a.StartsWith("!"));  //Removes all comment lines
+
+                encounterOptions.Add(list);
+            }
+            if(encounterOptions.Count > 0)
+                encounterOptions.RemoveAt(0);
+        }
+
+        private void updateEncounterOptions()
+        {
+            int[] comboboxIndexes = new int[9];
+
+            comboboxIndexes[0] = Math.Max(cboSwarmDPPt.SelectedIndex, 0);
+            comboboxIndexes[1] = Math.Max(cboSwarmHGSS.SelectedIndex, 0);
+            comboboxIndexes[2] = Math.Max(cboSwarmGen5.SelectedIndex, 0);
+            comboboxIndexes[3] = Math.Max(cboTimeDPPt.SelectedIndex, 0);
+            comboboxIndexes[4] = Math.Max(cboTimeHGSS.SelectedIndex, 0);
+            comboboxIndexes[5] = Math.Max(cboRadio.SelectedIndex, 0);
+            comboboxIndexes[6] = Math.Max(cboSeason.SelectedIndex, 0);
+            comboboxIndexes[7] = Math.Max(cboLuckyPower.SelectedIndex, 0);
+            comboboxIndexes[8] = Math.Max(cboGBASlot.SelectedIndex, 0);
+
+            // Refresh comboboxes
+            cboSwarmDPPt.Items.Clear();
+            cboSwarmHGSS.Items.Clear();
+            cboSwarmGen5.Items.Clear();
+            cboTimeDPPt.Items.Clear();
+            cboTimeHGSS.Items.Clear();
+            cboRadio.Items.Clear();
+            cboSeason.Items.Clear();
+            cboLuckyPower.Items.Clear();
+            cboGBASlot.Items.Clear();
+
+            try
+            {
+                cboSwarmDPPt.Items.AddRange(encounterOptions[2].ToArray());
+                cboSwarmHGSS.Items.AddRange(encounterOptions[2].ToArray());
+                cboSwarmGen5.Items.AddRange(encounterOptions[2].ToArray());
+                cboTimeDPPt.Items.AddRange(encounterOptions[3].ToArray());
+                cboTimeHGSS.Items.AddRange(encounterOptions[3].ToArray());
+                cboRadio.Items.AddRange(encounterOptions[4].ToArray());
+                cboSeason.Items.AddRange(encounterOptions[5].ToArray());
+                cboLuckyPower.Items.AddRange(encounterOptions[6].ToArray());
+                cboGBASlot.Items.AddRange(encounterOptions[7].ToArray());
+
+                cboSwarmDPPt.SelectedIndex = comboboxIndexes[0];
+                cboSwarmHGSS.SelectedIndex = comboboxIndexes[1];
+                cboSwarmGen5.SelectedIndex = comboboxIndexes[2];
+                cboTimeDPPt.SelectedIndex = comboboxIndexes[3];
+                cboTimeHGSS.SelectedIndex = comboboxIndexes[4];
+                cboRadio.SelectedIndex = comboboxIndexes[5];
+                cboSeason.SelectedIndex = comboboxIndexes[6];
+                cboLuckyPower.SelectedIndex = comboboxIndexes[7];
+                cboGBASlot.SelectedIndex = comboboxIndexes[8];
+            }
+            catch (ArgumentOutOfRangeException e)
+            {
+                MessageBox.Show(e.Message);
+            }
+        }
+
+        // Forces repel enabling if Hustle / Pressure / Vital Spirit is selected
+        private void cboAbility_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (!pnlAbility.Visible)
+                return;
+
+            if(cboAbility.SelectedItem.Equals(encounterOptions[0][2]))
+            {
+                chkRepel.Enabled = false;
+                chkRepel.Checked = true;
+            }
+            else
+            {
+                chkRepel.Enabled = true;
+            }
+
+        }
+
+        // Repel level enable when checked
+        private void chkRepel_CheckedChanged(object sender, EventArgs e)
+        {
+            nudLevelRepel.Enabled = chkRepel.Checked;
+            lblLevelRepelDisp.Enabled = chkRepel.Checked;
+        }
+
+
+        #region loadingEncounterSlots
+
+
+
+        private void changeEncounterOptionsAS(object sender, EventArgs e)
+        {
+
+        }
+
+        private void changEncounterOptionsOR(object sender, EventArgs e)
+        {
+
+        }
+
+        private void changeEncounterOptionsXY(object sender, EventArgs e)
+        {
+
+        }
+
+        private void changeEncounterOptionsB2W2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void changeEncounterOptionsBW(object sender, EventArgs e)
+        {
+
+        }
+
+        private void changeEncounterOptionsHGSS(object sender, EventArgs e)
+        {
+
+        }
+
+        private void changeEncounterOptionsPlat(object sender, EventArgs e)
+        {
+
+        }
+
+        private void changeEncounterOptionsDP(object sender, EventArgs e)
+        {
+
+        }
+
+        private void changeEncounterOptionsFireLeaf(object sender, EventArgs e)
+        {
+            changeEncounterOptionsFireLeaf();
+        }
+
+        private void changeEncounterOptionsFireLeaf()
+        {
+            if (cboMapsFireLeaf.SelectedItem == null || cboMapsFireLeaf.Items.Count == 0)
+                return;
+
+
+            string encounterType = cboEncounterType.SelectedItem == null ? "" : (string)cboEncounterType.SelectedItem;
+            int selectedMap = cboMapsFireLeaf.SelectedIndex == -1 ? 0 : Utils.MapsFRLG.FindIndex(s => s.Equals((string)cboMapsFireLeaf.SelectedItem));
+
+            cboEncounterType.Items.Clear();
+
+            if (Utils.MapsFireRed[selectedMap].isExistingEncounterType(EncounterType.Walking))
+                cboEncounterType.Items.Add(encounterOptions[0][0]);
+            if (Utils.MapsFireRed[selectedMap].isExistingEncounterType(EncounterType.Surf))
+                cboEncounterType.Items.Add(encounterOptions[0][1]);
+            if (Utils.MapsFireRed[selectedMap].isExistingEncounterType(EncounterType.RockSmash))
+                cboEncounterType.Items.Add(encounterOptions[0][2]);
+            if (Utils.MapsFireRed[selectedMap].isExistingEncounterType(EncounterType.OldRod))
+                cboEncounterType.Items.Add(encounterOptions[0][3]);
+            if (Utils.MapsFireRed[selectedMap].isExistingEncounterType(EncounterType.GoodRod))
+                cboEncounterType.Items.Add(encounterOptions[0][4]);
+            if (Utils.MapsFireRed[selectedMap].isExistingEncounterType(EncounterType.SuperRod))
+                cboEncounterType.Items.Add(encounterOptions[0][5]);
+
+            if (cboEncounterType.Items.Contains(encounterType))
+            {
+                cboEncounterType.SelectedItem = encounterType;
+            }
+            else
+            {
+                cboEncounterType.SelectedIndex = 0;
+            }
+        }
+
+        private void changeEncounterOptionsEmerald(object sender, EventArgs e)
+        {
+            changeEncounterOptionsEmerald();
+        }
+
+        private void changeEncounterOptionsEmerald()
+        {
+            if (cboMapsEmer.SelectedItem == null || cboMapsEmer.Items.Count == 0)
+                return;
+
+
+            string encounterType = cboEncounterType.SelectedItem == null ? "" : (string)cboEncounterType.SelectedItem;
+            int selectedMap = cboMapsEmer.SelectedIndex == -1 ? 0 : Utils.MapsEmer.FindIndex(s => s.Equals((string)cboMapsEmer.SelectedItem));
+
+            cboEncounterType.Items.Clear();
+
+            if (Utils.MapsEmerald[selectedMap].isExistingEncounterType(EncounterType.Walking))
+                cboEncounterType.Items.Add(encounterOptions[0][0]);
+            if (Utils.MapsEmerald[selectedMap].isExistingEncounterType(EncounterType.Surf))
+                cboEncounterType.Items.Add(encounterOptions[0][1]);
+            if (Utils.MapsEmerald[selectedMap].isExistingEncounterType(EncounterType.RockSmash))
+                cboEncounterType.Items.Add(encounterOptions[0][2]);
+            if (Utils.MapsEmerald[selectedMap].isExistingEncounterType(EncounterType.OldRod))
+                cboEncounterType.Items.Add(encounterOptions[0][3]);
+            if (Utils.MapsEmerald[selectedMap].isExistingEncounterType(EncounterType.GoodRod))
+                cboEncounterType.Items.Add(encounterOptions[0][4]);
+            if (Utils.MapsEmerald[selectedMap].isExistingEncounterType(EncounterType.SuperRod))
+                cboEncounterType.Items.Add(encounterOptions[0][5]);
+
+            if (cboEncounterType.Items.Contains(encounterType))
+            {
+                cboEncounterType.SelectedItem = encounterType;
+            }
+            else
+            {
+                cboEncounterType.SelectedIndex = 0;
+            }
+        }
+
+        private void changeEncounterOptionsRubySapp(object sender, EventArgs e) {
+            changeEncounterOptionsRubySapp();
+        }
+
+        private void changeEncounterOptionsRubySapp()
+        {
+            if (cboMapsRubySapp.SelectedItem == null || cboMapsRubySapp.Items.Count == 0)
+                return;
+
+
+            string encounterType = cboEncounterType.SelectedItem == null ? "" : (string)cboEncounterType.SelectedItem;
+            int selectedMap = cboMapsRubySapp.SelectedIndex == -1 ? 0 : Utils.MapsRS.FindIndex(s => s.Equals((string)cboMapsRubySapp.SelectedItem));
+
+            cboEncounterType.Items.Clear();
+
+            if (Utils.MapsRuby[selectedMap].isExistingEncounterType(EncounterType.Walking))
+                cboEncounterType.Items.Add(encounterOptions[0][0]);
+            if (Utils.MapsRuby[selectedMap].isExistingEncounterType(EncounterType.Surf))
+                cboEncounterType.Items.Add(encounterOptions[0][1]);
+            if (Utils.MapsRuby[selectedMap].isExistingEncounterType(EncounterType.RockSmash))
+                cboEncounterType.Items.Add(encounterOptions[0][2]);
+            if (Utils.MapsRuby[selectedMap].isExistingEncounterType(EncounterType.OldRod))
+                cboEncounterType.Items.Add(encounterOptions[0][3]);
+            if (Utils.MapsRuby[selectedMap].isExistingEncounterType(EncounterType.GoodRod))
+                cboEncounterType.Items.Add(encounterOptions[0][4]);
+            if (Utils.MapsRuby[selectedMap].isExistingEncounterType(EncounterType.SuperRod))
+                cboEncounterType.Items.Add(encounterOptions[0][5]);
+
+            if (cboEncounterType.Items.Contains(encounterType))
+            {
+                cboEncounterType.SelectedItem = encounterType;
+            }
+            else
+            {
+                cboEncounterType.SelectedIndex = 0;
+            }
+                
+
+        }
+
+
+        void cboEncounterType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int currentMap;
+            EncounterSlot[] newSlots = null;
+            EncounterType type = (EncounterType)encounterOptions[0].FindIndex(s => s.Equals((string)cboEncounterType.SelectedItem));
+            Version currentVersion = (Version)((int)Version.Ruby + cboVersion.SelectedIndex);
+
+            switch (currentVersion)
+            {
+                case Version.Ruby:
+                    currentMap = Utils.MapsRS.FindIndex(s => s.Equals((string)cboMapsRubySapp.SelectedItem));
+                    newSlots = Utils.MapsRuby[currentMap].getSlots(type);
+                    break;
+
+                case Version.Sapphire:
+                    currentMap = Utils.MapsRS.FindIndex(s => s.Equals((string)cboMapsRubySapp.SelectedItem));
+                    newSlots = Utils.MapsSapphire[currentMap].getSlots(type);
+                    break;
+
+                case Version.Emerald:
+                    currentMap = Utils.MapsEmer.FindIndex(s => s.Equals((string)cboMapsEmer.SelectedItem));
+                    newSlots = Utils.MapsEmerald[currentMap].getSlots(type);
+                    break;
+                case Version.FireRed:
+                    currentMap = Utils.MapsFRLG.FindIndex(s => s.Equals((string)cboMapsFireLeaf.SelectedItem));
+                    newSlots = Utils.MapsFireRed[currentMap].getSlots(type);
+                    break;
+                case Version.LeafGreen:
+                    currentMap = Utils.MapsFRLG.FindIndex(s => s.Equals((string)cboMapsFireLeaf.SelectedItem));
+                    newSlots = Utils.MapsLeafGreen[currentMap].getSlots(type);
+                    break;
+                default:
+                    break;
+
+            }
+
+
+            if (newSlots == null)
+                return;
+
+            updateSlots(newSlots);
+        }
+
+        private void updateSlots(EncounterSlot[] newSlots)
+        {
+            //
+            updatingSlots = true;
+
+            currentSlots = newSlots;
+
+            foreach(Control b in gboSlots.Controls)
+            {
+                b.Visible = false;
+            }
+
+            for(int i = 0; i < currentSlots.Length; i++)
+            {
+                ((ComboBox)(gboSlots.Controls.Find("cboSlot" + i, false)[0])).Visible = true;
+                ((NumericUpDown)(gboSlots.Controls.Find("nudMinLv" + i, false)[0])).Visible = true;
+                ((NumericUpDown)(gboSlots.Controls.Find("nudMaxLv" + i, false)[0])).Visible = true;
+                ((PictureBox)(gboSlots.Controls.Find("pctPoke" + i, false)[0])).Visible = true;
+                ((Label)(gboSlots.Controls.Find("lblPercent" + i, false)[0])).Visible = true;
+
+                ((ComboBox)(gboSlots.Controls.Find("cboSlot" + i, false)[0])).SelectedIndex = currentSlots[i].Species.NatID - 1;
+                ((NumericUpDown)(gboSlots.Controls.Find("nudMinLv" + i, false)[0])).Value = currentSlots[i].MinLevel;
+                ((NumericUpDown)(gboSlots.Controls.Find("nudMaxLv" + i, false)[0])).Value = currentSlots[i].MaxLevel;
+                // Change minisprite
+                ((PictureBox)gboSlots.Controls.Find("pctPoke" + i, false)[0]).Image = (Image)Properties.Resources.ResourceManager.GetObject
+                    ("_" + (currentSlots[i].Species.NatID) + (currentSlots[i].Species.Form !=0 ? ("_"+currentSlots[i].Species.Form) : ""));
+
+                ((Label)(gboSlots.Controls.Find("lblPercent" + i, false)[0])).Text = currentSlots[i].Percentage + " %";
+
+            }
+
+
+            updatingSlots = false;
+            
+        }
+
+
+        #endregion
+
 
     }
 }

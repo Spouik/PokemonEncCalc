@@ -76,7 +76,7 @@ namespace PokemonEncCalc
 
             if (oldRod[0] != 0)
             {
-                OldRodSlots = new EncounterSlot[5];
+                OldRodSlots = new EncounterSlot[2];
                 for (int i = 0; i < 2; i++)
                 {
                     short species = BitConverter.ToInt16(oldRod, 4 * i + 2);
@@ -86,7 +86,7 @@ namespace PokemonEncCalc
 
             if (goodRod[0] != 0)
             {
-                GoodRodSlots = new EncounterSlot[5];
+                GoodRodSlots = new EncounterSlot[3];
                 for (int i = 0; i < 3; i++)
                 {
                     short species = BitConverter.ToInt16(goodRod, 4 * i + 2);
@@ -112,12 +112,12 @@ namespace PokemonEncCalc
         {
             switch (type)
             {
-                case EncounterType.TallGrass: return !(WalkSlots == null);
+                case EncounterType.Walking: return !(WalkSlots == null);
                 case EncounterType.Surf: return !(SurfSlots == null);
                 case EncounterType.RockSmash: return !(RockSmashSlots == null);
                 case EncounterType.OldRod: return !(OldRodSlots == null);
                 case EncounterType.GoodRod: return !(GoodRodSlots == null);
-                case EncounterType.SuperRod: return !(WalkSlots == null);
+                case EncounterType.SuperRod: return !(SuperRodSlots == null);
                 default: return false;
             }
         }
@@ -130,16 +130,44 @@ namespace PokemonEncCalc
         /// <returns>Encounter slot data, or null if data not available.</returns>
         internal EncounterSlot[] getSlots(EncounterType type)
         {
+            EncounterSlot[] returnSlots = null, selectedSlots = null;
+
             switch (type)
             {
-                case EncounterType.TallGrass: return WalkSlots;
-                case EncounterType.Surf: return SurfSlots;
-                case EncounterType.RockSmash: return RockSmashSlots;
-                case EncounterType.OldRod: return OldRodSlots;
-                case EncounterType.GoodRod: return GoodRodSlots;
-                case EncounterType.SuperRod: return WalkSlots;
+                case EncounterType.Walking:
+                    returnSlots = new EncounterSlot[12];
+                    selectedSlots = WalkSlots;
+                    break;
+                case EncounterType.Surf:
+                    returnSlots = new EncounterSlot[5];
+                    selectedSlots = SurfSlots;
+                    break;
+                case EncounterType.RockSmash:
+                    returnSlots = new EncounterSlot[5];
+                    selectedSlots = RockSmashSlots;
+                    break;
+                case EncounterType.OldRod:
+                    returnSlots = new EncounterSlot[2];
+                    selectedSlots = OldRodSlots;
+                    break;
+                case EncounterType.GoodRod:
+                    returnSlots = new EncounterSlot[3];
+                    selectedSlots = GoodRodSlots;
+                    break;
+                case EncounterType.SuperRod:
+                    returnSlots = new EncounterSlot[5];
+                    selectedSlots = SuperRodSlots;
+                    break;
                 default: return null;
             }
+
+            for(int i =0; i< selectedSlots.Length; i++)
+            {
+                returnSlots[i] = new EncounterSlot(selectedSlots[i]);
+            }
+
+            return returnSlots;
+
         }
 
     }

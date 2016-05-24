@@ -5008,4 +5008,10 @@
   <data name="YSlots" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\data\YSlots.dat;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="encounter_options_EN" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\strings\en\encounter_options.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
+  <data name="encounter_options_FR" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\strings\fr\encounter_options.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
 </root>

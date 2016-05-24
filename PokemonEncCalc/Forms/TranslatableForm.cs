@@ -34,7 +34,7 @@ namespace PokemonEncCalc
                 string text = stringSplit[1];
 
                 // rename controls of frmMainPage
-                Control[] c = this.Controls.Find(control, true);
+                Control[] c = Controls.Find(control, true);
                 if (c.Length > 0)
                     c[0].Text = text;
 

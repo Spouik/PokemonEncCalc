@@ -140,18 +140,9 @@
             this.lblLvHorde0_0 = new System.Windows.Forms.Label();
             this.lblPercentHorde0 = new System.Windows.Forms.Label();
             this.gboAutoFill = new System.Windows.Forms.GroupBox();
-            this.cboMapsAS = new System.Windows.Forms.ComboBox();
-            this.lblHelpRoute120 = new System.Windows.Forms.Label();
-            this.lblHelpTurnback = new System.Windows.Forms.Label();
-            this.pnlTurnback = new System.Windows.Forms.Panel();
-            this.pnlRoute120 = new System.Windows.Forms.Panel();
-            this.lblRoute120 = new System.Windows.Forms.Label();
-            this.pctRoute120 = new System.Windows.Forms.PictureBox();
-            this.lblTurnback = new System.Windows.Forms.Label();
-            this.pctTurnback = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.chkAbility = new System.Windows.Forms.CheckBox();
-            this.cboAbility = new System.Windows.Forms.ComboBox();
+            this.pnlLuckyPower = new System.Windows.Forms.Panel();
+            this.chkLuckyPower = new System.Windows.Forms.CheckBox();
+            this.cboLuckyPower = new System.Windows.Forms.ComboBox();
             this.pnlGen5Options = new System.Windows.Forms.Panel();
             this.lblSeasonDisp = new System.Windows.Forms.Label();
             this.lblSwarmGen5Disp = new System.Windows.Forms.Label();
@@ -164,6 +155,11 @@
             this.cboRadio = new System.Windows.Forms.ComboBox();
             this.cboTimeHGSS = new System.Windows.Forms.ComboBox();
             this.cboSwarmHGSS = new System.Windows.Forms.ComboBox();
+            this.lblHelpRoute120 = new System.Windows.Forms.Label();
+            this.lblHelpTurnback = new System.Windows.Forms.Label();
+            this.pnlAbility = new System.Windows.Forms.Panel();
+            this.chkAbility = new System.Windows.Forms.CheckBox();
+            this.cboAbility = new System.Windows.Forms.ComboBox();
             this.pnlDPPtOptions = new System.Windows.Forms.Panel();
             this.cboGBASlot = new System.Windows.Forms.ComboBox();
             this.cboTimeDPPt = new System.Windows.Forms.ComboBox();
@@ -172,14 +168,21 @@
             this.lblGBASlotDisp = new System.Windows.Forms.Label();
             this.lblTimeDPPtDisp = new System.Windows.Forms.Label();
             this.lblSwarmDPPtDisp = new System.Windows.Forms.Label();
-            this.pnlLuckyPower = new System.Windows.Forms.Panel();
-            this.chkLuckyPower = new System.Windows.Forms.CheckBox();
-            this.cboLuckyPower = new System.Windows.Forms.ComboBox();
             this.chkRepel = new System.Windows.Forms.CheckBox();
             this.lblLevelRepelDisp = new System.Windows.Forms.Label();
             this.lblAreaDisp = new System.Windows.Forms.Label();
             this.lblEncounterTypeDisp = new System.Windows.Forms.Label();
             this.lblVersionDisp = new System.Windows.Forms.Label();
+            this.nudLevelRepel = new System.Windows.Forms.NumericUpDown();
+            this.cboEncounterType = new System.Windows.Forms.ComboBox();
+            this.cboVersion = new System.Windows.Forms.ComboBox();
+            this.pnlRoute120 = new System.Windows.Forms.Panel();
+            this.lblRoute120 = new System.Windows.Forms.Label();
+            this.pctRoute120 = new System.Windows.Forms.PictureBox();
+            this.pnlTurnback = new System.Windows.Forms.Panel();
+            this.lblTurnback = new System.Windows.Forms.Label();
+            this.pctTurnback = new System.Windows.Forms.PictureBox();
+            this.cboMapsAS = new System.Windows.Forms.ComboBox();
             this.cboMapsOR = new System.Windows.Forms.ComboBox();
             this.cboMapsXY = new System.Windows.Forms.ComboBox();
             this.cboMapsB2W2 = new System.Windows.Forms.ComboBox();
@@ -190,9 +193,6 @@
             this.cboMapsFireLeaf = new System.Windows.Forms.ComboBox();
             this.cboMapsEmer = new System.Windows.Forms.ComboBox();
             this.cboMapsRubySapp = new System.Windows.Forms.ComboBox();
-            this.nudLevelRepel = new System.Windows.Forms.NumericUpDown();
-            this.cboEncounterType = new System.Windows.Forms.ComboBox();
-            this.cboVersion = new System.Windows.Forms.ComboBox();
             this.cmdCalc = new System.Windows.Forms.Button();
             this.cmdClose = new System.Windows.Forms.Button();
             this.mstMenu.SuspendLayout();
@@ -254,16 +254,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.pctHorde1_0)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctHorde0_0)).BeginInit();
             this.gboAutoFill.SuspendLayout();
-            this.pnlTurnback.SuspendLayout();
-            this.pnlRoute120.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pctRoute120)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctTurnback)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.pnlLuckyPower.SuspendLayout();
             this.pnlGen5Options.SuspendLayout();
             this.pnlHGSSOptions.SuspendLayout();
+            this.pnlAbility.SuspendLayout();
             this.pnlDPPtOptions.SuspendLayout();
-            this.pnlLuckyPower.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudLevelRepel)).BeginInit();
+            this.pnlRoute120.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pctRoute120)).BeginInit();
+            this.pnlTurnback.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pctTurnback)).BeginInit();
             this.SuspendLayout();
             // 
             // mstMenu
@@ -1023,6 +1023,7 @@
             this.pctPoke11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pctPoke11.TabIndex = 1;
             this.pctPoke11.TabStop = false;
+            this.pctPoke11.Click += new System.EventHandler(this.changeForm);
             // 
             // pctPoke7
             // 
@@ -1032,6 +1033,7 @@
             this.pctPoke7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pctPoke7.TabIndex = 1;
             this.pctPoke7.TabStop = false;
+            this.pctPoke7.Click += new System.EventHandler(this.changeForm);
             // 
             // pctPoke3
             // 
@@ -1041,6 +1043,7 @@
             this.pctPoke3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pctPoke3.TabIndex = 1;
             this.pctPoke3.TabStop = false;
+            this.pctPoke3.Click += new System.EventHandler(this.changeForm);
             // 
             // pctPoke9
             // 
@@ -1050,6 +1053,7 @@
             this.pctPoke9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pctPoke9.TabIndex = 1;
             this.pctPoke9.TabStop = false;
+            this.pctPoke9.Click += new System.EventHandler(this.changeForm);
             // 
             // pctPoke5
             // 
@@ -1059,6 +1063,7 @@
             this.pctPoke5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pctPoke5.TabIndex = 1;
             this.pctPoke5.TabStop = false;
+            this.pctPoke5.Click += new System.EventHandler(this.changeForm);
             // 
             // pctPoke1
             // 
@@ -1068,6 +1073,7 @@
             this.pctPoke1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pctPoke1.TabIndex = 1;
             this.pctPoke1.TabStop = false;
+            this.pctPoke1.Click += new System.EventHandler(this.changeForm);
             // 
             // pctPoke10
             // 
@@ -1077,6 +1083,7 @@
             this.pctPoke10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pctPoke10.TabIndex = 1;
             this.pctPoke10.TabStop = false;
+            this.pctPoke10.Click += new System.EventHandler(this.changeForm);
             // 
             // pctPoke6
             // 
@@ -1086,6 +1093,7 @@
             this.pctPoke6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pctPoke6.TabIndex = 1;
             this.pctPoke6.TabStop = false;
+            this.pctPoke6.Click += new System.EventHandler(this.changeForm);
             // 
             // pctPoke2
             // 
@@ -1095,6 +1103,7 @@
             this.pctPoke2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pctPoke2.TabIndex = 1;
             this.pctPoke2.TabStop = false;
+            this.pctPoke2.Click += new System.EventHandler(this.changeForm);
             // 
             // pctPoke8
             // 
@@ -1104,6 +1113,7 @@
             this.pctPoke8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pctPoke8.TabIndex = 1;
             this.pctPoke8.TabStop = false;
+            this.pctPoke8.Click += new System.EventHandler(this.changeForm);
             // 
             // pctPoke4
             // 
@@ -1113,6 +1123,7 @@
             this.pctPoke4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pctPoke4.TabIndex = 1;
             this.pctPoke4.TabStop = false;
+            this.pctPoke4.Click += new System.EventHandler(this.changeForm);
             // 
             // pctPoke0
             // 
@@ -1122,6 +1133,7 @@
             this.pctPoke0.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pctPoke0.TabIndex = 1;
             this.pctPoke0.TabStop = false;
+            this.pctPoke0.Click += new System.EventHandler(this.changeForm);
             // 
             // cboSlot11
             // 
@@ -1563,20 +1575,24 @@
             // 
             // gboAutoFill
             // 
-            this.gboAutoFill.Controls.Add(this.cboMapsAS);
-            this.gboAutoFill.Controls.Add(this.lblHelpRoute120);
-            this.gboAutoFill.Controls.Add(this.lblHelpTurnback);
-            this.gboAutoFill.Controls.Add(this.pnlTurnback);
-            this.gboAutoFill.Controls.Add(this.panel1);
+            this.gboAutoFill.Controls.Add(this.pnlLuckyPower);
             this.gboAutoFill.Controls.Add(this.pnlGen5Options);
             this.gboAutoFill.Controls.Add(this.pnlHGSSOptions);
+            this.gboAutoFill.Controls.Add(this.lblHelpRoute120);
+            this.gboAutoFill.Controls.Add(this.lblHelpTurnback);
+            this.gboAutoFill.Controls.Add(this.pnlAbility);
             this.gboAutoFill.Controls.Add(this.pnlDPPtOptions);
-            this.gboAutoFill.Controls.Add(this.pnlLuckyPower);
             this.gboAutoFill.Controls.Add(this.chkRepel);
             this.gboAutoFill.Controls.Add(this.lblLevelRepelDisp);
             this.gboAutoFill.Controls.Add(this.lblAreaDisp);
             this.gboAutoFill.Controls.Add(this.lblEncounterTypeDisp);
             this.gboAutoFill.Controls.Add(this.lblVersionDisp);
+            this.gboAutoFill.Controls.Add(this.nudLevelRepel);
+            this.gboAutoFill.Controls.Add(this.cboEncounterType);
+            this.gboAutoFill.Controls.Add(this.cboVersion);
+            this.gboAutoFill.Controls.Add(this.pnlRoute120);
+            this.gboAutoFill.Controls.Add(this.pnlTurnback);
+            this.gboAutoFill.Controls.Add(this.cboMapsAS);
             this.gboAutoFill.Controls.Add(this.cboMapsOR);
             this.gboAutoFill.Controls.Add(this.cboMapsXY);
             this.gboAutoFill.Controls.Add(this.cboMapsB2W2);
@@ -1587,9 +1603,6 @@
             this.gboAutoFill.Controls.Add(this.cboMapsFireLeaf);
             this.gboAutoFill.Controls.Add(this.cboMapsEmer);
             this.gboAutoFill.Controls.Add(this.cboMapsRubySapp);
-            this.gboAutoFill.Controls.Add(this.nudLevelRepel);
-            this.gboAutoFill.Controls.Add(this.cboEncounterType);
-            this.gboAutoFill.Controls.Add(this.cboVersion);
             this.gboAutoFill.Location = new System.Drawing.Point(640, 27);
             this.gboAutoFill.Name = "gboAutoFill";
             this.gboAutoFill.Size = new System.Drawing.Size(423, 452);
@@ -1597,122 +1610,36 @@
             this.gboAutoFill.TabStop = false;
             this.gboAutoFill.Text = "Encounter Slots Auto Fill";
             // 
-            // cboMapsAS
+            // pnlLuckyPower
             // 
-            this.cboMapsAS.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboMapsAS.FormattingEnabled = true;
-            this.cboMapsAS.Location = new System.Drawing.Point(152, 42);
-            this.cboMapsAS.Name = "cboMapsAS";
-            this.cboMapsAS.Size = new System.Drawing.Size(242, 21);
-            this.cboMapsAS.Sorted = true;
-            this.cboMapsAS.TabIndex = 13;
-            this.cboMapsAS.Visible = false;
+            this.pnlLuckyPower.Controls.Add(this.chkLuckyPower);
+            this.pnlLuckyPower.Controls.Add(this.cboLuckyPower);
+            this.pnlLuckyPower.Location = new System.Drawing.Point(20, 187);
+            this.pnlLuckyPower.Name = "pnlLuckyPower";
+            this.pnlLuckyPower.Size = new System.Drawing.Size(376, 49);
+            this.pnlLuckyPower.TabIndex = 6;
+            this.pnlLuckyPower.Visible = false;
             // 
-            // lblHelpRoute120
+            // chkLuckyPower
             // 
-            this.lblHelpRoute120.AutoSize = true;
-            this.lblHelpRoute120.Location = new System.Drawing.Point(404, 46);
-            this.lblHelpRoute120.Name = "lblHelpRoute120";
-            this.lblHelpRoute120.Size = new System.Drawing.Size(13, 13);
-            this.lblHelpRoute120.TabIndex = 12;
-            this.lblHelpRoute120.Text = "?";
-            this.lblHelpRoute120.Visible = false;
+            this.chkLuckyPower.AutoSize = true;
+            this.chkLuckyPower.Location = new System.Drawing.Point(6, 15);
+            this.chkLuckyPower.Name = "chkLuckyPower";
+            this.chkLuckyPower.Size = new System.Drawing.Size(114, 17);
+            this.chkLuckyPower.TabIndex = 5;
+            this.chkLuckyPower.Text = "Lucky Pass Power";
+            this.chkLuckyPower.UseVisualStyleBackColor = true;
+            this.chkLuckyPower.CheckedChanged += new System.EventHandler(this.chkLuckyPower_CheckedChanged);
             // 
-            // lblHelpTurnback
+            // cboLuckyPower
             // 
-            this.lblHelpTurnback.AutoSize = true;
-            this.lblHelpTurnback.Location = new System.Drawing.Point(404, 46);
-            this.lblHelpTurnback.Name = "lblHelpTurnback";
-            this.lblHelpTurnback.Size = new System.Drawing.Size(13, 13);
-            this.lblHelpTurnback.TabIndex = 11;
-            this.lblHelpTurnback.Text = "?";
-            this.lblHelpTurnback.Visible = false;
-            // 
-            // pnlTurnback
-            // 
-            this.pnlTurnback.Controls.Add(this.pnlRoute120);
-            this.pnlTurnback.Controls.Add(this.lblTurnback);
-            this.pnlTurnback.Controls.Add(this.pctTurnback);
-            this.pnlTurnback.Location = new System.Drawing.Point(21, 83);
-            this.pnlTurnback.Name = "pnlTurnback";
-            this.pnlTurnback.Size = new System.Drawing.Size(378, 352);
-            this.pnlTurnback.TabIndex = 10;
-            this.pnlTurnback.Visible = false;
-            // 
-            // pnlRoute120
-            // 
-            this.pnlRoute120.Controls.Add(this.lblRoute120);
-            this.pnlRoute120.Controls.Add(this.pctRoute120);
-            this.pnlRoute120.Location = new System.Drawing.Point(0, 0);
-            this.pnlRoute120.Name = "pnlRoute120";
-            this.pnlRoute120.Size = new System.Drawing.Size(378, 310);
-            this.pnlRoute120.TabIndex = 11;
-            this.pnlRoute120.Visible = false;
-            // 
-            // lblRoute120
-            // 
-            this.lblRoute120.Location = new System.Drawing.Point(10, 262);
-            this.lblRoute120.Name = "lblRoute120";
-            this.lblRoute120.Size = new System.Drawing.Size(360, 36);
-            this.lblRoute120.TabIndex = 1;
-            this.lblRoute120.Text = "If you are fishing in the pond on the picture above, choose \"Route 120 (b)\". If n" +
-    "ot, choose \"Route 120 (a)\".";
-            // 
-            // pctRoute120
-            // 
-            this.pctRoute120.Image = global::PokemonEncCalc.Properties.Resources.Route_120__b_;
-            this.pctRoute120.Location = new System.Drawing.Point(5, 6);
-            this.pctRoute120.Name = "pctRoute120";
-            this.pctRoute120.Size = new System.Drawing.Size(366, 245);
-            this.pctRoute120.TabIndex = 0;
-            this.pctRoute120.TabStop = false;
-            // 
-            // lblTurnback
-            // 
-            this.lblTurnback.Location = new System.Drawing.Point(10, 304);
-            this.lblTurnback.Name = "lblTurnback";
-            this.lblTurnback.Size = new System.Drawing.Size(360, 36);
-            this.lblTurnback.TabIndex = 1;
-            this.lblTurnback.Text = "If your map matches with the picture above, choose \"Turnback Cave (before pillar " +
-    "2) (b)\". If not, choose \"Turnback Cave (before pillar 2) (a)\".";
-            // 
-            // pctTurnback
-            // 
-            this.pctTurnback.Image = global::PokemonEncCalc.Properties.Resources.turnback;
-            this.pctTurnback.Location = new System.Drawing.Point(5, 6);
-            this.pctTurnback.Name = "pctTurnback";
-            this.pctTurnback.Size = new System.Drawing.Size(366, 284);
-            this.pctTurnback.TabIndex = 0;
-            this.pctTurnback.TabStop = false;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.chkAbility);
-            this.panel1.Controls.Add(this.cboAbility);
-            this.panel1.Location = new System.Drawing.Point(169, 116);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(230, 54);
-            this.panel1.TabIndex = 9;
-            this.panel1.Visible = false;
-            // 
-            // chkAbility
-            // 
-            this.chkAbility.AutoSize = true;
-            this.chkAbility.Location = new System.Drawing.Point(11, 3);
-            this.chkAbility.Name = "chkAbility";
-            this.chkAbility.Size = new System.Drawing.Size(53, 17);
-            this.chkAbility.TabIndex = 5;
-            this.chkAbility.Text = "Ability";
-            this.chkAbility.UseVisualStyleBackColor = true;
-            // 
-            // cboAbility
-            // 
-            this.cboAbility.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboAbility.FormattingEnabled = true;
-            this.cboAbility.Location = new System.Drawing.Point(9, 27);
-            this.cboAbility.Name = "cboAbility";
-            this.cboAbility.Size = new System.Drawing.Size(216, 21);
-            this.cboAbility.TabIndex = 0;
+            this.cboLuckyPower.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboLuckyPower.Enabled = false;
+            this.cboLuckyPower.FormattingEnabled = true;
+            this.cboLuckyPower.Location = new System.Drawing.Point(155, 13);
+            this.cboLuckyPower.Name = "cboLuckyPower";
+            this.cboLuckyPower.Size = new System.Drawing.Size(216, 21);
+            this.cboLuckyPower.TabIndex = 0;
             // 
             // pnlGen5Options
             // 
@@ -1728,7 +1655,7 @@
             // 
             // lblSeasonDisp
             // 
-            this.lblSeasonDisp.Location = new System.Drawing.Point(189, 16);
+            this.lblSeasonDisp.Location = new System.Drawing.Point(189, 17);
             this.lblSeasonDisp.Name = "lblSeasonDisp";
             this.lblSeasonDisp.Size = new System.Drawing.Size(132, 13);
             this.lblSeasonDisp.TabIndex = 4;
@@ -1748,7 +1675,7 @@
             // 
             this.cboSeason.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboSeason.FormattingEnabled = true;
-            this.cboSeason.Location = new System.Drawing.Point(189, 32);
+            this.cboSeason.Location = new System.Drawing.Point(189, 33);
             this.cboSeason.Name = "cboSeason";
             this.cboSeason.Size = new System.Drawing.Size(132, 21);
             this.cboSeason.TabIndex = 0;
@@ -1770,7 +1697,7 @@
             this.pnlHGSSOptions.Controls.Add(this.cboRadio);
             this.pnlHGSSOptions.Controls.Add(this.cboTimeHGSS);
             this.pnlHGSSOptions.Controls.Add(this.cboSwarmHGSS);
-            this.pnlHGSSOptions.Location = new System.Drawing.Point(25, 266);
+            this.pnlHGSSOptions.Location = new System.Drawing.Point(28, 258);
             this.pnlHGSSOptions.Name = "pnlHGSSOptions";
             this.pnlHGSSOptions.Size = new System.Drawing.Size(366, 138);
             this.pnlHGSSOptions.TabIndex = 8;
@@ -1778,7 +1705,7 @@
             // 
             // lblTimeHGSSDisp
             // 
-            this.lblTimeHGSSDisp.Location = new System.Drawing.Point(189, 16);
+            this.lblTimeHGSSDisp.Location = new System.Drawing.Point(189, 17);
             this.lblTimeHGSSDisp.Name = "lblTimeHGSSDisp";
             this.lblTimeHGSSDisp.Size = new System.Drawing.Size(132, 13);
             this.lblTimeHGSSDisp.TabIndex = 4;
@@ -1816,7 +1743,7 @@
             // 
             this.cboTimeHGSS.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboTimeHGSS.FormattingEnabled = true;
-            this.cboTimeHGSS.Location = new System.Drawing.Point(189, 32);
+            this.cboTimeHGSS.Location = new System.Drawing.Point(189, 33);
             this.cboTimeHGSS.Name = "cboTimeHGSS";
             this.cboTimeHGSS.Size = new System.Drawing.Size(132, 21);
             this.cboTimeHGSS.TabIndex = 0;
@@ -1830,6 +1757,56 @@
             this.cboSwarmHGSS.Size = new System.Drawing.Size(132, 21);
             this.cboSwarmHGSS.TabIndex = 0;
             // 
+            // lblHelpRoute120
+            // 
+            this.lblHelpRoute120.AutoSize = true;
+            this.lblHelpRoute120.Location = new System.Drawing.Point(404, 46);
+            this.lblHelpRoute120.Name = "lblHelpRoute120";
+            this.lblHelpRoute120.Size = new System.Drawing.Size(13, 13);
+            this.lblHelpRoute120.TabIndex = 12;
+            this.lblHelpRoute120.Text = "?";
+            this.lblHelpRoute120.Visible = false;
+            // 
+            // lblHelpTurnback
+            // 
+            this.lblHelpTurnback.AutoSize = true;
+            this.lblHelpTurnback.Location = new System.Drawing.Point(404, 46);
+            this.lblHelpTurnback.Name = "lblHelpTurnback";
+            this.lblHelpTurnback.Size = new System.Drawing.Size(13, 13);
+            this.lblHelpTurnback.TabIndex = 11;
+            this.lblHelpTurnback.Text = "?";
+            this.lblHelpTurnback.Visible = false;
+            // 
+            // pnlAbility
+            // 
+            this.pnlAbility.Controls.Add(this.chkAbility);
+            this.pnlAbility.Controls.Add(this.cboAbility);
+            this.pnlAbility.Location = new System.Drawing.Point(169, 116);
+            this.pnlAbility.Name = "pnlAbility";
+            this.pnlAbility.Size = new System.Drawing.Size(230, 54);
+            this.pnlAbility.TabIndex = 9;
+            this.pnlAbility.Visible = false;
+            // 
+            // chkAbility
+            // 
+            this.chkAbility.AutoSize = true;
+            this.chkAbility.Location = new System.Drawing.Point(11, 3);
+            this.chkAbility.Name = "chkAbility";
+            this.chkAbility.Size = new System.Drawing.Size(53, 17);
+            this.chkAbility.TabIndex = 5;
+            this.chkAbility.Text = "Ability";
+            this.chkAbility.UseVisualStyleBackColor = true;
+            // 
+            // cboAbility
+            // 
+            this.cboAbility.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboAbility.FormattingEnabled = true;
+            this.cboAbility.Location = new System.Drawing.Point(9, 27);
+            this.cboAbility.Name = "cboAbility";
+            this.cboAbility.Size = new System.Drawing.Size(216, 21);
+            this.cboAbility.TabIndex = 0;
+            this.cboAbility.SelectedIndexChanged += new System.EventHandler(this.cboAbility_SelectedIndexChanged);
+            // 
             // pnlDPPtOptions
             // 
             this.pnlDPPtOptions.Controls.Add(this.cboGBASlot);
@@ -1839,9 +1816,9 @@
             this.pnlDPPtOptions.Controls.Add(this.lblGBASlotDisp);
             this.pnlDPPtOptions.Controls.Add(this.lblTimeDPPtDisp);
             this.pnlDPPtOptions.Controls.Add(this.lblSwarmDPPtDisp);
-            this.pnlDPPtOptions.Location = new System.Drawing.Point(21, 272);
+            this.pnlDPPtOptions.Location = new System.Drawing.Point(28, 258);
             this.pnlDPPtOptions.Name = "pnlDPPtOptions";
-            this.pnlDPPtOptions.Size = new System.Drawing.Size(373, 135);
+            this.pnlDPPtOptions.Size = new System.Drawing.Size(366, 138);
             this.pnlDPPtOptions.TabIndex = 7;
             this.pnlDPPtOptions.Visible = false;
             // 
@@ -1849,27 +1826,27 @@
             // 
             this.cboGBASlot.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboGBASlot.FormattingEnabled = true;
-            this.cboGBASlot.Location = new System.Drawing.Point(20, 87);
+            this.cboGBASlot.Location = new System.Drawing.Point(16, 87);
             this.cboGBASlot.Name = "cboGBASlot";
-            this.cboGBASlot.Size = new System.Drawing.Size(140, 21);
+            this.cboGBASlot.Size = new System.Drawing.Size(132, 21);
             this.cboGBASlot.TabIndex = 0;
             // 
             // cboTimeDPPt
             // 
             this.cboTimeDPPt.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboTimeDPPt.FormattingEnabled = true;
-            this.cboTimeDPPt.Location = new System.Drawing.Point(219, 33);
+            this.cboTimeDPPt.Location = new System.Drawing.Point(189, 33);
             this.cboTimeDPPt.Name = "cboTimeDPPt";
-            this.cboTimeDPPt.Size = new System.Drawing.Size(139, 21);
+            this.cboTimeDPPt.Size = new System.Drawing.Size(132, 21);
             this.cboTimeDPPt.TabIndex = 0;
             // 
             // cboSwarmDPPt
             // 
             this.cboSwarmDPPt.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboSwarmDPPt.FormattingEnabled = true;
-            this.cboSwarmDPPt.Location = new System.Drawing.Point(20, 33);
+            this.cboSwarmDPPt.Location = new System.Drawing.Point(16, 33);
             this.cboSwarmDPPt.Name = "cboSwarmDPPt";
-            this.cboSwarmDPPt.Size = new System.Drawing.Size(140, 21);
+            this.cboSwarmDPPt.Size = new System.Drawing.Size(132, 21);
             this.cboSwarmDPPt.TabIndex = 0;
             // 
             // chkRadarDPPt
@@ -1884,59 +1861,30 @@
             // 
             // lblGBASlotDisp
             // 
-            this.lblGBASlotDisp.Location = new System.Drawing.Point(20, 65);
+            this.lblGBASlotDisp.Location = new System.Drawing.Point(16, 71);
             this.lblGBASlotDisp.Name = "lblGBASlotDisp";
-            this.lblGBASlotDisp.Size = new System.Drawing.Size(140, 13);
+            this.lblGBASlotDisp.Size = new System.Drawing.Size(132, 13);
             this.lblGBASlotDisp.TabIndex = 4;
             this.lblGBASlotDisp.Text = "GBA Slot";
             this.lblGBASlotDisp.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lblTimeDPPtDisp
             // 
-            this.lblTimeDPPtDisp.Location = new System.Drawing.Point(218, 11);
+            this.lblTimeDPPtDisp.Location = new System.Drawing.Point(189, 17);
             this.lblTimeDPPtDisp.Name = "lblTimeDPPtDisp";
-            this.lblTimeDPPtDisp.Size = new System.Drawing.Size(140, 13);
+            this.lblTimeDPPtDisp.Size = new System.Drawing.Size(132, 13);
             this.lblTimeDPPtDisp.TabIndex = 4;
             this.lblTimeDPPtDisp.Text = "Time of day";
             this.lblTimeDPPtDisp.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lblSwarmDPPtDisp
             // 
-            this.lblSwarmDPPtDisp.Location = new System.Drawing.Point(20, 11);
+            this.lblSwarmDPPtDisp.Location = new System.Drawing.Point(16, 17);
             this.lblSwarmDPPtDisp.Name = "lblSwarmDPPtDisp";
-            this.lblSwarmDPPtDisp.Size = new System.Drawing.Size(140, 13);
+            this.lblSwarmDPPtDisp.Size = new System.Drawing.Size(132, 13);
             this.lblSwarmDPPtDisp.TabIndex = 4;
             this.lblSwarmDPPtDisp.Text = "Swarm";
             this.lblSwarmDPPtDisp.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // pnlLuckyPower
-            // 
-            this.pnlLuckyPower.Controls.Add(this.chkLuckyPower);
-            this.pnlLuckyPower.Controls.Add(this.cboLuckyPower);
-            this.pnlLuckyPower.Location = new System.Drawing.Point(23, 187);
-            this.pnlLuckyPower.Name = "pnlLuckyPower";
-            this.pnlLuckyPower.Size = new System.Drawing.Size(376, 49);
-            this.pnlLuckyPower.TabIndex = 6;
-            this.pnlLuckyPower.Visible = false;
-            // 
-            // chkLuckyPower
-            // 
-            this.chkLuckyPower.AutoSize = true;
-            this.chkLuckyPower.Location = new System.Drawing.Point(6, 15);
-            this.chkLuckyPower.Name = "chkLuckyPower";
-            this.chkLuckyPower.Size = new System.Drawing.Size(114, 17);
-            this.chkLuckyPower.TabIndex = 5;
-            this.chkLuckyPower.Text = "Lucky Pass Power";
-            this.chkLuckyPower.UseVisualStyleBackColor = true;
-            // 
-            // cboLuckyPower
-            // 
-            this.cboLuckyPower.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboLuckyPower.FormattingEnabled = true;
-            this.cboLuckyPower.Location = new System.Drawing.Point(155, 13);
-            this.cboLuckyPower.Name = "cboLuckyPower";
-            this.cboLuckyPower.Size = new System.Drawing.Size(216, 21);
-            this.cboLuckyPower.TabIndex = 0;
             // 
             // chkRepel
             // 
@@ -1947,6 +1895,7 @@
             this.chkRepel.TabIndex = 5;
             this.chkRepel.Text = "Repel";
             this.chkRepel.UseVisualStyleBackColor = true;
+            this.chkRepel.CheckedChanged += new System.EventHandler(this.chkRepel_CheckedChanged);
             // 
             // lblLevelRepelDisp
             // 
@@ -1984,116 +1933,6 @@
             this.lblVersionDisp.TabIndex = 0;
             this.lblVersionDisp.Text = "Version";
             // 
-            // cboMapsOR
-            // 
-            this.cboMapsOR.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboMapsOR.FormattingEnabled = true;
-            this.cboMapsOR.Location = new System.Drawing.Point(152, 42);
-            this.cboMapsOR.Name = "cboMapsOR";
-            this.cboMapsOR.Size = new System.Drawing.Size(242, 21);
-            this.cboMapsOR.Sorted = true;
-            this.cboMapsOR.TabIndex = 0;
-            this.cboMapsOR.Visible = false;
-            // 
-            // cboMapsXY
-            // 
-            this.cboMapsXY.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboMapsXY.FormattingEnabled = true;
-            this.cboMapsXY.Location = new System.Drawing.Point(152, 42);
-            this.cboMapsXY.Name = "cboMapsXY";
-            this.cboMapsXY.Size = new System.Drawing.Size(242, 21);
-            this.cboMapsXY.Sorted = true;
-            this.cboMapsXY.TabIndex = 0;
-            this.cboMapsXY.Visible = false;
-            // 
-            // cboMapsB2W2
-            // 
-            this.cboMapsB2W2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboMapsB2W2.FormattingEnabled = true;
-            this.cboMapsB2W2.Location = new System.Drawing.Point(152, 42);
-            this.cboMapsB2W2.Name = "cboMapsB2W2";
-            this.cboMapsB2W2.Size = new System.Drawing.Size(242, 21);
-            this.cboMapsB2W2.Sorted = true;
-            this.cboMapsB2W2.TabIndex = 0;
-            this.cboMapsB2W2.Visible = false;
-            // 
-            // cboMapsBW
-            // 
-            this.cboMapsBW.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboMapsBW.FormattingEnabled = true;
-            this.cboMapsBW.Location = new System.Drawing.Point(152, 42);
-            this.cboMapsBW.Name = "cboMapsBW";
-            this.cboMapsBW.Size = new System.Drawing.Size(242, 21);
-            this.cboMapsBW.Sorted = true;
-            this.cboMapsBW.TabIndex = 0;
-            this.cboMapsBW.Visible = false;
-            // 
-            // cboMapsHGSS
-            // 
-            this.cboMapsHGSS.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboMapsHGSS.FormattingEnabled = true;
-            this.cboMapsHGSS.Location = new System.Drawing.Point(152, 42);
-            this.cboMapsHGSS.Name = "cboMapsHGSS";
-            this.cboMapsHGSS.Size = new System.Drawing.Size(242, 21);
-            this.cboMapsHGSS.Sorted = true;
-            this.cboMapsHGSS.TabIndex = 0;
-            this.cboMapsHGSS.Visible = false;
-            // 
-            // cboMapsPlat
-            // 
-            this.cboMapsPlat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboMapsPlat.FormattingEnabled = true;
-            this.cboMapsPlat.Location = new System.Drawing.Point(152, 42);
-            this.cboMapsPlat.Name = "cboMapsPlat";
-            this.cboMapsPlat.Size = new System.Drawing.Size(242, 21);
-            this.cboMapsPlat.Sorted = true;
-            this.cboMapsPlat.TabIndex = 0;
-            this.cboMapsPlat.Visible = false;
-            // 
-            // cboMapsDP
-            // 
-            this.cboMapsDP.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboMapsDP.FormattingEnabled = true;
-            this.cboMapsDP.Location = new System.Drawing.Point(152, 42);
-            this.cboMapsDP.Name = "cboMapsDP";
-            this.cboMapsDP.Size = new System.Drawing.Size(242, 21);
-            this.cboMapsDP.Sorted = true;
-            this.cboMapsDP.TabIndex = 0;
-            this.cboMapsDP.Visible = false;
-            // 
-            // cboMapsFireLeaf
-            // 
-            this.cboMapsFireLeaf.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboMapsFireLeaf.FormattingEnabled = true;
-            this.cboMapsFireLeaf.Location = new System.Drawing.Point(152, 42);
-            this.cboMapsFireLeaf.Name = "cboMapsFireLeaf";
-            this.cboMapsFireLeaf.Size = new System.Drawing.Size(242, 21);
-            this.cboMapsFireLeaf.Sorted = true;
-            this.cboMapsFireLeaf.TabIndex = 0;
-            this.cboMapsFireLeaf.Visible = false;
-            // 
-            // cboMapsEmer
-            // 
-            this.cboMapsEmer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboMapsEmer.FormattingEnabled = true;
-            this.cboMapsEmer.Location = new System.Drawing.Point(152, 42);
-            this.cboMapsEmer.Name = "cboMapsEmer";
-            this.cboMapsEmer.Size = new System.Drawing.Size(242, 21);
-            this.cboMapsEmer.Sorted = true;
-            this.cboMapsEmer.TabIndex = 0;
-            this.cboMapsEmer.Visible = false;
-            // 
-            // cboMapsRubySapp
-            // 
-            this.cboMapsRubySapp.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboMapsRubySapp.FormattingEnabled = true;
-            this.cboMapsRubySapp.Location = new System.Drawing.Point(152, 42);
-            this.cboMapsRubySapp.Name = "cboMapsRubySapp";
-            this.cboMapsRubySapp.Size = new System.Drawing.Size(242, 21);
-            this.cboMapsRubySapp.Sorted = true;
-            this.cboMapsRubySapp.TabIndex = 0;
-            this.cboMapsRubySapp.Visible = false;
-            // 
             // nudLevelRepel
             // 
             this.nudLevelRepel.Location = new System.Drawing.Point(60, 142);
@@ -2119,6 +1958,7 @@
             this.cboEncounterType.Name = "cboEncounterType";
             this.cboEncounterType.Size = new System.Drawing.Size(274, 21);
             this.cboEncounterType.TabIndex = 0;
+            this.cboEncounterType.SelectedIndexChanged += new System.EventHandler(this.cboEncounterType_SelectedIndexChanged);
             // 
             // cboVersion
             // 
@@ -2129,6 +1969,194 @@
             this.cboVersion.Size = new System.Drawing.Size(120, 21);
             this.cboVersion.TabIndex = 0;
             this.cboVersion.SelectedIndexChanged += new System.EventHandler(this.cboVersion_SelectedIndexChanged);
+            // 
+            // pnlRoute120
+            // 
+            this.pnlRoute120.Controls.Add(this.lblRoute120);
+            this.pnlRoute120.Controls.Add(this.pctRoute120);
+            this.pnlRoute120.Location = new System.Drawing.Point(21, 86);
+            this.pnlRoute120.Name = "pnlRoute120";
+            this.pnlRoute120.Size = new System.Drawing.Size(378, 310);
+            this.pnlRoute120.TabIndex = 11;
+            this.pnlRoute120.Visible = false;
+            // 
+            // lblRoute120
+            // 
+            this.lblRoute120.Location = new System.Drawing.Point(10, 262);
+            this.lblRoute120.Name = "lblRoute120";
+            this.lblRoute120.Size = new System.Drawing.Size(360, 36);
+            this.lblRoute120.TabIndex = 1;
+            this.lblRoute120.Text = "If you are fishing in the pond on the picture above, choose \"Route 120 (b)\". If n" +
+    "ot, choose \"Route 120 (a)\".";
+            // 
+            // pctRoute120
+            // 
+            this.pctRoute120.Image = global::PokemonEncCalc.Properties.Resources.Route_120__b_;
+            this.pctRoute120.Location = new System.Drawing.Point(5, 6);
+            this.pctRoute120.Name = "pctRoute120";
+            this.pctRoute120.Size = new System.Drawing.Size(366, 245);
+            this.pctRoute120.TabIndex = 0;
+            this.pctRoute120.TabStop = false;
+            // 
+            // pnlTurnback
+            // 
+            this.pnlTurnback.Controls.Add(this.lblTurnback);
+            this.pnlTurnback.Controls.Add(this.pctTurnback);
+            this.pnlTurnback.Location = new System.Drawing.Point(21, 86);
+            this.pnlTurnback.Name = "pnlTurnback";
+            this.pnlTurnback.Size = new System.Drawing.Size(378, 352);
+            this.pnlTurnback.TabIndex = 10;
+            this.pnlTurnback.Visible = false;
+            // 
+            // lblTurnback
+            // 
+            this.lblTurnback.Location = new System.Drawing.Point(10, 304);
+            this.lblTurnback.Name = "lblTurnback";
+            this.lblTurnback.Size = new System.Drawing.Size(360, 36);
+            this.lblTurnback.TabIndex = 1;
+            this.lblTurnback.Text = "If your map matches with the picture above, choose \"Turnback Cave (before pillar " +
+    "2) (b)\". If not, choose \"Turnback Cave (before pillar 2) (a)\".";
+            // 
+            // pctTurnback
+            // 
+            this.pctTurnback.Image = global::PokemonEncCalc.Properties.Resources.turnback;
+            this.pctTurnback.Location = new System.Drawing.Point(5, 6);
+            this.pctTurnback.Name = "pctTurnback";
+            this.pctTurnback.Size = new System.Drawing.Size(366, 284);
+            this.pctTurnback.TabIndex = 0;
+            this.pctTurnback.TabStop = false;
+            // 
+            // cboMapsAS
+            // 
+            this.cboMapsAS.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboMapsAS.FormattingEnabled = true;
+            this.cboMapsAS.Location = new System.Drawing.Point(152, 42);
+            this.cboMapsAS.Name = "cboMapsAS";
+            this.cboMapsAS.Size = new System.Drawing.Size(242, 21);
+            this.cboMapsAS.Sorted = true;
+            this.cboMapsAS.TabIndex = 13;
+            this.cboMapsAS.Visible = false;
+            this.cboMapsAS.SelectedIndexChanged += new System.EventHandler(this.changeEncounterOptionsAS);
+            // 
+            // cboMapsOR
+            // 
+            this.cboMapsOR.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboMapsOR.FormattingEnabled = true;
+            this.cboMapsOR.Location = new System.Drawing.Point(152, 42);
+            this.cboMapsOR.Name = "cboMapsOR";
+            this.cboMapsOR.Size = new System.Drawing.Size(242, 21);
+            this.cboMapsOR.Sorted = true;
+            this.cboMapsOR.TabIndex = 0;
+            this.cboMapsOR.Visible = false;
+            this.cboMapsOR.SelectedIndexChanged += new System.EventHandler(this.changEncounterOptionsOR);
+            // 
+            // cboMapsXY
+            // 
+            this.cboMapsXY.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboMapsXY.FormattingEnabled = true;
+            this.cboMapsXY.Location = new System.Drawing.Point(152, 42);
+            this.cboMapsXY.Name = "cboMapsXY";
+            this.cboMapsXY.Size = new System.Drawing.Size(242, 21);
+            this.cboMapsXY.Sorted = true;
+            this.cboMapsXY.TabIndex = 0;
+            this.cboMapsXY.Visible = false;
+            this.cboMapsXY.SelectedIndexChanged += new System.EventHandler(this.changeEncounterOptionsXY);
+            // 
+            // cboMapsB2W2
+            // 
+            this.cboMapsB2W2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboMapsB2W2.FormattingEnabled = true;
+            this.cboMapsB2W2.Location = new System.Drawing.Point(152, 42);
+            this.cboMapsB2W2.Name = "cboMapsB2W2";
+            this.cboMapsB2W2.Size = new System.Drawing.Size(242, 21);
+            this.cboMapsB2W2.Sorted = true;
+            this.cboMapsB2W2.TabIndex = 0;
+            this.cboMapsB2W2.Visible = false;
+            this.cboMapsB2W2.SelectedIndexChanged += new System.EventHandler(this.changeEncounterOptionsB2W2);
+            // 
+            // cboMapsBW
+            // 
+            this.cboMapsBW.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboMapsBW.FormattingEnabled = true;
+            this.cboMapsBW.Location = new System.Drawing.Point(152, 42);
+            this.cboMapsBW.Name = "cboMapsBW";
+            this.cboMapsBW.Size = new System.Drawing.Size(242, 21);
+            this.cboMapsBW.Sorted = true;
+            this.cboMapsBW.TabIndex = 0;
+            this.cboMapsBW.Visible = false;
+            this.cboMapsBW.SelectedIndexChanged += new System.EventHandler(this.changeEncounterOptionsBW);
+            // 
+            // cboMapsHGSS
+            // 
+            this.cboMapsHGSS.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboMapsHGSS.FormattingEnabled = true;
+            this.cboMapsHGSS.Location = new System.Drawing.Point(152, 42);
+            this.cboMapsHGSS.Name = "cboMapsHGSS";
+            this.cboMapsHGSS.Size = new System.Drawing.Size(242, 21);
+            this.cboMapsHGSS.Sorted = true;
+            this.cboMapsHGSS.TabIndex = 0;
+            this.cboMapsHGSS.Visible = false;
+            this.cboMapsHGSS.SelectedIndexChanged += new System.EventHandler(this.changeEncounterOptionsHGSS);
+            // 
+            // cboMapsPlat
+            // 
+            this.cboMapsPlat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboMapsPlat.FormattingEnabled = true;
+            this.cboMapsPlat.Location = new System.Drawing.Point(152, 42);
+            this.cboMapsPlat.Name = "cboMapsPlat";
+            this.cboMapsPlat.Size = new System.Drawing.Size(242, 21);
+            this.cboMapsPlat.Sorted = true;
+            this.cboMapsPlat.TabIndex = 0;
+            this.cboMapsPlat.Visible = false;
+            this.cboMapsPlat.SelectedIndexChanged += new System.EventHandler(this.changeEncounterOptionsPlat);
+            // 
+            // cboMapsDP
+            // 
+            this.cboMapsDP.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboMapsDP.FormattingEnabled = true;
+            this.cboMapsDP.Location = new System.Drawing.Point(152, 42);
+            this.cboMapsDP.Name = "cboMapsDP";
+            this.cboMapsDP.Size = new System.Drawing.Size(242, 21);
+            this.cboMapsDP.Sorted = true;
+            this.cboMapsDP.TabIndex = 0;
+            this.cboMapsDP.Visible = false;
+            this.cboMapsDP.SelectedIndexChanged += new System.EventHandler(this.changeEncounterOptionsDP);
+            // 
+            // cboMapsFireLeaf
+            // 
+            this.cboMapsFireLeaf.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboMapsFireLeaf.FormattingEnabled = true;
+            this.cboMapsFireLeaf.Location = new System.Drawing.Point(152, 42);
+            this.cboMapsFireLeaf.Name = "cboMapsFireLeaf";
+            this.cboMapsFireLeaf.Size = new System.Drawing.Size(242, 21);
+            this.cboMapsFireLeaf.Sorted = true;
+            this.cboMapsFireLeaf.TabIndex = 0;
+            this.cboMapsFireLeaf.Visible = false;
+            this.cboMapsFireLeaf.SelectedIndexChanged += new System.EventHandler(this.changeEncounterOptionsFireLeaf);
+            // 
+            // cboMapsEmer
+            // 
+            this.cboMapsEmer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboMapsEmer.FormattingEnabled = true;
+            this.cboMapsEmer.Location = new System.Drawing.Point(152, 42);
+            this.cboMapsEmer.Name = "cboMapsEmer";
+            this.cboMapsEmer.Size = new System.Drawing.Size(242, 21);
+            this.cboMapsEmer.Sorted = true;
+            this.cboMapsEmer.TabIndex = 0;
+            this.cboMapsEmer.Visible = false;
+            this.cboMapsEmer.SelectedIndexChanged += new System.EventHandler(this.changeEncounterOptionsEmerald);
+            // 
+            // cboMapsRubySapp
+            // 
+            this.cboMapsRubySapp.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboMapsRubySapp.FormattingEnabled = true;
+            this.cboMapsRubySapp.Location = new System.Drawing.Point(152, 42);
+            this.cboMapsRubySapp.Name = "cboMapsRubySapp";
+            this.cboMapsRubySapp.Size = new System.Drawing.Size(242, 21);
+            this.cboMapsRubySapp.Sorted = true;
+            this.cboMapsRubySapp.TabIndex = 0;
+            this.cboMapsRubySapp.Visible = false;
+            this.cboMapsRubySapp.SelectedIndexChanged += new System.EventHandler(this.changeEncounterOptionsRubySapp);
             // 
             // cmdCalc
             // 
@@ -2236,35 +2264,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.pctHorde0_0)).EndInit();
             this.gboAutoFill.ResumeLayout(false);
             this.gboAutoFill.PerformLayout();
-            this.pnlTurnback.ResumeLayout(false);
-            this.pnlRoute120.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pctRoute120)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctTurnback)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.pnlGen5Options.ResumeLayout(false);
-            this.pnlHGSSOptions.ResumeLayout(false);
-            this.pnlDPPtOptions.ResumeLayout(false);
-            this.pnlDPPtOptions.PerformLayout();
             this.pnlLuckyPower.ResumeLayout(false);
             this.pnlLuckyPower.PerformLayout();
+            this.pnlGen5Options.ResumeLayout(false);
+            this.pnlHGSSOptions.ResumeLayout(false);
+            this.pnlAbility.ResumeLayout(false);
+            this.pnlAbility.PerformLayout();
+            this.pnlDPPtOptions.ResumeLayout(false);
+            this.pnlDPPtOptions.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudLevelRepel)).EndInit();
+            this.pnlRoute120.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pctRoute120)).EndInit();
+            this.pnlTurnback.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pctTurnback)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
-
-
-            this.pctPoke0.Click += new System.EventHandler(this.changeForm);
-            this.pctPoke1.Click += new System.EventHandler(this.changeForm);
-            this.pctPoke2.Click += new System.EventHandler(this.changeForm);
-            this.pctPoke3.Click += new System.EventHandler(this.changeForm);
-            this.pctPoke4.Click += new System.EventHandler(this.changeForm);
-            this.pctPoke5.Click += new System.EventHandler(this.changeForm);
-            this.pctPoke6.Click += new System.EventHandler(this.changeForm);
-            this.pctPoke7.Click += new System.EventHandler(this.changeForm);
-            this.pctPoke8.Click += new System.EventHandler(this.changeForm);
-            this.pctPoke9.Click += new System.EventHandler(this.changeForm);
-            this.pctPoke10.Click += new System.EventHandler(this.changeForm);
-            this.pctPoke11.Click += new System.EventHandler(this.changeForm);
 
         }
 
@@ -2422,7 +2436,7 @@
         internal System.Windows.Forms.Button cmdCalc;
         internal System.Windows.Forms.Button cmdClose;
         internal System.Windows.Forms.Panel pnlTurnback;
-        internal System.Windows.Forms.Panel panel1;
+        internal System.Windows.Forms.Panel pnlAbility;
         internal System.Windows.Forms.Label lblTurnback;
         private System.Windows.Forms.PictureBox pctTurnback;
         private System.Windows.Forms.Label lblHelpRoute120;

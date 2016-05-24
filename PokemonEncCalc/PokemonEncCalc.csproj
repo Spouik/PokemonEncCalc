@@ -348,6 +348,8 @@
     <Content Include="Resources\images\minisprites_s\2.png" />
     <Content Include="Resources\images\minisprites_s\20.png" />
     <Content Include="Resources\images\minisprites_s\200.png" />
+    <None Include="Resources\strings\fr\encounter_options.txt" />
+    <None Include="Resources\strings\en\encounter_options.txt" />
     <None Include="Resources\images\minisprites_s\201-1.png" />
     <None Include="Resources\images\minisprites_s\201-2.png" />
     <None Include="Resources\images\minisprites_s\201-3.png" />
