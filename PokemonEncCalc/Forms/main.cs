@@ -215,6 +215,7 @@ namespace PokemonEncCalc
                     cboMapsBW.Visible = true;
                     pnlAbility.Visible = true;
                     pnlGen5Options.Visible = true;
+                    changeEncounterOptionsBW();
                     break;
                 case 12:
                 case 13:
@@ -222,6 +223,7 @@ namespace PokemonEncCalc
                     pnlAbility.Visible = true;
                     pnlGen5Options.Visible = true;
                     pnlLuckyPower.Visible = true;
+                    changeEncounterOptionsB2W2();
                     break;
                 case 14:
                 case 15:
@@ -353,6 +355,7 @@ namespace PokemonEncCalc
         {
             // Activate the lucky power combobox by checking this checkbox
             cboLuckyPower.Enabled = chkLuckyPower.Checked;
+            changeLuckyPowerPercentage();
 
         }
 
@@ -481,14 +484,126 @@ namespace PokemonEncCalc
 
         }
 
+        private void changeEncounterOptionsGen5(object sender, EventArgs e)
+        {
+            Version currentVersion = (Version)((int)Version.Ruby + cboVersion.SelectedIndex);
+            switch (currentVersion)
+            {
+                case Version.Black:
+                case Version.White:
+                    changeEncounterOptionsBW();
+                    break;
+                case Version.Black2:
+                case Version.White2:
+                    changeEncounterOptionsB2W2();
+                    break;
+                default: break;
+            }
+        }
+
         private void changeEncounterOptionsB2W2(object sender, EventArgs e)
         {
+            changeEncounterOptionsB2W2();
+        }
 
+        private void changeEncounterOptionsB2W2()
+        {
+            if (cboMapsB2W2.SelectedItem == null || cboMapsB2W2.Items.Count == 0)
+                return;
+
+            if (!cboMapsB2W2.Visible) return;
+
+            string encounterType = cboEncounterType.SelectedItem == null ? "" : (string)cboEncounterType.SelectedItem;
+            int selectedMap = cboMapsB2W2.SelectedIndex == -1 ? 0 : Utils.mapTablesB2W2[Utils.MapsB2W2.FindIndex(s => s.Equals((string)cboMapsB2W2.SelectedItem))];
+
+            lblSeasonDisp.Enabled = cboSeason.Enabled = false;
+
+            // season check
+            if (new[] { 2, 26, 42, 46, 64, 131, 138, 146, 150, 165 }.Contains(selectedMap))
+            {
+                lblSeasonDisp.Enabled = true;
+                cboSeason.Enabled = true;
+                selectedMap += cboSeason.SelectedIndex;
+            }
+
+
+            cboEncounterType.Items.Clear();
+
+            if (Utils.MapsBlack2[selectedMap].isExistingEncounterType(EncounterType.Walking))
+                cboEncounterType.Items.Add(encounterOptions[0][0]);
+            if (Utils.MapsBlack2[selectedMap].isExistingEncounterType(EncounterType.DarkGrass))
+                cboEncounterType.Items.Add(encounterOptions[0][6]);
+            if (Utils.MapsBlack2[selectedMap].isExistingEncounterType(EncounterType.ShakingGrass))
+                cboEncounterType.Items.Add(encounterOptions[0][7]);
+            if (Utils.MapsBlack2[selectedMap].isExistingEncounterType(EncounterType.Surf))
+                cboEncounterType.Items.Add(encounterOptions[0][1]);
+            if (Utils.MapsBlack2[selectedMap].isExistingEncounterType(EncounterType.RipplingSurf))
+                cboEncounterType.Items.Add(encounterOptions[0][8]);
+            if (Utils.MapsBlack2[selectedMap].isExistingEncounterType(EncounterType.SuperRod))
+                cboEncounterType.Items.Add(encounterOptions[0][5]);
+            if (Utils.MapsBlack2[selectedMap].isExistingEncounterType(EncounterType.RipplingFish))
+                cboEncounterType.Items.Add(encounterOptions[0][9]);
+
+            if (cboEncounterType.Items.Contains(encounterType))
+            {
+                cboEncounterType.SelectedItem = encounterType;
+            }
+            else
+            {
+                cboEncounterType.SelectedIndex = 0;
+            }
         }
 
         private void changeEncounterOptionsBW(object sender, EventArgs e)
         {
+            changeEncounterOptionsBW();
+        }
 
+        private void changeEncounterOptionsBW()
+        {
+            if (cboMapsBW.SelectedItem == null || cboMapsBW.Items.Count == 0)
+                return;
+
+            if (!cboMapsBW.Visible) return;
+
+            string encounterType = cboEncounterType.SelectedItem == null ? "" : (string)cboEncounterType.SelectedItem;
+            int selectedMap = cboMapsBW.SelectedIndex == -1 ? 0 : Utils.mapTablesBW[Utils.MapsBW.FindIndex(s => s.Equals((string)cboMapsBW.SelectedItem))];
+
+            lblSeasonDisp.Enabled = cboSeason.Enabled = false;
+            // season check
+            if (new[] { 2, 47, 63, 67, 94, 108, 115, 123, 127 }.Contains(selectedMap))
+            {
+                lblSeasonDisp.Enabled = true;
+                cboSeason.Enabled = true;
+                selectedMap += cboSeason.SelectedIndex;
+            }
+
+
+            cboEncounterType.Items.Clear();
+
+            if (Utils.MapsBlack[selectedMap].isExistingEncounterType(EncounterType.Walking))
+                cboEncounterType.Items.Add(encounterOptions[0][0]);
+            if (Utils.MapsBlack[selectedMap].isExistingEncounterType(EncounterType.DarkGrass))
+                cboEncounterType.Items.Add(encounterOptions[0][6]);
+            if (Utils.MapsBlack[selectedMap].isExistingEncounterType(EncounterType.ShakingGrass))
+                cboEncounterType.Items.Add(encounterOptions[0][7]);
+            if (Utils.MapsBlack[selectedMap].isExistingEncounterType(EncounterType.Surf))
+                cboEncounterType.Items.Add(encounterOptions[0][1]);
+            if (Utils.MapsBlack[selectedMap].isExistingEncounterType(EncounterType.RipplingSurf))
+                cboEncounterType.Items.Add(encounterOptions[0][8]);
+            if (Utils.MapsBlack[selectedMap].isExistingEncounterType(EncounterType.SuperRod))
+                cboEncounterType.Items.Add(encounterOptions[0][5]);
+            if (Utils.MapsBlack[selectedMap].isExistingEncounterType(EncounterType.RipplingFish))
+                cboEncounterType.Items.Add(encounterOptions[0][9]);
+
+            if (cboEncounterType.Items.Contains(encounterType))
+            {
+                cboEncounterType.SelectedItem = encounterType;
+            }
+            else
+            {
+                cboEncounterType.SelectedIndex = 0;
+            }
         }
 
         private void changeEncounterOptionsHGSS(object sender, EventArgs e)
@@ -568,6 +683,7 @@ namespace PokemonEncCalc
             if (cboMapsHGSS.SelectedItem == null || cboMapsHGSS.Items.Count == 0)
                 return;
 
+            if (!cboMapsHGSS.Visible) return;
 
             string encounterType = cboEncounterType.SelectedItem == null ? "" : (string)cboEncounterType.SelectedItem;
             int selectedMap = cboMapsHGSS.SelectedIndex == -1 ? 0 : Utils.mapTablesHGSS[Utils.MapsHGSS.FindIndex(s => s.Equals((string)cboMapsHGSS.SelectedItem))];
@@ -638,6 +754,7 @@ namespace PokemonEncCalc
             if (cboMapsPlat.SelectedItem == null || cboMapsPlat.Items.Count == 0)
                 return;
 
+            if (!cboMapsPlat.Visible) return;
 
             string encounterType = cboEncounterType.SelectedItem == null ? "" : (string)cboEncounterType.SelectedItem;
             int selectedMap = cboMapsPlat.SelectedIndex == -1 ? 0 : Utils.mapTablesPlat[Utils.MapsPt.FindIndex(s => s.Equals((string)cboMapsPlat.SelectedItem))];
@@ -706,6 +823,7 @@ namespace PokemonEncCalc
             if (cboMapsDP.SelectedItem == null || cboMapsDP.Items.Count == 0)
                 return;
 
+            if (!cboMapsDP.Visible) return;
 
             string encounterType = cboEncounterType.SelectedItem == null ? "" : (string)cboEncounterType.SelectedItem;
             int selectedMap = cboMapsDP.SelectedIndex == -1 ? 0 : Utils.mapTablesDP[Utils.MapsDP.FindIndex(s => s.Equals((string)cboMapsDP.SelectedItem))];
@@ -746,6 +864,7 @@ namespace PokemonEncCalc
             if (cboMapsFireLeaf.SelectedItem == null || cboMapsFireLeaf.Items.Count == 0)
                 return;
 
+            if (!cboMapsFireLeaf.Visible) return;
 
             string encounterType = cboEncounterType.SelectedItem == null ? "" : (string)cboEncounterType.SelectedItem;
             int selectedMap = cboMapsFireLeaf.SelectedIndex == -1 ? 0 : Utils.MapsFRLG.FindIndex(s => s.Equals((string)cboMapsFireLeaf.SelectedItem));
@@ -785,6 +904,7 @@ namespace PokemonEncCalc
             if (cboMapsEmer.SelectedItem == null || cboMapsEmer.Items.Count == 0)
                 return;
 
+            if (!cboMapsEmer.Visible) return;
 
             string encounterType = cboEncounterType.SelectedItem == null ? "" : (string)cboEncounterType.SelectedItem;
             int selectedMap = cboMapsEmer.SelectedIndex == -1 ? 0 : Utils.MapsEmer.FindIndex(s => s.Equals((string)cboMapsEmer.SelectedItem));
@@ -823,6 +943,7 @@ namespace PokemonEncCalc
             if (cboMapsRubySapp.SelectedItem == null || cboMapsRubySapp.Items.Count == 0)
                 return;
 
+            if (!cboMapsRubySapp.Visible) return;
 
             string encounterType = cboEncounterType.SelectedItem == null ? "" : (string)cboEncounterType.SelectedItem;
             int selectedMap = cboMapsRubySapp.SelectedIndex == -1 ? 0 : Utils.MapsRS.FindIndex(s => s.Equals((string)cboMapsRubySapp.SelectedItem));
@@ -861,7 +982,7 @@ namespace PokemonEncCalc
             EncounterSlot[] newSlots = null;
             EncounterType type = (EncounterType)encounterOptions[0].FindIndex(s => s.Equals((string)cboEncounterType.SelectedItem));
             Version currentVersion = (Version)((int)Version.Ruby + cboVersion.SelectedIndex);
-            int gba, time, radio, season = 0;
+            int gba = 0, time = 0, radio = 0;
 
             switch (currentVersion)
             {
@@ -923,6 +1044,26 @@ namespace PokemonEncCalc
                     time = cboTimeHGSS.Enabled ? cboTimeHGSS.SelectedIndex : 0;
                     newSlots = Utils.MapsSoulSilver[currentMap].getSlots(type, (cboSwarmHGSS.Enabled && (cboSwarmHGSS.SelectedIndex == 1)), time, radio);
                     break;
+                case Version.Black:
+                    currentMap = Utils.mapTablesBW[Utils.MapsBW.FindIndex(s => s.Equals((string)cboMapsBW.SelectedItem))];
+                    currentMap += (cboSeason.Enabled) ? cboSeason.SelectedIndex : 0;
+                    newSlots = Utils.MapsBlack[currentMap].getSlots(type);
+                    break;
+                case Version.White:
+                    currentMap = Utils.mapTablesBW[Utils.MapsBW.FindIndex(s => s.Equals((string)cboMapsBW.SelectedItem))];
+                    currentMap += (cboSeason.Enabled) ? cboSeason.SelectedIndex : 0;
+                    newSlots = Utils.MapsWhite[currentMap].getSlots(type);
+                    break;
+                case Version.Black2:
+                    currentMap = Utils.mapTablesB2W2[Utils.MapsB2W2.FindIndex(s => s.Equals((string)cboMapsB2W2.SelectedItem))];
+                    currentMap += (cboSeason.Enabled) ? cboSeason.SelectedIndex : 0;
+                    newSlots = Utils.MapsBlack2[currentMap].getSlots(type);
+                    break;
+                case Version.White2:
+                    currentMap = Utils.mapTablesB2W2[Utils.MapsB2W2.FindIndex(s => s.Equals((string)cboMapsB2W2.SelectedItem))];
+                    currentMap += (cboSeason.Enabled) ? cboSeason.SelectedIndex : 0;
+                    newSlots = Utils.MapsWhite2[currentMap].getSlots(type);
+                    break;
                 default:
                     break;
 
@@ -931,9 +1072,24 @@ namespace PokemonEncCalc
 
             if (newSlots == null)
                 return;
-
+         
             updateSlots(newSlots);
+            changeLuckyPowerPercentage();
         }
+
+        void changeLuckyPowerPercentage()
+        {
+            if (!(cboLuckyPower.Visible)) return;
+            EncounterType type = (EncounterType)encounterOptions[0].FindIndex(s => s.Equals((string)cboEncounterType.SelectedItem));
+            int luckyPowerLevel = cboLuckyPower.Enabled ? cboLuckyPower.SelectedIndex + 1 : 0;
+            decimal[] percent = AreaMapGen5.getPercentages(type, luckyPowerLevel);
+            for(int i = 0;  i < currentSlots.Length; i++)
+            {
+                currentSlots[i].Percentage = percent[i];
+            }
+            updateSlots(currentSlots);
+        }
+
 
         private void updateSlots(EncounterSlot[] newSlots)
         {
@@ -972,8 +1128,12 @@ namespace PokemonEncCalc
         }
 
 
+
         #endregion
 
-
+        private void cboLuckyPower_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            changeLuckyPowerPercentage();
+        }
     }
 }

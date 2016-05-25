@@ -1640,6 +1640,7 @@
             this.cboLuckyPower.Name = "cboLuckyPower";
             this.cboLuckyPower.Size = new System.Drawing.Size(216, 21);
             this.cboLuckyPower.TabIndex = 0;
+            this.cboLuckyPower.SelectedIndexChanged += new System.EventHandler(this.cboLuckyPower_SelectedIndexChanged);
             // 
             // pnlGen5Options
             // 
@@ -1664,12 +1665,14 @@
             // 
             // lblSwarmGen5Disp
             // 
+            this.lblSwarmGen5Disp.Enabled = false;
             this.lblSwarmGen5Disp.Location = new System.Drawing.Point(16, 17);
             this.lblSwarmGen5Disp.Name = "lblSwarmGen5Disp";
             this.lblSwarmGen5Disp.Size = new System.Drawing.Size(132, 13);
             this.lblSwarmGen5Disp.TabIndex = 4;
             this.lblSwarmGen5Disp.Text = "Swarm";
             this.lblSwarmGen5Disp.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblSwarmGen5Disp.Visible = false;
             // 
             // cboSeason
             // 
@@ -1679,15 +1682,18 @@
             this.cboSeason.Name = "cboSeason";
             this.cboSeason.Size = new System.Drawing.Size(132, 21);
             this.cboSeason.TabIndex = 0;
+            this.cboSeason.SelectedIndexChanged += new System.EventHandler(this.changeEncounterOptionsGen5);
             // 
             // cboSwarmGen5
             // 
             this.cboSwarmGen5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboSwarmGen5.Enabled = false;
             this.cboSwarmGen5.FormattingEnabled = true;
             this.cboSwarmGen5.Location = new System.Drawing.Point(16, 33);
             this.cboSwarmGen5.Name = "cboSwarmGen5";
             this.cboSwarmGen5.Size = new System.Drawing.Size(132, 21);
             this.cboSwarmGen5.TabIndex = 0;
+            this.cboSwarmGen5.Visible = false;
             // 
             // pnlHGSSOptions
             // 

@@ -196,5 +196,105 @@ namespace PokemonEncCalc
 
         }
 
+        // 
+
+        internal EncounterSlot[] getSlots(EncounterType type)
+        {
+            EncounterSlot[] selected = null, returnSlots = null;
+            switch(type)
+            {
+                case EncounterType.Walking:
+                    selected = WalkSlots;
+                    returnSlots = new EncounterSlot[12];
+                    break;
+                case EncounterType.DarkGrass:
+                    selected = DarkGrassSlots;
+                    returnSlots = new EncounterSlot[12];
+                    break;
+                case EncounterType.ShakingGrass:
+                    selected = ShakingSpots;
+                    returnSlots = new EncounterSlot[12];
+                    break;
+                case EncounterType.Surf:
+                    selected = SurfSlots;
+                    returnSlots = new EncounterSlot[5];
+                    break;
+                case EncounterType.RipplingSurf:
+                    selected = SurfRippling;
+                    returnSlots = new EncounterSlot[5];
+                    break;
+                case EncounterType.SuperRod:
+                    selected = SuperRodSlots;
+                    returnSlots = new EncounterSlot[5];
+                    break;
+                case EncounterType.RipplingFish:
+                    selected = FishRippling;
+                    returnSlots = new EncounterSlot[5];
+                    break;
+                default: break; 
+
+            }
+
+            for(int i = 0; i < selected.Length; i++)
+            {
+                returnSlots[i] = new EncounterSlot(selected[i]);
+            }
+
+
+            return returnSlots;
+        }
+
+        internal static decimal[] getPercentages(EncounterType type, int powerLevel)
+        {
+            switch (type)
+            {
+                case EncounterType.Walking:
+                case EncounterType.DarkGrass:
+                case EncounterType.ShakingGrass:
+                    switch (powerLevel)
+                    {
+                        case 1: return percentGrassLv1;
+                        case 2: return percentGrassLv2;
+                        case 3: return percentGrassLv3;
+                        default: return percentGrass;
+                    }
+                case EncounterType.Surf:
+                case EncounterType.RipplingSurf:
+                    switch (powerLevel)
+                    {
+                        case 1: return percentSurfLv1;
+                        case 2: return percentSurfLv2;
+                        case 3: return percentSurfLv3;
+                        default: return percentSurf;
+                    }
+
+                case EncounterType.SuperRod:
+                case EncounterType.RipplingFish:
+                    switch (powerLevel)
+                    {
+                        case 1: return percentSuperRodLv1;
+                        case 2: return percentSuperRodLv2;
+                        case 3: return percentSuperRodLv3;
+                        default: return percentSuperRod;
+                    }
+
+                default: return null;
+            }
+        }
+
+        internal bool isExistingEncounterType(EncounterType type)
+        {
+            switch (type)
+            {
+                case EncounterType.Walking: return !(WalkSlots == null);
+                case EncounterType.DarkGrass: return !(DarkGrassSlots == null);
+                case EncounterType.ShakingGrass: return !(ShakingSpots == null);
+                case EncounterType.Surf: return !(SurfSlots == null);
+                case EncounterType.RipplingSurf: return !(SurfRippling == null);
+                case EncounterType.SuperRod: return !(SuperRodSlots == null);
+                case EncounterType.RipplingFish: return !(FishRippling == null);
+                default: return false;
+            }
+        }
     }
 }
