@@ -30,5 +30,10 @@ namespace PokemonEncCalc
             MaxLevel = encounterSlot.MaxLevel;
             Percentage = encounterSlot.Percentage;
         }
+
+        internal bool Equals(EncounterSlot a)
+        {
+            return (Species == a.Species && MinLevel == a.MinLevel && MaxLevel == a.MaxLevel);
+        }
     }
 }

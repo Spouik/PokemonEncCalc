@@ -135,7 +135,7 @@ namespace PokemonEncCalc
                             if (p.Forms[formid] != null)
                                 p = p.Forms[formid];
                 SwarmWalkSlots[0] = new EncounterSlot(p, grassLevel[0], grassLevel[0], percentGrass[0]);
-                SwarmWalkSlots[1] = new EncounterSlot(p, grassLevel[0], grassLevel[0], percentGrass[0]);
+                SwarmWalkSlots[1] = new EncounterSlot(p, grassLevel[1], grassLevel[1], percentGrass[1]);
 
                 // hoenn radio (Replaces slots 2, 3, 4 and 5 when active)
                 HoennRadioSlots = new EncounterSlot[4];
@@ -149,8 +149,8 @@ namespace PokemonEncCalc
                         if (p.FormCount() > formid)
                             if (p.Forms[formid] != null)
                                 p = p.Forms[formid];
-                    HoennRadioSlots[i] = new EncounterSlot(p, grassLevel[2 * i + 2], grassLevel[2 * i + 2], percentGrass[2 * i + 2]);
-                    HoennRadioSlots[i+2] = new EncounterSlot(p, grassLevel[2 * i + 3], grassLevel[2 * i + 3], percentGrass[2 * i + 3]);
+                    HoennRadioSlots[2 * i] = new EncounterSlot(p, grassLevel[2 * i + 2], grassLevel[2 * i + 2], percentGrass[2 * i + 2]);
+                    HoennRadioSlots[2 * i + 1] = new EncounterSlot(p, grassLevel[2 * i + 3], grassLevel[2 * i + 3], percentGrass[2 * i + 3]);
                 }
 
                 // sinnoh radio (Replaces slots 2, 3, 4 and 5 when active)
@@ -165,8 +165,8 @@ namespace PokemonEncCalc
                         if (p.FormCount() > formid)
                             if (p.Forms[formid] != null)
                                 p = p.Forms[formid];
-                    SinnohRadioSlots[i] = new EncounterSlot(p, grassLevel[2 * i + 2], grassLevel[2 * i + 2], percentGrass[2 * i + 2]);
-                    SinnohRadioSlots[i+2] = new EncounterSlot(p, grassLevel[2 * i + 3], grassLevel[2 * i + 3], percentGrass[2 * i + 3]);
+                    SinnohRadioSlots[2 * i] = new EncounterSlot(p, grassLevel[2 * i + 2], grassLevel[2 * i + 2], percentGrass[2 * i + 2]);
+                    SinnohRadioSlots[2 * i + 1] = new EncounterSlot(p, grassLevel[2 * i + 3], grassLevel[2 * i + 3], percentGrass[2 * i + 3]);
                 }
             }
 
@@ -278,8 +278,8 @@ namespace PokemonEncCalc
                 SwarmGoodRodSlots = new EncounterSlot[3];
                 SwarmSuperRodSlots = new EncounterSlot[5];
 
-                species = (short)(BitConverter.ToInt16(nightfish, 0) & 0x3FF);
-                formid = (byte)(nightfish[1] >> 2);
+                species = (short)(BitConverter.ToInt16(swarmfish, 0) & 0x3FF);
+                formid = (byte)(swarmfish[1] >> 2);
                 p = Utils.PokemonList[species - 1];
                 if (formid > 0)
                     if (p.FormCount() > formid)
@@ -294,7 +294,7 @@ namespace PokemonEncCalc
                     // Good Rod
                     if(new[] { 0, 2, 3}.Contains(i))
                     {
-                        SwarmGoodRodSlots[j] = new EncounterSlot(p, goodRod[4 * i], oldRod[4 * i + 1], percentOldRod[i]);
+                        SwarmGoodRodSlots[j] = new EncounterSlot(p, goodRod[4 * i], oldRod[4 * i + 1], percentGoodRod[i]);
                         j++; 
                     }
 
@@ -304,9 +304,177 @@ namespace PokemonEncCalc
                 }
             }
 
+        }
 
+        internal bool isThereSwarm()
+        {
+            if (new[] { 78, 102 }.Contains(map)) return false;
+
+            if (WalkSlots == null) return false;
+            return (!(WalkSlots[0].Species == SwarmWalkSlots[0].Species));
+        }
+
+        internal bool isThereSurfSwarm()
+        {
+            // Special cases : Maps not recognized via the common check (Cerulean Cave : all floors)
+            if (new[] { 139,140,141 }.Contains(map)) return false;
+
+            if (SurfSlots == null) return false;
+            return (!(SurfSlots[0].Species == SwarmSurfSlots[0].Species));
+        }
+        internal bool isThereFishSwarm()
+        {
+            if (OldRodSlots == null) return false;
+            return (!(OldRodSlots[2].Species == SwarmOldRodSlots[0].Species));
         }
 
 
+        internal bool isThereTimeOfDay()
+        {
+            if (WalkSlots == null) return false;
+            return (!(WalkSlots[0].Equals(DaySlots[0]) && WalkSlots[0].Equals(NightSlots[0])
+                && WalkSlots[1].Equals(DaySlots[1]) && WalkSlots[1].Equals(NightSlots[1])
+                && WalkSlots[2].Equals(DaySlots[2]) && WalkSlots[2].Equals(NightSlots[2])
+                && WalkSlots[3].Equals(DaySlots[3]) && WalkSlots[3].Equals(NightSlots[3])
+                && WalkSlots[4].Equals(DaySlots[4]) && WalkSlots[4].Equals(NightSlots[4])
+                && WalkSlots[5].Equals(DaySlots[5]) && WalkSlots[5].Equals(NightSlots[5])
+                && WalkSlots[6].Equals(DaySlots[6]) && WalkSlots[6].Equals(NightSlots[6])
+                && WalkSlots[7].Equals(DaySlots[7]) && WalkSlots[7].Equals(NightSlots[7])
+                && WalkSlots[8].Equals(DaySlots[8]) && WalkSlots[8].Equals(NightSlots[8])
+                && WalkSlots[9].Equals(DaySlots[9]) && WalkSlots[9].Equals(NightSlots[9])
+                && WalkSlots[10].Equals(DaySlots[10]) && WalkSlots[10].Equals(NightSlots[10])
+                && WalkSlots[11].Equals(DaySlots[11]) && WalkSlots[11].Equals(NightSlots[11])));
+        }
+
+        internal bool isThereFishNight()
+        {
+            // Special cases : Maps not recognized via the common check (Cerulean Cave : all floors + Cliff Edge Gate)
+            if (new[] { 82, 139, 140, 141 }.Contains(map)) return false;
+
+            if (OldRodSlots == null) return false;
+            return (!(GoodRodSlots[3].Species == NightGoodRodSlots[0].Species));
+        }
+
+
+        internal bool isThereRadio()
+        {
+            if (WalkSlots == null) return false;
+            // There is actually radio everywhere (where walk slots exist) except for Ruins of Alph (weird signal)
+            // Check only if the species of regular slot 0 is an Unown.
+            return !(WalkSlots[0].Species.NatID == 201);
+        }
+
+        /// <summary>
+        /// Gets encounter slot data for a specific encounter type
+        /// </summary>
+        /// <param name="type">Encounter type</param>
+        /// <returns>Encounter slot data, or null if data not available.</returns>
+        internal EncounterSlot[] getSlots(EncounterType type, bool swarm = false, int timeOfDay = 0, int radio = 0)
+        {
+            EncounterSlot[] returnSlots = null, selectedSlots = null;
+
+            switch (type)
+            {
+                case EncounterType.Walking:
+                    returnSlots = new EncounterSlot[12];
+                    selectedSlots = WalkSlots;
+                    if (timeOfDay == 1) selectedSlots = DaySlots;
+                    if (timeOfDay == 2) selectedSlots = NightSlots;
+                    break;
+                case EncounterType.RockSmash:
+                    returnSlots = new EncounterSlot[2];
+                    selectedSlots = RockSmashSlots;
+                    break;
+                case EncounterType.Surf:
+                    returnSlots = new EncounterSlot[5];
+                    selectedSlots = SurfSlots;
+                    break;
+                case EncounterType.OldRod:
+                    returnSlots = new EncounterSlot[5];
+                    selectedSlots = OldRodSlots;
+                    break;
+                case EncounterType.GoodRod:
+                    returnSlots = new EncounterSlot[5];
+                    selectedSlots = GoodRodSlots;
+                    break;
+                case EncounterType.SuperRod:
+                    returnSlots = new EncounterSlot[5];
+                    selectedSlots = SuperRodSlots;
+                    break;
+                default: return null;
+            }
+
+            for (int i = 0; i < selectedSlots.Length; i++)
+            {
+                returnSlots[i] = new EncounterSlot(selectedSlots[i]);
+            }
+            switch (type)
+            {
+                case EncounterType.Walking:
+                    if (swarm)
+                    {
+                        returnSlots[0] = new EncounterSlot(SwarmWalkSlots[0]);
+                        returnSlots[1] = new EncounterSlot(SwarmWalkSlots[1]);
+                    }
+                    if (radio == 1)
+                    {
+                        returnSlots[2] = new EncounterSlot(HoennRadioSlots[0]);
+                        returnSlots[3] = new EncounterSlot(HoennRadioSlots[1]);
+                        returnSlots[4] = new EncounterSlot(HoennRadioSlots[2]);
+                        returnSlots[5] = new EncounterSlot(HoennRadioSlots[3]);
+                    }
+                    if (radio == 2)
+                    {
+                        returnSlots[2] = new EncounterSlot(SinnohRadioSlots[0]);
+                        returnSlots[3] = new EncounterSlot(SinnohRadioSlots[1]);
+                        returnSlots[4] = new EncounterSlot(SinnohRadioSlots[2]);
+                        returnSlots[5] = new EncounterSlot(SinnohRadioSlots[3]);
+                    }
+                    break;
+                case EncounterType.Surf:
+                    if (swarm) returnSlots[0] = new EncounterSlot(SwarmSurfSlots[0]);
+                    break;
+                case EncounterType.OldRod:
+                    if (swarm) returnSlots[2] = new EncounterSlot(SwarmOldRodSlots[0]);
+                    break;
+                case EncounterType.GoodRod:
+                    if (timeOfDay == 2) returnSlots[3] = new EncounterSlot(NightGoodRodSlots[0]);
+                    if (swarm)
+                    {
+                        returnSlots[0] = new EncounterSlot(SwarmGoodRodSlots[0]);
+                        returnSlots[2] = new EncounterSlot(SwarmGoodRodSlots[1]);
+                        returnSlots[3] = new EncounterSlot(SwarmGoodRodSlots[2]);
+                    }
+                    break;
+                case EncounterType.SuperRod:
+                    if (timeOfDay == 2) returnSlots[1] = new EncounterSlot(NightSuperRodSlots[0]);
+                    if (swarm)
+                    {
+                        returnSlots[0] = new EncounterSlot(SwarmSuperRodSlots[0]);
+                        returnSlots[1] = new EncounterSlot(SwarmSuperRodSlots[1]);
+                        returnSlots[2] = new EncounterSlot(SwarmSuperRodSlots[2]);
+                        returnSlots[3] = new EncounterSlot(SwarmSuperRodSlots[3]);
+                        returnSlots[4] = new EncounterSlot(SwarmSuperRodSlots[4]);
+                    }
+                    break;
+                default:
+                    break;
+            }
+                return returnSlots;
+        }
+
+        internal bool isExistingEncounterType(EncounterType type)
+        {
+            switch (type)
+            {
+                case EncounterType.Walking: return !(WalkSlots == null);
+                case EncounterType.Surf: return !(SurfSlots == null);
+                case EncounterType.RockSmash: return !(RockSmashSlots == null);
+                case EncounterType.OldRod: return !(OldRodSlots == null);
+                case EncounterType.GoodRod: return !(GoodRodSlots == null);
+                case EncounterType.SuperRod: return !(SuperRodSlots == null);
+                default: return false;
+            }
+        }
     }
 }

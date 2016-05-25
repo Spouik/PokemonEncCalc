@@ -1738,6 +1738,7 @@
             this.cboRadio.Name = "cboRadio";
             this.cboRadio.Size = new System.Drawing.Size(132, 21);
             this.cboRadio.TabIndex = 0;
+            this.cboRadio.SelectedIndexChanged += new System.EventHandler(this.loadSlotData);
             // 
             // cboTimeHGSS
             // 
@@ -1747,6 +1748,7 @@
             this.cboTimeHGSS.Name = "cboTimeHGSS";
             this.cboTimeHGSS.Size = new System.Drawing.Size(132, 21);
             this.cboTimeHGSS.TabIndex = 0;
+            this.cboTimeHGSS.SelectedIndexChanged += new System.EventHandler(this.loadSlotData);
             // 
             // cboSwarmHGSS
             // 
@@ -1756,6 +1758,7 @@
             this.cboSwarmHGSS.Name = "cboSwarmHGSS";
             this.cboSwarmHGSS.Size = new System.Drawing.Size(132, 21);
             this.cboSwarmHGSS.TabIndex = 0;
+            this.cboSwarmHGSS.SelectedIndexChanged += new System.EventHandler(this.loadSlotData);
             // 
             // lblHelpRoute120
             // 
@@ -1830,6 +1833,7 @@
             this.cboGBASlot.Name = "cboGBASlot";
             this.cboGBASlot.Size = new System.Drawing.Size(132, 21);
             this.cboGBASlot.TabIndex = 0;
+            this.cboGBASlot.SelectedIndexChanged += new System.EventHandler(this.loadSlotData);
             // 
             // cboTimeDPPt
             // 
@@ -1839,6 +1843,7 @@
             this.cboTimeDPPt.Name = "cboTimeDPPt";
             this.cboTimeDPPt.Size = new System.Drawing.Size(132, 21);
             this.cboTimeDPPt.TabIndex = 0;
+            this.cboTimeDPPt.SelectedIndexChanged += new System.EventHandler(this.loadSlotData);
             // 
             // cboSwarmDPPt
             // 
@@ -1848,6 +1853,7 @@
             this.cboSwarmDPPt.Name = "cboSwarmDPPt";
             this.cboSwarmDPPt.Size = new System.Drawing.Size(132, 21);
             this.cboSwarmDPPt.TabIndex = 0;
+            this.cboSwarmDPPt.SelectedIndexChanged += new System.EventHandler(this.loadSlotData);
             // 
             // chkRadarDPPt
             // 
@@ -1858,6 +1864,7 @@
             this.chkRadarDPPt.TabIndex = 5;
             this.chkRadarDPPt.Text = "PokéRadar used";
             this.chkRadarDPPt.UseVisualStyleBackColor = true;
+            this.chkRadarDPPt.CheckedChanged += new System.EventHandler(this.loadSlotData);
             // 
             // lblGBASlotDisp
             // 
@@ -1958,7 +1965,7 @@
             this.cboEncounterType.Name = "cboEncounterType";
             this.cboEncounterType.Size = new System.Drawing.Size(274, 21);
             this.cboEncounterType.TabIndex = 0;
-            this.cboEncounterType.SelectedIndexChanged += new System.EventHandler(this.cboEncounterType_SelectedIndexChanged);
+            this.cboEncounterType.SelectedIndexChanged += new System.EventHandler(this.loadSlotData);
             // 
             // cboVersion
             // 

@@ -195,17 +195,20 @@ namespace PokemonEncCalc
                     cboMapsDP.Visible = true;
                     pnlAbility.Visible = true;
                     pnlDPPtOptions.Visible = true;
+                    changeEncounterOptionsDP();
                     break;
                 case 7:
                     cboMapsPlat.Visible = true;
                     pnlAbility.Visible = true;
                     pnlDPPtOptions.Visible = true;
+                    changeEncounterOptionsPlat();
                     break;
                 case 8:
                 case 9:
                     cboMapsHGSS.Visible = true;
                     pnlAbility.Visible = true;
                     pnlHGSSOptions.Visible = true;
+                    changeEncounterOptionsHGSS();
                     break;
                 case 10:
                 case 11:
@@ -490,16 +493,246 @@ namespace PokemonEncCalc
 
         private void changeEncounterOptionsHGSS(object sender, EventArgs e)
         {
+            changeEncounterOptionsHGSS();
+        }
 
+        private void changeSpecialOptionsHGSS(int map)
+        {
+            foreach (Control c in pnlHGSSOptions.Controls)
+                c.Enabled = false;
+
+            
+
+            if ((string)(cboEncounterType.SelectedItem) == encounterOptions[0][0])
+            {
+                if (Utils.MapsHeartGold[map].isThereSwarm())
+                {
+                    lblSwarmHGSSDisp.Enabled = true;
+                    cboSwarmHGSS.Enabled = true;
+                }
+
+                if (Utils.MapsHeartGold[map].isThereTimeOfDay())
+                {
+                    lblTimeHGSSDisp.Enabled = true;
+                    cboTimeHGSS.Enabled = true;
+                }
+
+                if (Utils.MapsHeartGold[map].isThereRadio())
+                {
+                    lblRadioDisp.Enabled = true;
+                    cboRadio.Enabled = true;
+                }
+            }
+
+            if((string)(cboEncounterType.SelectedItem) == encounterOptions[0][1])
+            {
+                if (Utils.MapsHeartGold[map].isThereSurfSwarm())
+                {
+                    lblSwarmHGSSDisp.Enabled = true;
+                    cboSwarmHGSS.Enabled = true;
+                }
+            }
+
+            if ((string)(cboEncounterType.SelectedItem) == encounterOptions[0][3])
+            {
+                if (Utils.MapsHeartGold[map].isThereFishSwarm())
+                {
+                    lblSwarmHGSSDisp.Enabled = true;
+                    cboSwarmHGSS.Enabled = true;
+                }
+            }
+
+            if ((string)(cboEncounterType.SelectedItem) == encounterOptions[0][4] || (string)(cboEncounterType.SelectedItem) == encounterOptions[0][5])
+            {
+                if (Utils.MapsHeartGold[map].isThereFishSwarm())
+                {
+                    lblSwarmHGSSDisp.Enabled = true;
+                    cboSwarmHGSS.Enabled = true;
+                }
+                if (Utils.MapsHeartGold[map].isThereFishNight())
+                {
+                    lblTimeHGSSDisp.Enabled = true;
+                    cboTimeHGSS.Enabled = true;
+                }
+            }
+
+
+
+
+
+
+        }
+
+        private void changeEncounterOptionsHGSS()
+        {
+            if (cboMapsHGSS.SelectedItem == null || cboMapsHGSS.Items.Count == 0)
+                return;
+
+
+            string encounterType = cboEncounterType.SelectedItem == null ? "" : (string)cboEncounterType.SelectedItem;
+            int selectedMap = cboMapsHGSS.SelectedIndex == -1 ? 0 : Utils.mapTablesHGSS[Utils.MapsHGSS.FindIndex(s => s.Equals((string)cboMapsHGSS.SelectedItem))];
+
+
+            cboEncounterType.Items.Clear();
+
+            if (Utils.MapsHeartGold[selectedMap].isExistingEncounterType(EncounterType.Walking))
+                cboEncounterType.Items.Add(encounterOptions[0][0]);
+            if (Utils.MapsHeartGold[selectedMap].isExistingEncounterType(EncounterType.Surf))
+                cboEncounterType.Items.Add(encounterOptions[0][1]);
+            if (Utils.MapsHeartGold[selectedMap].isExistingEncounterType(EncounterType.RockSmash))
+                cboEncounterType.Items.Add(encounterOptions[0][2]);
+            if (Utils.MapsHeartGold[selectedMap].isExistingEncounterType(EncounterType.OldRod))
+                cboEncounterType.Items.Add(encounterOptions[0][3]);
+            if (Utils.MapsHeartGold[selectedMap].isExistingEncounterType(EncounterType.GoodRod))
+                cboEncounterType.Items.Add(encounterOptions[0][4]);
+            if (Utils.MapsHeartGold[selectedMap].isExistingEncounterType(EncounterType.SuperRod))
+                cboEncounterType.Items.Add(encounterOptions[0][5]);
+
+            if (cboEncounterType.Items.Contains(encounterType))
+            {
+                cboEncounterType.SelectedItem = encounterType;
+            }
+            else
+            {
+                cboEncounterType.SelectedIndex = 0;
+            }
         }
 
         private void changeEncounterOptionsPlat(object sender, EventArgs e)
         {
+            changeEncounterOptionsPlat();
+        }
 
+        private void changeSpecialOptionsPlat(int map)
+        {
+            // change swarm, time, gba slot, pokeradar
+
+            foreach (Control c in pnlDPPtOptions.Controls)
+                c.Enabled = false;
+
+            if (Utils.MapsPlatinum[map].isThereSwarm())
+            {
+                lblSwarmDPPtDisp.Enabled = true;
+                cboSwarmDPPt.Enabled = true;
+            }
+            if (Utils.MapsPlatinum[map].isThereTimeOfDay())
+            {
+                lblTimeDPPtDisp.Enabled = true;
+                cboTimeDPPt.Enabled = true;
+            }
+            if (Utils.MapsPlatinum[map].isThereGBASlot())
+            {
+                lblGBASlotDisp.Enabled = true;
+                cboGBASlot.Enabled = true;
+            }
+            if (Utils.MapsPlatinum[map].isTherePokeRadar())
+                chkRadarDPPt.Enabled = true;
+
+            if (!((string)(cboEncounterType.SelectedItem) == encounterOptions[0][0]))
+                foreach (Control c in pnlDPPtOptions.Controls)
+                    c.Enabled = false;
+        }
+
+        private void changeEncounterOptionsPlat()
+        {
+            if (cboMapsPlat.SelectedItem == null || cboMapsPlat.Items.Count == 0)
+                return;
+
+
+            string encounterType = cboEncounterType.SelectedItem == null ? "" : (string)cboEncounterType.SelectedItem;
+            int selectedMap = cboMapsPlat.SelectedIndex == -1 ? 0 : Utils.mapTablesPlat[Utils.MapsPt.FindIndex(s => s.Equals((string)cboMapsPlat.SelectedItem))];
+
+
+
+            //
+            cboEncounterType.Items.Clear();
+
+            if (Utils.MapsPlatinum[selectedMap].isExistingEncounterType(EncounterType.Walking))
+                cboEncounterType.Items.Add(encounterOptions[0][0]);
+            if (Utils.MapsPlatinum[selectedMap].isExistingEncounterType(EncounterType.Surf))
+                cboEncounterType.Items.Add(encounterOptions[0][1]);
+            if (Utils.MapsPlatinum[selectedMap].isExistingEncounterType(EncounterType.OldRod))
+                cboEncounterType.Items.Add(encounterOptions[0][3]);
+            if (Utils.MapsPlatinum[selectedMap].isExistingEncounterType(EncounterType.GoodRod))
+                cboEncounterType.Items.Add(encounterOptions[0][4]);
+            if (Utils.MapsPlatinum[selectedMap].isExistingEncounterType(EncounterType.SuperRod))
+                cboEncounterType.Items.Add(encounterOptions[0][5]);
+
+            if (cboEncounterType.Items.Contains(encounterType))
+            {
+                cboEncounterType.SelectedItem = encounterType;
+            }
+            else
+            {
+                cboEncounterType.SelectedIndex = 0;
+            }
         }
 
         private void changeEncounterOptionsDP(object sender, EventArgs e)
         {
+            changeEncounterOptionsDP();
+        }
+
+        private void changeSpecialOptionsDP(int map)
+        {
+            foreach (Control c in pnlDPPtOptions.Controls)
+                c.Enabled = false;
+
+            if (Utils.MapsDiamond[map].isThereSwarm())
+            {
+                lblSwarmDPPtDisp.Enabled = true;
+                cboSwarmDPPt.Enabled = true;
+            }
+            if (Utils.MapsDiamond[map].isThereTimeOfDay())
+            {
+                lblTimeDPPtDisp.Enabled = true;
+                cboTimeDPPt.Enabled = true;
+            }
+            if (Utils.MapsDiamond[map].isThereGBASlot())
+            {
+                lblGBASlotDisp.Enabled = true;
+                cboGBASlot.Enabled = true;
+            }
+            if (Utils.MapsDiamond[map].isTherePokeRadar())
+                chkRadarDPPt.Enabled = true;
+
+            if (!((string)(cboEncounterType.SelectedItem) == encounterOptions[0][0]))
+                foreach (Control c in pnlDPPtOptions.Controls)
+                    c.Enabled = false;
+        }
+
+        private void changeEncounterOptionsDP()
+        {
+            if (cboMapsDP.SelectedItem == null || cboMapsDP.Items.Count == 0)
+                return;
+
+
+            string encounterType = cboEncounterType.SelectedItem == null ? "" : (string)cboEncounterType.SelectedItem;
+            int selectedMap = cboMapsDP.SelectedIndex == -1 ? 0 : Utils.mapTablesDP[Utils.MapsDP.FindIndex(s => s.Equals((string)cboMapsDP.SelectedItem))];
+            
+
+
+            cboEncounterType.Items.Clear();
+
+            if (Utils.MapsDiamond[selectedMap].isExistingEncounterType(EncounterType.Walking))
+                cboEncounterType.Items.Add(encounterOptions[0][0]);
+            if (Utils.MapsDiamond[selectedMap].isExistingEncounterType(EncounterType.Surf))
+                cboEncounterType.Items.Add(encounterOptions[0][1]);
+            if (Utils.MapsDiamond[selectedMap].isExistingEncounterType(EncounterType.OldRod))
+                cboEncounterType.Items.Add(encounterOptions[0][3]);
+            if (Utils.MapsDiamond[selectedMap].isExistingEncounterType(EncounterType.GoodRod))
+                cboEncounterType.Items.Add(encounterOptions[0][4]);
+            if (Utils.MapsDiamond[selectedMap].isExistingEncounterType(EncounterType.SuperRod))
+                cboEncounterType.Items.Add(encounterOptions[0][5]);
+
+            if (cboEncounterType.Items.Contains(encounterType))
+            {
+                cboEncounterType.SelectedItem = encounterType;
+            }
+            else
+            {
+                cboEncounterType.SelectedIndex = 0;
+            }
 
         }
 
@@ -622,12 +855,13 @@ namespace PokemonEncCalc
         }
 
 
-        void cboEncounterType_SelectedIndexChanged(object sender, EventArgs e)
+        void loadSlotData(object sender, EventArgs e)
         {
             int currentMap;
             EncounterSlot[] newSlots = null;
             EncounterType type = (EncounterType)encounterOptions[0].FindIndex(s => s.Equals((string)cboEncounterType.SelectedItem));
             Version currentVersion = (Version)((int)Version.Ruby + cboVersion.SelectedIndex);
+            int gba, time, radio, season = 0;
 
             switch (currentVersion)
             {
@@ -652,6 +886,42 @@ namespace PokemonEncCalc
                 case Version.LeafGreen:
                     currentMap = Utils.MapsFRLG.FindIndex(s => s.Equals((string)cboMapsFireLeaf.SelectedItem));
                     newSlots = Utils.MapsLeafGreen[currentMap].getSlots(type);
+                    break;
+                case Version.Diamond:
+                    currentMap = Utils.mapTablesDP[Utils.MapsDP.FindIndex(s => s.Equals((string)cboMapsDP.SelectedItem))];
+                    changeSpecialOptionsDP(currentMap);
+                    gba = cboGBASlot.Enabled ? cboGBASlot.SelectedIndex : 0;
+                    time = cboTimeDPPt.Enabled ? cboTimeDPPt.SelectedIndex : 0;
+                    newSlots = Utils.MapsDiamond[currentMap].getSlots(type, (cboSwarmDPPt.Enabled && (cboSwarmDPPt.SelectedIndex == 1)), time, gba, chkRadarDPPt.Checked && chkRadarDPPt.Enabled);
+                    break;
+                case Version.Pearl:
+                    currentMap = Utils.mapTablesDP[Utils.MapsDP.FindIndex(s => s.Equals((string)cboMapsDP.SelectedItem))];
+                    changeSpecialOptionsDP(currentMap);
+                    gba = cboGBASlot.Enabled ? cboGBASlot.SelectedIndex : 0;
+                    time = cboTimeDPPt.Enabled ? cboTimeDPPt.SelectedIndex : 0;
+                    newSlots = Utils.MapsPearl[currentMap].getSlots(type, (cboSwarmDPPt.Enabled && (cboSwarmDPPt.SelectedIndex == 1)), time, gba, chkRadarDPPt.Checked && chkRadarDPPt.Enabled);
+                    break;
+
+                case Version.Platinum:
+                    currentMap = Utils.mapTablesPlat[Utils.MapsPt.FindIndex(s => s.Equals((string)cboMapsPlat.SelectedItem))];
+                    changeSpecialOptionsPlat(currentMap);
+                    gba = cboGBASlot.Enabled ? cboGBASlot.SelectedIndex : 0;
+                    time = cboTimeDPPt.Enabled ? cboTimeDPPt.SelectedIndex : 0;
+                    newSlots = Utils.MapsPlatinum[currentMap].getSlots(type, (cboSwarmDPPt.Enabled && (cboSwarmDPPt.SelectedIndex == 1)), time, gba, chkRadarDPPt.Checked && chkRadarDPPt.Enabled);
+                    break;
+                case Version.HeartGold:
+                    currentMap = Utils.mapTablesHGSS[Utils.MapsHGSS.FindIndex(s => s.Equals((string)cboMapsHGSS.SelectedItem))];
+                    changeSpecialOptionsHGSS(currentMap);
+                    radio = cboRadio.Enabled ? cboRadio.SelectedIndex : 0;
+                    time = cboTimeHGSS.Enabled ? cboTimeHGSS.SelectedIndex : 0;
+                    newSlots = Utils.MapsHeartGold[currentMap].getSlots(type, (cboSwarmHGSS.Enabled && (cboSwarmHGSS.SelectedIndex == 1)), time, radio);
+                    break;
+                case Version.SoulSilver:
+                    currentMap = Utils.mapTablesHGSS[Utils.MapsHGSS.FindIndex(s => s.Equals((string)cboMapsHGSS.SelectedItem))];
+                    changeSpecialOptionsHGSS(currentMap);
+                    radio = cboRadio.Enabled ? cboRadio.SelectedIndex : 0;
+                    time = cboTimeHGSS.Enabled ? cboTimeHGSS.SelectedIndex : 0;
+                    newSlots = Utils.MapsSoulSilver[currentMap].getSlots(type, (cboSwarmHGSS.Enabled && (cboSwarmHGSS.SelectedIndex == 1)), time, radio);
                     break;
                 default:
                     break;

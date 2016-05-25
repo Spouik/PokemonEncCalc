@@ -85,10 +85,10 @@ namespace PokemonEncCalc
                     formid = (byte)(grass[8 * i + 5] >> 2);
                     p = Utils.PokemonList[species - 1];
                     if (formid > 0)
-                        if (p.FormCount() > formid)
-                            if(p.Forms[formid] != null)
-                                p = p.Forms[formid];
-                    WalkSlots[i] = new EncounterSlot(p, grass[8 * i + 1], grass[8 * i], percentGrass[i]);
+                        if (p.FormCount() >= formid)
+                            if(p.Forms[formid-1] != null)
+                                p = p.Forms[formid-1];
+                    WalkSlots[i] = new EncounterSlot(p, grass[8 * i], grass[8 * i], percentGrass[i]);
                 }
 
                 // swarm (Replaces slots 0 and 1 when active)
@@ -101,7 +101,7 @@ namespace PokemonEncCalc
                         if (p.FormCount() > formid)
                             if (p.Forms[formid] != null)
                                 p = p.Forms[formid];
-                    Swarm[s] = new EncounterSlot(p, grass[1+8*s], grass[8*s], percentGrass[s]);         
+                    Swarm[s] = new EncounterSlot(p, grass[8*s], grass[8*s], percentGrass[s]);         
                 }
 
                 // Day (Replaces slots 2 and 3, regular ones are for morning)
@@ -115,7 +115,7 @@ namespace PokemonEncCalc
                         if (p.FormCount() > formid)
                             if (p.Forms[formid] != null)
                                 p = p.Forms[formid];
-                    Day[s] = new EncounterSlot(p, grass[17 + 8 * s], grass[16 + 8 * s], percentGrass[s+2]);
+                    Day[s] = new EncounterSlot(p, grass[16 + 8 * s], grass[16 + 8 * s], percentGrass[s+2]);
                 }
                 // Night (Replaces slots 2 and 3, regular ones are for morning)
                 Night = new EncounterSlot[2];
@@ -128,7 +128,7 @@ namespace PokemonEncCalc
                         if (p.FormCount() > formid)
                             if (p.Forms[formid] != null)
                                 p = p.Forms[formid];
-                    Night[s] = new EncounterSlot(p, grass[17 + 8 * s], grass[16 + 8 * s], percentGrass[s + 2]);
+                    Night[s] = new EncounterSlot(p, grass[16 + 8 * s], grass[16 + 8 * s], percentGrass[s + 2]);
                 }
 
                 // PokéRadar (Replaces slots 4, 5, 10 and 11 when active)
@@ -143,7 +143,7 @@ namespace PokemonEncCalc
                         if (p.FormCount() > formid)
                             if (p.Forms[formid] != null)
                                 p = p.Forms[formid];
-                    PokeRadar[s] = new EncounterSlot(p, grass[1 + 8 * r[s]], grass[8 * r[s]], percentGrass[r[s]]);
+                    PokeRadar[s] = new EncounterSlot(p, grass[8 * r[s]], grass[8 * r[s]], percentGrass[r[s]]);
                 }
                 // Ruby (Replaces slots 8 and 9 when active)
                 Ruby = new EncounterSlot[2];
@@ -157,7 +157,7 @@ namespace PokemonEncCalc
                         if (p.FormCount() > formid)
                             if (p.Forms[formid] != null)
                                 p = p.Forms[formid];
-                    Ruby[s] = new EncounterSlot(p, grass[1 + 8 * r[s]], grass[8 * r[s]], percentGrass[r[s]]);
+                    Ruby[s] = new EncounterSlot(p, grass[8 * r[s]], grass[8 * r[s]], percentGrass[r[s]]);
                 }
                 // Sapphire (Replaces slots 8 and 9 when active)
                 Sapphire = new EncounterSlot[2];
@@ -170,7 +170,7 @@ namespace PokemonEncCalc
                         if (p.FormCount() > formid)
                             if (p.Forms[formid] != null)
                                 p = p.Forms[formid];
-                    Sapphire[s] = new EncounterSlot(p, grass[1 + 8 * r[s]], grass[8 * r[s]], percentGrass[r[s]]);
+                    Sapphire[s] = new EncounterSlot(p, grass[8 * r[s]], grass[8 * r[s]], percentGrass[r[s]]);
                 }
                 // Emerald (Replaces slots 8 and 9 when active)
                 Emerald = new EncounterSlot[2];
@@ -183,7 +183,7 @@ namespace PokemonEncCalc
                         if (p.FormCount() > formid)
                             if (p.Forms[formid] != null)
                                 p = p.Forms[formid];
-                    Emerald[s] = new EncounterSlot(p, grass[1 + 8 * r[s]], grass[8 * r[s]], percentGrass[r[s]]);
+                    Emerald[s] = new EncounterSlot(p, grass[8 * r[s]], grass[8 * r[s]], percentGrass[r[s]]);
                 }
                 // FireRed (Replaces slots 8 and 9 when active)
                 FireRed = new EncounterSlot[2];
@@ -196,7 +196,7 @@ namespace PokemonEncCalc
                         if (p.FormCount() > formid)
                             if (p.Forms[formid] != null)
                                 p = p.Forms[formid];
-                    FireRed[s] = new EncounterSlot(p, grass[1 + 8 * r[s]], grass[8 * r[s]], percentGrass[r[s]]);
+                    FireRed[s] = new EncounterSlot(p, grass[8 * r[s]], grass[8 * r[s]], percentGrass[r[s]]);
                 }
                 // LeafGreen (Replaces slots 8 and 9 when active)
                 LeafGreen = new EncounterSlot[2];
@@ -209,7 +209,7 @@ namespace PokemonEncCalc
                         if (p.FormCount() > formid)
                             if (p.Forms[formid] != null)
                                 p = p.Forms[formid];
-                    LeafGreen[s] = new EncounterSlot(p, grass[1 + 8 * r[s]], grass[8 * r[s]], percentGrass[r[s]]);
+                    LeafGreen[s] = new EncounterSlot(p, grass[8 * r[s]], grass[8 * r[s]], percentGrass[r[s]]);
                 }
             }
 
@@ -282,16 +282,142 @@ namespace PokemonEncCalc
 
         internal bool isThereSwarm()
         {
+            if (WalkSlots == null) return false;
             return (!(WalkSlots[0].Species == Swarm[0].Species && WalkSlots[1].Species == Swarm[1].Species));
         }
 
         internal bool isTherePokeRadar()
         {
+            if (WalkSlots == null) return false;
             return (!(WalkSlots[4].Species == PokeRadar[0].Species && WalkSlots[5].Species == PokeRadar[1].Species
                    && WalkSlots[10].Species == PokeRadar[2].Species && WalkSlots[11].Species == PokeRadar[3].Species));
         }
 
+        internal bool isThereGBASlot()
+        {
+            if (WalkSlots == null) return false;
+            return (!(WalkSlots[8].Species == Ruby[0].Species && WalkSlots[9].Species == Ruby[1].Species
+                && WalkSlots[8].Species == Sapphire[0].Species && WalkSlots[9].Species == Sapphire[1].Species
+                && WalkSlots[8].Species == Emerald[0].Species && WalkSlots[9].Species == Emerald[1].Species
+                && WalkSlots[8].Species == FireRed[0].Species && WalkSlots[9].Species == FireRed[1].Species
+                && WalkSlots[8].Species == LeafGreen[0].Species && WalkSlots[9].Species == LeafGreen[1].Species));
+        }
 
+        internal bool isThereTimeOfDay()
+        {
+            if (WalkSlots == null) return false;
+            return (!(WalkSlots[2].Species == Day[0].Species && WalkSlots[3].Species == Day[1].Species
+                    && WalkSlots[2].Species == Night[0].Species && WalkSlots[3].Species == Night[1].Species));
+        }
+
+        internal bool isExistingEncounterType(EncounterType type)
+        {
+            switch (type)
+            {
+                case EncounterType.Walking: return !(WalkSlots == null);
+                case EncounterType.Surf: return !(SurfSlots == null);
+                case EncounterType.OldRod: return !(OldRodSlots == null);
+                case EncounterType.GoodRod: return !(GoodRodSlots == null);
+                case EncounterType.SuperRod: return !(SuperRodSlots == null);
+                default: return false;
+            }
+        }
+
+        /// <summary>
+        /// Gets encounter slot data for a specific encounter type
+        /// </summary>
+        /// <param name="type">Encounter type</param>
+        /// <returns>Encounter slot data, or null if data not available.</returns>
+        internal EncounterSlot[] getSlots(EncounterType type, bool swarm = false, int timeOfDay = 0, int gbaSlot = 0, bool radar = false)
+        {
+            EncounterSlot[] returnSlots = null, selectedSlots = null;
+
+            switch (type)
+            {
+                case EncounterType.Walking:
+                    returnSlots = new EncounterSlot[12];
+                    selectedSlots = WalkSlots;
+                    break;
+                case EncounterType.Surf:
+                    returnSlots = new EncounterSlot[5];
+                    selectedSlots = SurfSlots;
+                    break;
+                case EncounterType.OldRod:
+                    returnSlots = new EncounterSlot[5];
+                    selectedSlots = OldRodSlots;
+                    break;
+                case EncounterType.GoodRod:
+                    returnSlots = new EncounterSlot[5];
+                    selectedSlots = GoodRodSlots;
+                    break;
+                case EncounterType.SuperRod:
+                    returnSlots = new EncounterSlot[5];
+                    selectedSlots = SuperRodSlots;
+                    break;
+                default: return null;
+            }
+
+            for (int i = 0; i < selectedSlots.Length; i++)
+            {
+                returnSlots[i] = new EncounterSlot(selectedSlots[i]);
+            }
+            if(type == EncounterType.Walking)
+            {
+                if (swarm)
+                {
+                    returnSlots[0] = new EncounterSlot(Swarm[0]);
+                    returnSlots[1] = new EncounterSlot(Swarm[1]);
+                }
+                if (radar)
+                {
+                    returnSlots[4] = new EncounterSlot(PokeRadar[0]);
+                    returnSlots[5] = new EncounterSlot(PokeRadar[1]);
+                    returnSlots[10] = new EncounterSlot(PokeRadar[2]);
+                    returnSlots[11] = new EncounterSlot(PokeRadar[3]);
+                }
+
+                switch (timeOfDay)
+                {
+                    case 1:
+                        returnSlots[2] = new EncounterSlot(Day[0]);
+                        returnSlots[3] = new EncounterSlot(Day[1]);
+                        break;
+                    case 2:
+                        returnSlots[2] = new EncounterSlot(Night[0]);
+                        returnSlots[3] = new EncounterSlot(Night[1]);
+                        break;
+                    default: break;
+                }
+                switch (gbaSlot)
+                {
+                    case 1:
+                        returnSlots[8] = new EncounterSlot(Ruby[0]);
+                        returnSlots[9] = new EncounterSlot(Ruby[1]);
+                        break;
+                    case 2:
+                        returnSlots[8] = new EncounterSlot(Sapphire[0]);
+                        returnSlots[9] = new EncounterSlot(Sapphire[1]);
+                        break;
+                    case 3:
+                        returnSlots[8] = new EncounterSlot(Emerald[0]);
+                        returnSlots[9] = new EncounterSlot(Emerald[1]);
+                        break;
+                    case 4:
+                        returnSlots[8] = new EncounterSlot(FireRed[0]);
+                        returnSlots[9] = new EncounterSlot(FireRed[1]);
+                        break;
+                    case 5:
+                        returnSlots[8] = new EncounterSlot(LeafGreen[0]);
+                        returnSlots[9] = new EncounterSlot(LeafGreen[1]);
+                        break;
+                    default: break;
+                }
+
+            }
+
+            return returnSlots;
+
+        }
 
     }
 }
