@@ -91,9 +91,9 @@ namespace PokemonEncCalc
                     formid = (byte)(grass[2 * i + 1] >> 2);
                     p = Utils.PokemonList[species - 1];
                     if (formid > 0)
-                        if (p.FormCount() > formid)
-                            if (p.Forms[formid] != null)
-                                p = p.Forms[formid];
+                        if (p.FormCount() >= formid)
+                            if (p.Forms[formid - 1] != null)
+                                p = p.Forms[formid - 1];
                     WalkSlots[i] = new EncounterSlot(p, grassLevel[i], grassLevel[i], percentGrass[i]);
                 }
                 // Regular slots (day)
@@ -104,9 +104,9 @@ namespace PokemonEncCalc
                     formid = (byte)(day[2 * i + 1] >> 2);
                     p = Utils.PokemonList[species - 1];
                     if (formid > 0)
-                        if (p.FormCount() > formid)
-                            if (p.Forms[formid] != null)
-                                p = p.Forms[formid];
+                        if (p.FormCount() >= formid)
+                            if (p.Forms[formid - 1] != null)
+                                p = p.Forms[formid - 1];
                     DaySlots[i] = new EncounterSlot(p, grassLevel[i], grassLevel[i], percentGrass[i]);
                 }
                 // Regular slots (night)
@@ -117,9 +117,9 @@ namespace PokemonEncCalc
                     formid = (byte)(night[2 * i + 1] >> 2);
                     p = Utils.PokemonList[species - 1];
                     if (formid > 0)
-                        if (p.FormCount() > formid)
-                            if (p.Forms[formid] != null)
-                                p = p.Forms[formid];
+                        if (p.FormCount() >= formid)
+                            if (p.Forms[formid - 1] != null)
+                                p = p.Forms[formid - 1];
                     NightSlots[i] = new EncounterSlot(p, grassLevel[i], grassLevel[i], percentGrass[i]);
                 }
 
@@ -130,10 +130,10 @@ namespace PokemonEncCalc
                 species = (short)(BitConverter.ToInt16(swarmgrass, 0) & 0x3FF);
                 formid = (byte)(swarmgrass[1] >> 2);
                 p = Utils.PokemonList[species - 1];
-                    if (formid > 0)
-                        if (p.FormCount() > formid)
-                            if (p.Forms[formid] != null)
-                                p = p.Forms[formid];
+                if (formid > 0)
+                    if (p.FormCount() >= formid)
+                        if (p.Forms[formid - 1] != null)
+                            p = p.Forms[formid - 1];
                 SwarmWalkSlots[0] = new EncounterSlot(p, grassLevel[0], grassLevel[0], percentGrass[0]);
                 SwarmWalkSlots[1] = new EncounterSlot(p, grassLevel[1], grassLevel[1], percentGrass[1]);
 
@@ -146,9 +146,9 @@ namespace PokemonEncCalc
                     formid = (byte)(hoenn[2 * i + 1] >> 2);
                     p = Utils.PokemonList[species - 1];
                     if (formid > 0)
-                        if (p.FormCount() > formid)
-                            if (p.Forms[formid] != null)
-                                p = p.Forms[formid];
+                        if (p.FormCount() >= formid)
+                            if (p.Forms[formid - 1] != null)
+                                p = p.Forms[formid - 1];
                     HoennRadioSlots[2 * i] = new EncounterSlot(p, grassLevel[2 * i + 2], grassLevel[2 * i + 2], percentGrass[2 * i + 2]);
                     HoennRadioSlots[2 * i + 1] = new EncounterSlot(p, grassLevel[2 * i + 3], grassLevel[2 * i + 3], percentGrass[2 * i + 3]);
                 }
@@ -162,9 +162,9 @@ namespace PokemonEncCalc
                     formid = (byte)(sinnoh[2 * i + 1] >> 2);
                     p = Utils.PokemonList[species - 1];
                     if (formid > 0)
-                        if (p.FormCount() > formid)
-                            if (p.Forms[formid] != null)
-                                p = p.Forms[formid];
+                        if (p.FormCount() >= formid)
+                            if (p.Forms[formid - 1] != null)
+                                p = p.Forms[formid - 1];
                     SinnohRadioSlots[2 * i] = new EncounterSlot(p, grassLevel[2 * i + 2], grassLevel[2 * i + 2], percentGrass[2 * i + 2]);
                     SinnohRadioSlots[2 * i + 1] = new EncounterSlot(p, grassLevel[2 * i + 3], grassLevel[2 * i + 3], percentGrass[2 * i + 3]);
                 }
@@ -181,9 +181,9 @@ namespace PokemonEncCalc
                     formid = (byte)(surf[4 * i + 3] >> 2);
                     p = Utils.PokemonList[species - 1];
                     if (formid > 0)
-                        if (p.FormCount() > formid)
-                            if (p.Forms[formid] != null)
-                                p = p.Forms[formid];
+                        if (p.FormCount() >= formid)
+                            if (p.Forms[formid - 1] != null)
+                                p = p.Forms[formid - 1];
                     SurfSlots[i] = new EncounterSlot(p, surf[4 * i], surf[4 * i + 1], percentSurf[i]);
                 }
 
@@ -193,9 +193,9 @@ namespace PokemonEncCalc
                 formid = (byte)(swarmsurf[1] >> 2);
                 p = Utils.PokemonList[species - 1];
                 if (formid > 0)
-                    if (p.FormCount() > formid)
-                        if (p.Forms[formid] != null)
-                            p = p.Forms[formid];
+                    if (p.FormCount() >= formid)
+                        if (p.Forms[formid - 1] != null)
+                            p = p.Forms[formid - 1];
                 SwarmSurfSlots[0] = new EncounterSlot(p, surf[0], surf[1], percentSurf[0]);
             }
 
@@ -209,9 +209,9 @@ namespace PokemonEncCalc
                     formid = (byte)(rocksmash[4 * i + 3] >> 2);
                     p = Utils.PokemonList[species - 1];
                     if (formid > 0)
-                        if (p.FormCount() > formid)
-                            if (p.Forms[formid] != null)
-                                p = p.Forms[formid];
+                        if (p.FormCount() >= formid)
+                            if (p.Forms[formid - 1] != null)
+                                p = p.Forms[formid - 1];
                     RockSmashSlots[i] = new EncounterSlot(p, rocksmash[4 * i], rocksmash[4 * i + 1], percentRockSmash[i]);
                 }
             }
@@ -226,9 +226,9 @@ namespace PokemonEncCalc
                     formid = (byte)(oldRod[4 * i + 3] >> 2);
                     p = Utils.PokemonList[species - 1];
                     if (formid > 0)
-                        if (p.FormCount() > formid)
-                            if (p.Forms[formid] != null)
-                                p = p.Forms[formid];
+                        if (p.FormCount() >= formid)
+                            if (p.Forms[formid - 1] != null)
+                                p = p.Forms[formid - 1];
                     OldRodSlots[i] = new EncounterSlot(p, oldRod[4 * i], oldRod[4 * i + 1], percentOldRod[i]);
                 }
 
@@ -240,9 +240,9 @@ namespace PokemonEncCalc
                     formid = (byte)(goodRod[4 * i + 3] >> 2);
                     p = Utils.PokemonList[species - 1];
                     if (formid > 0)
-                        if (p.FormCount() > formid)
-                            if (p.Forms[formid] != null)
-                                p = p.Forms[formid];
+                        if (p.FormCount() >= formid)
+                            if (p.Forms[formid - 1] != null)
+                                p = p.Forms[formid - 1];
                     GoodRodSlots[i] = new EncounterSlot(p, goodRod[4 * i], goodRod[4 * i + 1], percentGoodRod[i]);
                 }
 
@@ -254,9 +254,9 @@ namespace PokemonEncCalc
                     formid = (byte)(superRod[4 * i + 3] >> 2);
                     p = Utils.PokemonList[species - 1];
                     if (formid > 0)
-                        if (p.FormCount() > formid)
-                            if (p.Forms[formid] != null)
-                                p = p.Forms[formid];
+                        if (p.FormCount() >= formid)
+                            if (p.Forms[formid - 1] != null)
+                                p = p.Forms[formid - 1];
                     SuperRodSlots[i] = new EncounterSlot(p, superRod[4 * i], superRod[4 * i + 1], percentSuperRod[i]);
                 }
 
@@ -267,9 +267,9 @@ namespace PokemonEncCalc
                 formid = (byte)(nightfish[1] >> 2);
                 p = Utils.PokemonList[species - 1];
                 if (formid > 0)
-                    if (p.FormCount() > formid)
-                        if (p.Forms[formid] != null)
-                            p = p.Forms[formid];
+                    if (p.FormCount() >= formid)
+                        if (p.Forms[formid - 1] != null)
+                            p = p.Forms[formid - 1];
                 NightGoodRodSlots[0] = new EncounterSlot(p, goodRod[12], goodRod[13], percentGoodRod[3]);
                 NightSuperRodSlots[0] = new EncounterSlot(p, superRod[4], superRod[5], percentSuperRod[1]);
 
@@ -282,9 +282,9 @@ namespace PokemonEncCalc
                 formid = (byte)(swarmfish[1] >> 2);
                 p = Utils.PokemonList[species - 1];
                 if (formid > 0)
-                    if (p.FormCount() > formid)
-                        if (p.Forms[formid] != null)
-                            p = p.Forms[formid];
+                    if (p.FormCount() >= formid)
+                        if (p.Forms[formid - 1] != null)
+                            p = p.Forms[formid - 1];
 
                 // Old Rod
                 SwarmOldRodSlots[0] = new EncounterSlot(p, oldRod[8], oldRod[9], percentOldRod[2]);
