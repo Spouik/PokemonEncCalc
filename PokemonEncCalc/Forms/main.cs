@@ -142,6 +142,9 @@ namespace PokemonEncCalc
             if (!((ComboBox)sender).Name.StartsWith("cboSlot")) //Checks combobox name (expected "cboSlot" + x, where x between 0 and 11)
                 return;
 
+            if (!((ComboBox)sender).Visible)
+                return;
+
             int slot;
             if (!int.TryParse(((ComboBox)sender).Name.Substring(7), out slot))
                 return;
@@ -234,10 +237,12 @@ namespace PokemonEncCalc
                 case 16:
                     cboMapsOR.Visible = true;
                     pnlAbility.Visible = true;
+                    changeEncounterOptionsOR();
                     break;
                 case 17:
                     cboMapsAS.Visible = true;
                     pnlAbility.Visible = true;
+                    changeEncounterOptionsAS();
                     break;
                 default:
                     break;
@@ -472,12 +477,92 @@ namespace PokemonEncCalc
 
         private void changeEncounterOptionsAS(object sender, EventArgs e)
         {
+            changeEncounterOptionsAS();
+        }
 
+        private void changeEncounterOptionsAS()
+        {
+            if (cboMapsAS.SelectedItem == null || cboMapsAS.Items.Count == 0)
+                return;
+
+            if (!cboMapsAS.Visible) return;
+
+            string encounterType = cboEncounterType.SelectedItem == null ? "" : (string)cboEncounterType.SelectedItem;
+            int selectedMap = cboMapsAS.SelectedIndex == -1 ? 0 : Utils.MapsAS.FindIndex(s => s.Equals((string)cboMapsAS.SelectedItem));
+
+
+            cboEncounterType.Items.Clear();
+
+            if (Utils.MapsAlphaSapphire[selectedMap].isExistingEncounterType(EncounterType.Walking))
+                cboEncounterType.Items.Add(encounterOptions[0][0]);
+            if (Utils.MapsAlphaSapphire[selectedMap].isExistingEncounterType(EncounterType.TallGrass))
+                cboEncounterType.Items.Add(encounterOptions[0][10]);
+            if (Utils.MapsAlphaSapphire[selectedMap].isExistingEncounterType(EncounterType.Diving))
+                cboEncounterType.Items.Add(encounterOptions[0][15]);
+            if (Utils.MapsAlphaSapphire[selectedMap].isExistingEncounterType(EncounterType.Surf))
+                cboEncounterType.Items.Add(encounterOptions[0][1]);
+            if (Utils.MapsAlphaSapphire[selectedMap].isExistingEncounterType(EncounterType.RockSmash))
+                cboEncounterType.Items.Add(encounterOptions[0][2]);
+            if (Utils.MapsAlphaSapphire[selectedMap].isExistingEncounterType(EncounterType.OldRod))
+                cboEncounterType.Items.Add(encounterOptions[0][3]);
+            if (Utils.MapsAlphaSapphire[selectedMap].isExistingEncounterType(EncounterType.GoodRod))
+                cboEncounterType.Items.Add(encounterOptions[0][4]);
+            if (Utils.MapsAlphaSapphire[selectedMap].isExistingEncounterType(EncounterType.SuperRod))
+                cboEncounterType.Items.Add(encounterOptions[0][5]);
+
+            if (cboEncounterType.Items.Contains(encounterType))
+            {
+                cboEncounterType.SelectedItem = encounterType;
+            }
+            else
+            {
+                cboEncounterType.SelectedIndex = 0;
+            }
         }
 
         private void changEncounterOptionsOR(object sender, EventArgs e)
         {
+            changeEncounterOptionsOR();
+        }
 
+        private void changeEncounterOptionsOR()
+        {
+            if (cboMapsOR.SelectedItem == null || cboMapsOR.Items.Count == 0)
+                return;
+
+            if (!cboMapsOR.Visible) return;
+
+            string encounterType = cboEncounterType.SelectedItem == null ? "" : (string)cboEncounterType.SelectedItem;
+            int selectedMap = cboMapsOR.SelectedIndex == -1 ? 0 : Utils.MapsOR.FindIndex(s => s.Equals((string)cboMapsOR.SelectedItem));
+
+
+            cboEncounterType.Items.Clear();
+
+            if (Utils.MapsOmegaRuby[selectedMap].isExistingEncounterType(EncounterType.Walking))
+                cboEncounterType.Items.Add(encounterOptions[0][0]);
+            if (Utils.MapsOmegaRuby[selectedMap].isExistingEncounterType(EncounterType.TallGrass))
+                cboEncounterType.Items.Add(encounterOptions[0][10]);
+            if (Utils.MapsOmegaRuby[selectedMap].isExistingEncounterType(EncounterType.Diving))
+                cboEncounterType.Items.Add(encounterOptions[0][15]);
+            if (Utils.MapsOmegaRuby[selectedMap].isExistingEncounterType(EncounterType.Surf))
+                cboEncounterType.Items.Add(encounterOptions[0][1]);
+            if (Utils.MapsOmegaRuby[selectedMap].isExistingEncounterType(EncounterType.RockSmash))
+                cboEncounterType.Items.Add(encounterOptions[0][2]);
+            if (Utils.MapsOmegaRuby[selectedMap].isExistingEncounterType(EncounterType.OldRod))
+                cboEncounterType.Items.Add(encounterOptions[0][3]);
+            if (Utils.MapsOmegaRuby[selectedMap].isExistingEncounterType(EncounterType.GoodRod))
+                cboEncounterType.Items.Add(encounterOptions[0][4]);
+            if (Utils.MapsOmegaRuby[selectedMap].isExistingEncounterType(EncounterType.SuperRod))
+                cboEncounterType.Items.Add(encounterOptions[0][5]);
+
+            if (cboEncounterType.Items.Contains(encounterType))
+            {
+                cboEncounterType.SelectedItem = encounterType;
+            }
+            else
+            {
+                cboEncounterType.SelectedIndex = 0;
+            }
         }
 
         private void changeEncounterOptionsXY(object sender, EventArgs e)
@@ -1118,6 +1203,14 @@ namespace PokemonEncCalc
                 case Version.Y:
                     currentMap = Utils.MapsXY.FindIndex(s => s.Equals((string)cboMapsXY.SelectedItem));
                     newSlots = Utils.MapsY[currentMap].getSlots(type);
+                    break;
+                case Version.OmegaRuby:
+                    currentMap = Utils.MapsOR.FindIndex(s => s.Equals((string)cboMapsOR.SelectedItem));
+                    newSlots = Utils.MapsOmegaRuby[currentMap].getSlots(type);
+                    break;
+                case Version.AlphaSapphire:
+                    currentMap = Utils.MapsAS.FindIndex(s => s.Equals((string)cboMapsAS.SelectedItem));
+                    newSlots = Utils.MapsAlphaSapphire[currentMap].getSlots(type);
                     break;
                 default:
                     break;

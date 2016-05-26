@@ -359,9 +359,10 @@ namespace PokemonEncCalc
                     returnSlots = new EncounterSlot[12];
                     break;
 
-                default: break;
+                default: return null;
 
             }
+            
 
             for (int i = 0; i < selected.Length; i++)
             {

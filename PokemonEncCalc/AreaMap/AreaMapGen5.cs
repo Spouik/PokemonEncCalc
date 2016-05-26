@@ -231,11 +231,12 @@ namespace PokemonEncCalc
                     selected = FishRippling;
                     returnSlots = new EncounterSlot[5];
                     break;
-                default: break; 
+                default: return null; 
 
             }
+            
 
-            for(int i = 0; i < selected.Length; i++)
+            for (int i = 0; i < selected.Length; i++)
             {
                 returnSlots[i] = new EncounterSlot(selected[i]);
             }

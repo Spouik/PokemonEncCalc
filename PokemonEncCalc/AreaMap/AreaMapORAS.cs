@@ -267,5 +267,72 @@ namespace PokemonEncCalc
 
         }
 
+        internal EncounterSlot[] getSlots(EncounterType type)
+        {
+            EncounterSlot[] selected = null, returnSlots = null;
+            switch (type)
+            {
+                case EncounterType.Diving:
+                case EncounterType.Walking:
+                    selected = WalkSlots;
+                    returnSlots = new EncounterSlot[12];
+                    break;
+
+                case EncounterType.TallGrass:
+                    selected = TallGrassSlots;
+                    returnSlots = new EncounterSlot[12];
+                    break;
+                case EncounterType.Surf:
+                    selected = SurfSlots;
+                    returnSlots = new EncounterSlot[5];
+                    break;
+                case EncounterType.RockSmash:
+                    selected = RockSmashSlots;
+                    returnSlots = new EncounterSlot[5];
+                    break;
+                case EncounterType.OldRod:
+                    selected = OldRodSlots;
+                    returnSlots = new EncounterSlot[3];
+                    break;
+                case EncounterType.GoodRod:
+                    selected = GoodRodSlots;
+                    returnSlots = new EncounterSlot[3];
+                    break;
+                case EncounterType.SuperRod:
+                    selected = SuperRodSlots;
+                    returnSlots = new EncounterSlot[3];
+                    break;
+
+
+                default: return null;
+
+            }
+            
+
+            for (int i = 0; i < selected.Length; i++)
+            {
+                returnSlots[i] = new EncounterSlot(selected[i]);
+            }
+
+
+            return returnSlots;
+        }
+
+        internal bool isExistingEncounterType(EncounterType type)
+        {
+            switch (type)
+            {
+                case EncounterType.Walking: return (WalkSlots == null) ? false : !(new[] { 9, 13, 15, 17, 18, 19 }.Contains(map));
+                case EncounterType.Diving: return (WalkSlots == null) ? false : (new[] { 9, 13, 15, 17, 18, 19 }.Contains(map));
+                case EncounterType.Surf: return !(SurfSlots == null);
+                case EncounterType.RockSmash: return !(RockSmashSlots == null);
+                case EncounterType.OldRod: return !(OldRodSlots == null);
+                case EncounterType.GoodRod: return !(GoodRodSlots == null);
+                case EncounterType.SuperRod: return !(SuperRodSlots == null);
+                case EncounterType.TallGrass: return !(TallGrassSlots == null);
+                default: return false;
+            }
+        }
+
     }
 }
