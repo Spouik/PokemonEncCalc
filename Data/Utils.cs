@@ -272,11 +272,12 @@ namespace PokemonEncCalc
         internal static List<EncounterSlot> calcEncounterRate(EncounterSlot[] slots, Version version, Ability ability = Ability.None, byte repel = 0)
         {
             List<EncounterSlot> result = new List<EncounterSlot>();
-            result.AddRange(slots);
+            for(int i = 0; i< slots.Length; i++)
+                result.Add(new EncounterSlot(slots[i]));
             result = calcAbility(result, ability, version);
             result = calcRepel(result, repel);
 
-            return normalizeSlots(result);
+            return result;
         }
 
         //
@@ -285,7 +286,9 @@ namespace PokemonEncCalc
         private static List<EncounterSlot> calcRepel(List<EncounterSlot> slots, byte repel)
         {
             foreach (EncounterSlot e in slots)
-                e.Percentage *= Math.Min(Math.Max(0, (decimal)(e.MaxLevel - repel) / (decimal)(e.MinLevel - repel)), 1);
+                e.Percentage *= Math.Min(Math.Max(0, (decimal)(e.MaxLevel - repel + 1) / (decimal)(e.MaxLevel - e.MinLevel + 1)), 1);
+
+            slots.RemoveAll(s => s.Percentage == 0);
 
             return slots;
         }
@@ -421,24 +424,26 @@ namespace PokemonEncCalc
         internal static List<EncounterSlot> normalizeSlots(List<EncounterSlot> slots)
         {
             List<EncounterSlot> normalizedSlots = new List<EncounterSlot>();
+            List<EncounterSlot> slots2 = new List<EncounterSlot>();
+            foreach (EncounterSlot e in slots) slots2.Add(new EncounterSlot(e));
             decimal totalPercent = 0;
-            while(slots.Count != 0)
+            while(slots2.Count != 0)
             {
-                EncounterSlot e = slots[0];
+                EncounterSlot e = slots2[0];
                 decimal percent = e.Percentage;
                 byte minLv = e.MinLevel;
                 byte maxLv = e.MaxLevel;
-                for (int i = 1; i < slots.Count; i++)
-                    if (e.Species.Equals(slots[i].Species))
+                for (int i = 1; i < slots2.Count; i++)
+                    if (e.Species.Equals(slots2[i].Species))
                     {
-                        minLv = Math.Min(minLv, slots[i].MinLevel);
-                        maxLv = Math.Max(maxLv, slots[i].MaxLevel);
-                        percent += slots[i].Percentage;
+                        minLv = Math.Min(minLv, slots2[i].MinLevel);
+                        maxLv = Math.Max(maxLv, slots2[i].MaxLevel);
+                        percent += slots2[i].Percentage;
                     }
 
                 normalizedSlots.Add(new EncounterSlot(e.Species, minLv, maxLv, percent));
                 totalPercent += percent;
-                slots.RemoveAll(s => s.Species.Equals(e.Species));
+                slots2.RemoveAll(s => s.Species.Equals(e.Species));
             }
 
             // 
@@ -449,6 +454,20 @@ namespace PokemonEncCalc
                 a.Percentage *= 100 / totalPercent;
 
             return normalizedSlots;
+        }
+
+
+        /// <summary>
+        /// Calculate the mathematical expectation to find a shiny using Cute Charm, based on modified EncouterSlot values
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns></returns>
+
+        internal static int cuteCharmExpectation(List<EncounterSlot> data)
+        {
+            decimal c = data.Where(s => new[] { 0, 254, 255 }.Contains(s.Species.GenderRatio)).Sum(s => s.Percentage);
+            decimal gendered = (100 - c) * 3;
+            return (int)Math.Floor((gendered + c) / (c / 8192 + (gendered / 24576)));
         }
 
         #endregion

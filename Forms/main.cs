@@ -33,15 +33,78 @@ namespace PokemonEncCalc
 
         private void cmdCalc_Click(object sender, EventArgs e)
         {
-            List<EncounterSlot> result = Utils.calcEncounterRate(currentSlots, Version.Diamond, Ability.None, chkRepel.Checked ? (byte)nudLevelRepel.Value : (byte)0);
+            Version version = (Version)(cboVersion.SelectedIndex + (int)Version.Ruby);
+            Ability ability = (chkAbility.Checked && pnlAbility.Visible) 
+                ? (Ability)(encounterOptions[1].FindIndex(s => s.Equals(cboAbility.SelectedItem)) + 1)
+                : Ability.None;
+            List<EncounterSlot> result = Utils.calcEncounterRate(currentSlots, version, ability, chkRepel.Checked ? (byte)nudLevelRepel.Value : (byte)0);
 
-            string resultText = "";
-            foreach (EncounterSlot s in result)
-                resultText += (s.Species.NameEN + " - " + s.Percentage.ToString() + Environment.NewLine);
+            string resultText = encounterInfoAsText();
 
-            
+            frmDisplayResults r = new frmDisplayResults();
+            r.ShowDialog(result, resultText, (ability == Ability.CuteCharm));
+        }
 
-            MessageBox.Show(resultText);
+        private string encounterInfoAsText()
+        {
+            string r = "";
+
+            // Map name
+            if (cboMapsRubySapp.Visible) r += (string)(cboMapsRubySapp.SelectedItem);
+            if (cboMapsEmer.Visible) r += (string)(cboMapsEmer.SelectedItem);
+            if (cboMapsFireLeaf.Visible) r += (string)(cboMapsFireLeaf.SelectedItem);
+            if (cboMapsDP.Visible) r += (string)(cboMapsDP.SelectedItem);
+            if (cboMapsPlat.Visible) r += (string)(cboMapsPlat.SelectedItem);
+            if (cboMapsHGSS.Visible) r += (string)(cboMapsHGSS.SelectedItem);
+            if (cboMapsBW.Visible) r += (string)(cboMapsBW.SelectedItem);
+            if (cboMapsB2W2.Visible) r += (string)(cboMapsB2W2.SelectedItem);
+            if (cboMapsXY.Visible) r += (string)(cboMapsXY.SelectedItem);
+            if (cboMapsOR.Visible) r += (string)(cboMapsOR.SelectedItem);
+            if (cboMapsAS.Visible) r += (string)(cboMapsAS.SelectedItem);
+
+            // Version
+            r += " (" + (string)(cboVersion.SelectedItem) + ")";
+
+            // Encounter Type
+            r += " - " + cboEncounterType.SelectedItem + Environment.NewLine;
+
+            // Repel
+            if (chkRepel.Checked) r += chkRepel.Text + " " + lblLevelRepelDisp.Text + " " + nudLevelRepel.Value;
+
+            // Ability
+            if (pnlAbility.Visible && chkAbility.Checked)
+                r += (r.EndsWith(Environment.NewLine) ? "" : " - ") + cboAbility.SelectedItem;
+
+            // Swarm
+            if (pnlDPPtOptions.Visible && cboSwarmDPPt.Enabled && cboSwarmDPPt.SelectedIndex == 1)
+                r += (r.EndsWith(Environment.NewLine) ? "" : " - ") + lblSwarmDPPtDisp.Text;
+            if (pnlHGSSOptions.Visible && cboSwarmHGSS.Enabled && cboSwarmHGSS.SelectedIndex == 1)
+                r += (r.EndsWith(Environment.NewLine) ? "" : " - ") + lblSwarmHGSSDisp.Text;
+
+            // Time
+            if (pnlDPPtOptions.Visible && cboTimeDPPt.Enabled)
+                r += (r.EndsWith(Environment.NewLine) ? "" : " - ") + cboTimeDPPt.SelectedItem;
+            if (pnlHGSSOptions.Visible && cboTimeHGSS.Enabled)
+                r += (r.EndsWith(Environment.NewLine) ? "" : " - ") + cboTimeHGSS.SelectedItem;
+
+            // GBA Slot
+            if (pnlDPPtOptions.Visible && cboGBASlot.Enabled && cboGBASlot.SelectedIndex > 0)
+                r += (r.EndsWith(Environment.NewLine) ? "" : " - ") + cboGBASlot.SelectedItem;
+
+            // PokéRadar
+            if (pnlDPPtOptions.Visible && chkRadarDPPt.Checked)
+                r += (r.EndsWith(Environment.NewLine) ? "" : " - ") + chkRadarDPPt.Text;
+
+            // Radio
+            if (pnlHGSSOptions.Visible && cboRadio.Enabled && cboRadio.SelectedIndex > 0)
+                r += (r.EndsWith(Environment.NewLine) ? "" : " - ") + cboRadio.SelectedItem;
+
+            // Season
+            if (pnlGen5Options.Visible && cboSeason.Enabled)
+                r += (r.EndsWith(Environment.NewLine) ? "" : " - ") + cboSeason.SelectedItem;
+
+
+            return r;
         }
 
         private void cmdClose_Click(object sender, EventArgs e)
@@ -58,11 +121,11 @@ namespace PokemonEncCalc
             renameMenuStrip();
             renameComboboxes();
             updateEncounterOptions();
-            for (int a = 0; a < currentSlots.Length; a++)
-            {
-                //currentSlots[a] = new EncounterSlot();
-                currentSlots[a].Percentage = percentage[a];
-            }
+            //for (int a = 0; a < currentSlots.Length; a++)
+            //{
+            //    //currentSlots[a] = new EncounterSlot();
+            //    currentSlots[a].Percentage = percentage[a];
+            //}
         }
 
         private void renameMenuStrip()
@@ -1122,6 +1185,25 @@ namespace PokemonEncCalc
             Version currentVersion = (Version)((int)Version.Ruby + cboVersion.SelectedIndex);
             int gba = 0, time = 0, radio = 0;
 
+            cboAbility.Items.Clear();
+            cboAbility.Items.Add(encounterOptions[1][0]);
+            cboAbility.Items.Add(encounterOptions[1][1]);
+            switch (type)
+            {
+                case EncounterType.Walking:
+                case EncounterType.DarkGrass:
+                case EncounterType.Surf:
+                case EncounterType.RedFlowers:
+                case EncounterType.YellowFlowers:
+                case EncounterType.PurpleFlowers:
+                case EncounterType.TallGrass:
+                case EncounterType.Diving:
+                case EncounterType.ShallowWater:
+                    cboAbility.Items.Add(encounterOptions[1][2]);
+                    break;
+                default: break;
+            }
+
             switch (currentVersion)
             {
                 case Version.Ruby:
@@ -1147,6 +1229,7 @@ namespace PokemonEncCalc
                     newSlots = Utils.MapsLeafGreen[currentMap].getSlots(type);
                     break;
                 case Version.Diamond:
+                    cboAbility.Items.Add(encounterOptions[1][3]);
                     currentMap = Utils.mapTablesDP[Utils.MapsDP.FindIndex(s => s.Equals((string)cboMapsDP.SelectedItem))];
                     changeSpecialOptionsDP(currentMap);
                     gba = cboGBASlot.Enabled ? cboGBASlot.SelectedIndex : 0;
@@ -1154,6 +1237,7 @@ namespace PokemonEncCalc
                     newSlots = Utils.MapsDiamond[currentMap].getSlots(type, (cboSwarmDPPt.Enabled && (cboSwarmDPPt.SelectedIndex == 1)), time, gba, chkRadarDPPt.Checked && chkRadarDPPt.Enabled);
                     break;
                 case Version.Pearl:
+                    cboAbility.Items.Add(encounterOptions[1][3]);
                     currentMap = Utils.mapTablesDP[Utils.MapsDP.FindIndex(s => s.Equals((string)cboMapsDP.SelectedItem))];
                     changeSpecialOptionsDP(currentMap);
                     gba = cboGBASlot.Enabled ? cboGBASlot.SelectedIndex : 0;
@@ -1162,6 +1246,7 @@ namespace PokemonEncCalc
                     break;
 
                 case Version.Platinum:
+                    cboAbility.Items.Add(encounterOptions[1][3]);
                     currentMap = Utils.mapTablesPlat[Utils.MapsPt.FindIndex(s => s.Equals((string)cboMapsPlat.SelectedItem))];
                     changeSpecialOptionsPlat(currentMap);
                     gba = cboGBASlot.Enabled ? cboGBASlot.SelectedIndex : 0;
@@ -1169,6 +1254,7 @@ namespace PokemonEncCalc
                     newSlots = Utils.MapsPlatinum[currentMap].getSlots(type, (cboSwarmDPPt.Enabled && (cboSwarmDPPt.SelectedIndex == 1)), time, gba, chkRadarDPPt.Checked && chkRadarDPPt.Enabled);
                     break;
                 case Version.HeartGold:
+                    cboAbility.Items.Add(encounterOptions[1][3]);
                     currentMap = Utils.mapTablesHGSS[Utils.MapsHGSS.FindIndex(s => s.Equals((string)cboMapsHGSS.SelectedItem))];
                     changeSpecialOptionsHGSS(currentMap);
                     radio = cboRadio.Enabled ? cboRadio.SelectedIndex : 0;
@@ -1176,6 +1262,7 @@ namespace PokemonEncCalc
                     newSlots = Utils.MapsHeartGold[currentMap].getSlots(type, (cboSwarmHGSS.Enabled && (cboSwarmHGSS.SelectedIndex == 1)), time, radio);
                     break;
                 case Version.SoulSilver:
+                    cboAbility.Items.Add(encounterOptions[1][3]);
                     currentMap = Utils.mapTablesHGSS[Utils.MapsHGSS.FindIndex(s => s.Equals((string)cboMapsHGSS.SelectedItem))];
                     changeSpecialOptionsHGSS(currentMap);
                     radio = cboRadio.Enabled ? cboRadio.SelectedIndex : 0;
@@ -1222,6 +1309,8 @@ namespace PokemonEncCalc
                     break;
 
             }
+
+
 
 
             if (newSlots == null)

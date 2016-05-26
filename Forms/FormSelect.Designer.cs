@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFormSelect));
             this.lblChooseFormText = new System.Windows.Forms.Label();
             this.cboFormList = new System.Windows.Forms.ComboBox();
             this.pctMinisprite = new System.Windows.Forms.PictureBox();
@@ -93,6 +94,7 @@
             this.Controls.Add(this.pctMinisprite);
             this.Controls.Add(this.cboFormList);
             this.Controls.Add(this.lblChooseFormText);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmFormSelect";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FormSelect";
