@@ -229,6 +229,7 @@ namespace PokemonEncCalc
                 case 15:
                     cboMapsXY.Visible = true;
                     pnlAbility.Visible = true;
+                    changeEncounterOptionsXY();
                     break;
                 case 16:
                     cboMapsOR.Visible = true;
@@ -481,7 +482,53 @@ namespace PokemonEncCalc
 
         private void changeEncounterOptionsXY(object sender, EventArgs e)
         {
+            changeEncounterOptionsXY();
+        }
 
+        private void changeEncounterOptionsXY()
+        {
+            if (cboMapsXY.SelectedItem == null || cboMapsXY.Items.Count == 0)
+                return;
+
+            if (!cboMapsXY.Visible) return;
+
+            string encounterType = cboEncounterType.SelectedItem == null ? "" : (string)cboEncounterType.SelectedItem;
+            int selectedMap = cboMapsXY.SelectedIndex == -1 ? 0 : Utils.MapsXY.FindIndex(s => s.Equals((string)cboMapsXY.SelectedItem));
+
+
+            cboEncounterType.Items.Clear();
+
+            if (Utils.MapsX[selectedMap].isExistingEncounterType(EncounterType.Walking))
+                cboEncounterType.Items.Add(encounterOptions[0][0]);
+            if (Utils.MapsX[selectedMap].isExistingEncounterType(EncounterType.TallGrass))
+                cboEncounterType.Items.Add(encounterOptions[0][10]);
+            if (Utils.MapsX[selectedMap].isExistingEncounterType(EncounterType.RedFlowers))
+                cboEncounterType.Items.Add(encounterOptions[0][11]);
+            if (Utils.MapsX[selectedMap].isExistingEncounterType(EncounterType.YellowFlowers))
+                cboEncounterType.Items.Add(encounterOptions[0][12]);
+            if (Utils.MapsX[selectedMap].isExistingEncounterType(EncounterType.PurpleFlowers))
+                cboEncounterType.Items.Add(encounterOptions[0][13]);
+            if (Utils.MapsX[selectedMap].isExistingEncounterType(EncounterType.ShallowWater))
+                cboEncounterType.Items.Add(encounterOptions[0][14]);
+            if (Utils.MapsX[selectedMap].isExistingEncounterType(EncounterType.Surf))
+                cboEncounterType.Items.Add(encounterOptions[0][1]);
+            if (Utils.MapsX[selectedMap].isExistingEncounterType(EncounterType.RockSmash))
+                cboEncounterType.Items.Add(encounterOptions[0][2]);
+            if (Utils.MapsX[selectedMap].isExistingEncounterType(EncounterType.OldRod))
+                cboEncounterType.Items.Add(encounterOptions[0][3]);
+            if (Utils.MapsX[selectedMap].isExistingEncounterType(EncounterType.GoodRod))
+                cboEncounterType.Items.Add(encounterOptions[0][4]);
+            if (Utils.MapsX[selectedMap].isExistingEncounterType(EncounterType.SuperRod))
+                cboEncounterType.Items.Add(encounterOptions[0][5]);
+
+            if (cboEncounterType.Items.Contains(encounterType))
+            {
+                cboEncounterType.SelectedItem = encounterType;
+            }
+            else
+            {
+                cboEncounterType.SelectedIndex = 0;
+            }
         }
 
         private void changeEncounterOptionsGen5(object sender, EventArgs e)
@@ -1063,6 +1110,14 @@ namespace PokemonEncCalc
                     currentMap = Utils.mapTablesB2W2[Utils.MapsB2W2.FindIndex(s => s.Equals((string)cboMapsB2W2.SelectedItem))];
                     currentMap += (cboSeason.Enabled) ? cboSeason.SelectedIndex : 0;
                     newSlots = Utils.MapsWhite2[currentMap].getSlots(type);
+                    break;
+                case Version.X:
+                    currentMap = Utils.MapsXY.FindIndex(s => s.Equals((string)cboMapsXY.SelectedItem));
+                    newSlots = Utils.MapsX[currentMap].getSlots(type);
+                    break;
+                case Version.Y:
+                    currentMap = Utils.MapsXY.FindIndex(s => s.Equals((string)cboMapsXY.SelectedItem));
+                    newSlots = Utils.MapsY[currentMap].getSlots(type);
                     break;
                 default:
                     break;

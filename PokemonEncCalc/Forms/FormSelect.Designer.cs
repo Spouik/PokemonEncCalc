@@ -94,6 +94,7 @@
             this.Controls.Add(this.cboFormList);
             this.Controls.Add(this.lblChooseFormText);
             this.Name = "frmFormSelect";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FormSelect";
             this.Load += new System.EventHandler(this.FormSelect_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pctMinisprite)).EndInit();

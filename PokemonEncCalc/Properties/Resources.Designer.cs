@@ -14743,6 +14743,36 @@ namespace PokemonEncCalc.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _710_1 {
+            get {
+                object obj = ResourceManager.GetObject("_710_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _710_2 {
+            get {
+                object obj = ResourceManager.GetObject("_710_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _710_3 {
+            get {
+                object obj = ResourceManager.GetObject("_710_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _710s {
             get {
                 object obj = ResourceManager.GetObject("_710s", resourceCulture);
@@ -14786,6 +14816,36 @@ namespace PokemonEncCalc.Properties {
         internal static System.Drawing.Bitmap _711 {
             get {
                 object obj = ResourceManager.GetObject("_711", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _711_1 {
+            get {
+                object obj = ResourceManager.GetObject("_711_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _711_2 {
+            get {
+                object obj = ResourceManager.GetObject("_711_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _711_3 {
+            get {
+                object obj = ResourceManager.GetObject("_711_3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -15753,8 +15813,8 @@ namespace PokemonEncCalc.Properties {
         ///
         ///!!!
         ///
-        ///Swarm
         ///No Swarm
+        ///Swarm
         ///
         ///!!!
         ///
@@ -15764,7 +15824,7 @@ namespace PokemonEncCalc.Properties {
         ///
         ///!!!
         ///
-        ///Hoenn r [rest of string was truncated]&quot;;.
+        ///No radi [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string encounter_options_EN {
             get {
@@ -15805,10 +15865,8 @@ namespace PokemonEncCalc.Properties {
         ///
         ///!!!
         ///
-        ///Troupeau
         ///Sans troupeau
-        ///
-        ///! [rest of string was truncated]&quot;;.
+        ///Avec troupeau [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string encounter_options_FR {
             get {

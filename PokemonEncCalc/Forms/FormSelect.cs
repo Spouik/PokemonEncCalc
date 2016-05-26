@@ -27,7 +27,7 @@ namespace PokemonEncCalc
 
         internal DialogResult ShowDialog(EncounterSlot slot)
         {
-            data = slot;
+            data = new EncounterSlot(slot);
             return ShowDialog();
         }
 

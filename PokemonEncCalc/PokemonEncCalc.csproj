@@ -984,7 +984,13 @@
     <Content Include="Resources\images\minisprites_s\708.png" />
     <Content Include="Resources\images\minisprites_s\709.png" />
     <Content Include="Resources\images\minisprites_s\71.png" />
+    <None Include="Resources\images\minisprites_s\710-1.png" />
+    <None Include="Resources\images\minisprites_s\710-2.png" />
+    <None Include="Resources\images\minisprites_s\710-3.png" />
     <Content Include="Resources\images\minisprites_s\710.png" />
+    <None Include="Resources\images\minisprites_s\711-1.png" />
+    <None Include="Resources\images\minisprites_s\711-2.png" />
+    <None Include="Resources\images\minisprites_s\711-3.png" />
     <Content Include="Resources\images\minisprites_s\711.png" />
     <Content Include="Resources\images\minisprites_s\712.png" />
     <Content Include="Resources\images\minisprites_s\713.png" />

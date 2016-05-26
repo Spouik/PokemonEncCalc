@@ -5014,4 +5014,22 @@
   <data name="encounter_options_FR" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\strings\fr\encounter_options.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
   </data>
+  <data name="_710_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\710-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_710_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\710-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_710_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\710-3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_711_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\711-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_711_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\711-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_711_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\711-3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

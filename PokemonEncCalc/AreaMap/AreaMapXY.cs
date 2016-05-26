@@ -52,8 +52,8 @@ namespace PokemonEncCalc
 
             // Copy data to arrays
             grass = data.Skip(0).Take(48).ToArray();
-            redflowers = data.Skip(48).Take(48).ToArray();
-            yellowflowers = data.Skip(96).Take(48).ToArray();
+            redflowers = data.Skip(96).Take(48).ToArray();
+            yellowflowers = data.Skip(48).Take(48).ToArray();
             purpleflowers = data.Skip(144).Take(48).ToArray();
             surf = data.Skip(192).Take(20).ToArray();
             oldrod = data.Skip(212).Take(12).ToArray();
@@ -80,9 +80,9 @@ namespace PokemonEncCalc
                     formid = (byte)(grass[4 * i + 3] >> 2);
                     p = Utils.PokemonList[species - 1];
                     if (formid > 0)
-                        if (p.FormCount() > formid)
-                            if (p.Forms[formid] != null)
-                                p = p.Forms[formid];
+                        if (p.FormCount() >= formid)
+                            if (p.Forms[formid - 1] != null)
+                                p = p.Forms[formid - 1];
                     WalkSlots[i] = new EncounterSlot(p, grass[4 * i], grass[4 * i + 1], percentGrass[i]);
                 }
 
@@ -98,9 +98,9 @@ namespace PokemonEncCalc
                     formid = (byte)(redflowers[4 * i + 3] >> 2);
                     p = Utils.PokemonList[species - 1];
                     if (formid > 0)
-                        if (p.FormCount() > formid)
-                            if (p.Forms[formid] != null)
-                                p = p.Forms[formid];
+                        if (p.FormCount() >= formid)
+                            if (p.Forms[formid - 1] != null)
+                                p = p.Forms[formid - 1];
                     RedFlowersSlots[i] = new EncounterSlot(p, redflowers[4 * i], redflowers[4 * i + 1], percentGrass[i]);
                 }
 
@@ -116,9 +116,9 @@ namespace PokemonEncCalc
                     formid = (byte)(yellowflowers[4 * i + 3] >> 2);
                     p = Utils.PokemonList[species - 1];
                     if (formid > 0)
-                        if (p.FormCount() > formid)
-                            if (p.Forms[formid] != null)
-                                p = p.Forms[formid];
+                        if (p.FormCount() >= formid)
+                            if (p.Forms[formid - 1] != null)
+                                p = p.Forms[formid - 1];
                     YellowFlowersSlots[i] = new EncounterSlot(p, yellowflowers[4 * i], yellowflowers[4 * i + 1], percentGrass[i]);
                 }
 
@@ -134,9 +134,9 @@ namespace PokemonEncCalc
                     formid = (byte)(purpleflowers[4 * i + 3] >> 2);
                     p = Utils.PokemonList[species - 1];
                     if (formid > 0)
-                        if (p.FormCount() > formid)
-                            if (p.Forms[formid] != null)
-                                p = p.Forms[formid];
+                        if (p.FormCount() >= formid)
+                            if (p.Forms[formid - 1] != null)
+                                p = p.Forms[formid - 1];
                     PurpleFlowersSlots[i] = new EncounterSlot(p, purpleflowers[4 * i], purpleflowers[4 * i + 1], percentGrass[i]);
                 }
 
@@ -152,9 +152,9 @@ namespace PokemonEncCalc
                     formid = (byte)(surf[4 * i + 3] >> 2);
                     p = Utils.PokemonList[species - 1];
                     if (formid > 0)
-                        if (p.FormCount() > formid)
-                            if (p.Forms[formid] != null)
-                                p = p.Forms[formid];
+                        if (p.FormCount() >= formid)
+                            if (p.Forms[formid - 1] != null)
+                                p = p.Forms[formid - 1];
                     SurfSlots[i] = new EncounterSlot(p, surf[4 * i], surf[4 * i + 1], percentSurf[i]);
                 }
 
@@ -170,9 +170,9 @@ namespace PokemonEncCalc
                     formid = (byte)(oldrod[4 * i + 3] >> 2);
                     p = Utils.PokemonList[species - 1];
                     if (formid > 0)
-                        if (p.FormCount() > formid)
-                            if (p.Forms[formid] != null)
-                                p = p.Forms[formid];
+                        if (p.FormCount() >= formid)
+                            if (p.Forms[formid - 1] != null)
+                                p = p.Forms[formid - 1];
                     OldRodSlots[i] = new EncounterSlot(p, oldrod[4 * i], oldrod[4 * i + 1], percentOldRod[i]);
                 }
 
@@ -188,9 +188,9 @@ namespace PokemonEncCalc
                     formid = (byte)(goodrod[4 * i + 3] >> 2);
                     p = Utils.PokemonList[species - 1];
                     if (formid > 0)
-                        if (p.FormCount() > formid)
-                            if (p.Forms[formid] != null)
-                                p = p.Forms[formid];
+                        if (p.FormCount() >= formid)
+                            if (p.Forms[formid - 1] != null)
+                                p = p.Forms[formid - 1];
                     GoodRodSlots[i] = new EncounterSlot(p, goodrod[4 * i], goodrod[4 * i + 1], percentGoodRod[i]);
                 }
 
@@ -206,9 +206,9 @@ namespace PokemonEncCalc
                     formid = (byte)(superrod[4 * i + 3] >> 2);
                     p = Utils.PokemonList[species - 1];
                     if (formid > 0)
-                        if (p.FormCount() > formid)
-                            if (p.Forms[formid] != null)
-                                p = p.Forms[formid];
+                        if (p.FormCount() >= formid)
+                            if (p.Forms[formid - 1] != null)
+                                p = p.Forms[formid - 1];
                     SuperRodSlots[i] = new EncounterSlot(p, superrod[4 * i], superrod[4 * i + 1], percentSuperRod[i]);
                 }
 
@@ -224,9 +224,9 @@ namespace PokemonEncCalc
                     formid = (byte)(rocksmash[4 * i + 3] >> 2);
                     p = Utils.PokemonList[species - 1];
                     if (formid > 0)
-                        if (p.FormCount() > formid)
-                            if (p.Forms[formid] != null)
-                                p = p.Forms[formid];
+                        if (p.FormCount() >= formid)
+                            if (p.Forms[formid - 1] != null)
+                                p = p.Forms[formid - 1];
                     RockSmash[i] = new EncounterSlot(p, rocksmash[4 * i], rocksmash[4 * i + 1], percentRockSmash[i]);
                 }
 
@@ -242,9 +242,9 @@ namespace PokemonEncCalc
                     formid = (byte)(other[4 * i + 3] >> 2);
                     p = Utils.PokemonList[species - 1];
                     if (formid > 0)
-                        if (p.FormCount() > formid)
-                            if (p.Forms[formid] != null)
-                                p = p.Forms[formid];
+                        if (p.FormCount() >= formid)
+                            if (p.Forms[formid - 1] != null)
+                                p = p.Forms[formid - 1];
                     OtherSlots[i] = new EncounterSlot(p, other[4 * i], other[4 * i + 1], percentGrass[i]);
                 }
 
@@ -260,9 +260,9 @@ namespace PokemonEncCalc
                     formid = (byte)(hordes[4 * i + 3] >> 2);
                     p = Utils.PokemonList[species - 1];
                     if (formid > 0)
-                        if (p.FormCount() > formid)
-                            if (p.Forms[formid] != null)
-                                p = p.Forms[formid];
+                        if (p.FormCount() >= formid)
+                            if (p.Forms[formid - 1] != null)
+                                p = p.Forms[formid - 1];
                     Horde1[i] = new EncounterSlot(p, hordes[4 * i], hordes[4 * i + 1], 20);
                 }
 
@@ -278,9 +278,9 @@ namespace PokemonEncCalc
                     formid = (byte)(hordes[4 * i + 23] >> 2);
                     p = Utils.PokemonList[species - 1];
                     if (formid > 0)
-                        if (p.FormCount() > formid)
-                            if (p.Forms[formid] != null)
-                                p = p.Forms[formid];
+                        if (p.FormCount() >= formid)
+                            if (p.Forms[formid - 1] != null)
+                                p = p.Forms[formid - 1];
                     Horde2[i] = new EncounterSlot(p, hordes[4 * i + 20], hordes[4 * i + 21], 20);
                 }
 
@@ -296,15 +296,99 @@ namespace PokemonEncCalc
                     formid = (byte)(hordes[4 * i + 43] >> 2);
                     p = Utils.PokemonList[species - 1];
                     if (formid > 0)
-                        if (p.FormCount() > formid)
-                            if (p.Forms[formid] != null)
-                                p = p.Forms[formid];
+                        if (p.FormCount() >= formid)
+                            if (p.Forms[formid - 1] != null)
+                                p = p.Forms[formid - 1];
                     Horde3[i] = new EncounterSlot(p, hordes[4 * i + 40], hordes[4 * i + 41], 20);
                 }
 
             }
 
 
+        }
+
+        internal EncounterSlot[] getSlots(EncounterType type)
+        {
+            EncounterSlot[] selected = null, returnSlots = null;
+            switch (type)
+            {
+                case EncounterType.Walking:
+                    if (new[] { 20, 24, 28 }.Contains(map))
+                        selected = OtherSlots;
+                    else
+                        selected = WalkSlots;
+                    returnSlots = new EncounterSlot[12];
+                    break;
+
+                case EncounterType.RedFlowers:
+                    selected = RedFlowersSlots;
+                    returnSlots = new EncounterSlot[12];
+                    break;
+                case EncounterType.YellowFlowers:
+                    selected = YellowFlowersSlots;
+                    returnSlots = new EncounterSlot[12];
+                    break;
+                case EncounterType.PurpleFlowers:
+                    selected = PurpleFlowersSlots;
+                    returnSlots = new EncounterSlot[12];
+                    break;
+
+                case EncounterType.Surf:
+                    selected = SurfSlots;
+                    returnSlots = new EncounterSlot[5];
+                    break;
+                case EncounterType.RockSmash:
+                    selected = RockSmash;
+                    returnSlots = new EncounterSlot[5];
+                    break;
+                case EncounterType.OldRod:
+                    selected = OldRodSlots;
+                    returnSlots = new EncounterSlot[3];
+                    break;
+                case EncounterType.GoodRod:
+                    selected = GoodRodSlots;
+                    returnSlots = new EncounterSlot[3];
+                    break;
+                case EncounterType.SuperRod:
+                    selected = SuperRodSlots;
+                    returnSlots = new EncounterSlot[3];
+                    break;
+                case EncounterType.ShallowWater:
+                case EncounterType.TallGrass:
+                    selected = OtherSlots;
+                    returnSlots = new EncounterSlot[12];
+                    break;
+
+                default: break;
+
+            }
+
+            for (int i = 0; i < selected.Length; i++)
+            {
+                returnSlots[i] = new EncounterSlot(selected[i]);
+            }
+
+
+            return returnSlots;
+        }
+
+        internal bool isExistingEncounterType(EncounterType type)
+        {
+            switch (type)
+            {
+                case EncounterType.Walking: return !(WalkSlots == null) ? true : (new[] { 20, 24, 28 }.Contains(map));
+                case EncounterType.RedFlowers: return !(RedFlowersSlots == null);
+                case EncounterType.YellowFlowers: return !(YellowFlowersSlots == null);
+                case EncounterType.PurpleFlowers: return !(PurpleFlowersSlots == null);
+                case EncounterType.Surf: return !(SurfSlots == null);
+                case EncounterType.RockSmash: return !(RockSmash == null);
+                case EncounterType.OldRod: return !(OldRodSlots == null);
+                case EncounterType.GoodRod: return !(GoodRodSlots == null);
+                case EncounterType.SuperRod: return !(SuperRodSlots == null);
+                case EncounterType.ShallowWater: return new[] { 25, 30 }.Contains(map);
+                case EncounterType.TallGrass: return new[] { 17, 27 }.Contains(map);
+                default: return false;
+            }
         }
 
     }
