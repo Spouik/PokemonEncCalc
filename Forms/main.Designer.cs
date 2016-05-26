@@ -140,6 +140,12 @@
             this.lblLvHorde0_0 = new System.Windows.Forms.Label();
             this.lblPercentHorde0 = new System.Windows.Forms.Label();
             this.gboAutoFill = new System.Windows.Forms.GroupBox();
+            this.pnlRoute120 = new System.Windows.Forms.Panel();
+            this.lblRoute120 = new System.Windows.Forms.Label();
+            this.pctRoute120 = new System.Windows.Forms.PictureBox();
+            this.pnlTurnback = new System.Windows.Forms.Panel();
+            this.lblTurnback = new System.Windows.Forms.Label();
+            this.pctTurnback = new System.Windows.Forms.PictureBox();
             this.pnlLuckyPower = new System.Windows.Forms.Panel();
             this.chkLuckyPower = new System.Windows.Forms.CheckBox();
             this.cboLuckyPower = new System.Windows.Forms.ComboBox();
@@ -176,12 +182,6 @@
             this.nudLevelRepel = new System.Windows.Forms.NumericUpDown();
             this.cboEncounterType = new System.Windows.Forms.ComboBox();
             this.cboVersion = new System.Windows.Forms.ComboBox();
-            this.pnlRoute120 = new System.Windows.Forms.Panel();
-            this.lblRoute120 = new System.Windows.Forms.Label();
-            this.pctRoute120 = new System.Windows.Forms.PictureBox();
-            this.pnlTurnback = new System.Windows.Forms.Panel();
-            this.lblTurnback = new System.Windows.Forms.Label();
-            this.pctTurnback = new System.Windows.Forms.PictureBox();
             this.cboMapsAS = new System.Windows.Forms.ComboBox();
             this.cboMapsOR = new System.Windows.Forms.ComboBox();
             this.cboMapsXY = new System.Windows.Forms.ComboBox();
@@ -254,16 +254,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.pctHorde1_0)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctHorde0_0)).BeginInit();
             this.gboAutoFill.SuspendLayout();
+            this.pnlRoute120.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pctRoute120)).BeginInit();
+            this.pnlTurnback.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pctTurnback)).BeginInit();
             this.pnlLuckyPower.SuspendLayout();
             this.pnlGen5Options.SuspendLayout();
             this.pnlHGSSOptions.SuspendLayout();
             this.pnlAbility.SuspendLayout();
             this.pnlDPPtOptions.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudLevelRepel)).BeginInit();
-            this.pnlRoute120.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pctRoute120)).BeginInit();
-            this.pnlTurnback.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pctTurnback)).BeginInit();
             this.SuspendLayout();
             // 
             // mstMenu
@@ -1575,6 +1575,8 @@
             // 
             // gboAutoFill
             // 
+            this.gboAutoFill.Controls.Add(this.pnlRoute120);
+            this.gboAutoFill.Controls.Add(this.pnlTurnback);
             this.gboAutoFill.Controls.Add(this.pnlLuckyPower);
             this.gboAutoFill.Controls.Add(this.pnlGen5Options);
             this.gboAutoFill.Controls.Add(this.pnlHGSSOptions);
@@ -1590,8 +1592,6 @@
             this.gboAutoFill.Controls.Add(this.nudLevelRepel);
             this.gboAutoFill.Controls.Add(this.cboEncounterType);
             this.gboAutoFill.Controls.Add(this.cboVersion);
-            this.gboAutoFill.Controls.Add(this.pnlRoute120);
-            this.gboAutoFill.Controls.Add(this.pnlTurnback);
             this.gboAutoFill.Controls.Add(this.cboMapsAS);
             this.gboAutoFill.Controls.Add(this.cboMapsOR);
             this.gboAutoFill.Controls.Add(this.cboMapsXY);
@@ -1609,6 +1609,62 @@
             this.gboAutoFill.TabIndex = 2;
             this.gboAutoFill.TabStop = false;
             this.gboAutoFill.Text = "Encounter Slots Auto Fill";
+            // 
+            // pnlRoute120
+            // 
+            this.pnlRoute120.Controls.Add(this.lblRoute120);
+            this.pnlRoute120.Controls.Add(this.pctRoute120);
+            this.pnlRoute120.Location = new System.Drawing.Point(21, 86);
+            this.pnlRoute120.Name = "pnlRoute120";
+            this.pnlRoute120.Size = new System.Drawing.Size(378, 310);
+            this.pnlRoute120.TabIndex = 11;
+            this.pnlRoute120.Visible = false;
+            // 
+            // lblRoute120
+            // 
+            this.lblRoute120.Location = new System.Drawing.Point(10, 262);
+            this.lblRoute120.Name = "lblRoute120";
+            this.lblRoute120.Size = new System.Drawing.Size(360, 36);
+            this.lblRoute120.TabIndex = 1;
+            this.lblRoute120.Text = "If you are fishing in the pond on the picture above, choose \"Route 120 (b)\". If n" +
+    "ot, choose \"Route 120 (a)\".";
+            // 
+            // pctRoute120
+            // 
+            this.pctRoute120.Image = global::PokemonEncCalc.Properties.Resources.Route_120__b_;
+            this.pctRoute120.Location = new System.Drawing.Point(5, 6);
+            this.pctRoute120.Name = "pctRoute120";
+            this.pctRoute120.Size = new System.Drawing.Size(366, 245);
+            this.pctRoute120.TabIndex = 0;
+            this.pctRoute120.TabStop = false;
+            // 
+            // pnlTurnback
+            // 
+            this.pnlTurnback.Controls.Add(this.lblTurnback);
+            this.pnlTurnback.Controls.Add(this.pctTurnback);
+            this.pnlTurnback.Location = new System.Drawing.Point(21, 86);
+            this.pnlTurnback.Name = "pnlTurnback";
+            this.pnlTurnback.Size = new System.Drawing.Size(378, 352);
+            this.pnlTurnback.TabIndex = 10;
+            this.pnlTurnback.Visible = false;
+            // 
+            // lblTurnback
+            // 
+            this.lblTurnback.Location = new System.Drawing.Point(10, 304);
+            this.lblTurnback.Name = "lblTurnback";
+            this.lblTurnback.Size = new System.Drawing.Size(360, 36);
+            this.lblTurnback.TabIndex = 1;
+            this.lblTurnback.Text = "If your map matches with the picture above, choose \"Turnback Cave (before pillar " +
+    "2) (b)\". If not, choose \"Turnback Cave (before pillar 2) (a)\".";
+            // 
+            // pctTurnback
+            // 
+            this.pctTurnback.Image = global::PokemonEncCalc.Properties.Resources.turnback;
+            this.pctTurnback.Location = new System.Drawing.Point(5, 6);
+            this.pctTurnback.Name = "pctTurnback";
+            this.pctTurnback.Size = new System.Drawing.Size(366, 284);
+            this.pctTurnback.TabIndex = 0;
+            this.pctTurnback.TabStop = false;
             // 
             // pnlLuckyPower
             // 
@@ -1775,6 +1831,8 @@
             this.lblHelpRoute120.TabIndex = 12;
             this.lblHelpRoute120.Text = "?";
             this.lblHelpRoute120.Visible = false;
+            this.lblHelpRoute120.MouseLeave += new System.EventHandler(this.displayRoute120_off);
+            this.lblHelpRoute120.MouseHover += new System.EventHandler(this.displayRoute120_on);
             // 
             // lblHelpTurnback
             // 
@@ -1785,6 +1843,8 @@
             this.lblHelpTurnback.TabIndex = 11;
             this.lblHelpTurnback.Text = "?";
             this.lblHelpTurnback.Visible = false;
+            this.lblHelpTurnback.MouseLeave += new System.EventHandler(this.displayTurnback_off);
+            this.lblHelpTurnback.MouseHover += new System.EventHandler(this.displayTurnback_on);
             // 
             // pnlAbility
             // 
@@ -1982,62 +2042,6 @@
             this.cboVersion.Size = new System.Drawing.Size(120, 21);
             this.cboVersion.TabIndex = 0;
             this.cboVersion.SelectedIndexChanged += new System.EventHandler(this.cboVersion_SelectedIndexChanged);
-            // 
-            // pnlRoute120
-            // 
-            this.pnlRoute120.Controls.Add(this.lblRoute120);
-            this.pnlRoute120.Controls.Add(this.pctRoute120);
-            this.pnlRoute120.Location = new System.Drawing.Point(21, 86);
-            this.pnlRoute120.Name = "pnlRoute120";
-            this.pnlRoute120.Size = new System.Drawing.Size(378, 310);
-            this.pnlRoute120.TabIndex = 11;
-            this.pnlRoute120.Visible = false;
-            // 
-            // lblRoute120
-            // 
-            this.lblRoute120.Location = new System.Drawing.Point(10, 262);
-            this.lblRoute120.Name = "lblRoute120";
-            this.lblRoute120.Size = new System.Drawing.Size(360, 36);
-            this.lblRoute120.TabIndex = 1;
-            this.lblRoute120.Text = "If you are fishing in the pond on the picture above, choose \"Route 120 (b)\". If n" +
-    "ot, choose \"Route 120 (a)\".";
-            // 
-            // pctRoute120
-            // 
-            this.pctRoute120.Image = global::PokemonEncCalc.Properties.Resources.Route_120__b_;
-            this.pctRoute120.Location = new System.Drawing.Point(5, 6);
-            this.pctRoute120.Name = "pctRoute120";
-            this.pctRoute120.Size = new System.Drawing.Size(366, 245);
-            this.pctRoute120.TabIndex = 0;
-            this.pctRoute120.TabStop = false;
-            // 
-            // pnlTurnback
-            // 
-            this.pnlTurnback.Controls.Add(this.lblTurnback);
-            this.pnlTurnback.Controls.Add(this.pctTurnback);
-            this.pnlTurnback.Location = new System.Drawing.Point(21, 86);
-            this.pnlTurnback.Name = "pnlTurnback";
-            this.pnlTurnback.Size = new System.Drawing.Size(378, 352);
-            this.pnlTurnback.TabIndex = 10;
-            this.pnlTurnback.Visible = false;
-            // 
-            // lblTurnback
-            // 
-            this.lblTurnback.Location = new System.Drawing.Point(10, 304);
-            this.lblTurnback.Name = "lblTurnback";
-            this.lblTurnback.Size = new System.Drawing.Size(360, 36);
-            this.lblTurnback.TabIndex = 1;
-            this.lblTurnback.Text = "If your map matches with the picture above, choose \"Turnback Cave (before pillar " +
-    "2) (b)\". If not, choose \"Turnback Cave (before pillar 2) (a)\".";
-            // 
-            // pctTurnback
-            // 
-            this.pctTurnback.Image = global::PokemonEncCalc.Properties.Resources.turnback;
-            this.pctTurnback.Location = new System.Drawing.Point(5, 6);
-            this.pctTurnback.Name = "pctTurnback";
-            this.pctTurnback.Size = new System.Drawing.Size(366, 284);
-            this.pctTurnback.TabIndex = 0;
-            this.pctTurnback.TabStop = false;
             // 
             // cboMapsAS
             // 
@@ -2277,6 +2281,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pctHorde0_0)).EndInit();
             this.gboAutoFill.ResumeLayout(false);
             this.gboAutoFill.PerformLayout();
+            this.pnlRoute120.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pctRoute120)).EndInit();
+            this.pnlTurnback.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pctTurnback)).EndInit();
             this.pnlLuckyPower.ResumeLayout(false);
             this.pnlLuckyPower.PerformLayout();
             this.pnlGen5Options.ResumeLayout(false);
@@ -2286,10 +2294,6 @@
             this.pnlDPPtOptions.ResumeLayout(false);
             this.pnlDPPtOptions.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudLevelRepel)).EndInit();
-            this.pnlRoute120.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pctRoute120)).EndInit();
-            this.pnlTurnback.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pctTurnback)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -15,7 +15,6 @@ namespace PokemonEncCalc
     {
         // Current Slots : Should match with those displayed on the form
         EncounterSlot[] currentSlots = new EncounterSlot[12];
-        EncounterType currentEncounterType = EncounterType.Walking;
         decimal[] percentage = { 20, 20, 10, 10, 10, 10, 5, 5, 4, 4, 1, 1 };
 
         bool updatingSlots = false; //is true when slots are being updated automatically (prevents slot modification via controls during this time)
@@ -170,7 +169,8 @@ namespace PokemonEncCalc
             cboMapsRubySapp.Visible = cboMapsEmer.Visible = cboMapsFireLeaf.Visible = cboMapsDP.Visible
                 = cboMapsPlat.Visible = cboMapsHGSS.Visible = cboMapsBW.Visible = cboMapsB2W2.Visible
                 = cboMapsXY.Visible = cboMapsOR.Visible = cboMapsAS.Visible = pnlAbility.Visible = pnlDPPtOptions.Visible
-                = pnlHGSSOptions.Visible = pnlGen5Options.Visible = pnlLuckyPower.Visible = false;
+                = pnlHGSSOptions.Visible = pnlGen5Options.Visible = pnlLuckyPower.Visible
+                = lblHelpRoute120.Visible = lblHelpTurnback.Visible = false;
 
 
 
@@ -490,6 +490,9 @@ namespace PokemonEncCalc
             string encounterType = cboEncounterType.SelectedItem == null ? "" : (string)cboEncounterType.SelectedItem;
             int selectedMap = cboMapsAS.SelectedIndex == -1 ? 0 : Utils.MapsAS.FindIndex(s => s.Equals((string)cboMapsAS.SelectedItem));
 
+            if (new[] { 65, 66 }.Contains(selectedMap)) lblHelpRoute120.Visible = true;
+            else lblHelpRoute120.Visible = false;
+            
 
             cboEncounterType.Items.Clear();
 
@@ -535,6 +538,8 @@ namespace PokemonEncCalc
             string encounterType = cboEncounterType.SelectedItem == null ? "" : (string)cboEncounterType.SelectedItem;
             int selectedMap = cboMapsOR.SelectedIndex == -1 ? 0 : Utils.MapsOR.FindIndex(s => s.Equals((string)cboMapsOR.SelectedItem));
 
+            if (new[] { 65, 66 }.Contains(selectedMap)) lblHelpRoute120.Visible = true;
+            else lblHelpRoute120.Visible = false;
 
             cboEncounterType.Items.Clear();
 
@@ -892,7 +897,8 @@ namespace PokemonEncCalc
             int selectedMap = cboMapsPlat.SelectedIndex == -1 ? 0 : Utils.mapTablesPlat[Utils.MapsPt.FindIndex(s => s.Equals((string)cboMapsPlat.SelectedItem))];
 
 
-
+            if (new[] { 69,70 }.Contains(selectedMap)) lblHelpTurnback.Visible = true;
+            else lblHelpTurnback.Visible = false;
             //
             cboEncounterType.Items.Clear();
 
@@ -1282,6 +1288,28 @@ namespace PokemonEncCalc
         private void cboLuckyPower_SelectedIndexChanged(object sender, EventArgs e)
         {
             changeLuckyPowerPercentage();
+        }
+
+        private void displayTurnback_on(object sender, EventArgs e)
+        {
+            pnlTurnback.Visible = true;
+            pnlTurnback.BringToFront();
+        }
+
+        private void displayTurnback_off(object sender, EventArgs e)
+        {
+            pnlTurnback.Visible = false;
+        }
+
+        private void displayRoute120_on(object sender, EventArgs e)
+        {
+            pnlRoute120.Visible = true;
+            pnlRoute120.BringToFront();
+        }
+
+        private void displayRoute120_off(object sender, EventArgs e)
+        {
+            pnlRoute120.Visible = false;
         }
     }
 }

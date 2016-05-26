@@ -55,7 +55,7 @@ namespace PokemonEncCalc
         public string FormNameKR { get; set; }
 
         // alternative forms
-        public List<Pokemon> Forms { get; }
+        public List<Pokemon> Forms { get;}
 
         public string getName()
         {

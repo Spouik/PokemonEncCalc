@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokemonEncCalc", "PokemonEncCalc\PokemonEncCalc.csproj", "{8C1F0FFE-D37A-4010-A6FD-A5798813A9A5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokemonEncCalc", "PokemonEncCalc.csproj", "{8C1F0FFE-D37A-4010-A6FD-A5798813A9A5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
