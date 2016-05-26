@@ -390,6 +390,16 @@ namespace PokemonEncCalc
                     break;
 
                 case Ability.CuteCharm:
+                    // Genderless and fixed-gendered Pokémon are more likely to be found shiny.
+
+                    foreach (EncounterSlot s in slots)
+                        if (new[] { 0, 254, 255 }.Contains(s.Species.GenderRatio)) s.Percentage *= 3;
+
+                    decimal sum = slots.Sum(s => s.Percentage);
+
+                    foreach (EncounterSlot s in slots)
+                        s.Percentage *= (100 / sum);
+
                     break;
 
                 default:

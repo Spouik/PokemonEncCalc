@@ -1,11 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PokemonEncCalc
@@ -57,10 +53,10 @@ namespace PokemonEncCalc
                 pct.Location = new Point(2, 2);
                 l.Location = new Point(2, 98);
                 int a = 40;
-                int x = (row + 1) * 4 < nbSlots ? 4 : nbSlots % 4;
+                int x = (row + 1) * 4 < nbSlots ? 4 : ((nbSlots - 1) % 4) + 1;
                 //int y = nbSlots / 4;
                 int b = (parentWidth - (x * 100 + (x - 1) * a)) / 2;
-                int d = nbSlots <= 12 ? (pnlResults.Height - ((nbSlots / 4 + 1) * 120 + (nbSlots / 4) * 40)) / 2 : 20;
+                int d = nbSlots <= 12 ? (pnlResults.Height - (((nbSlots-1) / 4 + 1) * 120 + ((nbSlots-1) / 4) * 40)) / 2 : 20;
                 p.Location = new Point(b + column * (100 + a), d + row * (160));
                 pnlResults.Controls.Add(p);
                 column++;

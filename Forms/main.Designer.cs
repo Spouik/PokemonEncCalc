@@ -1865,10 +1865,12 @@
             this.chkAbility.TabIndex = 5;
             this.chkAbility.Text = "Ability";
             this.chkAbility.UseVisualStyleBackColor = true;
+            this.chkAbility.CheckedChanged += new System.EventHandler(this.chkAbility_checkedChanged);
             // 
             // cboAbility
             // 
             this.cboAbility.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboAbility.Enabled = false;
             this.cboAbility.FormattingEnabled = true;
             this.cboAbility.Location = new System.Drawing.Point(9, 27);
             this.cboAbility.Name = "cboAbility";
@@ -1972,12 +1974,13 @@
             // 
             // lblLevelRepelDisp
             // 
-            this.lblLevelRepelDisp.AutoSize = true;
+            this.lblLevelRepelDisp.Enabled = false;
             this.lblLevelRepelDisp.Location = new System.Drawing.Point(7, 146);
             this.lblLevelRepelDisp.Name = "lblLevelRepelDisp";
             this.lblLevelRepelDisp.Size = new System.Drawing.Size(33, 13);
             this.lblLevelRepelDisp.TabIndex = 4;
             this.lblLevelRepelDisp.Text = "Level";
+            this.lblLevelRepelDisp.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // lblAreaDisp
             // 
@@ -2008,6 +2011,7 @@
             // 
             // nudLevelRepel
             // 
+            this.nudLevelRepel.Enabled = false;
             this.nudLevelRepel.Location = new System.Drawing.Point(60, 142);
             this.nudLevelRepel.Minimum = new decimal(new int[] {
             1,
@@ -2212,8 +2216,10 @@
             this.Controls.Add(this.gboAutoFill);
             this.Controls.Add(this.gboSlots);
             this.Controls.Add(this.mstMenu);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.mstMenu;
+            this.MaximizeBox = false;
             this.Name = "frmMainPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

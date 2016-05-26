@@ -533,6 +533,11 @@ namespace PokemonEncCalc
             lblLevelRepelDisp.Enabled = chkRepel.Checked;
         }
 
+        private void chkAbility_checkedChanged(object sender, EventArgs e)
+        {
+            cboAbility.Enabled = chkAbility.Checked;
+        }
+
 
         #region loadingEncounterSlots
 
@@ -1185,6 +1190,9 @@ namespace PokemonEncCalc
             Version currentVersion = (Version)((int)Version.Ruby + cboVersion.SelectedIndex);
             int gba = 0, time = 0, radio = 0;
 
+            Ability selectedAbility = (Ability)(encounterOptions[1].FindIndex(s=> s==(string)(cboAbility.SelectedItem)) + 1);
+            if (selectedAbility == Ability.None) selectedAbility = Ability.Static;
+
             cboAbility.Items.Clear();
             cboAbility.Items.Add(encounterOptions[1][0]);
             cboAbility.Items.Add(encounterOptions[1][1]);
@@ -1310,7 +1318,10 @@ namespace PokemonEncCalc
 
             }
 
-
+            if (cboAbility.Items.Contains(encounterOptions[1][(int)selectedAbility - 1]))
+                cboAbility.SelectedItem = encounterOptions[1][(int)selectedAbility - 1];
+            else
+                cboAbility.SelectedIndex = 0;
 
 
             if (newSlots == null)
