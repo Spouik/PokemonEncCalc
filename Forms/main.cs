@@ -514,7 +514,7 @@ namespace PokemonEncCalc
             if (!pnlAbility.Visible)
                 return;
 
-            if(cboAbility.SelectedItem.Equals(encounterOptions[0][2]))
+            if(cboAbility.SelectedItem.Equals(encounterOptions[1][2]))
             {
                 chkRepel.Enabled = false;
                 chkRepel.Checked = true;
