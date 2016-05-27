@@ -35,6 +35,8 @@ namespace PokemonEncCalc
         public byte SpD_Old { get; set; }
         public byte Spe_Old { get; set; }
 
+        public byte CatchRateORAS { get; set; }
+
         // PokemonNames
         public string NameDE { get; set; }
         public string NameEN { get; set; }
@@ -139,6 +141,8 @@ namespace PokemonEncCalc
                 SpA_Old = data[43];
                 SpD_Old = data[44];
                 Spe_Old = data[45];
+
+                CatchRateORAS = data[46];
 
                 Forms = new List<Pokemon>();
             }

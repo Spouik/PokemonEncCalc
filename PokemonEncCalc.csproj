@@ -73,6 +73,12 @@
     <Compile Include="AreaMap\AreaMapHGSS.cs" />
     <Compile Include="AreaMap\AreaMapORAS.cs" />
     <Compile Include="AreaMap\AreaMapXY.cs" />
+    <Compile Include="Forms\CaptureCalc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CaptureCalc.Designer.cs">
+      <DependentUpon>CaptureCalc.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\DisplayResults.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +119,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="EncounterSlots\RegularSlots.cs" />
+    <EmbeddedResource Include="Forms\CaptureCalc.resx">
+      <DependentUpon>CaptureCalc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\DisplayResults.resx">
       <DependentUpon>DisplayResults.cs</DependentUpon>
     </EmbeddedResource>
@@ -251,6 +260,8 @@
     <None Include="Resources\strings\en\interface.txt" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\strings\fr\balls.txt" />
+    <None Include="Resources\strings\en\balls.txt" />
     <None Include="Resources\strings\kr\honeyTreesLocations.txt" />
     <None Include="Resources\strings\jp\honeyTreesLocations.txt" />
     <None Include="Resources\strings\it\honeyTreesLocations.txt" />
@@ -259,6 +270,32 @@
     <None Include="Resources\strings\de\honeyTreesLocations.txt" />
     <None Include="Resources\strings\en\honeyTreesLocations.txt" />
     <None Include="Resources\images\HoneyTree.png" />
+    <None Include="Resources\images\balls\b0.png" />
+    <None Include="Resources\images\balls\b1.png" />
+    <None Include="Resources\images\balls\b2.png" />
+    <None Include="Resources\images\balls\b3.png" />
+    <None Include="Resources\images\balls\b4.png" />
+    <None Include="Resources\images\balls\b5.png" />
+    <None Include="Resources\images\balls\b6.png" />
+    <None Include="Resources\images\balls\b7.png" />
+    <None Include="Resources\images\balls\b8.png" />
+    <None Include="Resources\images\balls\b9.png" />
+    <None Include="Resources\images\balls\b10.png" />
+    <None Include="Resources\images\balls\b11.png" />
+    <None Include="Resources\images\balls\b12.png" />
+    <None Include="Resources\images\balls\b13.png" />
+    <None Include="Resources\images\balls\b14.png" />
+    <None Include="Resources\images\balls\b15.png" />
+    <None Include="Resources\images\balls\b16.png" />
+    <None Include="Resources\images\balls\b17.png" />
+    <None Include="Resources\images\balls\b18.png" />
+    <None Include="Resources\images\balls\b19.png" />
+    <None Include="Resources\images\balls\b20.png" />
+    <None Include="Resources\images\balls\b21.png" />
+    <None Include="Resources\images\balls\b22.png" />
+    <None Include="Resources\images\balls\b23.png" />
+    <None Include="Resources\images\balls\b24.png" />
+    <None Include="Resources\images\balls\b25.png" />
     <Content Include="Resources\images\minisprites_s\0.png" />
     <Content Include="Resources\images\minisprites_s\1.png" />
     <Content Include="Resources\images\minisprites_s\10.png" />

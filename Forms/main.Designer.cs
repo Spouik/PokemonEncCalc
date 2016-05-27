@@ -32,6 +32,7 @@
             this.mstMenu = new System.Windows.Forms.MenuStrip();
             this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.honeyCuteCharmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.captureToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.languageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.englishToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -281,7 +282,8 @@
             // toolsToolStripMenuItem
             // 
             this.toolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.honeyCuteCharmToolStripMenuItem});
+            this.honeyCuteCharmToolStripMenuItem,
+            this.captureToolStripMenuItem});
             this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
             this.toolsToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
             this.toolsToolStripMenuItem.Text = "Tools";
@@ -292,6 +294,13 @@
             this.honeyCuteCharmToolStripMenuItem.Size = new System.Drawing.Size(246, 22);
             this.honeyCuteCharmToolStripMenuItem.Text = "Munchlax Trees and Cute Charm";
             this.honeyCuteCharmToolStripMenuItem.Click += new System.EventHandler(this.honeyCuteCharmToolStripMenuItem_Click);
+            // 
+            // captureToolStripMenuItem
+            // 
+            this.captureToolStripMenuItem.Name = "captureToolStripMenuItem";
+            this.captureToolStripMenuItem.Size = new System.Drawing.Size(246, 22);
+            this.captureToolStripMenuItem.Text = "Capture Calculator";
+            this.captureToolStripMenuItem.Click += new System.EventHandler(this.captureCalculatorToolStripMenuItem_Click);
             // 
             // optionsToolStripMenuItem
             // 
@@ -2484,6 +2493,7 @@
         internal System.Windows.Forms.Label lblEncounterTypeDisp;
         internal System.Windows.Forms.ComboBox cboMapsAS;
         private System.Windows.Forms.ToolStripMenuItem honeyCuteCharmToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem captureToolStripMenuItem;
     }
 }
 

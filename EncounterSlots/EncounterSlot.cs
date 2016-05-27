@@ -8,7 +8,7 @@ namespace PokemonEncCalc
 {
     class EncounterSlot
     {
-        private EncounterSlot encounterSlot;
+
 
         public Pokemon Species { get; set; }
         public byte MinLevel { get; set; }

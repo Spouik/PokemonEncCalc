@@ -514,7 +514,7 @@ namespace PokemonEncCalc
             if (!pnlAbility.Visible)
                 return;
 
-            if(cboAbility.SelectedItem.Equals(encounterOptions[1][2]))
+            if(cboAbility.SelectedItem.Equals(encounterOptions[1][2]) && chkAbility.Checked)
             {
                 chkRepel.Enabled = false;
                 chkRepel.Checked = true;
@@ -535,7 +535,18 @@ namespace PokemonEncCalc
 
         private void chkAbility_checkedChanged(object sender, EventArgs e)
         {
+            if (!pnlAbility.Visible)
+                return;
+
             cboAbility.Enabled = chkAbility.Checked;
+            if (cboAbility.SelectedItem.Equals(encounterOptions[1][2]) && chkAbility.Checked)
+            {
+                chkRepel.Enabled = false;
+                chkRepel.Checked = true;
+            }
+            else
+                chkRepel.Enabled = true;
+
         }
 
 
@@ -1416,6 +1427,12 @@ namespace PokemonEncCalc
         {
             frmHoneyCuteCharm f = new frmHoneyCuteCharm();
             f.ShowDialog();
+        }
+
+        private void captureCalculatorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCaptureCalc c = new frmCaptureCalc();
+            c.ShowDialog();
         }
     }
 }
