@@ -79,6 +79,12 @@
     <Compile Include="Forms\DisplayResults.Designer.cs">
       <DependentUpon>DisplayResults.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\HoneyCuteCharm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HoneyCuteCharm.Designer.cs">
+      <DependentUpon>HoneyCuteCharm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\TranslatableForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +118,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormSelect.resx">
       <DependentUpon>FormSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HoneyCuteCharm.resx">
+      <DependentUpon>HoneyCuteCharm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\main.resx">
       <DependentUpon>main.cs</DependentUpon>
@@ -242,6 +251,14 @@
     <None Include="Resources\strings\en\interface.txt" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\strings\kr\honeyTreesLocations.txt" />
+    <None Include="Resources\strings\jp\honeyTreesLocations.txt" />
+    <None Include="Resources\strings\it\honeyTreesLocations.txt" />
+    <None Include="Resources\strings\fr\honeyTreesLocations.txt" />
+    <None Include="Resources\strings\es\honeyTreesLocations.txt" />
+    <None Include="Resources\strings\de\honeyTreesLocations.txt" />
+    <None Include="Resources\strings\en\honeyTreesLocations.txt" />
+    <None Include="Resources\images\HoneyTree.png" />
     <Content Include="Resources\images\minisprites_s\0.png" />
     <Content Include="Resources\images\minisprites_s\1.png" />
     <Content Include="Resources\images\minisprites_s\10.png" />

@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMainPage));
             this.mstMenu = new System.Windows.Forms.MenuStrip();
             this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.honeyCuteCharmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.languageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.englishToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -279,9 +280,18 @@
             // 
             // toolsToolStripMenuItem
             // 
+            this.toolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.honeyCuteCharmToolStripMenuItem});
             this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
             this.toolsToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
             this.toolsToolStripMenuItem.Text = "Tools";
+            // 
+            // honeyCuteCharmToolStripMenuItem
+            // 
+            this.honeyCuteCharmToolStripMenuItem.Name = "honeyCuteCharmToolStripMenuItem";
+            this.honeyCuteCharmToolStripMenuItem.Size = new System.Drawing.Size(246, 22);
+            this.honeyCuteCharmToolStripMenuItem.Text = "Munchlax Trees and Cute Charm";
+            this.honeyCuteCharmToolStripMenuItem.Click += new System.EventHandler(this.honeyCuteCharmToolStripMenuItem_Click);
             // 
             // optionsToolStripMenuItem
             // 
@@ -2473,6 +2483,7 @@
         internal System.Windows.Forms.Label lblVersionDisp;
         internal System.Windows.Forms.Label lblEncounterTypeDisp;
         internal System.Windows.Forms.ComboBox cboMapsAS;
+        private System.Windows.Forms.ToolStripMenuItem honeyCuteCharmToolStripMenuItem;
     }
 }
 

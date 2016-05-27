@@ -1411,5 +1411,11 @@ namespace PokemonEncCalc
         {
             pnlRoute120.Visible = false;
         }
+
+        private void honeyCuteCharmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmHoneyCuteCharm f = new frmHoneyCuteCharm();
+            f.ShowDialog();
+        }
     }
 }

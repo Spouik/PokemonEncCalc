@@ -17158,6 +17158,219 @@ namespace PokemonEncCalc.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap HoneyTree {
+            get {
+                object obj = ResourceManager.GetObject("HoneyTree", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Route 205 South
+        ///Route 205 North
+        ///Route 206
+        ///Route 207
+        ///Route 208
+        ///Route 209
+        ///Route 210 South
+        ///Route 210 North
+        ///Route 211
+        ///Route 212 West
+        ///Route 212 East
+        ///Route 213
+        ///Route 214
+        ///Route 215
+        ///Route 218
+        ///Route 221
+        ///Route 222
+        ///Valley Windworks
+        ///Eterna Forest
+        ///Fuego Ironworks
+        ///Floaroma Meadow.
+        /// </summary>
+        internal static string honeyTreesLocationsDE {
+            get {
+                return ResourceManager.GetString("honeyTreesLocationsDE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Route 205 South
+        ///Route 205 North
+        ///Route 206
+        ///Route 207
+        ///Route 208
+        ///Route 209
+        ///Route 210 South
+        ///Route 210 North
+        ///Route 211
+        ///Route 212 West
+        ///Route 212 East
+        ///Route 213
+        ///Route 214
+        ///Route 215
+        ///Route 218
+        ///Route 221
+        ///Route 222
+        ///Valley Windworks
+        ///Eterna Forest
+        ///Fuego Ironworks
+        ///Floaroma Meadow.
+        /// </summary>
+        internal static string honeyTreesLocationsEN {
+            get {
+                return ResourceManager.GetString("honeyTreesLocationsEN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Route 205 South
+        ///Route 205 North
+        ///Route 206
+        ///Route 207
+        ///Route 208
+        ///Route 209
+        ///Route 210 South
+        ///Route 210 North
+        ///Route 211
+        ///Route 212 West
+        ///Route 212 East
+        ///Route 213
+        ///Route 214
+        ///Route 215
+        ///Route 218
+        ///Route 221
+        ///Route 222
+        ///Valley Windworks
+        ///Eterna Forest
+        ///Fuego Ironworks
+        ///Floaroma Meadow.
+        /// </summary>
+        internal static string honeyTreesLocationsES {
+            get {
+                return ResourceManager.GetString("honeyTreesLocationsES", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Route 205 Sud
+        ///Route 205 Nord
+        ///Route 206
+        ///Route 207
+        ///Route 208
+        ///Route 209
+        ///Route 210 Sud
+        ///Route 210 Nord
+        ///Route 211
+        ///Route 212 Ouest
+        ///Route 212 Est
+        ///Route 213
+        ///Route 214
+        ///Route 215
+        ///Route 218
+        ///Route 221
+        ///Route 222
+        ///Les Éoliennes
+        ///Forêt Vestigion
+        ///Forge Fuego
+        ///Pré Floraville.
+        /// </summary>
+        internal static string honeyTreesLocationsFR {
+            get {
+                return ResourceManager.GetString("honeyTreesLocationsFR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Route 205 South
+        ///Route 205 North
+        ///Route 206
+        ///Route 207
+        ///Route 208
+        ///Route 209
+        ///Route 210 South
+        ///Route 210 North
+        ///Route 211
+        ///Route 212 West
+        ///Route 212 East
+        ///Route 213
+        ///Route 214
+        ///Route 215
+        ///Route 218
+        ///Route 221
+        ///Route 222
+        ///Valley Windworks
+        ///Eterna Forest
+        ///Fuego Ironworks
+        ///Floaroma Meadow.
+        /// </summary>
+        internal static string honeyTreesLocationsIT {
+            get {
+                return ResourceManager.GetString("honeyTreesLocationsIT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Route 205 South
+        ///Route 205 North
+        ///Route 206
+        ///Route 207
+        ///Route 208
+        ///Route 209
+        ///Route 210 South
+        ///Route 210 North
+        ///Route 211
+        ///Route 212 West
+        ///Route 212 East
+        ///Route 213
+        ///Route 214
+        ///Route 215
+        ///Route 218
+        ///Route 221
+        ///Route 222
+        ///Valley Windworks
+        ///Eterna Forest
+        ///Fuego Ironworks
+        ///Floaroma Meadow.
+        /// </summary>
+        internal static string honeyTreesLocationsJP {
+            get {
+                return ResourceManager.GetString("honeyTreesLocationsJP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Route 205 South
+        ///Route 205 North
+        ///Route 206
+        ///Route 207
+        ///Route 208
+        ///Route 209
+        ///Route 210 South
+        ///Route 210 North
+        ///Route 211
+        ///Route 212 West
+        ///Route 212 East
+        ///Route 213
+        ///Route 214
+        ///Route 215
+        ///Route 218
+        ///Route 221
+        ///Route 222
+        ///Valley Windworks
+        ///Eterna Forest
+        ///Fuego Ironworks
+        ///Floaroma Meadow.
+        /// </summary>
+        internal static string honeyTreesLocationsKR {
+            get {
+                return ResourceManager.GetString("honeyTreesLocationsKR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
         internal static System.Drawing.Icon icon {
@@ -18718,9 +18931,7 @@ namespace PokemonEncCalc.Properties {
         ///X
         ///Y
         ///Omega Rubin
-        ///Alpha Saphir
-        ///Sonne
-        ///Mond.
+        ///Alpha Saphir.
         /// </summary>
         internal static string versionsDE {
             get {
@@ -18746,9 +18957,7 @@ namespace PokemonEncCalc.Properties {
         ///X
         ///Y
         ///Omega Ruby
-        ///Alpha Sapphire
-        ///Sun
-        ///Moon.
+        ///Alpha Sapphire.
         /// </summary>
         internal static string versionsEN {
             get {
@@ -18774,9 +18983,7 @@ namespace PokemonEncCalc.Properties {
         ///X
         ///Y
         ///Rubí Omega
-        ///Zafiro Alfa
-        ///Sol
-        ///Luna.
+        ///Zafiro Alfa.
         /// </summary>
         internal static string versionsES {
             get {
@@ -18802,9 +19009,7 @@ namespace PokemonEncCalc.Properties {
         ///X
         ///Y
         ///Rubis Oméga
-        ///Saphir Alpha
-        ///Soleil
-        ///Lune.
+        ///Saphir Alpha.
         /// </summary>
         internal static string versionsFR {
             get {
@@ -18830,9 +19035,7 @@ namespace PokemonEncCalc.Properties {
         ///X
         ///Y
         ///Rubno Omega
-        ///Zaffiro Alpha
-        ///Sole
-        ///Luna.
+        ///Zaffiro Alpha.
         /// </summary>
         internal static string versionsIT {
             get {
@@ -18858,9 +19061,7 @@ namespace PokemonEncCalc.Properties {
         ///X
         ///Y
         ///オメガルビー
-        ///アルファサファイア
-        ///サン
-        ///ムーン.
+        ///アルファサファイア.
         /// </summary>
         internal static string versionsJP {
             get {
@@ -18886,9 +19087,7 @@ namespace PokemonEncCalc.Properties {
         ///X
         ///Y
         ///오메가루비
-        ///알파사파이어
-        ///썬
-        ///문.
+        ///알파사파이어.
         /// </summary>
         internal static string versionsKR {
             get {

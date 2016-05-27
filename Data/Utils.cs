@@ -477,7 +477,7 @@ namespace PokemonEncCalc
         {
             decimal c = data.Where(s => new[] { 0, 254, 255 }.Contains(s.Species.GenderRatio)).Sum(s => s.Percentage);
             decimal gendered = (100 - c) * 3;
-            return (int)Math.Floor((gendered + c) / (c / 8192 + (gendered / 24576)));
+            return (int)Math.Round((gendered + c) / (c / 8192 + (gendered / 24576)));
         }
 
         #endregion

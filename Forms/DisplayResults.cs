@@ -47,7 +47,7 @@ namespace PokemonEncCalc
                 Label l = new Label();
                 l.Size = new Size(96, 20);
                 l.TextAlign = ContentAlignment.MiddleCenter;
-                l.Text = (Math.Floor(slot.Percentage * 100) / 100).ToString() + " %";
+                l.Text = (Math.Round(slot.Percentage * 100) / 100).ToString() + " %";
                 p.Controls.Add(pct);
                 p.Controls.Add(l);
                 pct.Location = new Point(2, 2);
@@ -71,8 +71,8 @@ namespace PokemonEncCalc
         private void repelDisp()
         {
             if (repel >= 100) return;
-            lblRepel.Text += " " + Math.Floor(repel * 100) / 100 + " %";
-            pbarRepel.Value = (int)Math.Floor(repel * 10);
+            lblRepel.Text += " " + Math.Round(repel * 100) / 100 + " %";
+            pbarRepel.Value = (int)Math.Round(repel * 10);
             lblRepel.Visible = true;
             pbarRepel.Visible = true;
         }
