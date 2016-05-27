@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace PokemonEncCalc
 {
@@ -33,16 +35,56 @@ namespace PokemonEncCalc
                 string control = stringSplit[0];
                 string text = stringSplit[1];
 
-                // rename controls of frmMainPage
+                // rename controls of form
                 Control[] c = Controls.Find(control, true);
                 if (c.Length > 0)
                     c[0].Text = text;
+                else
+                    // MenuStrips are not scanned
+                    // We scan them here
+                    foreach (Object m in Controls)
+                    {
+                        try
+                        {
+                            MenuStrip n = (MenuStrip)m;
+                        
+                            // Get all the top menu items
+                            List<ToolStripMenuItem> allItems = new List<ToolStripMenuItem>();
+                            
 
-
+                            foreach (ToolStripMenuItem item in n.Items)
+                            {
+                                // Add top menu items
+                                allItems.Add(item);
+                                // For each of the top menu items, get all sub items recursively
+                                allItems.AddRange(GetItems(item));
+                            }
+                            int i = (allItems.FindIndex(s=> s.Name.Equals(control)));
+                            if (i >= 0)
+                                allItems[i].Text = text;
+                        }
+                        catch(Exception e)
+                        {
+                            // Not a menuStrip
+                            continue;
+                        }
+                    }
             }
 
         }
 
+        private IEnumerable<ToolStripMenuItem> GetItems(ToolStripMenuItem item)
+        {
+            foreach (ToolStripMenuItem dropDownItem in item.DropDownItems)
+            {
+                if (dropDownItem.HasDropDownItems)
+                {
+                    foreach (ToolStripMenuItem subItem in GetItems(dropDownItem))
+                        yield return subItem;
+                }
+                yield return dropDownItem;
+            }
+        }
 
     }
 }
