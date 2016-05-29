@@ -41,19 +41,6 @@ namespace PokemonEncCalc
 
         };
 
-        private string[][] resultText = new string[][]{
-
-           new string[] { "", "", "" },
-           new string[] { "You have {0} % chance to catch {1} in a {2}.", "You have {3} % chance to get a critical capture", "A critical capture has {4} chances to be successful." },
-           new string[] { "Vous avez {0} % de chances de capturer {1} dans une {2}.", "Vous avez {3} % de chances d'effectuer une capture critique", "En cas de capture critique, le Pokémon a {4} de chances de rentrer." },
-           new string[] { "", "", "" },
-           new string[] { "", "", "" },
-           new string[] { "", "", "" },
-           new string[] { "", "", "" },
-           new string[] { "", "", "" }
-
-        };
-
         private string[][] messageBoxes = new string[][] {
            new string[] { "", "", "" },
            new string[] { "{0} is not available in generation {1}", "The {0} is not available in generation {1}", "" },
