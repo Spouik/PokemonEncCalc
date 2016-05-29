@@ -94,6 +94,7 @@
             this.Controls.Add(this.pctMinisprite);
             this.Controls.Add(this.cboFormList);
             this.Controls.Add(this.lblChooseFormText);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmFormSelect";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;

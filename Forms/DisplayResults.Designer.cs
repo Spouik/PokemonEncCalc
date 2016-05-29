@@ -89,9 +89,9 @@
             // lblInfo
             // 
             this.lblInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInfo.Location = new System.Drawing.Point(12, 14);
+            this.lblInfo.Location = new System.Drawing.Point(12, 4);
             this.lblInfo.Name = "lblInfo";
-            this.lblInfo.Size = new System.Drawing.Size(920, 59);
+            this.lblInfo.Size = new System.Drawing.Size(920, 70);
             this.lblInfo.TabIndex = 1;
             this.lblInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -114,6 +114,7 @@
             this.Controls.Add(this.cmdClose);
             this.Controls.Add(this.lblInfo);
             this.Controls.Add(this.pnlResults);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmDisplayResults";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;

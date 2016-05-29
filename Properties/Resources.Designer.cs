@@ -2633,6 +2633,276 @@ namespace PokemonEncCalc.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _201s_1 {
+            get {
+                object obj = ResourceManager.GetObject("_201s_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _201s_10 {
+            get {
+                object obj = ResourceManager.GetObject("_201s_10", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _201s_11 {
+            get {
+                object obj = ResourceManager.GetObject("_201s_11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _201s_12 {
+            get {
+                object obj = ResourceManager.GetObject("_201s_12", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _201s_13 {
+            get {
+                object obj = ResourceManager.GetObject("_201s_13", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _201s_14 {
+            get {
+                object obj = ResourceManager.GetObject("_201s_14", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _201s_15 {
+            get {
+                object obj = ResourceManager.GetObject("_201s_15", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _201s_16 {
+            get {
+                object obj = ResourceManager.GetObject("_201s_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _201s_17 {
+            get {
+                object obj = ResourceManager.GetObject("_201s_17", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _201s_18 {
+            get {
+                object obj = ResourceManager.GetObject("_201s_18", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _201s_19 {
+            get {
+                object obj = ResourceManager.GetObject("_201s_19", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _201s_2 {
+            get {
+                object obj = ResourceManager.GetObject("_201s_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _201s_20 {
+            get {
+                object obj = ResourceManager.GetObject("_201s_20", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _201s_21 {
+            get {
+                object obj = ResourceManager.GetObject("_201s_21", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _201s_22 {
+            get {
+                object obj = ResourceManager.GetObject("_201s_22", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _201s_23 {
+            get {
+                object obj = ResourceManager.GetObject("_201s_23", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _201s_24 {
+            get {
+                object obj = ResourceManager.GetObject("_201s_24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _201s_25 {
+            get {
+                object obj = ResourceManager.GetObject("_201s_25", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _201s_26 {
+            get {
+                object obj = ResourceManager.GetObject("_201s_26", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _201s_27 {
+            get {
+                object obj = ResourceManager.GetObject("_201s_27", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _201s_3 {
+            get {
+                object obj = ResourceManager.GetObject("_201s_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _201s_4 {
+            get {
+                object obj = ResourceManager.GetObject("_201s_4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _201s_5 {
+            get {
+                object obj = ResourceManager.GetObject("_201s_5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _201s_6 {
+            get {
+                object obj = ResourceManager.GetObject("_201s_6", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _201s_7 {
+            get {
+                object obj = ResourceManager.GetObject("_201s_7", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _201s_8 {
+            get {
+                object obj = ResourceManager.GetObject("_201s_8", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _201s_9 {
+            get {
+                object obj = ResourceManager.GetObject("_201s_9", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _202 {
             get {
                 object obj = ResourceManager.GetObject("_202", resourceCulture);
@@ -17718,10 +17988,7 @@ namespace PokemonEncCalc.Properties {
         ///languageToolStripMenuItem = Language
         ///aboutToolStripMenuItem = About
         ///honeyCuteCharmToolStripMenuItem = Munchlax Trees and Cute Charm
-        ///
-        ///! Groupboxes
-        ///
-        ///gboSlots  [rest of string was truncated]&quot;;.
+        ///captureToolStripMenuItem =  [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string interfaceEN {
             get {
@@ -17745,16 +18012,13 @@ namespace PokemonEncCalc.Properties {
         ///optionsToolStripMenuItem = Options
         ///languageToolStripMenuItem = Langue
         ///aboutToolStripMenuItem = À propos
-        ///honeyCuteCharmToolStripMenuItem = Arbers à Goinfrex et Joli Sourire
+        ///honeyCuteCharmToolStripMenuItem = Arbres à Goinfrex et Joli Sourire
+        ///captureToolStripMenuItem = Calculateur de capture
         ///
         ///! Groupboxes
         ///
         ///gboSlots = Pokémon de la zone
-        ///gboAutoFill = Paramètres de la zone
-        ///
-        ///! Labels
-        ///
-        ///lbl [rest of string was truncated]&quot;;.
+        ///gbo [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string interfaceFR {
             get {

@@ -44,9 +44,21 @@ namespace PokemonEncCalc
         private string[][] resultText = new string[][]{
 
            new string[] { "", "", "" },
-           new string[] { "", "" },
            new string[] { "You have {0} % chance to catch {1} in a {2}.", "You have {3} % chance to get a critical capture", "A critical capture has {4} chances to be successful." },
            new string[] { "Vous avez {0} % de chances de capturer {1} dans une {2}.", "Vous avez {3} % de chances d'effectuer une capture critique", "En cas de capture critique, le Pokémon a {4} de chances de rentrer." },
+           new string[] { "", "", "" },
+           new string[] { "", "", "" },
+           new string[] { "", "", "" },
+           new string[] { "", "", "" },
+           new string[] { "", "", "" }
+
+        };
+
+        private string[][] messageBoxes = new string[][] {
+           new string[] { "", "", "" },
+           new string[] { "{0} is not available in generation {1}", "The {0} is not available in generation {1}", "" },
+           new string[] { "{0} n'est pas disponible en génération {1}", "La {0} n'est pas disponible en génération {1}", "" },
+           new string[] { "", "", "" },
            new string[] { "", "", "" },
            new string[] { "", "", "" },
            new string[] { "", "", "" },
@@ -119,17 +131,17 @@ namespace PokemonEncCalc
             {
                 case 0:
                 case 1:
-                    pnlGen5.Visible = pnlGen6Games.Visible = cboCapturePower.Visible = lblCapturePower.Visible = false;
+                    pnlGen5.Visible = pnlGen6Games.Visible = cboCapturePower.Visible = lblCapturePower.Visible = pnlPokedexGen6.Visible = false;
                     txtCaptureRate.Text = Utils.PokemonList[cboPokemon.SelectedIndex].CatchRate.ToString();
                     break;
                 case 2:
                     pnlGen5.Visible = cboCapturePower.Visible = lblCapturePower.Visible = true;
-                    pnlGen6Games.Visible = false;
+                    pnlGen6Games.Visible = pnlPokedexGen6.Visible = false;
                     txtCaptureRate.Text = Utils.PokemonList[cboPokemon.SelectedIndex].CatchRate.ToString();
                     break;
                 case 3:
                     pnlGen5.Visible = false;
-                    pnlGen6Games.Visible = cboCapturePower.Visible = lblCapturePower.Visible = true;
+                    pnlGen6Games.Visible = cboCapturePower.Visible = lblCapturePower.Visible = pnlPokedexGen6.Visible = true;
                     if (rdORAS.Checked) txtCaptureRate.Text = Utils.PokemonList[cboPokemon.SelectedIndex].CatchRateORAS.ToString();
                     else txtCaptureRate.Text = Utils.PokemonList[cboPokemon.SelectedIndex].CatchRate.ToString();
 
@@ -171,6 +183,344 @@ namespace PokemonEncCalc
                     pnlTimer.Visible = true; break;
                 default: break;
             }
+        }
+
+        private void cmdGO_Click(object sender, EventArgs e)
+        {
+            Ball ball = (Ball)(balls.FindIndex(s => s.Equals(cboBall.SelectedItem)));
+            Ball[] kurtBalls = new Ball[] {Ball.FastBall, Ball.FriendBall, Ball.HeavyBall, Ball.LevelBall,
+                                            Ball.LoveBall, Ball.LureBall, Ball.MoonBall};
+
+            Ball[] gen4Balls = new Ball[] { Ball.DuskBall, Ball.QuickBall, Ball.HealBall };
+
+            // Get standard information for capture calculation
+            int catchRate = int.Parse(txtCaptureRate.Text);
+            decimal ballBonus = 1;
+            decimal statusBonus = 1;
+            int currentHP = int.Parse(txtCurrentHP.Text);
+            int maxHP = int.Parse(txtMaxHP.Text);
+            Pokemon p = Utils.PokemonList[cboPokemon.SelectedIndex];
+
+            // Get specific informaton for capture calculation
+            int pokedex = 0;
+            decimal capturePower = 1;
+            decimal darkGrass = 1;
+            decimal criticalCatch = 0;
+
+            pnlResult3_4.Visible = pnlResult5_6.Visible = false;
+
+            // Checks
+
+            // Check Pokémon & Generation match
+            //  + Check ball available (HGSS only & those introduced in gen 4)
+            switch (cboGeneration.SelectedIndex)
+            {
+                case 0:
+                    if(p.NatID > 386)
+                    {
+                        string msg = messageBoxes[Properties.Settings.Default.Language][0];
+                        msg = msg.Replace("{0}", (string)cboPokemon.SelectedItem);
+                        msg = msg.Replace("{1}", "3");
+                        MessageBox.Show(msg, "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                    if (kurtBalls.Contains(ball) || gen4Balls.Contains(ball))
+                    {
+                        string msg = messageBoxes[Properties.Settings.Default.Language][1];
+                        msg = msg.Replace("{0}", (string)cboBall.SelectedItem);
+                        msg = msg.Replace("{1}", "3");
+                        MessageBox.Show(msg, "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                    break;
+                case 1:
+                    if (p.NatID > 493)
+                    {
+                        string msg = messageBoxes[Properties.Settings.Default.Language][0];
+                        msg = msg.Replace("{0}", (string)cboPokemon.SelectedItem);
+                        msg = msg.Replace("{1}", "4");
+                        MessageBox.Show(msg, "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                    break;
+                case 2:
+                    if (p.NatID > 649)
+                    {
+                        string msg = messageBoxes[Properties.Settings.Default.Language][0];
+                        msg = msg.Replace("{0}", (string)cboPokemon.SelectedItem);
+                        msg = msg.Replace("{1}", "5");
+                        MessageBox.Show(msg, "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                    if (kurtBalls.Contains(ball))
+                    {
+                        string msg = messageBoxes[Properties.Settings.Default.Language][1];
+                        msg = msg.Replace("{0}", (string)cboBall.SelectedItem);
+                        msg = msg.Replace("{1}", "5");
+                        MessageBox.Show(msg, "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                    break;
+                case 3:
+                    if (kurtBalls.Contains(ball))
+                    {
+                        string msg = messageBoxes[Properties.Settings.Default.Language][1];
+                        msg = msg.Replace("{0}", (string)cboBall.SelectedItem);
+                        msg = msg.Replace("{1}", "6");
+                        MessageBox.Show(msg, "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                    break;
+                default:
+                    break;
+            }
+
+            // Specific capture modifiers (gen 5 & 6)
+            // Capture power & Pokedex
+            if (cboGeneration.SelectedIndex == 2)
+            {    // Generation 5
+                capturePower = (new[] { 1m, 1.1m, 1.2m, 1.3m })[cboCapturePower.SelectedIndex];
+                pokedex = (int)nudPokedexGen5.Value;
+            }
+            if (cboGeneration.SelectedIndex == 3)
+            {    // Generation 6
+                capturePower = (new[] { 1m, 1.5m, 2m, 2.5m })[cboCapturePower.SelectedIndex];
+                pokedex = (int)nudPokedexGen6.Value;
+            }
+            // Dark Grass (gen 5)
+            if(cboGeneration.SelectedIndex == 2 && chkDarkGrass.Checked)
+            {
+                darkGrass = 1229m/4096m;
+                if (pokedex > 30) darkGrass = 2048m / 4096m;
+                if (pokedex > 150) darkGrass = 2867m / 4096m;
+                if (pokedex > 300) darkGrass = 3277m / 4096m;
+                if (pokedex > 450) darkGrass = 3686m / 4096m;
+                if (pokedex > 600) darkGrass = 1m;
+            }
+
+            // Critical capture (generations 5 & 6)
+            if(cboGeneration.SelectedIndex >= 2)
+            {
+                if (pokedex > 30) criticalCatch = 0.5m;
+                if (pokedex > 150) criticalCatch = 1m;
+                if (pokedex > 300) criticalCatch = 1.5m;
+                if (pokedex > 450) criticalCatch = 2m;
+                if (pokedex > 600) criticalCatch = 2.5m;
+            }
+
+
+            // Apply ball modifiers
+            switch (ball)
+            {
+                case Ball.DiveBall:
+                    if (rdUnderWater.Checked) ballBonus = 3.5m;
+                    break;
+
+                case Ball.DuskBall:
+                    if (rdNightCave.Checked) ballBonus = 3.5m;
+                    break;
+
+                case Ball.FastBall:
+                    if (p.Spe_Old >= 100)
+                        catchRate *= 4;
+                    break;
+
+                case Ball.GreatBall:
+                case Ball.SafariBall:
+                case Ball.SportBall:
+                    ballBonus = 1.5m;
+                    break;
+
+                case Ball.HeavyBall:
+                    // Apply catchRate modifiers
+                    
+                    if (p.Weight < 2048) catchRate -= 20; // Should apply if weight > 102.4kg, but actually applies to > 204.8kg due to a bug.
+                    if (p.Weight >= 2048) catchRate += 20;
+                    if (p.Weight >= 3072) catchRate += 10; // actually +30, as the condition above is true if this one is true
+                    if (p.Weight >= 4096) catchRate += 10; // actually +40, for the same reason as above
+                    
+                    break;
+
+                case Ball.LevelBall:
+                    decimal levelDiff = nudLevelOwn.Value / nudLevelWild.Value;
+                    if (levelDiff > 1) catchRate *= 2;
+                    if (levelDiff > 2) catchRate *= 2; // *4 if 2 < levelDiff <= 4 (as condition above is always true if this one is true)
+                    if (levelDiff > 4) catchRate *= 2; // *8 if levelDiff > 4
+                    
+                    break;
+
+                case Ball.LoveBall:
+                    if (rdLove.Checked) catchRate *= 8;
+                    
+                    break;
+
+                case Ball.LureBall:
+                    if (rdFished.Checked) catchRate *= 3;
+                    
+                    break;
+
+                case Ball.MoonBall:
+                    if (new[] { 29, 30, 31, 32, 33, 34, 35, 36, 39, 40, 300, 301 }.Contains(p.NatID))
+                        catchRate *= 4;
+                    
+                    break;
+
+                case Ball.NestBall:
+                    int a = cboGeneration.SelectedIndex <= 1 ? 40 : 41;
+                    ballBonus = ((a - (int)nudNest.Value)) / 10;
+                    if (ballBonus < 1) ballBonus = 1;
+                    break;
+
+                case Ball.NetBall:
+                    if (p.Type1 == Type.Bug || p.Type2 == Type.Bug || p.Type1 == Type.Water || p.Type2 == Type.Water)
+                        ballBonus = 3;
+                    break;
+
+                case Ball.QuickBall:
+                    if (nudTurn.Value == 1) ballBonus = cboGeneration.SelectedIndex == 1 ? 4 : 5; // x4 if gen 4, x5 otherwise          
+                    break;
+
+                case Ball.RepeatBall:
+                    if (rdAlreadyCaught.Checked) ballBonus = 3;
+                    break;
+
+                case Ball.TimerBall:
+                    int turnsPassed = (int)nudTurn.Value - 1;
+                    if (cboGeneration.SelectedIndex <= 1) ballBonus = (turnsPassed + 10) / 10;
+                    else ballBonus = (decimal)turnsPassed * 1229 / 4096 + 1;
+                    if (ballBonus > 4) ballBonus = 4;
+                    break;
+
+                case Ball.UltraBall:
+                    ballBonus = 2;
+                    break;
+
+                default:
+                    ballBonus = 1;
+                    break;
+            }
+            // Checks catchRate value (should be between 1 and 255)
+            if (catchRate < 0) catchRate = 1; // Does not apply if catchRate == 0 (due to a bug), but as no Pokémon can have a catchRate of 20, this never happens.
+            if (catchRate > 255) catchRate = 255;
+
+            // status modifier
+            if (cboStatus.SelectedIndex > 0) statusBonus = 1.5m;
+            if (cboStatus.SelectedIndex > 3) statusBonus = cboGeneration.SelectedIndex > 1 ? 2.5m : 2;
+
+            // Probability calculation
+            decimal pr;
+            decimal cc;
+            decimal ccCapture;
+            if (cboGeneration.SelectedIndex <= 1)
+            {
+                pr = catchCalcGen3_4(catchRate, ballBonus, statusBonus, currentHP, maxHP);
+                lblCaptureResult3.Text = Math.Round(10000 * pr) / 100 + " %";
+                pnlResult3_4.Visible = true;
+            }
+            if(cboGeneration.SelectedIndex == 2)
+            {
+                pr = catchCalcGen5(catchRate, ballBonus, statusBonus, currentHP, maxHP, darkGrass, capturePower);
+                cc = criticalChanceGen5_6(catchRate, ballBonus, statusBonus, currentHP, maxHP, darkGrass, capturePower, criticalCatch);
+                ccCapture = criticalCalcGen5(catchRate, ballBonus, statusBonus, currentHP, maxHP, darkGrass, capturePower);
+                lblCaptureResult5.Text = Math.Round(10000 * pr) / 100 + " %";
+                lblCriticalResult.Text = Math.Round(10000 * cc) / 100 + " %";
+                lblCriticalCaptureResult.Text = Math.Round(10000 * ccCapture) / 100 + " %";
+                pnlResult5_6.Visible = true;
+
+            }
+            if (cboGeneration.SelectedIndex == 3)
+            {
+                pr = catchCalcGen6(catchRate, ballBonus, statusBonus, currentHP, maxHP, capturePower);
+                cc = criticalChanceGen5_6(catchRate, ballBonus, statusBonus, currentHP, maxHP, 1, capturePower, criticalCatch);
+                ccCapture = criticalCalcGen6(catchRate, ballBonus, statusBonus, currentHP, maxHP, capturePower);
+                lblCaptureResult5.Text = Math.Round(10000 * pr) / 100 + " %";
+                lblCriticalResult.Text = Math.Round(10000 * cc) / 100 + " %";
+                lblCriticalCaptureResult.Text = Math.Round(10000 * ccCapture) / 100 + " %";
+                pnlResult5_6.Visible = true;
+            }
+
+        }
+
+        private decimal catchCalcGen3_4(int catchRate, decimal bonusBall, decimal bonusStatus, int currentHP, int maxHP)
+        {
+            decimal a = Math.Floor(Math.Floor((3 * maxHP - 2 * currentHP) * Math.Floor(catchRate * bonusBall) / (3 * maxHP)) * bonusStatus);
+            if (a >= 255) return 1; // Capture guaranteed
+
+            decimal b = Math.Floor(1048560 / (decimal)Math.Floor(Math.Sqrt((double)Math.Floor(Math.Sqrt((double)Math.Floor(16711680m / a))))));
+
+            decimal r = b / 65536;
+            for (int i = 0; i < 3; i++)
+                r *= (b / 65536);
+
+            return r;
+        }
+
+        // Round functions
+        // Round to the nearest 1/4096th
+        private decimal round(decimal a)
+        {
+            return Math.Floor(4096 * a + 0.5m) / 4096;
+        }
+
+        // Round down to the nearest 1/4096th
+        private decimal down(decimal a)
+        {
+            return Math.Floor(4096 * a) / 4096;
+        }
+
+        private decimal catchCalcGen5(int catchRate, decimal bonusBall, decimal bonusStatus, int currentHP, int maxHP, decimal darkGrass, decimal capturePower)
+        {
+            decimal a = down(round(down(round(round((3 * maxHP - 2 * currentHP) * darkGrass) * catchRate * bonusBall) / (3 * maxHP)) * bonusStatus) * capturePower);
+            if (a >= 255) return 1;
+
+            decimal b = down(65536 / round((decimal)Math.Sqrt((double)round((decimal)Math.Sqrt((double)round(255m / a))))));
+
+            decimal result = b / 65536;
+            for (int i = 0; i < 2; i++)
+                result *= (b / 65536);
+
+            return result;
+        }
+
+        private decimal criticalCalcGen5(int catchRate, decimal bonusBall, decimal bonusStatus, int currentHP, int maxHP, decimal darkGrass, decimal capturePower)
+        {
+            decimal a = down(round(down(round(round((3 * maxHP - 2 * currentHP) * darkGrass) * catchRate * bonusBall) / (3 * maxHP)) * bonusStatus) * capturePower);
+            if (a >= 255) return 1;
+
+            decimal b = down(65536 / round((decimal)Math.Sqrt((double)round((decimal)Math.Sqrt((double)round(255m / a))))));
+
+            return b / 65536;
+        }
+
+        private decimal catchCalcGen6(int catchRate, decimal bonusBall, decimal bonusStatus, int currentHP, int maxHP, decimal capturePower)
+        {
+            decimal a = down(round(down(round(round((3 * maxHP - 2 * currentHP)) * catchRate * bonusBall) / (3 * maxHP)) * bonusStatus) * capturePower);
+            if (a >= 255) return 1;
+
+            decimal b = down(65536 / (decimal)Math.Pow((double)(255/ a), 3d/16d));
+
+            decimal result = b / 65536;
+            for (int i = 0; i < 2; i++)
+                result *= (b / 65536);
+
+            return result;
+        }
+
+        private decimal criticalCalcGen6(int catchRate, decimal bonusBall, decimal bonusStatus, int currentHP, int maxHP, decimal capturePower)
+        {
+            decimal a = down(round(down(round(round((3 * maxHP - 2 * currentHP)) * catchRate * bonusBall) / (3 * maxHP)) * bonusStatus) * capturePower);
+            if (a >= 255) return 1;
+
+            decimal b = down(65536 / (decimal)Math.Pow((double)(255 / a), 3d / 16d));
+
+            return b / 65536;
+        }
+
+        private decimal criticalChanceGen5_6(int catchRate, decimal bonusBall, decimal bonusStatus, int currentHP, int maxHP, decimal darkGrass, decimal capturePower, decimal criticalRate) 
+        {
+            decimal a = down(round(down(round(round((3 * maxHP - 2 * currentHP) * darkGrass) * catchRate * bonusBall) / (3 * maxHP)) * bonusStatus) * capturePower);
+            if (a > 255) a = 255;
+            return Math.Min(1, down(a * criticalRate / 6) / 256);
         }
     }
     

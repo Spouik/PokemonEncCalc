@@ -5140,4 +5140,85 @@
   <data name="ballsFR" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\strings\fr\balls.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
   </data>
+  <data name="_201s_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\sprites_s\201s-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_201s_10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\sprites_s\201s-10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_201s_11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\sprites_s\201s-11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_201s_12" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\sprites_s\201s-12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_201s_13" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\sprites_s\201s-13.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_201s_14" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\sprites_s\201s-14.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_201s_15" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\sprites_s\201s-15.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_201s_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\sprites_s\201s-16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_201s_17" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\sprites_s\201s-17.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_201s_18" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\sprites_s\201s-18.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_201s_19" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\sprites_s\201s-19.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_201s_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\sprites_s\201s-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_201s_20" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\sprites_s\201s-20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_201s_21" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\sprites_s\201s-21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_201s_22" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\sprites_s\201s-22.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_201s_23" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\sprites_s\201s-23.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_201s_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\sprites_s\201s-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_201s_25" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\sprites_s\201s-25.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_201s_26" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\sprites_s\201s-27.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_201s_27" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\sprites_s\201s-26.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_201s_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\sprites_s\201s-3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_201s_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\sprites_s\201s-4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_201s_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\sprites_s\201s-5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_201s_6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\sprites_s\201s-6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_201s_7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\sprites_s\201s-7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_201s_8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\sprites_s\201s-8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_201s_9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\sprites_s\201s-9.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

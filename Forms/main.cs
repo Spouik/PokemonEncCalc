@@ -66,7 +66,7 @@ namespace PokemonEncCalc
             r += " (" + (string)(cboVersion.SelectedItem) + ")";
 
             // Encounter Type
-            r += " - " + cboEncounterType.SelectedItem + Environment.NewLine;
+            r += " - " + cboEncounterType.SelectedItem + Environment.NewLine + Environment.NewLine;
 
             // Repel
             if (chkRepel.Checked) r += chkRepel.Text + " " + lblLevelRepelDisp.Text + " " + nudLevelRepel.Value;

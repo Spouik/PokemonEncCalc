@@ -345,6 +345,7 @@
             this.Controls.Add(this.gboCuteCharm);
             this.Controls.Add(this.gboMunchlax);
             this.Controls.Add(this.gboIDs);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "frmHoneyCuteCharm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Pokémon Encounter Calculator - Munchlax Trees & Cute Charm";
