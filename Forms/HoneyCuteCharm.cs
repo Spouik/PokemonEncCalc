@@ -24,6 +24,15 @@ namespace PokemonEncCalc
                                     "",
                                     ""};
 
+        private string[] tree = { "",
+                                    "Possible Munchlax trees",
+                                    "Arbres à Goinfrex possibles",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    ""};
+
         public frmHoneyCuteCharm()
         {
             InitializeComponent();
@@ -69,37 +78,54 @@ namespace PokemonEncCalc
                 MessageBox.Show(errorIDs[Properties.Settings.Default.Language], "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            lblCuteCharmF1.Text = lblCuteCharmF2.Text = lblCuteCharmF3.Text = lblCuteCharmF4.Text = lblCuteCharmM.Text = lblPercentage.Text = "";
+
+
 
             // Cute Charm Calc
+            if (!chkNoSecretID.Checked)
+            {
+                int n = 0;
+                decimal resultCC = 0;
 
-            int n = 0;
-            decimal resultCC = 0;
 
-            // Male Cute Charm. PID range: 0~24
-            n = cuteCharmShiny(0, TID, SID);
-            resultCC = 2 * n / 75m + 1 / 24576m;
-            lblCuteCharmM.Text = resultCC > 0.01m ? Math.Floor(10000 * resultCC) / 100 + " %" : "1/" + Math.Round(1 / resultCC);
+                // Male Cute Charm. PID range: 0~24
+                n = cuteCharmShiny(0, TID, SID);
+                resultCC = 2 * n / 75m + 1 / 24576m;
+                lblCuteCharmM.Text = resultCC > 0.01m ? Math.Floor(10000 * resultCC) / 100 + " %" : "1/" + Math.Round(1 / resultCC);
 
-            // Female Cute Charm (87.5M / 12.5F). PID range: 50~74
-            n = cuteCharmShiny(50, TID, SID);
-            resultCC = 2 * n / 75m + 1 / 24576m;
-            lblCuteCharmF1.Text = resultCC > 0.01m ? Math.Floor(10000 * resultCC) / 100 + " %" : "1/" + Math.Round(1 / resultCC);
+                // Female Cute Charm (87.5M / 12.5F). PID range: 50~74
+                n = cuteCharmShiny(50, TID, SID);
+                resultCC = 2 * n / 75m + 1 / 24576m;
+                lblCuteCharmF1.Text = resultCC > 0.01m ? Math.Floor(10000 * resultCC) / 100 + " %" : "1/" + Math.Round(1 / resultCC);
 
-            // Female Cute Charm (75M / 25F). PID range: 75~99
-            n = cuteCharmShiny(75, TID, SID);
-            resultCC = 2 * n / 75m + 1 / 24576m;
-            lblCuteCharmF2.Text = resultCC > 0.01m ? Math.Floor(10000 * resultCC) / 100 + " %" : "1/" + Math.Round(1 / resultCC);
+                // Female Cute Charm (75M / 25F). PID range: 75~99
+                n = cuteCharmShiny(75, TID, SID);
+                resultCC = 2 * n / 75m + 1 / 24576m;
+                lblCuteCharmF2.Text = resultCC > 0.01m ? Math.Floor(10000 * resultCC) / 100 + " %" : "1/" + Math.Round(1 / resultCC);
 
-            // Female Cute Charm (50M / 50F). PID range: 150~174
-            n = cuteCharmShiny(150, TID, SID);
-            resultCC = 2 * n / 75m + 1 / 24576m;
-            lblCuteCharmF3.Text = resultCC > 0.01m ? Math.Floor(10000 * resultCC) / 100 + " %" : "1/" + Math.Round(1 / resultCC);
+                // Female Cute Charm (50M / 50F). PID range: 150~174
+                n = cuteCharmShiny(150, TID, SID);
+                resultCC = 2 * n / 75m + 1 / 24576m;
+                lblCuteCharmF3.Text = resultCC > 0.01m ? Math.Floor(10000 * resultCC) / 100 + " %" : "1/" + Math.Round(1 / resultCC);
 
-            // Female Cute Charm (25M / 75F). PID range: 200~224
-            n = cuteCharmShiny(200, TID, SID);
-            resultCC = 2 * n / 75m + 1 / 24576m;
-            lblCuteCharmF4.Text = resultCC > 0.01m ? Math.Floor(10000 * resultCC) / 100 + " %" : "1/" + Math.Round(1 / resultCC);
+                // Female Cute Charm (25M / 75F). PID range: 200~224
+                n = cuteCharmShiny(200, TID, SID);
+                resultCC = 2 * n / 75m + 1 / 24576m;
+                lblCuteCharmF4.Text = resultCC > 0.01m ? Math.Floor(10000 * resultCC) / 100 + " %" : "1/" + Math.Round(1 / resultCC);
+            }
 
+            // Munchlax tree calc
+
+            if (!chkNoSecretID.Checked)
+                lblMunchlaxResults.Text = calcMunchlax(TID, SID);
+            else
+                lblMunchlaxResults.Text = calcMunchlax(TID);
+        }
+
+
+        private string calcMunchlax(int TID, int SID)
+        {
             // Honey tree calc
 
             int tree1, tree2, tree3, tree4;
@@ -111,7 +137,7 @@ namespace PokemonEncCalc
             tree1 = tree1 % 21;
 
             tree2 = tree2 % 21;
-            while(tree2 == tree1)
+            while (tree2 == tree1)
                 tree2 = (tree2 + 1) % 21;
 
             tree3 = tree3 % 21;
@@ -123,10 +149,75 @@ namespace PokemonEncCalc
                 tree4 = (tree4 + 1) % 21;
 
             // Display Results
-            lblMunchlaxResults.Text = honeyTrees[tree1] + Environment.NewLine + Environment.NewLine
-                                    + honeyTrees[tree2] + Environment.NewLine + Environment.NewLine
-                                    + honeyTrees[tree3] + Environment.NewLine + Environment.NewLine
-                                    + honeyTrees[tree4];
+            return Environment.NewLine + "        " + honeyTrees[tree1] + Environment.NewLine + Environment.NewLine
+                                       + "        " + honeyTrees[tree2] + Environment.NewLine + Environment.NewLine
+                                       + "        " + honeyTrees[tree3] + Environment.NewLine + Environment.NewLine
+                                       + "        " +  honeyTrees[tree4];
+        }
+
+        private string calcMunchlax(int TID)
+        {
+            // Honey tree calc
+
+            int tree1, tree2, tree3, tree4;
+
+            int[] treeCount = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+
+            // Brute force : test all SIDs (65536 values) and count every result to get probabilities
+            for (int SID = 0; SID < 65536; SID++)
+            {
+                tree1 = SID / 256;
+                tree2 = SID % 256;
+                tree3 = TID / 256;
+                tree4 = TID % 256;
+                
+
+                tree1 = tree1 % 21;
+
+                tree2 = tree2 % 21;
+                while (tree2 == tree1)
+                    tree2 = (tree2 + 1) % 21;
+
+                tree3 = tree3 % 21;
+                while (tree3 == tree1 || tree3 == tree2)
+                    tree3 = (tree3 + 1) % 21;
+
+                tree4 = tree4 % 21;
+                while (tree4 == tree1 || tree4 == tree2 || tree4 == tree3)
+                    tree4 = (tree4 + 1) % 21;
+
+                treeCount[tree1]++;
+                treeCount[tree2]++;
+                treeCount[tree3]++;
+                treeCount[tree4]++;
+
+            }
+            // Display Results
+            string result = tree[Properties.Settings.Default.Language] + Environment.NewLine + Environment.NewLine;
+            string percentages = Environment.NewLine + Environment.NewLine;
+
+            int i = 0;
+            int maxTrees = 6; // Display only the 6 trees with highest likelihood to be a Munchlax tree
+
+            while(treeCount.Sum(s=> s) != 0 && i < maxTrees)
+            {
+                int maxIndex = Array.IndexOf(treeCount, treeCount.Max());
+                result += "        " + honeyTrees[maxIndex] + Environment.NewLine;
+                percentages += " (" + Math.Round(10000 * ((decimal)treeCount[maxIndex] / 65536m)) / 100 + " %)" + Environment.NewLine;
+
+                treeCount[maxIndex] = 0;
+                i++;
+            }
+
+            lblPercentage.Text = percentages;
+
+            return result;
+
+        }
+
+        private void chkNoSecretID_CheckedChanged(object sender, EventArgs e)
+        {
+            txtSecret.Enabled = !chkNoSecretID.Checked;
         }
     }
 }

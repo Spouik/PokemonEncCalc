@@ -29,11 +29,13 @@
         private void InitializeComponent()
         {
             this.gboIDs = new System.Windows.Forms.GroupBox();
+            this.chkNoSecretID = new System.Windows.Forms.CheckBox();
             this.txtSecret = new System.Windows.Forms.MaskedTextBox();
             this.txtTrainer = new System.Windows.Forms.MaskedTextBox();
             this.lblSecretID = new System.Windows.Forms.Label();
             this.lblTrainerID = new System.Windows.Forms.Label();
             this.gboMunchlax = new System.Windows.Forms.GroupBox();
+            this.lblPercentage = new System.Windows.Forms.Label();
             this.lblMunchlaxResults = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gboCuteCharm = new System.Windows.Forms.GroupBox();
@@ -59,6 +61,7 @@
             // 
             // gboIDs
             // 
+            this.gboIDs.Controls.Add(this.chkNoSecretID);
             this.gboIDs.Controls.Add(this.txtSecret);
             this.gboIDs.Controls.Add(this.txtTrainer);
             this.gboIDs.Controls.Add(this.lblSecretID);
@@ -70,10 +73,21 @@
             this.gboIDs.TabStop = false;
             this.gboIDs.Text = "Your game\'s Trainer IDs";
             // 
+            // chkNoSecretID
+            // 
+            this.chkNoSecretID.AutoSize = true;
+            this.chkNoSecretID.Location = new System.Drawing.Point(62, 114);
+            this.chkNoSecretID.Name = "chkNoSecretID";
+            this.chkNoSecretID.Size = new System.Drawing.Size(214, 17);
+            this.chkNoSecretID.TabIndex = 2;
+            this.chkNoSecretID.Text = "You do not know what is your Secret ID";
+            this.chkNoSecretID.UseVisualStyleBackColor = true;
+            this.chkNoSecretID.CheckedChanged += new System.EventHandler(this.chkNoSecretID_CheckedChanged);
+            // 
             // txtSecret
             // 
             this.txtSecret.Culture = new System.Globalization.CultureInfo("");
-            this.txtSecret.Location = new System.Drawing.Point(196, 102);
+            this.txtSecret.Location = new System.Drawing.Point(196, 74);
             this.txtSecret.Mask = "99999";
             this.txtSecret.Name = "txtSecret";
             this.txtSecret.Size = new System.Drawing.Size(100, 20);
@@ -83,7 +97,7 @@
             // txtTrainer
             // 
             this.txtTrainer.Culture = new System.Globalization.CultureInfo("");
-            this.txtTrainer.Location = new System.Drawing.Point(196, 48);
+            this.txtTrainer.Location = new System.Drawing.Point(196, 38);
             this.txtTrainer.Mask = "99999";
             this.txtTrainer.Name = "txtTrainer";
             this.txtTrainer.Size = new System.Drawing.Size(100, 20);
@@ -93,16 +107,16 @@
             // lblSecretID
             // 
             this.lblSecretID.AutoSize = true;
-            this.lblSecretID.Location = new System.Drawing.Point(49, 105);
+            this.lblSecretID.Location = new System.Drawing.Point(49, 77);
             this.lblSecretID.Name = "lblSecretID";
             this.lblSecretID.Size = new System.Drawing.Size(52, 13);
             this.lblSecretID.TabIndex = 0;
-            this.lblSecretID.Text = "Secert ID";
+            this.lblSecretID.Text = "Secret ID";
             // 
             // lblTrainerID
             // 
             this.lblTrainerID.AutoSize = true;
-            this.lblTrainerID.Location = new System.Drawing.Point(49, 51);
+            this.lblTrainerID.Location = new System.Drawing.Point(49, 41);
             this.lblTrainerID.Name = "lblTrainerID";
             this.lblTrainerID.Size = new System.Drawing.Size(54, 13);
             this.lblTrainerID.TabIndex = 0;
@@ -110,6 +124,7 @@
             // 
             // gboMunchlax
             // 
+            this.gboMunchlax.Controls.Add(this.lblPercentage);
             this.gboMunchlax.Controls.Add(this.lblMunchlaxResults);
             this.gboMunchlax.Controls.Add(this.pictureBox1);
             this.gboMunchlax.Location = new System.Drawing.Point(400, 32);
@@ -119,13 +134,21 @@
             this.gboMunchlax.TabStop = false;
             this.gboMunchlax.Text = "Munchlax Trees (DPPt)";
             // 
+            // lblPercentage
+            // 
+            this.lblPercentage.BackColor = System.Drawing.Color.Transparent;
+            this.lblPercentage.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPercentage.Location = new System.Drawing.Point(144, 24);
+            this.lblPercentage.Name = "lblPercentage";
+            this.lblPercentage.Size = new System.Drawing.Size(77, 123);
+            this.lblPercentage.TabIndex = 2;
+            // 
             // lblMunchlaxResults
             // 
-            this.lblMunchlaxResults.AutoSize = true;
             this.lblMunchlaxResults.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMunchlaxResults.Location = new System.Drawing.Point(33, 43);
+            this.lblMunchlaxResults.Location = new System.Drawing.Point(6, 24);
             this.lblMunchlaxResults.Name = "lblMunchlaxResults";
-            this.lblMunchlaxResults.Size = new System.Drawing.Size(0, 13);
+            this.lblMunchlaxResults.Size = new System.Drawing.Size(215, 123);
             this.lblMunchlaxResults.TabIndex = 1;
             // 
             // pictureBox1
@@ -352,7 +375,6 @@
             this.gboIDs.ResumeLayout(false);
             this.gboIDs.PerformLayout();
             this.gboMunchlax.ResumeLayout(false);
-            this.gboMunchlax.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.gboCuteCharm.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -371,7 +393,6 @@
         private System.Windows.Forms.GroupBox gboCuteCharm;
         private System.Windows.Forms.Button cmdOK;
         private System.Windows.Forms.Button cmdClose;
-        private System.Windows.Forms.Label lblMunchlaxResults;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
@@ -384,5 +405,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblCuteCharmFDisp;
         private System.Windows.Forms.Label lblWildGenderRatio;
+        private System.Windows.Forms.CheckBox chkNoSecretID;
+        private System.Windows.Forms.Label lblMunchlaxResults;
+        private System.Windows.Forms.Label lblPercentage;
     }
 }

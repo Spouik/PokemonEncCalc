@@ -44,7 +44,7 @@ namespace PokemonEncCalc
                     // We scan them here
                     foreach (Object m in Controls)
                     {
-                        try
+                        if(m is MenuStrip)
                         {
                             MenuStrip n = (MenuStrip)m;
                         
@@ -62,11 +62,6 @@ namespace PokemonEncCalc
                             int i = (allItems.FindIndex(s=> s.Name.Equals(control)));
                             if (i >= 0)
                                 allItems[i].Text = text;
-                        }
-                        catch(Exception e)
-                        {
-                            // Not a menuStrip
-                            continue;
                         }
                     }
             }
