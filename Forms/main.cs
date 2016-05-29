@@ -1434,5 +1434,10 @@ namespace PokemonEncCalc
             frmCaptureCalc c = new frmCaptureCalc();
             c.ShowDialog();
         }
+
+        private void frmMainPage_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Properties.Settings.Default.Save();                
+        }
     }
 }
