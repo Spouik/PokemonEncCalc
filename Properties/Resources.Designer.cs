@@ -18896,6 +18896,497 @@ namespace PokemonEncCalc.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
+        internal static byte[] MovesGen3 {
+            get {
+                object obj = ResourceManager.GetObject("MovesGen3", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] MovesGen4 {
+            get {
+                object obj = ResourceManager.GetObject("MovesGen4", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] MovesGen5 {
+            get {
+                object obj = ResourceManager.GetObject("MovesGen5", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] MovesGen6 {
+            get {
+                object obj = ResourceManager.GetObject("MovesGen6", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to POUND
+        ///KARATE CHOP
+        ///DOUBLESLAP
+        ///COMET PUNCH
+        ///MEGA PUNCH
+        ///PAY DAY
+        ///FIRE PUNCH
+        ///ICE PUNCH
+        ///THUNDERPUNCH
+        ///SCRATCH
+        ///VICEGRIP
+        ///GUILLOTINE
+        ///RAZOR WIND
+        ///SWORDS DANCE
+        ///CUT
+        ///GUST
+        ///WING ATTACK
+        ///WHIRLWIND
+        ///FLY
+        ///BIND
+        ///SLAM
+        ///VINE WHIP
+        ///STOMP
+        ///DOUBLE KICK
+        ///MEGA KICK
+        ///JUMP KICK
+        ///ROLLING KICK
+        ///SAND-ATTACK
+        ///HEADBUTT
+        ///HORN ATTACK
+        ///FURY ATTACK
+        ///HORN DRILL
+        ///TACKLE
+        ///BODY SLAM
+        ///WRAP
+        ///TAKE DOWN
+        ///THRASH
+        ///DOUBLE-EDGE
+        ///TAIL WHIP
+        ///POISON STING
+        ///TWINEEDLE
+        ///PIN MISSILE
+        ///LEER
+        ///BITE
+        ///GROWL
+        ///ROAR
+        ///SING
+        ///SUPERSONIC
+        ///SONICBOOM
+        ///DISABLE
+        ///ACI [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string MovesNames3EN {
+            get {
+                return ResourceManager.GetString("MovesNames3EN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ECRAS&apos;FACE
+        ///POING-KARATE
+        ///TORGNOLES
+        ///POING COMETE
+        ///ULTIMAPOING
+        ///JACKPOT
+        ///POING DE FEU
+        ///POINGLACE
+        ///POING-ECLAIR
+        ///GRIFFE
+        ///FORCE POIGNE
+        ///GUILLOTINE
+        ///COUPE-VENT
+        ///DANSE-LAMES
+        ///COUPE
+        ///TORNADE
+        ///CRU-AILE
+        ///CYCLONE
+        ///VOL
+        ///ETREINTE
+        ///SOUPLESSE
+        ///FOUET LIANES
+        ///ECRASEMENT
+        ///DOUBLE PIED
+        ///ULTIMAWASHI
+        ///PIED SAUTE
+        ///MAWASHI GERI
+        ///JET DE SABLE
+        ///COUP D’BOULE
+        ///KOUD&apos;KORNE
+        ///FURIE
+        ///EMPAL&apos;KORNE
+        ///CHARGE
+        ///PLAQUAGE
+        ///LIGOTAGE
+        ///BELIER
+        ///MANIA
+        ///DAMOCLES
+        ///MIMI-QUEUE
+        ///DARD-VENIN
+        ///DOUBLE-DARD
+        ///DARD-NUEE
+        ///GROZ&apos;YEUX
+        ///MORSURE
+        ///RUGISSEMENT
+        ///HURLEMEN [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string MovesNames3FR {
+            get {
+                return ResourceManager.GetString("MovesNames3FR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pound
+        ///Karate Chop
+        ///DoubleSlap
+        ///Comet Punch
+        ///Mega Punch
+        ///Pay Day
+        ///Fire Punch
+        ///Ice Punch
+        ///ThunderPunch
+        ///Scratch
+        ///ViceGrip
+        ///Guillotine
+        ///Razor Wind
+        ///Swords Dance
+        ///Cut
+        ///Gust
+        ///Wing Attack
+        ///Whirlwind
+        ///Fly
+        ///Bind
+        ///Slam
+        ///Vine Whip
+        ///Stomp
+        ///Double Kick
+        ///Mega Kick
+        ///Jump Kick
+        ///Rolling Kick
+        ///Sand-Attack
+        ///Headbutt
+        ///Horn Attack
+        ///Fury Attack
+        ///Horn Drill
+        ///Tackle
+        ///Body Slam
+        ///Wrap
+        ///Take Down
+        ///Thrash
+        ///Double-Edge
+        ///Tail Whip
+        ///Poison Sting
+        ///Twineedle
+        ///Pin Missile
+        ///Leer
+        ///Bite
+        ///Growl
+        ///Roar
+        ///Sing
+        ///Supersonic
+        ///SonicBoom
+        ///Disable
+        ///Aci [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string MovesNames4EN {
+            get {
+                return ResourceManager.GetString("MovesNames4EN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ecras&apos;Face
+        ///Poing-Karaté
+        ///Torgnoles
+        ///Poing Comète
+        ///Ultimapoing
+        ///Jackpot
+        ///Poing de Feu
+        ///Poinglace
+        ///Poing-Eclair
+        ///Griffe
+        ///Force Poigne
+        ///Guillotine
+        ///Coupe-Vent
+        ///Danse-Lames
+        ///Coupe
+        ///Tornade
+        ///Cru-Aile
+        ///Cyclone
+        ///Vol
+        ///Etreinte
+        ///Souplesse
+        ///Fouet Lianes
+        ///Ecrasement
+        ///Double Pied
+        ///Ultimawashi
+        ///Pied Sauté
+        ///Mawashi Geri
+        ///Jet de Sable
+        ///Coup d’Boule
+        ///Koud&apos;Korne
+        ///Furie
+        ///Empal&apos;Korne
+        ///Charge
+        ///Plaquage
+        ///Ligotage
+        ///Bélier
+        ///Mania
+        ///Damoclès
+        ///Mimi-Queue
+        ///Dard-Venin
+        ///Double-Dard
+        ///Dard-Nuée
+        ///Groz&apos;Yeux
+        ///Morsure
+        ///Rugissement
+        ///Hurlemen [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string MovesNames4FR {
+            get {
+                return ResourceManager.GetString("MovesNames4FR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pound
+        ///Karate Chop
+        ///DoubleSlap
+        ///Comet Punch
+        ///Mega Punch
+        ///Pay Day
+        ///Fire Punch
+        ///Ice Punch
+        ///ThunderPunch
+        ///Scratch
+        ///ViceGrip
+        ///Guillotine
+        ///Razor Wind
+        ///Swords Dance
+        ///Cut
+        ///Gust
+        ///Wing Attack
+        ///Whirlwind
+        ///Fly
+        ///Bind
+        ///Slam
+        ///Vine Whip
+        ///Stomp
+        ///Double Kick
+        ///Mega Kick
+        ///Jump Kick
+        ///Rolling Kick
+        ///Sand-Attack
+        ///Headbutt
+        ///Horn Attack
+        ///Fury Attack
+        ///Horn Drill
+        ///Tackle
+        ///Body Slam
+        ///Wrap
+        ///Take Down
+        ///Thrash
+        ///Double-Edge
+        ///Tail Whip
+        ///Poison Sting
+        ///Twineedle
+        ///Pin Missile
+        ///Leer
+        ///Bite
+        ///Growl
+        ///Roar
+        ///Sing
+        ///Supersonic
+        ///SonicBoom
+        ///Disable
+        ///Aci [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string MovesNames5EN {
+            get {
+                return ResourceManager.GetString("MovesNames5EN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Écras&apos;Face
+        ///Poing-Karaté
+        ///Torgnoles
+        ///Poing Comète
+        ///Ultimapoing
+        ///Jackpot
+        ///Poing de Feu
+        ///Poinglace
+        ///Poing-Éclair
+        ///Griffe
+        ///Force Poigne
+        ///Guillotine
+        ///Coupe-Vent
+        ///Danse-Lames
+        ///Coupe
+        ///Tornade
+        ///Cru-Aile
+        ///Cyclone
+        ///Vol
+        ///Étreinte
+        ///Souplesse
+        ///Fouet Lianes
+        ///Écrasement
+        ///Double Pied
+        ///Ultimawashi
+        ///Pied Sauté
+        ///Mawashi Geri
+        ///Jet de Sable
+        ///Coup d’Boule
+        ///Koud&apos;Korne
+        ///Furie
+        ///Empal&apos;Korne
+        ///Charge
+        ///Plaquage
+        ///Ligotage
+        ///Bélier
+        ///Mania
+        ///Damoclès
+        ///Mimi-Queue
+        ///Dard-Venin
+        ///Double-Dard
+        ///Dard-Nuée
+        ///Groz&apos;Yeux
+        ///Morsure
+        ///Rugissement
+        ///Hurlemen [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string MovesNames5FR {
+            get {
+                return ResourceManager.GetString("MovesNames5FR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pound
+        ///Karate Chop
+        ///Double Slap
+        ///Comet Punch
+        ///Mega Punch
+        ///Pay Day
+        ///Fire Punch
+        ///Ice Punch
+        ///Thunder Punch
+        ///Scratch
+        ///Vice Grip
+        ///Guillotine
+        ///Razor Wind
+        ///Swords Dance
+        ///Cut
+        ///Gust
+        ///Wing Attack
+        ///Whirlwind
+        ///Fly
+        ///Bind
+        ///Slam
+        ///Vine Whip
+        ///Stomp
+        ///Double Kick
+        ///Mega Kick
+        ///Jump Kick
+        ///Rolling Kick
+        ///Sand Attack
+        ///Headbutt
+        ///Horn Attack
+        ///Fury Attack
+        ///Horn Drill
+        ///Tackle
+        ///Body Slam
+        ///Wrap
+        ///Take Down
+        ///Thrash
+        ///Double-Edge
+        ///Tail Whip
+        ///Poison Sting
+        ///Twineedle
+        ///Pin Missile
+        ///Leer
+        ///Bite
+        ///Growl
+        ///Roar
+        ///Sing
+        ///Supersonic
+        ///Sonic Boom
+        ///Disable        /// [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string MovesNames6EN {
+            get {
+                return ResourceManager.GetString("MovesNames6EN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Écras&apos;Face
+        ///Poing-Karaté
+        ///Torgnoles
+        ///Poing Comète
+        ///Ultimapoing
+        ///Jackpot
+        ///Poing de Feu
+        ///Poing-Glace
+        ///Poing-Éclair
+        ///Griffe
+        ///Force Poigne
+        ///Guillotine
+        ///Coupe-Vent
+        ///Danse-Lames
+        ///Coupe
+        ///Tornade
+        ///Cru-Aile
+        ///Cyclone
+        ///Vol
+        ///Étreinte
+        ///Souplesse
+        ///Fouet Lianes
+        ///Écrasement
+        ///Double Pied
+        ///Ultimawashi
+        ///Pied Sauté
+        ///Mawashi Geri
+        ///Jet de Sable
+        ///Coup d’Boule
+        ///Koud&apos;Korne
+        ///Furie
+        ///Empal&apos;Korne
+        ///Charge
+        ///Plaquage
+        ///Ligotage
+        ///Bélier
+        ///Mania
+        ///Damoclès
+        ///Mimi-Queue
+        ///Dard-Venin
+        ///Double-Dard
+        ///Dard-Nuée
+        ///Groz&apos;Yeux
+        ///Morsure
+        ///Rugissement
+        ///Hurlem [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string MovesNames6FR {
+            get {
+                return ResourceManager.GetString("MovesNames6FR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
         internal static byte[] OmegaRubySlots {
             get {
                 object obj = ResourceManager.GetObject("OmegaRubySlots", resourceCulture);

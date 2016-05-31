@@ -73,6 +73,7 @@
     <Compile Include="AreaMap\AreaMapHGSS.cs" />
     <Compile Include="AreaMap\AreaMapORAS.cs" />
     <Compile Include="AreaMap\AreaMapXY.cs" />
+    <Compile Include="Data\Move.cs" />
     <Compile Include="Forms\CaptureCalc.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +91,12 @@
     </Compile>
     <Compile Include="Forms\HoneyCuteCharm.Designer.cs">
       <DependentUpon>HoneyCuteCharm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ppCounter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ppCounter.Designer.cs">
+      <DependentUpon>ppCounter.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\TranslatableForm.cs">
       <SubType>Form</SubType>
@@ -134,6 +141,9 @@
     <EmbeddedResource Include="Forms\main.resx">
       <DependentUpon>main.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ppCounter.resx">
+      <DependentUpon>ppCounter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
@@ -163,6 +173,10 @@
     <None Include="Resources\data\HeartGoldSlots.dat" />
     <None Include="Resources\data\LeafGreenSlots.dat" />
     <None Include="Resources\data\MegasData.dat" />
+    <None Include="Resources\data\MovesGen3.dat" />
+    <None Include="Resources\data\MovesGen4.dat" />
+    <None Include="Resources\data\MovesGen5.dat" />
+    <None Include="Resources\data\MovesGen6.dat" />
     <None Include="Resources\data\OmegaRubySlots.dat" />
     <None Include="Resources\data\PearlSlots.dat" />
     <None Include="Resources\data\PlatinumSlots.dat" />
@@ -260,6 +274,18 @@
     <None Include="Resources\strings\en\interface.txt" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\strings\fr\MovesNames6.txt" />
+    <None Include="Resources\strings\fr\MovesNames5.txt" />
+    <None Include="Resources\strings\fr\MovesNames4.txt" />
+    <None Include="Resources\strings\fr\MovesNames3.txt" />
+    <None Include="Resources\strings\fr\MovesGen6.txt" />
+    <None Include="Resources\strings\fr\MovesGen5.txt" />
+    <None Include="Resources\strings\fr\MovesGen4.txt" />
+    <None Include="Resources\strings\fr\MovesGen3.txt" />
+    <None Include="Resources\strings\en\MovesNames6.txt" />
+    <None Include="Resources\strings\en\MovesNames5.txt" />
+    <None Include="Resources\strings\en\MovesNames4.txt" />
+    <None Include="Resources\strings\en\MovesNames3.txt" />
     <None Include="Resources\strings\fr\balls.txt" />
     <None Include="Resources\strings\en\balls.txt" />
     <None Include="Resources\strings\kr\honeyTreesLocations.txt" />

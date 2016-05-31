@@ -104,6 +104,18 @@ namespace PokemonEncCalc
                                                 };
 
 
+        // List of moves for gen 3 to 6 (data)
+        internal static List<Move> moveListGen3;
+        internal static List<Move> moveListGen4;
+        internal static List<Move> moveListGen5;
+        internal static List<Move> moveListGen6;
+
+        // List of moves for gen 3 to 6 (names)
+        internal static List<string> moveNamesGen3;
+        internal static List<string> moveNamesGen4;
+        internal static List<string> moveNamesGen5;
+        internal static List<string> moveNamesGen6;
+
         private static void initializePokemonNames()
         {
             NamesEN = new List<string>();
@@ -245,6 +257,8 @@ namespace PokemonEncCalc
                     break;
             }
 
+            initializeMoveNames();
+
             // 
             List<string> listFormControls = new List<string>();
             formList = new List<string>();
@@ -262,6 +276,59 @@ namespace PokemonEncCalc
 
         }
 
+
+        internal static void initializeMoves()
+        {
+            moveListGen3 = new List<Move>();
+            moveListGen4 = new List<Move>();
+            moveListGen5 = new List<Move>();
+            moveListGen6 = new List<Move>();
+
+            for(int i = 0; i < Properties.Resources.MovesGen3.Length / 5; i++)
+            {
+                moveListGen3.Add(new Move(Properties.Resources.MovesGen3.Skip(5 * i).Take(5).ToArray()));
+            }
+            for (int i = 0; i < Properties.Resources.MovesGen4.Length / 6; i++)
+            {
+                moveListGen4.Add(new Move(Properties.Resources.MovesGen4.Skip(6 * i).Take(6).ToArray()));
+            }
+            for (int i = 0; i < Properties.Resources.MovesGen5.Length / 6; i++)
+            {
+                moveListGen5.Add(new Move(Properties.Resources.MovesGen5.Skip(6 * i).Take(6).ToArray()));
+            }
+            for (int i = 0; i < Properties.Resources.MovesGen6.Length / 6; i++)
+            {
+                moveListGen6.Add(new Move(Properties.Resources.MovesGen6.Skip(6 * i).Take(6).ToArray()));
+            }
+
+            initializeMoveNames();
+        }
+
+        internal static void initializeMoveNames()
+        {
+            moveNamesGen3 = new List<string>();
+            moveNamesGen4 = new List<string>();
+            moveNamesGen5 = new List<string>();
+            moveNamesGen6 = new List<string>();
+
+            switch (Properties.Settings.Default.Language)
+            {
+                case 1:
+                    moveNamesGen3.AddRange(Properties.Resources.MovesNames3EN.Split(new[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries));
+                    moveNamesGen4.AddRange(Properties.Resources.MovesNames4EN.Split(new[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries));
+                    moveNamesGen5.AddRange(Properties.Resources.MovesNames5EN.Split(new[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries));
+                    moveNamesGen6.AddRange(Properties.Resources.MovesNames6EN.Split(new[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries));
+                    break;
+                case 2:
+                    moveNamesGen3.AddRange(Properties.Resources.MovesNames3FR.Split(new[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries));
+                    moveNamesGen4.AddRange(Properties.Resources.MovesNames4FR.Split(new[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries));
+                    moveNamesGen5.AddRange(Properties.Resources.MovesNames5FR.Split(new[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries));
+                    moveNamesGen6.AddRange(Properties.Resources.MovesNames6FR.Split(new[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries));
+                    break;
+                default:
+                    break;
+            }
+        }
 
         #region EncounterSlotCalculation
 

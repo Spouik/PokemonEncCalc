@@ -27,7 +27,8 @@ namespace PokemonEncCalc
             // Load data
             Utils.initializePokemonList();
             Utils.loadEncounterSlotData();
-            
+            Utils.initializeMoves();
+
             Application.Run(new frmMainPage());
         }
 

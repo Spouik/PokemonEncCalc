@@ -197,6 +197,7 @@
             this.cboMapsRubySapp = new System.Windows.Forms.ComboBox();
             this.cmdCalc = new System.Windows.Forms.Button();
             this.cmdClose = new System.Windows.Forms.Button();
+            this.ppCounterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mstMenu.SuspendLayout();
             this.gboSlots.SuspendLayout();
             this.pnlSwarmsGen3_5.SuspendLayout();
@@ -283,7 +284,8 @@
             // 
             this.toolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.honeyCuteCharmToolStripMenuItem,
-            this.captureToolStripMenuItem});
+            this.captureToolStripMenuItem,
+            this.ppCounterToolStripMenuItem});
             this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
             this.toolsToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
             this.toolsToolStripMenuItem.Text = "Tools";
@@ -2225,6 +2227,13 @@
             this.cmdClose.UseVisualStyleBackColor = false;
             this.cmdClose.Click += new System.EventHandler(this.cmdClose_Click);
             // 
+            // ppCounterToolStripMenuItem
+            // 
+            this.ppCounterToolStripMenuItem.Name = "ppCounterToolStripMenuItem";
+            this.ppCounterToolStripMenuItem.Size = new System.Drawing.Size(246, 22);
+            this.ppCounterToolStripMenuItem.Text = "PP Counter";
+            this.ppCounterToolStripMenuItem.Click += new System.EventHandler(this.ppCounterToolStripMenuItem_Click);
+            // 
             // frmMainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2495,6 +2504,7 @@
         internal System.Windows.Forms.ComboBox cboMapsAS;
         private System.Windows.Forms.ToolStripMenuItem honeyCuteCharmToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem captureToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ppCounterToolStripMenuItem;
     }
 }
 

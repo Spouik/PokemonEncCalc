@@ -1439,5 +1439,11 @@ namespace PokemonEncCalc
         {
             Properties.Settings.Default.Save();                
         }
+
+        private void ppCounterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPPCounter p = new frmPPCounter();
+            p.ShowDialog();
+        }
     }
 }
