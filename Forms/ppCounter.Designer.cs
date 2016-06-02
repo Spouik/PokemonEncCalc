@@ -92,6 +92,7 @@
             this.cmdGO.TabIndex = 1;
             this.cmdGO.Text = "GO";
             this.cmdGO.UseVisualStyleBackColor = true;
+            this.cmdGO.Click += new System.EventHandler(this.cmdGO_Click);
             // 
             // tabGenSelect
             // 
@@ -107,14 +108,14 @@
             // 
             // tabpGen3
             // 
-            this.tabpGen3.Controls.Add(this.lblGen3Move4);
-            this.tabpGen3.Controls.Add(this.lblGen3Move3);
-            this.tabpGen3.Controls.Add(this.lblGen3Move2);
             this.tabpGen3.Controls.Add(this.lblGen3Move1);
-            this.tabpGen3.Controls.Add(this.cboGen3Move4);
-            this.tabpGen3.Controls.Add(this.cboGen3Move3);
-            this.tabpGen3.Controls.Add(this.cboGen3Move2);
+            this.tabpGen3.Controls.Add(this.lblGen3Move2);
+            this.tabpGen3.Controls.Add(this.lblGen3Move3);
+            this.tabpGen3.Controls.Add(this.lblGen3Move4);
             this.tabpGen3.Controls.Add(this.cboGen3Move1);
+            this.tabpGen3.Controls.Add(this.cboGen3Move2);
+            this.tabpGen3.Controls.Add(this.cboGen3Move3);
+            this.tabpGen3.Controls.Add(this.cboGen3Move4);
             this.tabpGen3.Location = new System.Drawing.Point(4, 22);
             this.tabpGen3.Name = "tabpGen3";
             this.tabpGen3.Padding = new System.Windows.Forms.Padding(3);
@@ -122,33 +123,6 @@
             this.tabpGen3.TabIndex = 0;
             this.tabpGen3.Text = "Generation 3";
             this.tabpGen3.UseVisualStyleBackColor = true;
-            // 
-            // lblGen3Move4
-            // 
-            this.lblGen3Move4.AutoSize = true;
-            this.lblGen3Move4.Location = new System.Drawing.Point(117, 127);
-            this.lblGen3Move4.Name = "lblGen3Move4";
-            this.lblGen3Move4.Size = new System.Drawing.Size(43, 13);
-            this.lblGen3Move4.TabIndex = 1;
-            this.lblGen3Move4.Text = "Move 4";
-            // 
-            // lblGen3Move3
-            // 
-            this.lblGen3Move3.AutoSize = true;
-            this.lblGen3Move3.Location = new System.Drawing.Point(117, 100);
-            this.lblGen3Move3.Name = "lblGen3Move3";
-            this.lblGen3Move3.Size = new System.Drawing.Size(43, 13);
-            this.lblGen3Move3.TabIndex = 1;
-            this.lblGen3Move3.Text = "Move 3";
-            // 
-            // lblGen3Move2
-            // 
-            this.lblGen3Move2.AutoSize = true;
-            this.lblGen3Move2.Location = new System.Drawing.Point(117, 73);
-            this.lblGen3Move2.Name = "lblGen3Move2";
-            this.lblGen3Move2.Size = new System.Drawing.Size(43, 13);
-            this.lblGen3Move2.TabIndex = 1;
-            this.lblGen3Move2.Text = "Move 2";
             // 
             // lblGen3Move1
             // 
@@ -159,35 +133,32 @@
             this.lblGen3Move1.TabIndex = 1;
             this.lblGen3Move1.Text = "Move 1";
             // 
-            // cboGen3Move4
+            // lblGen3Move2
             // 
-            this.cboGen3Move4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboGen3Move4.FormattingEnabled = true;
-            this.cboGen3Move4.Location = new System.Drawing.Point(249, 124);
-            this.cboGen3Move4.Name = "cboGen3Move4";
-            this.cboGen3Move4.Size = new System.Drawing.Size(169, 21);
-            this.cboGen3Move4.Sorted = true;
-            this.cboGen3Move4.TabIndex = 0;
+            this.lblGen3Move2.AutoSize = true;
+            this.lblGen3Move2.Location = new System.Drawing.Point(117, 73);
+            this.lblGen3Move2.Name = "lblGen3Move2";
+            this.lblGen3Move2.Size = new System.Drawing.Size(43, 13);
+            this.lblGen3Move2.TabIndex = 1;
+            this.lblGen3Move2.Text = "Move 2";
             // 
-            // cboGen3Move3
+            // lblGen3Move3
             // 
-            this.cboGen3Move3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboGen3Move3.FormattingEnabled = true;
-            this.cboGen3Move3.Location = new System.Drawing.Point(249, 97);
-            this.cboGen3Move3.Name = "cboGen3Move3";
-            this.cboGen3Move3.Size = new System.Drawing.Size(169, 21);
-            this.cboGen3Move3.Sorted = true;
-            this.cboGen3Move3.TabIndex = 0;
+            this.lblGen3Move3.AutoSize = true;
+            this.lblGen3Move3.Location = new System.Drawing.Point(117, 100);
+            this.lblGen3Move3.Name = "lblGen3Move3";
+            this.lblGen3Move3.Size = new System.Drawing.Size(43, 13);
+            this.lblGen3Move3.TabIndex = 1;
+            this.lblGen3Move3.Text = "Move 3";
             // 
-            // cboGen3Move2
+            // lblGen3Move4
             // 
-            this.cboGen3Move2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboGen3Move2.FormattingEnabled = true;
-            this.cboGen3Move2.Location = new System.Drawing.Point(249, 70);
-            this.cboGen3Move2.Name = "cboGen3Move2";
-            this.cboGen3Move2.Size = new System.Drawing.Size(169, 21);
-            this.cboGen3Move2.Sorted = true;
-            this.cboGen3Move2.TabIndex = 0;
+            this.lblGen3Move4.AutoSize = true;
+            this.lblGen3Move4.Location = new System.Drawing.Point(117, 127);
+            this.lblGen3Move4.Name = "lblGen3Move4";
+            this.lblGen3Move4.Size = new System.Drawing.Size(43, 13);
+            this.lblGen3Move4.TabIndex = 1;
+            this.lblGen3Move4.Text = "Move 4";
             // 
             // cboGen3Move1
             // 
@@ -199,16 +170,46 @@
             this.cboGen3Move1.Sorted = true;
             this.cboGen3Move1.TabIndex = 0;
             // 
+            // cboGen3Move2
+            // 
+            this.cboGen3Move2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboGen3Move2.FormattingEnabled = true;
+            this.cboGen3Move2.Location = new System.Drawing.Point(249, 70);
+            this.cboGen3Move2.Name = "cboGen3Move2";
+            this.cboGen3Move2.Size = new System.Drawing.Size(169, 21);
+            this.cboGen3Move2.Sorted = true;
+            this.cboGen3Move2.TabIndex = 0;
+            // 
+            // cboGen3Move3
+            // 
+            this.cboGen3Move3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboGen3Move3.FormattingEnabled = true;
+            this.cboGen3Move3.Location = new System.Drawing.Point(249, 97);
+            this.cboGen3Move3.Name = "cboGen3Move3";
+            this.cboGen3Move3.Size = new System.Drawing.Size(169, 21);
+            this.cboGen3Move3.Sorted = true;
+            this.cboGen3Move3.TabIndex = 0;
+            // 
+            // cboGen3Move4
+            // 
+            this.cboGen3Move4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboGen3Move4.FormattingEnabled = true;
+            this.cboGen3Move4.Location = new System.Drawing.Point(249, 124);
+            this.cboGen3Move4.Name = "cboGen3Move4";
+            this.cboGen3Move4.Size = new System.Drawing.Size(169, 21);
+            this.cboGen3Move4.Sorted = true;
+            this.cboGen3Move4.TabIndex = 0;
+            // 
             // tabpGen4
             // 
-            this.tabpGen4.Controls.Add(this.lblGen4Move4);
-            this.tabpGen4.Controls.Add(this.lblGen4Move3);
-            this.tabpGen4.Controls.Add(this.lblGen4Move2);
             this.tabpGen4.Controls.Add(this.lblGen4Move1);
-            this.tabpGen4.Controls.Add(this.cboGen4Move4);
-            this.tabpGen4.Controls.Add(this.cboGen4Move3);
-            this.tabpGen4.Controls.Add(this.cboGen4Move2);
+            this.tabpGen4.Controls.Add(this.lblGen4Move2);
+            this.tabpGen4.Controls.Add(this.lblGen4Move3);
+            this.tabpGen4.Controls.Add(this.lblGen4Move4);
             this.tabpGen4.Controls.Add(this.cboGen4Move1);
+            this.tabpGen4.Controls.Add(this.cboGen4Move2);
+            this.tabpGen4.Controls.Add(this.cboGen4Move3);
+            this.tabpGen4.Controls.Add(this.cboGen4Move4);
             this.tabpGen4.Location = new System.Drawing.Point(4, 22);
             this.tabpGen4.Name = "tabpGen4";
             this.tabpGen4.Padding = new System.Windows.Forms.Padding(3);
@@ -216,33 +217,6 @@
             this.tabpGen4.TabIndex = 1;
             this.tabpGen4.Text = "Generation 4";
             this.tabpGen4.UseVisualStyleBackColor = true;
-            // 
-            // lblGen4Move4
-            // 
-            this.lblGen4Move4.AutoSize = true;
-            this.lblGen4Move4.Location = new System.Drawing.Point(117, 127);
-            this.lblGen4Move4.Name = "lblGen4Move4";
-            this.lblGen4Move4.Size = new System.Drawing.Size(43, 13);
-            this.lblGen4Move4.TabIndex = 6;
-            this.lblGen4Move4.Text = "Move 4";
-            // 
-            // lblGen4Move3
-            // 
-            this.lblGen4Move3.AutoSize = true;
-            this.lblGen4Move3.Location = new System.Drawing.Point(117, 100);
-            this.lblGen4Move3.Name = "lblGen4Move3";
-            this.lblGen4Move3.Size = new System.Drawing.Size(43, 13);
-            this.lblGen4Move3.TabIndex = 7;
-            this.lblGen4Move3.Text = "Move 3";
-            // 
-            // lblGen4Move2
-            // 
-            this.lblGen4Move2.AutoSize = true;
-            this.lblGen4Move2.Location = new System.Drawing.Point(117, 73);
-            this.lblGen4Move2.Name = "lblGen4Move2";
-            this.lblGen4Move2.Size = new System.Drawing.Size(43, 13);
-            this.lblGen4Move2.TabIndex = 8;
-            this.lblGen4Move2.Text = "Move 2";
             // 
             // lblGen4Move1
             // 
@@ -253,35 +227,32 @@
             this.lblGen4Move1.TabIndex = 9;
             this.lblGen4Move1.Text = "Move 1";
             // 
-            // cboGen4Move4
+            // lblGen4Move2
             // 
-            this.cboGen4Move4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboGen4Move4.FormattingEnabled = true;
-            this.cboGen4Move4.Location = new System.Drawing.Point(249, 124);
-            this.cboGen4Move4.Name = "cboGen4Move4";
-            this.cboGen4Move4.Size = new System.Drawing.Size(169, 21);
-            this.cboGen4Move4.Sorted = true;
-            this.cboGen4Move4.TabIndex = 2;
+            this.lblGen4Move2.AutoSize = true;
+            this.lblGen4Move2.Location = new System.Drawing.Point(117, 73);
+            this.lblGen4Move2.Name = "lblGen4Move2";
+            this.lblGen4Move2.Size = new System.Drawing.Size(43, 13);
+            this.lblGen4Move2.TabIndex = 8;
+            this.lblGen4Move2.Text = "Move 2";
             // 
-            // cboGen4Move3
+            // lblGen4Move3
             // 
-            this.cboGen4Move3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboGen4Move3.FormattingEnabled = true;
-            this.cboGen4Move3.Location = new System.Drawing.Point(249, 97);
-            this.cboGen4Move3.Name = "cboGen4Move3";
-            this.cboGen4Move3.Size = new System.Drawing.Size(169, 21);
-            this.cboGen4Move3.Sorted = true;
-            this.cboGen4Move3.TabIndex = 3;
+            this.lblGen4Move3.AutoSize = true;
+            this.lblGen4Move3.Location = new System.Drawing.Point(117, 100);
+            this.lblGen4Move3.Name = "lblGen4Move3";
+            this.lblGen4Move3.Size = new System.Drawing.Size(43, 13);
+            this.lblGen4Move3.TabIndex = 7;
+            this.lblGen4Move3.Text = "Move 3";
             // 
-            // cboGen4Move2
+            // lblGen4Move4
             // 
-            this.cboGen4Move2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboGen4Move2.FormattingEnabled = true;
-            this.cboGen4Move2.Location = new System.Drawing.Point(249, 70);
-            this.cboGen4Move2.Name = "cboGen4Move2";
-            this.cboGen4Move2.Size = new System.Drawing.Size(169, 21);
-            this.cboGen4Move2.Sorted = true;
-            this.cboGen4Move2.TabIndex = 4;
+            this.lblGen4Move4.AutoSize = true;
+            this.lblGen4Move4.Location = new System.Drawing.Point(117, 127);
+            this.lblGen4Move4.Name = "lblGen4Move4";
+            this.lblGen4Move4.Size = new System.Drawing.Size(43, 13);
+            this.lblGen4Move4.TabIndex = 6;
+            this.lblGen4Move4.Text = "Move 4";
             // 
             // cboGen4Move1
             // 
@@ -293,49 +264,52 @@
             this.cboGen4Move1.Sorted = true;
             this.cboGen4Move1.TabIndex = 5;
             // 
+            // cboGen4Move2
+            // 
+            this.cboGen4Move2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboGen4Move2.FormattingEnabled = true;
+            this.cboGen4Move2.Location = new System.Drawing.Point(249, 70);
+            this.cboGen4Move2.Name = "cboGen4Move2";
+            this.cboGen4Move2.Size = new System.Drawing.Size(169, 21);
+            this.cboGen4Move2.Sorted = true;
+            this.cboGen4Move2.TabIndex = 4;
+            // 
+            // cboGen4Move3
+            // 
+            this.cboGen4Move3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboGen4Move3.FormattingEnabled = true;
+            this.cboGen4Move3.Location = new System.Drawing.Point(249, 97);
+            this.cboGen4Move3.Name = "cboGen4Move3";
+            this.cboGen4Move3.Size = new System.Drawing.Size(169, 21);
+            this.cboGen4Move3.Sorted = true;
+            this.cboGen4Move3.TabIndex = 3;
+            // 
+            // cboGen4Move4
+            // 
+            this.cboGen4Move4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboGen4Move4.FormattingEnabled = true;
+            this.cboGen4Move4.Location = new System.Drawing.Point(249, 124);
+            this.cboGen4Move4.Name = "cboGen4Move4";
+            this.cboGen4Move4.Size = new System.Drawing.Size(169, 21);
+            this.cboGen4Move4.Sorted = true;
+            this.cboGen4Move4.TabIndex = 2;
+            // 
             // tabpGen5
             // 
-            this.tabpGen5.Controls.Add(this.lblGen5Move4);
-            this.tabpGen5.Controls.Add(this.lblGen5Move3);
-            this.tabpGen5.Controls.Add(this.lblGen5Move2);
             this.tabpGen5.Controls.Add(this.lblGen5Move1);
-            this.tabpGen5.Controls.Add(this.cboGen5Move4);
-            this.tabpGen5.Controls.Add(this.cboGen5Move3);
-            this.tabpGen5.Controls.Add(this.cboGen5Move2);
+            this.tabpGen5.Controls.Add(this.lblGen5Move2);
+            this.tabpGen5.Controls.Add(this.lblGen5Move3);
+            this.tabpGen5.Controls.Add(this.lblGen5Move4);
             this.tabpGen5.Controls.Add(this.cboGen5Move1);
+            this.tabpGen5.Controls.Add(this.cboGen5Move2);
+            this.tabpGen5.Controls.Add(this.cboGen5Move3);
+            this.tabpGen5.Controls.Add(this.cboGen5Move4);
             this.tabpGen5.Location = new System.Drawing.Point(4, 22);
             this.tabpGen5.Name = "tabpGen5";
             this.tabpGen5.Size = new System.Drawing.Size(598, 195);
             this.tabpGen5.TabIndex = 2;
             this.tabpGen5.Text = "Generation 5";
             this.tabpGen5.UseVisualStyleBackColor = true;
-            // 
-            // lblGen5Move4
-            // 
-            this.lblGen5Move4.AutoSize = true;
-            this.lblGen5Move4.Location = new System.Drawing.Point(117, 127);
-            this.lblGen5Move4.Name = "lblGen5Move4";
-            this.lblGen5Move4.Size = new System.Drawing.Size(43, 13);
-            this.lblGen5Move4.TabIndex = 14;
-            this.lblGen5Move4.Text = "Move 4";
-            // 
-            // lblGen5Move3
-            // 
-            this.lblGen5Move3.AutoSize = true;
-            this.lblGen5Move3.Location = new System.Drawing.Point(117, 100);
-            this.lblGen5Move3.Name = "lblGen5Move3";
-            this.lblGen5Move3.Size = new System.Drawing.Size(43, 13);
-            this.lblGen5Move3.TabIndex = 15;
-            this.lblGen5Move3.Text = "Move 3";
-            // 
-            // lblGen5Move2
-            // 
-            this.lblGen5Move2.AutoSize = true;
-            this.lblGen5Move2.Location = new System.Drawing.Point(117, 73);
-            this.lblGen5Move2.Name = "lblGen5Move2";
-            this.lblGen5Move2.Size = new System.Drawing.Size(43, 13);
-            this.lblGen5Move2.TabIndex = 16;
-            this.lblGen5Move2.Text = "Move 2";
             // 
             // lblGen5Move1
             // 
@@ -346,35 +320,32 @@
             this.lblGen5Move1.TabIndex = 17;
             this.lblGen5Move1.Text = "Move 1";
             // 
-            // cboGen5Move4
+            // lblGen5Move2
             // 
-            this.cboGen5Move4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboGen5Move4.FormattingEnabled = true;
-            this.cboGen5Move4.Location = new System.Drawing.Point(249, 124);
-            this.cboGen5Move4.Name = "cboGen5Move4";
-            this.cboGen5Move4.Size = new System.Drawing.Size(169, 21);
-            this.cboGen5Move4.Sorted = true;
-            this.cboGen5Move4.TabIndex = 10;
+            this.lblGen5Move2.AutoSize = true;
+            this.lblGen5Move2.Location = new System.Drawing.Point(117, 73);
+            this.lblGen5Move2.Name = "lblGen5Move2";
+            this.lblGen5Move2.Size = new System.Drawing.Size(43, 13);
+            this.lblGen5Move2.TabIndex = 16;
+            this.lblGen5Move2.Text = "Move 2";
             // 
-            // cboGen5Move3
+            // lblGen5Move3
             // 
-            this.cboGen5Move3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboGen5Move3.FormattingEnabled = true;
-            this.cboGen5Move3.Location = new System.Drawing.Point(249, 97);
-            this.cboGen5Move3.Name = "cboGen5Move3";
-            this.cboGen5Move3.Size = new System.Drawing.Size(169, 21);
-            this.cboGen5Move3.Sorted = true;
-            this.cboGen5Move3.TabIndex = 11;
+            this.lblGen5Move3.AutoSize = true;
+            this.lblGen5Move3.Location = new System.Drawing.Point(117, 100);
+            this.lblGen5Move3.Name = "lblGen5Move3";
+            this.lblGen5Move3.Size = new System.Drawing.Size(43, 13);
+            this.lblGen5Move3.TabIndex = 15;
+            this.lblGen5Move3.Text = "Move 3";
             // 
-            // cboGen5Move2
+            // lblGen5Move4
             // 
-            this.cboGen5Move2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboGen5Move2.FormattingEnabled = true;
-            this.cboGen5Move2.Location = new System.Drawing.Point(249, 70);
-            this.cboGen5Move2.Name = "cboGen5Move2";
-            this.cboGen5Move2.Size = new System.Drawing.Size(169, 21);
-            this.cboGen5Move2.Sorted = true;
-            this.cboGen5Move2.TabIndex = 12;
+            this.lblGen5Move4.AutoSize = true;
+            this.lblGen5Move4.Location = new System.Drawing.Point(117, 127);
+            this.lblGen5Move4.Name = "lblGen5Move4";
+            this.lblGen5Move4.Size = new System.Drawing.Size(43, 13);
+            this.lblGen5Move4.TabIndex = 14;
+            this.lblGen5Move4.Text = "Move 4";
             // 
             // cboGen5Move1
             // 
@@ -386,49 +357,52 @@
             this.cboGen5Move1.Sorted = true;
             this.cboGen5Move1.TabIndex = 13;
             // 
+            // cboGen5Move2
+            // 
+            this.cboGen5Move2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboGen5Move2.FormattingEnabled = true;
+            this.cboGen5Move2.Location = new System.Drawing.Point(249, 70);
+            this.cboGen5Move2.Name = "cboGen5Move2";
+            this.cboGen5Move2.Size = new System.Drawing.Size(169, 21);
+            this.cboGen5Move2.Sorted = true;
+            this.cboGen5Move2.TabIndex = 12;
+            // 
+            // cboGen5Move3
+            // 
+            this.cboGen5Move3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboGen5Move3.FormattingEnabled = true;
+            this.cboGen5Move3.Location = new System.Drawing.Point(249, 97);
+            this.cboGen5Move3.Name = "cboGen5Move3";
+            this.cboGen5Move3.Size = new System.Drawing.Size(169, 21);
+            this.cboGen5Move3.Sorted = true;
+            this.cboGen5Move3.TabIndex = 11;
+            // 
+            // cboGen5Move4
+            // 
+            this.cboGen5Move4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboGen5Move4.FormattingEnabled = true;
+            this.cboGen5Move4.Location = new System.Drawing.Point(249, 124);
+            this.cboGen5Move4.Name = "cboGen5Move4";
+            this.cboGen5Move4.Size = new System.Drawing.Size(169, 21);
+            this.cboGen5Move4.Sorted = true;
+            this.cboGen5Move4.TabIndex = 10;
+            // 
             // tabpGen6
             // 
-            this.tabpGen6.Controls.Add(this.lblGen6Move4);
-            this.tabpGen6.Controls.Add(this.lblGen6Move3);
-            this.tabpGen6.Controls.Add(this.lblGen6Move2);
             this.tabpGen6.Controls.Add(this.lblGen6Move1);
-            this.tabpGen6.Controls.Add(this.cboGen6Move4);
-            this.tabpGen6.Controls.Add(this.cboGen6Move3);
-            this.tabpGen6.Controls.Add(this.cboGen6Move2);
+            this.tabpGen6.Controls.Add(this.lblGen6Move2);
+            this.tabpGen6.Controls.Add(this.lblGen6Move3);
+            this.tabpGen6.Controls.Add(this.lblGen6Move4);
             this.tabpGen6.Controls.Add(this.cboGen6Move1);
+            this.tabpGen6.Controls.Add(this.cboGen6Move2);
+            this.tabpGen6.Controls.Add(this.cboGen6Move3);
+            this.tabpGen6.Controls.Add(this.cboGen6Move4);
             this.tabpGen6.Location = new System.Drawing.Point(4, 22);
             this.tabpGen6.Name = "tabpGen6";
             this.tabpGen6.Size = new System.Drawing.Size(598, 195);
             this.tabpGen6.TabIndex = 3;
             this.tabpGen6.Text = "Generation 6";
             this.tabpGen6.UseVisualStyleBackColor = true;
-            // 
-            // lblGen6Move4
-            // 
-            this.lblGen6Move4.AutoSize = true;
-            this.lblGen6Move4.Location = new System.Drawing.Point(117, 127);
-            this.lblGen6Move4.Name = "lblGen6Move4";
-            this.lblGen6Move4.Size = new System.Drawing.Size(43, 13);
-            this.lblGen6Move4.TabIndex = 14;
-            this.lblGen6Move4.Text = "Move 4";
-            // 
-            // lblGen6Move3
-            // 
-            this.lblGen6Move3.AutoSize = true;
-            this.lblGen6Move3.Location = new System.Drawing.Point(117, 100);
-            this.lblGen6Move3.Name = "lblGen6Move3";
-            this.lblGen6Move3.Size = new System.Drawing.Size(43, 13);
-            this.lblGen6Move3.TabIndex = 15;
-            this.lblGen6Move3.Text = "Move 3";
-            // 
-            // lblGen6Move2
-            // 
-            this.lblGen6Move2.AutoSize = true;
-            this.lblGen6Move2.Location = new System.Drawing.Point(117, 73);
-            this.lblGen6Move2.Name = "lblGen6Move2";
-            this.lblGen6Move2.Size = new System.Drawing.Size(43, 13);
-            this.lblGen6Move2.TabIndex = 16;
-            this.lblGen6Move2.Text = "Move 2";
             // 
             // lblGen6Move1
             // 
@@ -439,25 +413,42 @@
             this.lblGen6Move1.TabIndex = 17;
             this.lblGen6Move1.Text = "Move 1";
             // 
-            // cboGen6Move4
+            // lblGen6Move2
             // 
-            this.cboGen6Move4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboGen6Move4.FormattingEnabled = true;
-            this.cboGen6Move4.Location = new System.Drawing.Point(249, 124);
-            this.cboGen6Move4.Name = "cboGen6Move4";
-            this.cboGen6Move4.Size = new System.Drawing.Size(169, 21);
-            this.cboGen6Move4.Sorted = true;
-            this.cboGen6Move4.TabIndex = 10;
+            this.lblGen6Move2.AutoSize = true;
+            this.lblGen6Move2.Location = new System.Drawing.Point(117, 73);
+            this.lblGen6Move2.Name = "lblGen6Move2";
+            this.lblGen6Move2.Size = new System.Drawing.Size(43, 13);
+            this.lblGen6Move2.TabIndex = 16;
+            this.lblGen6Move2.Text = "Move 2";
             // 
-            // cboGen6Move3
+            // lblGen6Move3
             // 
-            this.cboGen6Move3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboGen6Move3.FormattingEnabled = true;
-            this.cboGen6Move3.Location = new System.Drawing.Point(249, 97);
-            this.cboGen6Move3.Name = "cboGen6Move3";
-            this.cboGen6Move3.Size = new System.Drawing.Size(169, 21);
-            this.cboGen6Move3.Sorted = true;
-            this.cboGen6Move3.TabIndex = 11;
+            this.lblGen6Move3.AutoSize = true;
+            this.lblGen6Move3.Location = new System.Drawing.Point(117, 100);
+            this.lblGen6Move3.Name = "lblGen6Move3";
+            this.lblGen6Move3.Size = new System.Drawing.Size(43, 13);
+            this.lblGen6Move3.TabIndex = 15;
+            this.lblGen6Move3.Text = "Move 3";
+            // 
+            // lblGen6Move4
+            // 
+            this.lblGen6Move4.AutoSize = true;
+            this.lblGen6Move4.Location = new System.Drawing.Point(117, 127);
+            this.lblGen6Move4.Name = "lblGen6Move4";
+            this.lblGen6Move4.Size = new System.Drawing.Size(43, 13);
+            this.lblGen6Move4.TabIndex = 14;
+            this.lblGen6Move4.Text = "Move 4";
+            // 
+            // cboGen6Move1
+            // 
+            this.cboGen6Move1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboGen6Move1.FormattingEnabled = true;
+            this.cboGen6Move1.Location = new System.Drawing.Point(249, 43);
+            this.cboGen6Move1.Name = "cboGen6Move1";
+            this.cboGen6Move1.Size = new System.Drawing.Size(169, 21);
+            this.cboGen6Move1.Sorted = true;
+            this.cboGen6Move1.TabIndex = 13;
             // 
             // cboGen6Move2
             // 
@@ -469,15 +460,25 @@
             this.cboGen6Move2.Sorted = true;
             this.cboGen6Move2.TabIndex = 12;
             // 
-            // cboGen6Move1
+            // cboGen6Move3
             // 
-            this.cboGen6Move1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboGen6Move1.FormattingEnabled = true;
-            this.cboGen6Move1.Location = new System.Drawing.Point(249, 43);
-            this.cboGen6Move1.Name = "cboGen6Move1";
-            this.cboGen6Move1.Size = new System.Drawing.Size(169, 21);
-            this.cboGen6Move1.Sorted = true;
-            this.cboGen6Move1.TabIndex = 13;
+            this.cboGen6Move3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboGen6Move3.FormattingEnabled = true;
+            this.cboGen6Move3.Location = new System.Drawing.Point(249, 97);
+            this.cboGen6Move3.Name = "cboGen6Move3";
+            this.cboGen6Move3.Size = new System.Drawing.Size(169, 21);
+            this.cboGen6Move3.Sorted = true;
+            this.cboGen6Move3.TabIndex = 11;
+            // 
+            // cboGen6Move4
+            // 
+            this.cboGen6Move4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboGen6Move4.FormattingEnabled = true;
+            this.cboGen6Move4.Location = new System.Drawing.Point(249, 124);
+            this.cboGen6Move4.Name = "cboGen6Move4";
+            this.cboGen6Move4.Size = new System.Drawing.Size(169, 21);
+            this.cboGen6Move4.Sorted = true;
+            this.cboGen6Move4.TabIndex = 10;
             // 
             // frmPPCounter
             // 
