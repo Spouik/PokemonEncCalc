@@ -14,7 +14,7 @@ namespace PokemonEncCalc
     public partial class frmMainPage : TranslatableForm
     {
         // Current Slots : Should match with those displayed on the form
-        EncounterSlot[] currentSlots = new EncounterSlot[12];
+        EncounterSlot[] currentSlots;
         decimal[] percentage = { 20, 20, 10, 10, 10, 10, 5, 5, 4, 4, 1, 1 };
 
         bool updatingSlots = false; //is true when slots are being updated automatically (prevents slot modification via controls during this time)
@@ -28,6 +28,10 @@ namespace PokemonEncCalc
         {
             loadEncounterOptions((Language)Properties.Settings.Default.Language);
             InitializeComponent();
+            if (Properties.Settings.Default.ShinySprites)
+                shinyToolStripMenuItem.Checked = true;
+            else
+                normalToolStripMenuItem.Checked = true;
             
         }
 
@@ -215,14 +219,15 @@ namespace PokemonEncCalc
                 return;
 
             // Change Slot
-            currentSlots[slot] = new EncounterSlot(Utils.PokemonList[((ComboBox)sender).SelectedIndex],
+            if(currentSlots != null)
+                if(slot < currentSlots.Length)
+                    currentSlots[slot] = new EncounterSlot(Utils.PokemonList[((ComboBox)sender).SelectedIndex],
                                                     (byte)((NumericUpDown)gboSlots.Controls.Find("nudMinLv" + slot, true)[0]).Value,
                                                     (byte)((NumericUpDown)gboSlots.Controls.Find("nudMaxLv" + slot, true)[0]).Value,
                                                     Decimal.Parse(((Label)gboSlots.Controls.Find("lblPercent" + slot, true)[0]).Text.Split(new[] { ' ' })[0]));
 
             // Change minisprite
-            ((PictureBox)gboSlots.Controls.Find("pctPoke" + slot, true)[0]).Image = (Image)Properties.Resources.ResourceManager.GetObject("_" + (((ComboBox)sender).SelectedIndex + 1));
-
+            update();
 
         }
 
@@ -358,9 +363,8 @@ namespace PokemonEncCalc
             if (formSelect.ShowDialog(currentSlots[slot]) == DialogResult.OK)
                 currentSlots[slot] = frmFormSelect.getResult();
 
-            ((PictureBox)sender).Image = (currentSlots[slot].Species.Form == 0) ? (Image)Properties.Resources.ResourceManager.GetObject("_" + currentSlots[slot].Species.NatID)
-                                                                  : (Image)Properties.Resources.ResourceManager.GetObject("_" + currentSlots[slot].Species.NatID + "_" + currentSlots[slot].Species.Form);
 
+            update();
         }
 
 
@@ -521,7 +525,29 @@ namespace PokemonEncCalc
             }
             else
             {
-                chkRepel.Enabled = true;
+                EncounterType type = (EncounterType)encounterOptions[0].FindIndex(s => s.Equals((string)cboEncounterType.SelectedItem));
+                chkRepel.Enabled = false;
+                switch (type)
+                {
+                    case EncounterType.Walking:
+                    case EncounterType.DarkGrass:
+                    case EncounterType.Surf:
+                    case EncounterType.RedFlowers:
+                    case EncounterType.YellowFlowers:
+                    case EncounterType.PurpleFlowers:
+                    case EncounterType.TallGrass:
+                    case EncounterType.Diving:
+                    case EncounterType.ShallowWater:
+                        chkRepel.Enabled = true;
+                        break;
+                    case EncounterType.RockSmash:
+                        if(cboVersion.SelectedIndex < 5)
+                            chkRepel.Enabled = true;
+                        break;
+                    default:
+                        chkRepel.Checked = false;
+                        break;
+                }
             }
 
         }
@@ -545,7 +571,31 @@ namespace PokemonEncCalc
                 chkRepel.Checked = true;
             }
             else
-                chkRepel.Enabled = true;
+            {
+                EncounterType type = (EncounterType)encounterOptions[0].FindIndex(s => s.Equals((string)cboEncounterType.SelectedItem));
+                chkRepel.Enabled = false;
+                switch (type)
+                {
+                    case EncounterType.Walking:
+                    case EncounterType.DarkGrass:
+                    case EncounterType.Surf:
+                    case EncounterType.RedFlowers:
+                    case EncounterType.YellowFlowers:
+                    case EncounterType.PurpleFlowers:
+                    case EncounterType.TallGrass:
+                    case EncounterType.Diving:
+                    case EncounterType.ShallowWater:
+                        chkRepel.Enabled = true;
+                        break;
+                    case EncounterType.RockSmash:
+                        if (cboVersion.SelectedIndex < 5)
+                            chkRepel.Enabled = true;
+                        break;
+                    default:
+                        chkRepel.Checked = false;
+                        break;
+                }
+            }
 
         }
 
@@ -1200,6 +1250,7 @@ namespace PokemonEncCalc
             EncounterType type = (EncounterType)encounterOptions[0].FindIndex(s => s.Equals((string)cboEncounterType.SelectedItem));
             Version currentVersion = (Version)((int)Version.Ruby + cboVersion.SelectedIndex);
             int gba = 0, time = 0, radio = 0;
+            chkRepel.Enabled = false;
 
             Ability selectedAbility = (Ability)(encounterOptions[1].FindIndex(s=> s==(string)(cboAbility.SelectedItem)) + 1);
             if (selectedAbility == Ability.None) selectedAbility = Ability.Static;
@@ -1219,8 +1270,15 @@ namespace PokemonEncCalc
                 case EncounterType.Diving:
                 case EncounterType.ShallowWater:
                     cboAbility.Items.Add(encounterOptions[1][2]);
+                    chkRepel.Enabled = true;
                     break;
-                default: break;
+                case EncounterType.RockSmash:
+                    if (cboVersion.SelectedIndex < 5)
+                        chkRepel.Enabled = true;
+                    break;
+                default:
+                    chkRepel.Checked = false;
+                    break;
             }
 
             switch (currentVersion)
@@ -1359,36 +1417,12 @@ namespace PokemonEncCalc
         private void updateSlots(EncounterSlot[] newSlots)
         {
             //
-            updatingSlots = true;
 
             currentSlots = newSlots;
 
-            foreach(Control b in gboSlots.Controls)
-            {
-                b.Visible = false;
-            }
-
-            for(int i = 0; i < currentSlots.Length; i++)
-            {
-                ((ComboBox)(gboSlots.Controls.Find("cboSlot" + i, false)[0])).Visible = true;
-                ((NumericUpDown)(gboSlots.Controls.Find("nudMinLv" + i, false)[0])).Visible = true;
-                ((NumericUpDown)(gboSlots.Controls.Find("nudMaxLv" + i, false)[0])).Visible = true;
-                ((PictureBox)(gboSlots.Controls.Find("pctPoke" + i, false)[0])).Visible = true;
-                ((Label)(gboSlots.Controls.Find("lblPercent" + i, false)[0])).Visible = true;
-
-                ((ComboBox)(gboSlots.Controls.Find("cboSlot" + i, false)[0])).SelectedIndex = currentSlots[i].Species.NatID - 1;
-                ((NumericUpDown)(gboSlots.Controls.Find("nudMinLv" + i, false)[0])).Value = currentSlots[i].MinLevel;
-                ((NumericUpDown)(gboSlots.Controls.Find("nudMaxLv" + i, false)[0])).Value = currentSlots[i].MaxLevel;
-                // Change minisprite
-                ((PictureBox)gboSlots.Controls.Find("pctPoke" + i, false)[0]).Image = (Image)Properties.Resources.ResourceManager.GetObject
-                    ("_" + (currentSlots[i].Species.NatID) + (currentSlots[i].Species.Form !=0 ? ("_"+currentSlots[i].Species.Form) : ""));
-
-                ((Label)(gboSlots.Controls.Find("lblPercent" + i, false)[0])).Text = currentSlots[i].Percentage + " %";
-
-            }
+            update();
 
 
-            updatingSlots = false;
             
         }
 
@@ -1445,5 +1479,65 @@ namespace PokemonEncCalc
             frmPPCounter p = new frmPPCounter();
             p.ShowDialog();
         }
+
+        private void normalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            normalToolStripMenuItem.Checked = true;
+            shinyToolStripMenuItem.Checked = false;
+            Properties.Settings.Default.ShinySprites = false;
+            update();
+
+        }
+
+        private void shinyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            normalToolStripMenuItem.Checked = false;
+            shinyToolStripMenuItem.Checked = true;
+            Properties.Settings.Default.ShinySprites = true;
+            update();
+        }
+
+        private void update()
+        {
+            if (currentSlots == null) return;
+
+            updatingSlots = true;
+
+
+            foreach (Control b in gboSlots.Controls)
+            {
+                b.Visible = false;
+            }
+
+            
+
+            for (int i = 0; i < currentSlots.Length; i++)
+            {
+                ((ComboBox)(gboSlots.Controls.Find("cboSlot" + i, false)[0])).Visible = true;
+                ((NumericUpDown)(gboSlots.Controls.Find("nudMinLv" + i, false)[0])).Visible = true;
+                ((NumericUpDown)(gboSlots.Controls.Find("nudMaxLv" + i, false)[0])).Visible = true;
+                ((PictureBox)(gboSlots.Controls.Find("pctPoke" + i, false)[0])).Visible = true;
+                ((Label)(gboSlots.Controls.Find("lblPercent" + i, false)[0])).Visible = true;
+
+                ((ComboBox)(gboSlots.Controls.Find("cboSlot" + i, false)[0])).SelectedIndex = currentSlots[i].Species.NatID - 1;
+                ((NumericUpDown)(gboSlots.Controls.Find("nudMinLv" + i, false)[0])).Value = currentSlots[i].MinLevel;
+                ((NumericUpDown)(gboSlots.Controls.Find("nudMaxLv" + i, false)[0])).Value = currentSlots[i].MaxLevel;
+                // Change minisprite
+                if (Properties.Settings.Default.ShinySprites)
+                    ((PictureBox)gboSlots.Controls.Find("pctPoke" + i, false)[0]).Image = (Image)Properties.Resources.ResourceManager.GetObject
+                        ("m" + (currentSlots[i].Species.NatID) + "s" + (currentSlots[i].Species.Form != 0 ? ("_" + currentSlots[i].Species.Form) : ""));
+                else
+                    ((PictureBox)gboSlots.Controls.Find("pctPoke" + i, false)[0]).Image = (Image)Properties.Resources.ResourceManager.GetObject
+                        ("m" + (currentSlots[i].Species.NatID) + (currentSlots[i].Species.Form != 0 ? ("_" + currentSlots[i].Species.Form) : ""));
+
+
+                ((Label)(gboSlots.Controls.Find("lblPercent" + i, false)[0])).Text = currentSlots[i].Percentage + " %";
+
+            }
+
+
+            updatingSlots = false;
+        }
+
     }
 }

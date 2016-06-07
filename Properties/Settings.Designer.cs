@@ -34,5 +34,17 @@ namespace PokemonEncCalc.Properties {
                 this["Language"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool ShinySprites {
+            get {
+                return ((bool)(this["ShinySprites"]));
+            }
+            set {
+                this["ShinySprites"] = value;
+            }
+        }
     }
 }

@@ -44,62 +44,124 @@ namespace PokemonEncCalc
 
             // Create EncounterSlot only if data exists 
             // (checked via minLv of the first slot, which should not be 0 if data exists)
+            
+
             if (grass[0] != 0)
             {
+                Pokemon p;
+                short species;
+                byte formid;
+
                 WalkSlots = new EncounterSlot[12];
                 for(int i = 0; i < 12; i++)
                 {
-                    short species = BitConverter.ToInt16(grass, 4 * i + 2);
-                    WalkSlots[i] = new EncounterSlot(Utils.PokemonList[species - 1], grass[4 * i], grass[4 * i + 1], percentGrass[i]);
+                    species = (short)(BitConverter.ToInt16(grass, 4 * i + 2) & 0x3FF);
+                    formid = (byte)(grass[4 * i + 3] >> 2);
+                    p = Utils.PokemonList[species - 1];
+                    if (formid > 0)
+                        if (p.FormCount() >= formid)
+                            if (p.Forms[formid - 1] != null)
+                                p = p.Forms[formid - 1];
+                    WalkSlots[i] = new EncounterSlot(p, grass[4 * i], grass[4 * i + 1], percentGrass[i]);
                 }
             }
 
             if (surf[0] != 0)
             {
+                Pokemon p;
+                short species;
+                byte formid;
+
                 SurfSlots = new EncounterSlot[5];
                 for (int i = 0; i < 5; i++)
                 {
-                    short species = BitConverter.ToInt16(surf, 4 * i + 2);
+                    species = (short)(BitConverter.ToInt16(surf, 4 * i + 2) & 0x3FF);
+                    formid = (byte)(surf[4 * i + 3] >> 2);
+                    p = Utils.PokemonList[species - 1];
+                    if (formid > 0)
+                        if (p.FormCount() >= formid)
+                            if (p.Forms[formid - 1] != null)
+                                p = p.Forms[formid - 1];
                     SurfSlots[i] = new EncounterSlot(Utils.PokemonList[species - 1], surf[4 * i], surf[4 * i + 1], percentSurf[i]);
                 }
             }
 
             if (rockSmash[0] != 0)
             {
+                Pokemon p;
+                short species;
+                byte formid;
+
                 RockSmashSlots = new EncounterSlot[5];
                 for (int i = 0; i < 5; i++)
                 {
-                    short species = BitConverter.ToInt16(rockSmash, 4 * i + 2);
+                    species = (short)(BitConverter.ToInt16(rockSmash, 4 * i + 2) & 0x3FF);
+                    formid = (byte)(rockSmash[4 * i + 3] >> 2);
+                    p = Utils.PokemonList[species - 1];
+                    if (formid > 0)
+                        if (p.FormCount() >= formid)
+                            if (p.Forms[formid - 1] != null)
+                                p = p.Forms[formid - 1];
                     RockSmashSlots[i] = new EncounterSlot(Utils.PokemonList[species - 1], rockSmash[4 * i], rockSmash[4 * i + 1], percentRockSmash[i]);
                 }
             }
 
             if (oldRod[0] != 0)
             {
+                Pokemon p;
+                short species;
+                byte formid;
+
                 OldRodSlots = new EncounterSlot[2];
                 for (int i = 0; i < 2; i++)
                 {
-                    short species = BitConverter.ToInt16(oldRod, 4 * i + 2);
+                    species = (short)(BitConverter.ToInt16(oldRod, 4 * i + 2) & 0x3FF);
+                    formid = (byte)(oldRod[4 * i + 3] >> 2);
+                    p = Utils.PokemonList[species - 1];
+                    if (formid > 0)
+                        if (p.FormCount() >= formid)
+                            if (p.Forms[formid - 1] != null)
+                                p = p.Forms[formid - 1];
                     OldRodSlots[i] = new EncounterSlot(Utils.PokemonList[species - 1], oldRod[4 * i], oldRod[4 * i + 1], percentOldRod[i]);
                 }
             }
 
             if (goodRod[0] != 0)
             {
+                Pokemon p;
+                short species;
+                byte formid;
+
                 GoodRodSlots = new EncounterSlot[3];
                 for (int i = 0; i < 3; i++)
                 {
-                    short species = BitConverter.ToInt16(goodRod, 4 * i + 2);
+                    species = (short)(BitConverter.ToInt16(goodRod, 4 * i + 2) & 0x3FF);
+                    formid = (byte)(goodRod[4 * i + 3] >> 2);
+                    p = Utils.PokemonList[species - 1];
+                    if (formid > 0)
+                        if (p.FormCount() >= formid)
+                            if (p.Forms[formid - 1] != null)
+                                p = p.Forms[formid - 1];
                     GoodRodSlots[i] = new EncounterSlot(Utils.PokemonList[species - 1], goodRod[4 * i], goodRod[4 * i + 1], percentGoodRod[i]);
                 }
             }
 
             if (superRod[0] != 0)
             {
+                Pokemon p;
+                short species;
+                byte formid;
+
                 SuperRodSlots = new EncounterSlot[5];
                 for (int i = 0; i < 5; i++)
                 {
-                    short species = BitConverter.ToInt16(superRod, 4 * i + 2);
+                    species = (short)(BitConverter.ToInt16(superRod, 4 * i + 2) & 0x3FF);
+                    formid = (byte)(superRod[4 * i + 3] >> 2);
+                    p = Utils.PokemonList[species - 1];
+                    if (formid > 0)
+                        if (p.FormCount() >= formid)
+                            if (p.Forms[formid - 1] != null)
+                                p = p.Forms[formid - 1];
                     SuperRodSlots[i] = new EncounterSlot(Utils.PokemonList[species - 1], superRod[4 * i], superRod[4 * i + 1], percentSuperRod[i]);
                 }
             }

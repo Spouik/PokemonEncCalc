@@ -71,8 +71,11 @@ namespace PokemonEncCalc
                                                             : Utils.PokemonList[data.Species.NatID - 1].Forms[cboFormList.SelectedIndex - 1];
 
             // Change minisprite
-            pctMinisprite.Image = (cboFormList.SelectedIndex == 0) ? (Image)Properties.Resources.ResourceManager.GetObject("_" + data.Species.NatID)
-                                                                  : (Image)Properties.Resources.ResourceManager.GetObject("_" + data.Species.NatID + "_" + cboFormList.SelectedIndex);
+            pctMinisprite.Image = (Image)Properties.Resources.ResourceManager.GetObject(
+                                "m" + data.Species.NatID +
+                                (Properties.Settings.Default.ShinySprites ? "s" : "") +
+                                (cboFormList.SelectedIndex == 0 ? "" : "_" + cboFormList.SelectedIndex));
+                                                                 
         }
 
 
