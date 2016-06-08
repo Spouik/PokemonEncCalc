@@ -10048,6 +10048,12 @@
   <data name="m99" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images\minisprites\m99.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="m618" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites\m618.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m668" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites\m668.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="questionMark" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images\questionMark.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>

@@ -616,6 +616,7 @@
             this.pctPokemon.Location = new System.Drawing.Point(43, 168);
             this.pctPokemon.Name = "pctPokemon";
             this.pctPokemon.Size = new System.Drawing.Size(32, 32);
+            this.pctPokemon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pctPokemon.TabIndex = 2;
             this.pctPokemon.TabStop = false;
             // 

@@ -60,46 +60,46 @@
             // lblMove1
             // 
             this.lblMove1.AutoSize = true;
-            this.lblMove1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMove1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMove1.Location = new System.Drawing.Point(150, 28);
             this.lblMove1.Name = "lblMove1";
-            this.lblMove1.Size = new System.Drawing.Size(51, 16);
+            this.lblMove1.Size = new System.Drawing.Size(45, 16);
             this.lblMove1.TabIndex = 0;
             this.lblMove1.Text = "label1";
             // 
             // lblMove2
             // 
             this.lblMove2.AutoSize = true;
-            this.lblMove2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMove2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMove2.Location = new System.Drawing.Point(150, 68);
             this.lblMove2.Name = "lblMove2";
-            this.lblMove2.Size = new System.Drawing.Size(51, 16);
+            this.lblMove2.Size = new System.Drawing.Size(45, 16);
             this.lblMove2.TabIndex = 0;
             this.lblMove2.Text = "label1";
             // 
             // lblMove3
             // 
             this.lblMove3.AutoSize = true;
-            this.lblMove3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMove3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMove3.Location = new System.Drawing.Point(150, 108);
             this.lblMove3.Name = "lblMove3";
-            this.lblMove3.Size = new System.Drawing.Size(51, 16);
+            this.lblMove3.Size = new System.Drawing.Size(45, 16);
             this.lblMove3.TabIndex = 0;
             this.lblMove3.Text = "label1";
             // 
             // lblMove4
             // 
             this.lblMove4.AutoSize = true;
-            this.lblMove4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMove4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMove4.Location = new System.Drawing.Point(150, 148);
             this.lblMove4.Name = "lblMove4";
-            this.lblMove4.Size = new System.Drawing.Size(51, 16);
+            this.lblMove4.Size = new System.Drawing.Size(45, 16);
             this.lblMove4.TabIndex = 0;
             this.lblMove4.Text = "label1";
             // 
             // lblMove1CurrentPP
             // 
-            this.lblMove1CurrentPP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMove1CurrentPP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMove1CurrentPP.Location = new System.Drawing.Point(326, 28);
             this.lblMove1CurrentPP.Name = "lblMove1CurrentPP";
             this.lblMove1CurrentPP.Size = new System.Drawing.Size(35, 16);
@@ -109,7 +109,7 @@
             // 
             // lblMove2CurrentPP
             // 
-            this.lblMove2CurrentPP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMove2CurrentPP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMove2CurrentPP.Location = new System.Drawing.Point(326, 68);
             this.lblMove2CurrentPP.Name = "lblMove2CurrentPP";
             this.lblMove2CurrentPP.Size = new System.Drawing.Size(35, 16);
@@ -119,7 +119,7 @@
             // 
             // lblMove3CurrentPP
             // 
-            this.lblMove3CurrentPP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMove3CurrentPP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMove3CurrentPP.Location = new System.Drawing.Point(326, 108);
             this.lblMove3CurrentPP.Name = "lblMove3CurrentPP";
             this.lblMove3CurrentPP.Size = new System.Drawing.Size(35, 16);
@@ -129,7 +129,7 @@
             // 
             // lblMove4CurrentPP
             // 
-            this.lblMove4CurrentPP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMove4CurrentPP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMove4CurrentPP.Location = new System.Drawing.Point(326, 148);
             this.lblMove4CurrentPP.Name = "lblMove4CurrentPP";
             this.lblMove4CurrentPP.Size = new System.Drawing.Size(35, 16);
@@ -140,46 +140,46 @@
             // lblSeparator1
             // 
             this.lblSeparator1.AutoSize = true;
-            this.lblSeparator1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSeparator1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSeparator1.Location = new System.Drawing.Point(366, 28);
             this.lblSeparator1.Name = "lblSeparator1";
-            this.lblSeparator1.Size = new System.Drawing.Size(13, 16);
+            this.lblSeparator1.Size = new System.Drawing.Size(12, 16);
             this.lblSeparator1.TabIndex = 0;
             this.lblSeparator1.Text = "/";
             // 
             // lblSeparator2
             // 
             this.lblSeparator2.AutoSize = true;
-            this.lblSeparator2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSeparator2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSeparator2.Location = new System.Drawing.Point(366, 68);
             this.lblSeparator2.Name = "lblSeparator2";
-            this.lblSeparator2.Size = new System.Drawing.Size(13, 16);
+            this.lblSeparator2.Size = new System.Drawing.Size(12, 16);
             this.lblSeparator2.TabIndex = 0;
             this.lblSeparator2.Text = "/";
             // 
             // lblSeparator3
             // 
             this.lblSeparator3.AutoSize = true;
-            this.lblSeparator3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSeparator3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSeparator3.Location = new System.Drawing.Point(366, 108);
             this.lblSeparator3.Name = "lblSeparator3";
-            this.lblSeparator3.Size = new System.Drawing.Size(13, 16);
+            this.lblSeparator3.Size = new System.Drawing.Size(12, 16);
             this.lblSeparator3.TabIndex = 0;
             this.lblSeparator3.Text = "/";
             // 
             // lblSeparator4
             // 
             this.lblSeparator4.AutoSize = true;
-            this.lblSeparator4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSeparator4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSeparator4.Location = new System.Drawing.Point(366, 148);
             this.lblSeparator4.Name = "lblSeparator4";
-            this.lblSeparator4.Size = new System.Drawing.Size(13, 16);
+            this.lblSeparator4.Size = new System.Drawing.Size(12, 16);
             this.lblSeparator4.TabIndex = 0;
             this.lblSeparator4.Text = "/";
             // 
             // lblMove1MaxPP
             // 
-            this.lblMove1MaxPP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMove1MaxPP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMove1MaxPP.Location = new System.Drawing.Point(382, 28);
             this.lblMove1MaxPP.Name = "lblMove1MaxPP";
             this.lblMove1MaxPP.Size = new System.Drawing.Size(24, 16);
@@ -189,7 +189,7 @@
             // 
             // lblMove2MaxPP
             // 
-            this.lblMove2MaxPP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMove2MaxPP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMove2MaxPP.Location = new System.Drawing.Point(382, 68);
             this.lblMove2MaxPP.Name = "lblMove2MaxPP";
             this.lblMove2MaxPP.Size = new System.Drawing.Size(24, 16);
@@ -199,7 +199,7 @@
             // 
             // lblMove3MaxPP
             // 
-            this.lblMove3MaxPP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMove3MaxPP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMove3MaxPP.Location = new System.Drawing.Point(382, 108);
             this.lblMove3MaxPP.Name = "lblMove3MaxPP";
             this.lblMove3MaxPP.Size = new System.Drawing.Size(24, 16);
@@ -209,7 +209,7 @@
             // 
             // lblMove4MaxPP
             // 
-            this.lblMove4MaxPP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMove4MaxPP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMove4MaxPP.Location = new System.Drawing.Point(382, 148);
             this.lblMove4MaxPP.Name = "lblMove4MaxPP";
             this.lblMove4MaxPP.Size = new System.Drawing.Size(24, 16);

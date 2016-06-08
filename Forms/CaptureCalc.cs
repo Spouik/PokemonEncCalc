@@ -108,7 +108,8 @@ namespace PokemonEncCalc
             if (cboGeneration.SelectedIndex == 3 && rdORAS.Checked)
                 txtCaptureRate.Text = Utils.PokemonList[cboPokemon.SelectedIndex].CatchRateORAS.ToString();
 
-            pctPokemon.Image = (Image)Properties.Resources.ResourceManager.GetObject("_" + (cboPokemon.SelectedIndex + 1));
+            pctPokemon.Image = (Image)Properties.Resources.ResourceManager.GetObject("m" + (cboPokemon.SelectedIndex + 1) 
+                + (Properties.Settings.Default.ShinySprites ? "s" : ""));
 
         }
 
