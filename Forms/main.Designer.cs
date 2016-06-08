@@ -38,6 +38,9 @@
             this.languageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.englishToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.frenchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pokémonSpritesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.normalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.shinyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gboSlots = new System.Windows.Forms.GroupBox();
             this.pnlSwarmsGen3_5 = new System.Windows.Forms.Panel();
@@ -198,9 +201,6 @@
             this.cboMapsRubySapp = new System.Windows.Forms.ComboBox();
             this.cmdCalc = new System.Windows.Forms.Button();
             this.cmdClose = new System.Windows.Forms.Button();
-            this.pokémonSpritesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.normalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.shinyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mstMenu.SuspendLayout();
             this.gboSlots.SuspendLayout();
             this.pnlSwarmsGen3_5.SuspendLayout();
@@ -336,22 +336,46 @@
             // englishToolStripMenuItem
             // 
             this.englishToolStripMenuItem.Name = "englishToolStripMenuItem";
-            this.englishToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.englishToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.englishToolStripMenuItem.Text = "English";
             this.englishToolStripMenuItem.Click += new System.EventHandler(this.englishToolStripMenuItem_Click);
             // 
             // frenchToolStripMenuItem
             // 
             this.frenchToolStripMenuItem.Name = "frenchToolStripMenuItem";
-            this.frenchToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.frenchToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.frenchToolStripMenuItem.Text = "Français";
             this.frenchToolStripMenuItem.Click += new System.EventHandler(this.frenchToolStripMenuItem_Click);
+            // 
+            // pokémonSpritesToolStripMenuItem
+            // 
+            this.pokémonSpritesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.normalToolStripMenuItem,
+            this.shinyToolStripMenuItem});
+            this.pokémonSpritesToolStripMenuItem.Name = "pokémonSpritesToolStripMenuItem";
+            this.pokémonSpritesToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.pokémonSpritesToolStripMenuItem.Text = "Pokémon sprites";
+            // 
+            // normalToolStripMenuItem
+            // 
+            this.normalToolStripMenuItem.Name = "normalToolStripMenuItem";
+            this.normalToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
+            this.normalToolStripMenuItem.Text = "Normal";
+            this.normalToolStripMenuItem.Click += new System.EventHandler(this.normalToolStripMenuItem_Click);
+            // 
+            // shinyToolStripMenuItem
+            // 
+            this.shinyToolStripMenuItem.Name = "shinyToolStripMenuItem";
+            this.shinyToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
+            this.shinyToolStripMenuItem.Text = "Shiny";
+            this.shinyToolStripMenuItem.Click += new System.EventHandler(this.shinyToolStripMenuItem_Click);
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
             this.aboutToolStripMenuItem.Text = "About";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // gboSlots
             // 
@@ -2237,29 +2261,6 @@
             this.cmdClose.Text = "Close";
             this.cmdClose.UseVisualStyleBackColor = false;
             this.cmdClose.Click += new System.EventHandler(this.cmdClose_Click);
-            // 
-            // pokémonSpritesToolStripMenuItem
-            // 
-            this.pokémonSpritesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.normalToolStripMenuItem,
-            this.shinyToolStripMenuItem});
-            this.pokémonSpritesToolStripMenuItem.Name = "pokémonSpritesToolStripMenuItem";
-            this.pokémonSpritesToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
-            this.pokémonSpritesToolStripMenuItem.Text = "Pokémon sprites";
-            // 
-            // normalToolStripMenuItem
-            // 
-            this.normalToolStripMenuItem.Name = "normalToolStripMenuItem";
-            this.normalToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.normalToolStripMenuItem.Text = "Normal";
-            this.normalToolStripMenuItem.Click += new System.EventHandler(this.normalToolStripMenuItem_Click);
-            // 
-            // shinyToolStripMenuItem
-            // 
-            this.shinyToolStripMenuItem.Name = "shinyToolStripMenuItem";
-            this.shinyToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.shinyToolStripMenuItem.Text = "Shiny";
-            this.shinyToolStripMenuItem.Click += new System.EventHandler(this.shinyToolStripMenuItem_Click);
             // 
             // frmMainPage
             // 

@@ -74,6 +74,12 @@
     <Compile Include="AreaMap\AreaMapORAS.cs" />
     <Compile Include="AreaMap\AreaMapXY.cs" />
     <Compile Include="Data\Move.cs" />
+    <Compile Include="Forms\About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\CaptureCalc.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +138,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="EncounterSlots\RegularSlots.cs" />
+    <EmbeddedResource Include="Forms\About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\CaptureCalc.resx">
       <DependentUpon>CaptureCalc.cs</DependentUpon>
     </EmbeddedResource>
@@ -2729,6 +2738,7 @@
     <None Include="Resources\images\sprites\719.png" />
     <None Include="Resources\images\sprites\720.png" />
     <None Include="Resources\images\sprites\721.png" />
+    <None Include="Resources\images\questionMark.png" />
     <Content Include="Resources\images\sprites_s\0s.png" />
     <Content Include="Resources\images\sprites_s\100s.png" />
     <Content Include="Resources\images\sprites_s\101s.png" />

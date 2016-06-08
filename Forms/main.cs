@@ -32,6 +32,17 @@ namespace PokemonEncCalc
                 shinyToolStripMenuItem.Checked = true;
             else
                 normalToolStripMenuItem.Checked = true;
+
+            switch(Properties.Settings.Default.Language)
+            {
+                case 1:
+                    englishToolStripMenuItem.Checked = true;
+                    break;
+                case 2:
+                    frenchToolStripMenuItem.Checked = true;
+                    break;
+                default: break;
+            }
             
         }
 
@@ -181,6 +192,8 @@ namespace PokemonEncCalc
             Properties.Settings.Default.Language = 1;
             Utils.changeLanguage(1);
             loadEncounterOptions(Language.English);
+            frenchToolStripMenuItem.Checked = false;
+            englishToolStripMenuItem.Checked = true;
             updateEncounterOptions();
             renameControls();
             renameMenuStrip();
@@ -193,6 +206,8 @@ namespace PokemonEncCalc
             Properties.Settings.Default.Language = 2;
             Utils.changeLanguage(2);
             loadEncounterOptions(Language.French);
+            frenchToolStripMenuItem.Checked = true;
+            englishToolStripMenuItem.Checked = false;
             updateEncounterOptions();
             renameControls();
             renameMenuStrip();
@@ -1539,5 +1554,10 @@ namespace PokemonEncCalc
             updatingSlots = false;
         }
 
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAbout a = new frmAbout();
+            a.ShowDialog();
+        }
     }
 }

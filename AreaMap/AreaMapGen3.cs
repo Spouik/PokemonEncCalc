@@ -82,7 +82,7 @@ namespace PokemonEncCalc
                         if (p.FormCount() >= formid)
                             if (p.Forms[formid - 1] != null)
                                 p = p.Forms[formid - 1];
-                    SurfSlots[i] = new EncounterSlot(Utils.PokemonList[species - 1], surf[4 * i], surf[4 * i + 1], percentSurf[i]);
+                    SurfSlots[i] = new EncounterSlot(p, surf[4 * i], surf[4 * i + 1], percentSurf[i]);
                 }
             }
 
@@ -102,7 +102,7 @@ namespace PokemonEncCalc
                         if (p.FormCount() >= formid)
                             if (p.Forms[formid - 1] != null)
                                 p = p.Forms[formid - 1];
-                    RockSmashSlots[i] = new EncounterSlot(Utils.PokemonList[species - 1], rockSmash[4 * i], rockSmash[4 * i + 1], percentRockSmash[i]);
+                    RockSmashSlots[i] = new EncounterSlot(p, rockSmash[4 * i], rockSmash[4 * i + 1], percentRockSmash[i]);
                 }
             }
 
@@ -122,7 +122,7 @@ namespace PokemonEncCalc
                         if (p.FormCount() >= formid)
                             if (p.Forms[formid - 1] != null)
                                 p = p.Forms[formid - 1];
-                    OldRodSlots[i] = new EncounterSlot(Utils.PokemonList[species - 1], oldRod[4 * i], oldRod[4 * i + 1], percentOldRod[i]);
+                    OldRodSlots[i] = new EncounterSlot(p, oldRod[4 * i], oldRod[4 * i + 1], percentOldRod[i]);
                 }
             }
 
@@ -142,7 +142,7 @@ namespace PokemonEncCalc
                         if (p.FormCount() >= formid)
                             if (p.Forms[formid - 1] != null)
                                 p = p.Forms[formid - 1];
-                    GoodRodSlots[i] = new EncounterSlot(Utils.PokemonList[species - 1], goodRod[4 * i], goodRod[4 * i + 1], percentGoodRod[i]);
+                    GoodRodSlots[i] = new EncounterSlot(p, goodRod[4 * i], goodRod[4 * i + 1], percentGoodRod[i]);
                 }
             }
 
@@ -162,7 +162,7 @@ namespace PokemonEncCalc
                         if (p.FormCount() >= formid)
                             if (p.Forms[formid - 1] != null)
                                 p = p.Forms[formid - 1];
-                    SuperRodSlots[i] = new EncounterSlot(Utils.PokemonList[species - 1], superRod[4 * i], superRod[4 * i + 1], percentSuperRod[i]);
+                    SuperRodSlots[i] = new EncounterSlot(p, superRod[4 * i], superRod[4 * i + 1], percentSuperRod[i]);
                 }
             }
 
