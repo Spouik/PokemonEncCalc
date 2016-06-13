@@ -333,16 +333,6 @@ namespace PokemonEncCalc.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _1101 {
-            get {
-                object obj = ResourceManager.GetObject("_1101", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap _110s {
             get {
                 object obj = ResourceManager.GetObject("_110s", resourceCulture);
@@ -18320,6 +18310,16 @@ namespace PokemonEncCalc.Properties {
         internal static System.Drawing.Bitmap m110 {
             get {
                 object obj = ResourceManager.GetObject("m110", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap m110s {
+            get {
+                object obj = ResourceManager.GetObject("m110s", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
