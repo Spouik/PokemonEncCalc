@@ -9,7 +9,7 @@ namespace PokemonEncCalc
     class Move
     {
         public Type MoveType { get; set; }
-        public byte Categorie { get; set; }
+        public byte Category { get; set; }
         public byte contestType { get; set; }
 
         public byte PP { get; set; }
@@ -24,7 +24,7 @@ namespace PokemonEncCalc
             if(data.Length == 5)
             {
                 MoveType = (Type)data[0];
-                Categorie = 255;
+                Category = 255;
                 contestType = data[1];
                 PP = data[2];
                 Power = data[3];
@@ -35,7 +35,7 @@ namespace PokemonEncCalc
             if (data.Length == 6)
             {
                 MoveType = (Type)data[0];
-                Categorie = data[1];
+                Category = data[1];
                 contestType = data[2];
                 PP = data[3];
                 Power = data[4];
