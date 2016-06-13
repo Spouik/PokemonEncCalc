@@ -70,9 +70,10 @@ namespace PokemonEncCalc
 
         private void repelDisp()
         {
-            if (repel >= 100) return;
-            lblRepel.Text += " " + Math.Round(repel * 100) / 100 + " %";
-            pbarRepel.Value = (int)Math.Round(repel * 10);
+            decimal percent = Math.Round(repel * 100) / 100;
+            if (percent >= 100) return;
+            lblRepel.Text += " " + percent + " %";
+            pbarRepel.Value = (int)Math.Round(percent * 10);
             lblRepel.Visible = true;
             pbarRepel.Visible = true;
         }

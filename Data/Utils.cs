@@ -379,7 +379,7 @@ namespace PokemonEncCalc
                     for(int i = 0; i < slotCount; i++)
                     {
                         if (slots[i].Species.Type1 == Type.Electric || slots[i].Species.Type2 == Type.Electric)
-                            slots.Add(new EncounterSlot(slots[i].Species, slots[i].MinLevel, slots[i].MaxLevel, 50 / nbElec));
+                            slots.Add(new EncounterSlot(slots[i].Species, slots[i].MinLevel, slots[i].MaxLevel, 50m / nbElec));
                         slots[i].Percentage /= 2;
                     }
                     break;
@@ -397,7 +397,7 @@ namespace PokemonEncCalc
                     for (int i = 0; i < slotCount; i++)
                     {
                         if (slots[i].Species.Type1 == Type.Steel || slots[i].Species.Type2 == Type.Steel)
-                            slots.Add(new EncounterSlot(slots[i].Species, slots[i].MinLevel, slots[i].MaxLevel, 50 / nbSteels));
+                            slots.Add(new EncounterSlot(slots[i].Species, slots[i].MinLevel, slots[i].MaxLevel, 50m / nbSteels));
                         slots[i].Percentage /= 2;
                     }
                     break;
