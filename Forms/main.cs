@@ -52,7 +52,9 @@ namespace PokemonEncCalc
             Ability ability = (chkAbility.Checked && pnlAbility.Visible) 
                 ? (Ability)(encounterOptions[1].FindIndex(s => s.Equals(cboAbility.SelectedItem)) + 1)
                 : Ability.None;
-            List<EncounterSlot> result = Utils.calcEncounterRate(currentSlots, version, ability, chkRepel.Checked ? (byte)nudLevelRepel.Value : (byte)0);
+            List<EncounterSlot> result = Utils.calcEncounterRate(currentSlots, version, ability, 
+                chkRepel.Checked ? (byte)nudLevelRepel.Value : (byte)0, 
+                nudIntimidateLevel.Visible ? (byte)nudIntimidateLevel.Value : (byte)0);
 
             string resultText = encounterInfoAsText();
 
@@ -88,7 +90,11 @@ namespace PokemonEncCalc
 
             // Ability
             if (pnlAbility.Visible && chkAbility.Checked)
+            {
                 r += (r.EndsWith(Environment.NewLine) ? "" : " - ") + cboAbility.SelectedItem;
+                if (cboAbility.SelectedItem.ToString() == encounterOptions[1][4])
+                    r += " (" + lblLevelRepelDisp.Text + " " + nudIntimidateLevel.Value.ToString() + ")"; 
+            }
 
             // Swarm
             if (pnlDPPtOptions.Visible && cboSwarmDPPt.Enabled && cboSwarmDPPt.SelectedIndex == 1)
@@ -533,6 +539,9 @@ namespace PokemonEncCalc
             if (!pnlAbility.Visible)
                 return;
 
+
+
+
             if(cboAbility.SelectedItem.Equals(encounterOptions[1][2]) && chkAbility.Checked)
             {
                 chkRepel.Enabled = false;
@@ -563,6 +572,17 @@ namespace PokemonEncCalc
                         chkRepel.Checked = false;
                         break;
                 }
+            }
+
+            lblIntimidateLevel.Visible = false;
+            nudIntimidateLevel.Visible = false;
+
+            if (cboAbility.SelectedItem.Equals(encounterOptions[1][4]) && chkAbility.Checked)
+            {
+                lblIntimidateLevel.Visible = true;
+                nudIntimidateLevel.Visible = true;
+                chkRepel.Enabled = false;
+                chkRepel.Checked = false;
             }
 
         }
@@ -610,6 +630,17 @@ namespace PokemonEncCalc
                         chkRepel.Checked = false;
                         break;
                 }
+            }
+
+            lblIntimidateLevel.Visible = false;
+            nudIntimidateLevel.Visible = false;
+
+            if (cboAbility.SelectedItem.Equals(encounterOptions[1][4]) && chkAbility.Checked)
+            {
+                lblIntimidateLevel.Visible = true;
+                nudIntimidateLevel.Visible = true;
+                chkRepel.Enabled = false;
+                chkRepel.Checked = false;
             }
 
         }
@@ -1285,11 +1316,23 @@ namespace PokemonEncCalc
                 case EncounterType.Diving:
                 case EncounterType.ShallowWater:
                     cboAbility.Items.Add(encounterOptions[1][2]);
+                    cboAbility.Items.Add(encounterOptions[1][4]);
                     chkRepel.Enabled = true;
                     break;
                 case EncounterType.RockSmash:
+                    cboAbility.Items.Add(encounterOptions[1][4]);
                     if (cboVersion.SelectedIndex < 5)
                         chkRepel.Enabled = true;
+                    else
+                        chkRepel.Checked = false;
+                    break;
+                case EncounterType.OldRod:
+                case EncounterType.GoodRod:
+                case EncounterType.SuperRod:
+                    if (currentVersion < Version.X)  // Keen-Eye / Intimidate doesn't work on Gen6 due to fishing mechanics
+                        cboAbility.Items.Add(encounterOptions[1][4]);
+
+                    chkRepel.Checked = false;
                     break;
                 default:
                     chkRepel.Checked = false;

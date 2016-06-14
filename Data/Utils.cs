@@ -336,12 +336,12 @@ namespace PokemonEncCalc
         //
         // Encounter rates calculation
         //
-        internal static List<EncounterSlot> calcEncounterRate(EncounterSlot[] slots, Version version, Ability ability = Ability.None, byte repel = 0)
+        internal static List<EncounterSlot> calcEncounterRate(EncounterSlot[] slots, Version version, Ability ability = Ability.None, byte repel = 0, byte intimidate = 0)
         {
             List<EncounterSlot> result = new List<EncounterSlot>();
             for(int i = 0; i< slots.Length; i++)
                 result.Add(new EncounterSlot(slots[i]));
-            result = calcAbility(result, ability, version);
+            result = calcAbility(result, ability, version, intimidate);
             result = calcRepel(result, repel);
 
             return result;
@@ -360,7 +360,7 @@ namespace PokemonEncCalc
             return slots;
         }
 
-        private static List<EncounterSlot> calcAbility(List<EncounterSlot> slots, Ability ability, Version version)
+        private static List<EncounterSlot> calcAbility(List<EncounterSlot> slots, Ability ability, Version version, byte intimidate)
         {
 
             int slotCount = slots.Count;
@@ -469,6 +469,29 @@ namespace PokemonEncCalc
 
                     break;
 
+                case Ability.Intimidate:
+                    // Repels half of Pokémon with level below or equals intimidator's Level - 5 (strictly below Intimidator's Lv - 4)
+                    intimidate -= 4;
+                    int nbSlots = slots.Count;
+
+                    if (intimidate < 1) break;
+
+                    for(int i =0; i < nbSlots; i++)
+                    {
+                        EncounterSlot s = slots[i];
+                        decimal lvRange = Math.Max(0, Math.Min(1, (decimal)(s.MaxLevel - intimidate + 1) / (s.MaxLevel - s.MinLevel + 1)));
+                        s.Percentage /= 2;
+                        slots.Add(new EncounterSlot(s.Species, intimidate, s.MaxLevel, s.Percentage * lvRange));
+                    }
+
+                    //decimal sumPercent = slots.Sum(s => s.Percentage);
+
+                    //foreach (EncounterSlot s in slots)
+                    //    s.Percentage *= (100 / sumPercent);
+
+                    slots.RemoveAll(s => s.Percentage == 0m);
+
+                    break;
                 default:
                     break;
 
