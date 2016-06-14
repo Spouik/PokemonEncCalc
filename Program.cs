@@ -11,7 +11,7 @@ namespace PokemonEncCalc
     static class Program
     {
 
-        internal readonly static string version = "5.6";
+        internal readonly static string version = "5.7";
 
         /// <summary>
         /// The main entry point for the application.

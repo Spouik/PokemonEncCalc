@@ -208,7 +208,14 @@ Ver. 5.0 :	- Added : English translation.
 		- Updated : Capture calculator (UI + Kurt Balls calculations fixed).
 		- Changed : About and changelog in the same form (with tabs).
 		- Fixed : Rock Smash levels in Pokémon Y (which are not same as in Pokémon X).	
-		- Fixed : Some weird results.</value>
+		- Fixed : Some weird results.
+
+	Ver. 5.7 :	- Added : Keen Eye and Intimidate calculation.
+		- Fixed : Weezing sprites.
+		- Fixed : Gen 4 moves data.
+		- Fixed : Static/Magnet Pull calculation (thanks @MMidare).
+		- Fixed : Slots Route 8 (Y) - Rock Smash (thanks @MMidare).
+</value>
   </data>
   <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
