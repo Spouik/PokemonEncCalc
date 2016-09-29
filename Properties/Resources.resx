@@ -7336,10 +7336,10 @@
   <data name="_669" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images\sprites\669.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="_669_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="_669_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images\sprites\669_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="_669_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="_669_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images\sprites\669_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="_669_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
@@ -7354,10 +7354,10 @@
   <data name="_670" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images\sprites\670.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="_670_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="_670_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images\sprites\670_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="_670_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="_670_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images\sprites\670_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="_670_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
@@ -7372,10 +7372,10 @@
   <data name="_671" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images\sprites\671.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="_671_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="_671_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images\sprites\671_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="_671_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="_671_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images\sprites\671_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="_671_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
@@ -9745,10 +9745,10 @@
   <data name="m670" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images\minisprites\m670.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="m670_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="m670_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images\minisprites\m670_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="m670_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="m670_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images\minisprites\m670_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="m670_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
@@ -9757,10 +9757,10 @@
   <data name="m671" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images\minisprites\m671.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="m671_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="m671_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images\minisprites\m671_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="m671_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="m671_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images\minisprites\m671_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="m671_3" type="System.Resources.ResXFileRef, System.Windows.Forms">

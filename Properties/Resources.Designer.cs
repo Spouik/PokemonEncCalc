@@ -16410,6 +16410,7 @@ namespace PokemonEncCalc.Properties {
         ///Magnet Pull
         ///Hustle / Pressure / Vital Spirit
         ///Cute Charm
+        ///Keen Eye / Intimidate
         ///
         ///!!!
         ///
@@ -16420,11 +16421,7 @@ namespace PokemonEncCalc.Properties {
         ///
         ///Morning
         ///Day
-        ///Night
-        ///
-        ///!!!
-        ///
-        ///No radi [rest of string was truncated]&quot;;.
+        /// [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string encounter_options_EN {
             get {
@@ -16462,11 +16459,11 @@ namespace PokemonEncCalc.Properties {
         ///Magnépiège
         ///Agitation / Pression / Esprit Vital
         ///Joli Sourire
+        ///Regard Vif / Intimidation
         ///
         ///!!!
         ///
-        ///Sans troupeau
-        ///Avec troupeau [rest of string was truncated]&quot;;.
+        ///S [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string encounter_options_FR {
             get {

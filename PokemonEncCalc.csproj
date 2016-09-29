@@ -66,13 +66,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AreaMap\AreaMap.cs" />
-    <Compile Include="AreaMap\AreaMapDPPt.cs" />
-    <Compile Include="AreaMap\AreaMapGen3.cs" />
-    <Compile Include="AreaMap\AreaMapGen5.cs" />
-    <Compile Include="AreaMap\AreaMapHGSS.cs" />
-    <Compile Include="AreaMap\AreaMapORAS.cs" />
-    <Compile Include="AreaMap\AreaMapXY.cs" />
+    <Compile Include="AreaMaps\AreaMap.cs" />
+    <Compile Include="AreaMaps\AreaMapDPPt.cs" />
+    <Compile Include="AreaMaps\AreaMapGen2.cs" />
+    <Compile Include="AreaMaps\AreaMapGen3.cs" />
+    <Compile Include="AreaMaps\AreaMapGen5.cs" />
+    <Compile Include="AreaMaps\AreaMapHGSS.cs" />
+    <Compile Include="AreaMaps\AreaMapORAS.cs" />
+    <Compile Include="AreaMaps\AreaMapXY.cs" />
     <Compile Include="Data\Move.cs" />
     <Compile Include="Forms\About.cs">
       <SubType>Form</SubType>
