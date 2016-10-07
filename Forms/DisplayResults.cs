@@ -47,7 +47,7 @@ namespace PokemonEncCalc
                 Label l = new Label();
                 l.Size = new Size(96, 20);
                 l.TextAlign = ContentAlignment.MiddleCenter;
-                l.Text = (Math.Round(slot.Percentage * 100) / 100).ToString() + " %";
+                l.Text = (Math.Round(slot.EffectivePercentage * 100) / 100).ToString() + " %";
                 p.Controls.Add(pct);
                 p.Controls.Add(l);
                 pct.Location = new Point(2, 2);

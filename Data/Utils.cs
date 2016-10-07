@@ -460,12 +460,12 @@ namespace PokemonEncCalc
                     // Genderless and fixed-gendered Pokémon are more likely to be found shiny.
 
                     foreach (EncounterSlot s in slots)
-                        if (new[] { 0, 254, 255 }.Contains(s.Species.GenderRatio)) s.Percentage *= 3;
+                        if (new[] { 0, 254, 255 }.Contains(s.Species.GenderRatio)) s.EffectivePercentage *= 3;
 
-                    decimal sum = slots.Sum(s => s.Percentage);
+                    decimal sum = slots.Sum(s => s.EffectivePercentage);
 
                     foreach (EncounterSlot s in slots)
-                        s.Percentage *= (100 / sum);
+                        s.EffectivePercentage *= (100 / sum);
 
                     break;
 
@@ -517,7 +517,7 @@ namespace PokemonEncCalc
         }
 
         //
-        // Normalize Encounter Slots: 100% scale & merge slots with same species.
+        // Normalize Encounter Slots: 100% scale (Effective percentage) & merge slots with same species.
         // returns an empty list if there  is no Pokémon remaining
         //
 
@@ -531,6 +531,7 @@ namespace PokemonEncCalc
             {
                 EncounterSlot e = slots2[0];
                 decimal percent = e.Percentage;
+                decimal effPercent = e.EffectivePercentage;
                 byte minLv = e.MinLevel;
                 byte maxLv = e.MaxLevel;
                 for (int i = 1; i < slots2.Count; i++)
@@ -539,10 +540,11 @@ namespace PokemonEncCalc
                         minLv = Math.Min(minLv, slots2[i].MinLevel);
                         maxLv = Math.Max(maxLv, slots2[i].MaxLevel);
                         percent += slots2[i].Percentage;
+                        effPercent += slots2[i].EffectivePercentage;
                     }
 
-                normalizedSlots.Add(new EncounterSlot(e.Species, minLv, maxLv, percent));
-                totalPercent += percent;
+                normalizedSlots.Add(new EncounterSlot(e.Species, minLv, maxLv, percent, effPercent));
+                totalPercent += effPercent;
                 slots2.RemoveAll(s => s.Species.Equals(e.Species));
             }
 
@@ -551,14 +553,14 @@ namespace PokemonEncCalc
                 return new List<EncounterSlot>();
 
             foreach (EncounterSlot a in normalizedSlots)
-                a.Percentage *= 100 / totalPercent;
+                a.EffectivePercentage *= 100 / totalPercent;
 
             return normalizedSlots;
         }
 
 
         /// <summary>
-        /// Calculate the mathematical expectation to find a shiny using Cute Charm, based on modified EncouterSlot values
+        /// Calculate the mathematical expectation to find a shiny using Cute Charm
         /// </summary>
         /// <param name="data"></param>
         /// <returns></returns>
@@ -566,7 +568,7 @@ namespace PokemonEncCalc
         internal static int cuteCharmExpectation(List<EncounterSlot> data)
         {
             decimal c = data.Where(s => new[] { 0, 254, 255 }.Contains(s.Species.GenderRatio)).Sum(s => s.Percentage);
-            decimal gendered = (100 - c) * 3;
+            decimal gendered = data.Sum(s => s.Percentage) - c;
             return (int)Math.Round((gendered + c) / (c / 8192 + (gendered / 24576)));
         }
 
