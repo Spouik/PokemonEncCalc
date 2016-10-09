@@ -119,6 +119,9 @@ namespace PokemonEncCalc
                 createEncounterSlotArray(ref SuperRodNightSlots, superRodN, rateSuperRod);
             }
 
+            if (rockSmash[0] != 0)
+                createEncounterSlotArray(ref RockSmashSlots, rockSmash, percentRockSmash);
+
             if (outbreakM[0] != 0)
             {
                 createEncounterSlotArray(ref OutbreakMorningSlots, outbreakM, percentGrass);

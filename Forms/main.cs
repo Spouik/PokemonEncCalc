@@ -1376,7 +1376,7 @@ namespace PokemonEncCalc
             if (!cboMapsCrystal.Visible) return;
 
             string encounterType = cboEncounterType.SelectedItem == null ? "" : (string)cboEncounterType.SelectedItem;
-            int selectedMap = cboMapsCrystal.SelectedIndex == -1 ? 0 : Utils.MapNamesGS.FindIndex(s => s.Equals((string)cboMapsCrystal.SelectedItem));
+            int selectedMap = cboMapsCrystal.SelectedIndex == -1 ? 0 : Utils.MapNamesC.FindIndex(s => s.Equals((string)cboMapsCrystal.SelectedItem));
 
             cboEncounterType.Items.Clear();
 
