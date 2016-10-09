@@ -49,7 +49,7 @@
             this.lblCuteCharmF2 = new System.Windows.Forms.Label();
             this.lblCuteCharmM = new System.Windows.Forms.Label();
             this.lblCuteCharmF1 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblCuteCharmMDisp = new System.Windows.Forms.Label();
             this.lblCuteCharmFDisp = new System.Windows.Forms.Label();
             this.cmdOK = new System.Windows.Forms.Button();
             this.cmdClose = new System.Windows.Forms.Button();
@@ -172,7 +172,7 @@
             this.gboCuteCharm.Controls.Add(this.lblCuteCharmF2);
             this.gboCuteCharm.Controls.Add(this.lblCuteCharmM);
             this.gboCuteCharm.Controls.Add(this.lblCuteCharmF1);
-            this.gboCuteCharm.Controls.Add(this.label1);
+            this.gboCuteCharm.Controls.Add(this.lblCuteCharmMDisp);
             this.gboCuteCharm.Controls.Add(this.lblCuteCharmFDisp);
             this.gboCuteCharm.ForeColor = System.Drawing.Color.DarkBlue;
             this.gboCuteCharm.Location = new System.Drawing.Point(33, 214);
@@ -312,18 +312,18 @@
             this.lblCuteCharmF1.TabIndex = 1;
             this.lblCuteCharmF1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label1
+            // lblCuteCharmMDisp
             // 
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.MediumBlue;
-            this.label1.Location = new System.Drawing.Point(52, 171);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(120, 80);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Cute Charm ♂";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.UseCompatibleTextRendering = true;
+            this.lblCuteCharmMDisp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblCuteCharmMDisp.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCuteCharmMDisp.ForeColor = System.Drawing.Color.MediumBlue;
+            this.lblCuteCharmMDisp.Location = new System.Drawing.Point(52, 171);
+            this.lblCuteCharmMDisp.Name = "lblCuteCharmMDisp";
+            this.lblCuteCharmMDisp.Size = new System.Drawing.Size(120, 80);
+            this.lblCuteCharmMDisp.TabIndex = 0;
+            this.lblCuteCharmMDisp.Text = "Cute Charm ♂";
+            this.lblCuteCharmMDisp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblCuteCharmMDisp.UseCompatibleTextRendering = true;
             // 
             // lblCuteCharmFDisp
             // 
@@ -402,7 +402,7 @@
         private System.Windows.Forms.Label lblCuteCharmF2;
         private System.Windows.Forms.Label lblCuteCharmM;
         private System.Windows.Forms.Label lblCuteCharmF1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblCuteCharmMDisp;
         private System.Windows.Forms.Label lblCuteCharmFDisp;
         private System.Windows.Forms.Label lblWildGenderRatio;
         private System.Windows.Forms.CheckBox chkNoSecretID;
