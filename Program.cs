@@ -11,7 +11,7 @@ namespace PokemonEncCalc
     static class Program
     {
 
-        internal readonly static string version = "5.7";
+        internal readonly static string version = "5.8";
         internal readonly static Version startingVersion = Version.Gold;
 
         /// <summary>
