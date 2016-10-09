@@ -32,6 +32,14 @@
             this.cmdClose = new System.Windows.Forms.Button();
             this.cmdCalc = new System.Windows.Forms.Button();
             this.gboAutoFill = new System.Windows.Forms.GroupBox();
+            this.pnlOptionsGen2 = new System.Windows.Forms.Panel();
+            this.chkBugCatching = new System.Windows.Forms.CheckBox();
+            this.lblTimeDispGSC = new System.Windows.Forms.Label();
+            this.lblSwarmDispGSC = new System.Windows.Forms.Label();
+            this.cboTimeGSC = new System.Windows.Forms.ComboBox();
+            this.cboSwarmGSC = new System.Windows.Forms.ComboBox();
+            this.cboMapsCrystal = new System.Windows.Forms.ComboBox();
+            this.cboMapsGS = new System.Windows.Forms.ComboBox();
             this.pnlLuckyPower = new System.Windows.Forms.Panel();
             this.chkLuckyPower = new System.Windows.Forms.CheckBox();
             this.cboLuckyPower = new System.Windows.Forms.ComboBox();
@@ -204,6 +212,7 @@
             this.shinyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gboAutoFill.SuspendLayout();
+            this.pnlOptionsGen2.SuspendLayout();
             this.pnlLuckyPower.SuspendLayout();
             this.pnlGen5Options.SuspendLayout();
             this.pnlHGSSOptions.SuspendLayout();
@@ -304,6 +313,9 @@
             // 
             // gboAutoFill
             // 
+            this.gboAutoFill.Controls.Add(this.pnlOptionsGen2);
+            this.gboAutoFill.Controls.Add(this.cboMapsCrystal);
+            this.gboAutoFill.Controls.Add(this.cboMapsGS);
             this.gboAutoFill.Controls.Add(this.pnlLuckyPower);
             this.gboAutoFill.Controls.Add(this.pnlGen5Options);
             this.gboAutoFill.Controls.Add(this.pnlHGSSOptions);
@@ -338,6 +350,94 @@
             this.gboAutoFill.TabIndex = 2;
             this.gboAutoFill.TabStop = false;
             this.gboAutoFill.Text = "Encounter Slots Auto Fill";
+            // 
+            // pnlOptionsGen2
+            // 
+            this.pnlOptionsGen2.Controls.Add(this.chkBugCatching);
+            this.pnlOptionsGen2.Controls.Add(this.lblTimeDispGSC);
+            this.pnlOptionsGen2.Controls.Add(this.lblSwarmDispGSC);
+            this.pnlOptionsGen2.Controls.Add(this.cboTimeGSC);
+            this.pnlOptionsGen2.Controls.Add(this.cboSwarmGSC);
+            this.pnlOptionsGen2.Location = new System.Drawing.Point(28, 258);
+            this.pnlOptionsGen2.Name = "pnlOptionsGen2";
+            this.pnlOptionsGen2.Size = new System.Drawing.Size(366, 138);
+            this.pnlOptionsGen2.TabIndex = 9;
+            this.pnlOptionsGen2.Visible = false;
+            // 
+            // chkBugCatching
+            // 
+            this.chkBugCatching.AutoSize = true;
+            this.chkBugCatching.Location = new System.Drawing.Point(19, 85);
+            this.chkBugCatching.Name = "chkBugCatching";
+            this.chkBugCatching.Size = new System.Drawing.Size(129, 17);
+            this.chkBugCatching.TabIndex = 5;
+            this.chkBugCatching.Text = "Bug Catching Contest";
+            this.chkBugCatching.UseVisualStyleBackColor = true;
+            this.chkBugCatching.CheckedChanged += new System.EventHandler(this.loadSlotData);
+            // 
+            // lblTimeDispGSC
+            // 
+            this.lblTimeDispGSC.Location = new System.Drawing.Point(189, 17);
+            this.lblTimeDispGSC.Name = "lblTimeDispGSC";
+            this.lblTimeDispGSC.Size = new System.Drawing.Size(132, 13);
+            this.lblTimeDispGSC.TabIndex = 4;
+            this.lblTimeDispGSC.Text = "Time";
+            this.lblTimeDispGSC.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // lblSwarmDispGSC
+            // 
+            this.lblSwarmDispGSC.Enabled = false;
+            this.lblSwarmDispGSC.Location = new System.Drawing.Point(16, 17);
+            this.lblSwarmDispGSC.Name = "lblSwarmDispGSC";
+            this.lblSwarmDispGSC.Size = new System.Drawing.Size(132, 13);
+            this.lblSwarmDispGSC.TabIndex = 4;
+            this.lblSwarmDispGSC.Text = "Swarm";
+            this.lblSwarmDispGSC.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // cboTimeGSC
+            // 
+            this.cboTimeGSC.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboTimeGSC.FormattingEnabled = true;
+            this.cboTimeGSC.Location = new System.Drawing.Point(189, 33);
+            this.cboTimeGSC.Name = "cboTimeGSC";
+            this.cboTimeGSC.Size = new System.Drawing.Size(132, 21);
+            this.cboTimeGSC.TabIndex = 0;
+            this.cboTimeGSC.SelectedIndexChanged += new System.EventHandler(this.loadSlotData);
+            // 
+            // cboSwarmGSC
+            // 
+            this.cboSwarmGSC.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboSwarmGSC.Enabled = false;
+            this.cboSwarmGSC.FormattingEnabled = true;
+            this.cboSwarmGSC.Location = new System.Drawing.Point(16, 33);
+            this.cboSwarmGSC.Name = "cboSwarmGSC";
+            this.cboSwarmGSC.Size = new System.Drawing.Size(132, 21);
+            this.cboSwarmGSC.TabIndex = 0;
+            this.cboSwarmGSC.SelectedIndexChanged += new System.EventHandler(this.loadSlotData);
+            // 
+            // cboMapsCrystal
+            // 
+            this.cboMapsCrystal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboMapsCrystal.FormattingEnabled = true;
+            this.cboMapsCrystal.Location = new System.Drawing.Point(152, 42);
+            this.cboMapsCrystal.Name = "cboMapsCrystal";
+            this.cboMapsCrystal.Size = new System.Drawing.Size(242, 21);
+            this.cboMapsCrystal.Sorted = true;
+            this.cboMapsCrystal.TabIndex = 15;
+            this.cboMapsCrystal.Visible = false;
+            this.cboMapsCrystal.SelectedIndexChanged += new System.EventHandler(this.changeEncounterOptionsCrystal);
+            // 
+            // cboMapsGS
+            // 
+            this.cboMapsGS.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboMapsGS.FormattingEnabled = true;
+            this.cboMapsGS.Location = new System.Drawing.Point(152, 42);
+            this.cboMapsGS.Name = "cboMapsGS";
+            this.cboMapsGS.Size = new System.Drawing.Size(242, 21);
+            this.cboMapsGS.Sorted = true;
+            this.cboMapsGS.TabIndex = 14;
+            this.cboMapsGS.Visible = false;
+            this.cboMapsGS.SelectedIndexChanged += new System.EventHandler(this.changeEncounterOptionsGoldSilver);
             // 
             // pnlLuckyPower
             // 
@@ -1092,7 +1192,7 @@
             // 
             // nudMaxLv11
             // 
-            this.nudMaxLv11.Location = new System.Drawing.Point(288, 387);
+            this.nudMaxLv11.Location = new System.Drawing.Point(301, 387);
             this.nudMaxLv11.Minimum = new decimal(new int[] {
             1,
             0,
@@ -1110,7 +1210,7 @@
             // 
             // nudMaxLv7
             // 
-            this.nudMaxLv7.Location = new System.Drawing.Point(288, 259);
+            this.nudMaxLv7.Location = new System.Drawing.Point(301, 259);
             this.nudMaxLv7.Minimum = new decimal(new int[] {
             1,
             0,
@@ -1128,7 +1228,7 @@
             // 
             // nudMaxLv3
             // 
-            this.nudMaxLv3.Location = new System.Drawing.Point(288, 131);
+            this.nudMaxLv3.Location = new System.Drawing.Point(301, 131);
             this.nudMaxLv3.Minimum = new decimal(new int[] {
             1,
             0,
@@ -1146,7 +1246,7 @@
             // 
             // nudMinLv0
             // 
-            this.nudMinLv0.Location = new System.Drawing.Point(227, 35);
+            this.nudMinLv0.Location = new System.Drawing.Point(240, 35);
             this.nudMinLv0.Minimum = new decimal(new int[] {
             1,
             0,
@@ -1164,7 +1264,7 @@
             // 
             // nudMaxLv0
             // 
-            this.nudMaxLv0.Location = new System.Drawing.Point(288, 35);
+            this.nudMaxLv0.Location = new System.Drawing.Point(301, 35);
             this.nudMaxLv0.Minimum = new decimal(new int[] {
             1,
             0,
@@ -1182,7 +1282,7 @@
             // 
             // nudMaxLv9
             // 
-            this.nudMaxLv9.Location = new System.Drawing.Point(288, 323);
+            this.nudMaxLv9.Location = new System.Drawing.Point(301, 323);
             this.nudMaxLv9.Minimum = new decimal(new int[] {
             1,
             0,
@@ -1200,7 +1300,7 @@
             // 
             // nudMaxLv5
             // 
-            this.nudMaxLv5.Location = new System.Drawing.Point(288, 195);
+            this.nudMaxLv5.Location = new System.Drawing.Point(301, 195);
             this.nudMaxLv5.Minimum = new decimal(new int[] {
             1,
             0,
@@ -1218,7 +1318,7 @@
             // 
             // nudMaxLv1
             // 
-            this.nudMaxLv1.Location = new System.Drawing.Point(288, 67);
+            this.nudMaxLv1.Location = new System.Drawing.Point(301, 67);
             this.nudMaxLv1.Minimum = new decimal(new int[] {
             1,
             0,
@@ -1236,7 +1336,7 @@
             // 
             // nudMaxLv10
             // 
-            this.nudMaxLv10.Location = new System.Drawing.Point(288, 355);
+            this.nudMaxLv10.Location = new System.Drawing.Point(301, 355);
             this.nudMaxLv10.Minimum = new decimal(new int[] {
             1,
             0,
@@ -1254,7 +1354,7 @@
             // 
             // nudMaxLv6
             // 
-            this.nudMaxLv6.Location = new System.Drawing.Point(288, 227);
+            this.nudMaxLv6.Location = new System.Drawing.Point(301, 227);
             this.nudMaxLv6.Minimum = new decimal(new int[] {
             1,
             0,
@@ -1272,7 +1372,7 @@
             // 
             // nudMaxLv2
             // 
-            this.nudMaxLv2.Location = new System.Drawing.Point(288, 99);
+            this.nudMaxLv2.Location = new System.Drawing.Point(301, 99);
             this.nudMaxLv2.Minimum = new decimal(new int[] {
             1,
             0,
@@ -1290,7 +1390,7 @@
             // 
             // nudMaxLv8
             // 
-            this.nudMaxLv8.Location = new System.Drawing.Point(288, 291);
+            this.nudMaxLv8.Location = new System.Drawing.Point(301, 291);
             this.nudMaxLv8.Minimum = new decimal(new int[] {
             1,
             0,
@@ -1308,7 +1408,7 @@
             // 
             // nudMaxLv4
             // 
-            this.nudMaxLv4.Location = new System.Drawing.Point(288, 163);
+            this.nudMaxLv4.Location = new System.Drawing.Point(301, 163);
             this.nudMaxLv4.Minimum = new decimal(new int[] {
             1,
             0,
@@ -1326,7 +1426,7 @@
             // 
             // nudMinLv11
             // 
-            this.nudMinLv11.Location = new System.Drawing.Point(227, 387);
+            this.nudMinLv11.Location = new System.Drawing.Point(240, 387);
             this.nudMinLv11.Minimum = new decimal(new int[] {
             1,
             0,
@@ -1344,7 +1444,7 @@
             // 
             // nudMinLv7
             // 
-            this.nudMinLv7.Location = new System.Drawing.Point(227, 259);
+            this.nudMinLv7.Location = new System.Drawing.Point(240, 259);
             this.nudMinLv7.Minimum = new decimal(new int[] {
             1,
             0,
@@ -1362,7 +1462,7 @@
             // 
             // nudMinLv3
             // 
-            this.nudMinLv3.Location = new System.Drawing.Point(227, 131);
+            this.nudMinLv3.Location = new System.Drawing.Point(240, 131);
             this.nudMinLv3.Minimum = new decimal(new int[] {
             1,
             0,
@@ -1380,7 +1480,7 @@
             // 
             // nudMinLv9
             // 
-            this.nudMinLv9.Location = new System.Drawing.Point(227, 323);
+            this.nudMinLv9.Location = new System.Drawing.Point(240, 323);
             this.nudMinLv9.Minimum = new decimal(new int[] {
             1,
             0,
@@ -1398,7 +1498,7 @@
             // 
             // nudMinLv5
             // 
-            this.nudMinLv5.Location = new System.Drawing.Point(227, 195);
+            this.nudMinLv5.Location = new System.Drawing.Point(240, 195);
             this.nudMinLv5.Minimum = new decimal(new int[] {
             1,
             0,
@@ -1416,7 +1516,7 @@
             // 
             // nudMinLv1
             // 
-            this.nudMinLv1.Location = new System.Drawing.Point(227, 67);
+            this.nudMinLv1.Location = new System.Drawing.Point(240, 67);
             this.nudMinLv1.Minimum = new decimal(new int[] {
             1,
             0,
@@ -1434,7 +1534,7 @@
             // 
             // nudMinLv10
             // 
-            this.nudMinLv10.Location = new System.Drawing.Point(227, 355);
+            this.nudMinLv10.Location = new System.Drawing.Point(240, 355);
             this.nudMinLv10.Minimum = new decimal(new int[] {
             1,
             0,
@@ -1452,7 +1552,7 @@
             // 
             // nudMinLv6
             // 
-            this.nudMinLv6.Location = new System.Drawing.Point(227, 227);
+            this.nudMinLv6.Location = new System.Drawing.Point(240, 227);
             this.nudMinLv6.Minimum = new decimal(new int[] {
             1,
             0,
@@ -1470,7 +1570,7 @@
             // 
             // nudMinLv2
             // 
-            this.nudMinLv2.Location = new System.Drawing.Point(227, 99);
+            this.nudMinLv2.Location = new System.Drawing.Point(240, 99);
             this.nudMinLv2.Minimum = new decimal(new int[] {
             1,
             0,
@@ -1488,7 +1588,7 @@
             // 
             // nudMinLv8
             // 
-            this.nudMinLv8.Location = new System.Drawing.Point(227, 291);
+            this.nudMinLv8.Location = new System.Drawing.Point(240, 291);
             this.nudMinLv8.Minimum = new decimal(new int[] {
             1,
             0,
@@ -1506,7 +1606,7 @@
             // 
             // nudMinLv4
             // 
-            this.nudMinLv4.Location = new System.Drawing.Point(227, 163);
+            this.nudMinLv4.Location = new System.Drawing.Point(240, 163);
             this.nudMinLv4.Minimum = new decimal(new int[] {
             1,
             0,
@@ -1524,115 +1624,115 @@
             // 
             // lblPercent11
             // 
-            this.lblPercent11.Location = new System.Drawing.Point(10, 394);
+            this.lblPercent11.Location = new System.Drawing.Point(4, 394);
             this.lblPercent11.Name = "lblPercent11";
-            this.lblPercent11.Size = new System.Drawing.Size(30, 13);
+            this.lblPercent11.Size = new System.Drawing.Size(48, 13);
             this.lblPercent11.TabIndex = 2;
             this.lblPercent11.Text = "1 %";
             this.lblPercent11.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // lblPercent7
             // 
-            this.lblPercent7.Location = new System.Drawing.Point(10, 266);
+            this.lblPercent7.Location = new System.Drawing.Point(4, 266);
             this.lblPercent7.Name = "lblPercent7";
-            this.lblPercent7.Size = new System.Drawing.Size(30, 13);
+            this.lblPercent7.Size = new System.Drawing.Size(48, 13);
             this.lblPercent7.TabIndex = 2;
             this.lblPercent7.Text = "5 %";
             this.lblPercent7.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // lblPercent3
             // 
-            this.lblPercent3.Location = new System.Drawing.Point(10, 138);
+            this.lblPercent3.Location = new System.Drawing.Point(4, 138);
             this.lblPercent3.Name = "lblPercent3";
-            this.lblPercent3.Size = new System.Drawing.Size(30, 13);
+            this.lblPercent3.Size = new System.Drawing.Size(48, 13);
             this.lblPercent3.TabIndex = 2;
             this.lblPercent3.Text = "10 %";
             this.lblPercent3.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // lblPercent9
             // 
-            this.lblPercent9.Location = new System.Drawing.Point(10, 330);
+            this.lblPercent9.Location = new System.Drawing.Point(4, 330);
             this.lblPercent9.Name = "lblPercent9";
-            this.lblPercent9.Size = new System.Drawing.Size(30, 13);
+            this.lblPercent9.Size = new System.Drawing.Size(48, 13);
             this.lblPercent9.TabIndex = 2;
             this.lblPercent9.Text = "4 %";
             this.lblPercent9.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // lblPercent5
             // 
-            this.lblPercent5.Location = new System.Drawing.Point(10, 202);
+            this.lblPercent5.Location = new System.Drawing.Point(4, 202);
             this.lblPercent5.Name = "lblPercent5";
-            this.lblPercent5.Size = new System.Drawing.Size(30, 13);
+            this.lblPercent5.Size = new System.Drawing.Size(48, 13);
             this.lblPercent5.TabIndex = 2;
             this.lblPercent5.Text = "10 %";
             this.lblPercent5.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // lblPercent1
             // 
-            this.lblPercent1.Location = new System.Drawing.Point(10, 74);
+            this.lblPercent1.Location = new System.Drawing.Point(4, 74);
             this.lblPercent1.Name = "lblPercent1";
-            this.lblPercent1.Size = new System.Drawing.Size(30, 13);
+            this.lblPercent1.Size = new System.Drawing.Size(48, 13);
             this.lblPercent1.TabIndex = 2;
             this.lblPercent1.Text = "20 %";
             this.lblPercent1.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // lblPercent10
             // 
-            this.lblPercent10.Location = new System.Drawing.Point(10, 362);
+            this.lblPercent10.Location = new System.Drawing.Point(4, 362);
             this.lblPercent10.Name = "lblPercent10";
-            this.lblPercent10.Size = new System.Drawing.Size(30, 13);
+            this.lblPercent10.Size = new System.Drawing.Size(48, 13);
             this.lblPercent10.TabIndex = 2;
             this.lblPercent10.Text = "1 %";
             this.lblPercent10.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // lblPercent6
             // 
-            this.lblPercent6.Location = new System.Drawing.Point(10, 234);
+            this.lblPercent6.Location = new System.Drawing.Point(4, 234);
             this.lblPercent6.Name = "lblPercent6";
-            this.lblPercent6.Size = new System.Drawing.Size(30, 13);
+            this.lblPercent6.Size = new System.Drawing.Size(48, 13);
             this.lblPercent6.TabIndex = 2;
             this.lblPercent6.Text = "5 %";
             this.lblPercent6.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // lblPercent2
             // 
-            this.lblPercent2.Location = new System.Drawing.Point(10, 106);
+            this.lblPercent2.Location = new System.Drawing.Point(4, 106);
             this.lblPercent2.Name = "lblPercent2";
-            this.lblPercent2.Size = new System.Drawing.Size(30, 13);
+            this.lblPercent2.Size = new System.Drawing.Size(48, 13);
             this.lblPercent2.TabIndex = 2;
             this.lblPercent2.Text = "10 %";
             this.lblPercent2.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // lblPercent8
             // 
-            this.lblPercent8.Location = new System.Drawing.Point(10, 298);
+            this.lblPercent8.Location = new System.Drawing.Point(4, 298);
             this.lblPercent8.Name = "lblPercent8";
-            this.lblPercent8.Size = new System.Drawing.Size(30, 13);
+            this.lblPercent8.Size = new System.Drawing.Size(48, 13);
             this.lblPercent8.TabIndex = 2;
             this.lblPercent8.Text = "4 %";
             this.lblPercent8.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // lblPercent4
             // 
-            this.lblPercent4.Location = new System.Drawing.Point(10, 170);
+            this.lblPercent4.Location = new System.Drawing.Point(4, 170);
             this.lblPercent4.Name = "lblPercent4";
-            this.lblPercent4.Size = new System.Drawing.Size(30, 13);
+            this.lblPercent4.Size = new System.Drawing.Size(48, 13);
             this.lblPercent4.TabIndex = 2;
             this.lblPercent4.Text = "10 %";
             this.lblPercent4.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // lblPercent0
             // 
-            this.lblPercent0.Location = new System.Drawing.Point(10, 42);
+            this.lblPercent0.Location = new System.Drawing.Point(4, 42);
             this.lblPercent0.Name = "lblPercent0";
-            this.lblPercent0.Size = new System.Drawing.Size(30, 13);
+            this.lblPercent0.Size = new System.Drawing.Size(48, 13);
             this.lblPercent0.TabIndex = 2;
             this.lblPercent0.Text = "20 %";
             this.lblPercent0.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // pctPoke11
             // 
-            this.pctPoke11.Location = new System.Drawing.Point(43, 379);
+            this.pctPoke11.Location = new System.Drawing.Point(55, 379);
             this.pctPoke11.Name = "pctPoke11";
             this.pctPoke11.Size = new System.Drawing.Size(32, 32);
             this.pctPoke11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -1642,7 +1742,7 @@
             // 
             // pctPoke7
             // 
-            this.pctPoke7.Location = new System.Drawing.Point(43, 251);
+            this.pctPoke7.Location = new System.Drawing.Point(55, 251);
             this.pctPoke7.Name = "pctPoke7";
             this.pctPoke7.Size = new System.Drawing.Size(32, 32);
             this.pctPoke7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -1652,7 +1752,7 @@
             // 
             // pctPoke3
             // 
-            this.pctPoke3.Location = new System.Drawing.Point(43, 123);
+            this.pctPoke3.Location = new System.Drawing.Point(55, 123);
             this.pctPoke3.Name = "pctPoke3";
             this.pctPoke3.Size = new System.Drawing.Size(32, 32);
             this.pctPoke3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -1662,7 +1762,7 @@
             // 
             // pctPoke9
             // 
-            this.pctPoke9.Location = new System.Drawing.Point(43, 315);
+            this.pctPoke9.Location = new System.Drawing.Point(55, 315);
             this.pctPoke9.Name = "pctPoke9";
             this.pctPoke9.Size = new System.Drawing.Size(32, 32);
             this.pctPoke9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -1672,7 +1772,7 @@
             // 
             // pctPoke5
             // 
-            this.pctPoke5.Location = new System.Drawing.Point(43, 187);
+            this.pctPoke5.Location = new System.Drawing.Point(55, 187);
             this.pctPoke5.Name = "pctPoke5";
             this.pctPoke5.Size = new System.Drawing.Size(32, 32);
             this.pctPoke5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -1682,7 +1782,7 @@
             // 
             // pctPoke1
             // 
-            this.pctPoke1.Location = new System.Drawing.Point(43, 59);
+            this.pctPoke1.Location = new System.Drawing.Point(55, 59);
             this.pctPoke1.Name = "pctPoke1";
             this.pctPoke1.Size = new System.Drawing.Size(32, 32);
             this.pctPoke1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -1692,7 +1792,7 @@
             // 
             // pctPoke10
             // 
-            this.pctPoke10.Location = new System.Drawing.Point(43, 347);
+            this.pctPoke10.Location = new System.Drawing.Point(55, 347);
             this.pctPoke10.Name = "pctPoke10";
             this.pctPoke10.Size = new System.Drawing.Size(32, 32);
             this.pctPoke10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -1702,7 +1802,7 @@
             // 
             // pctPoke6
             // 
-            this.pctPoke6.Location = new System.Drawing.Point(43, 219);
+            this.pctPoke6.Location = new System.Drawing.Point(55, 219);
             this.pctPoke6.Name = "pctPoke6";
             this.pctPoke6.Size = new System.Drawing.Size(32, 32);
             this.pctPoke6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -1712,7 +1812,7 @@
             // 
             // pctPoke2
             // 
-            this.pctPoke2.Location = new System.Drawing.Point(43, 91);
+            this.pctPoke2.Location = new System.Drawing.Point(55, 91);
             this.pctPoke2.Name = "pctPoke2";
             this.pctPoke2.Size = new System.Drawing.Size(32, 32);
             this.pctPoke2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -1722,7 +1822,7 @@
             // 
             // pctPoke8
             // 
-            this.pctPoke8.Location = new System.Drawing.Point(43, 283);
+            this.pctPoke8.Location = new System.Drawing.Point(55, 283);
             this.pctPoke8.Name = "pctPoke8";
             this.pctPoke8.Size = new System.Drawing.Size(32, 32);
             this.pctPoke8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -1732,7 +1832,7 @@
             // 
             // pctPoke4
             // 
-            this.pctPoke4.Location = new System.Drawing.Point(43, 155);
+            this.pctPoke4.Location = new System.Drawing.Point(55, 155);
             this.pctPoke4.Name = "pctPoke4";
             this.pctPoke4.Size = new System.Drawing.Size(32, 32);
             this.pctPoke4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -1742,7 +1842,7 @@
             // 
             // pctPoke0
             // 
-            this.pctPoke0.Location = new System.Drawing.Point(43, 27);
+            this.pctPoke0.Location = new System.Drawing.Point(55, 27);
             this.pctPoke0.Name = "pctPoke0";
             this.pctPoke0.Size = new System.Drawing.Size(32, 32);
             this.pctPoke0.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -1754,7 +1854,7 @@
             // 
             this.cboSlot11.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboSlot11.FormattingEnabled = true;
-            this.cboSlot11.Location = new System.Drawing.Point(85, 386);
+            this.cboSlot11.Location = new System.Drawing.Point(98, 386);
             this.cboSlot11.Name = "cboSlot11";
             this.cboSlot11.Size = new System.Drawing.Size(132, 21);
             this.cboSlot11.TabIndex = 0;
@@ -1764,7 +1864,7 @@
             // 
             this.cboSlot7.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboSlot7.FormattingEnabled = true;
-            this.cboSlot7.Location = new System.Drawing.Point(85, 258);
+            this.cboSlot7.Location = new System.Drawing.Point(98, 258);
             this.cboSlot7.Name = "cboSlot7";
             this.cboSlot7.Size = new System.Drawing.Size(132, 21);
             this.cboSlot7.TabIndex = 0;
@@ -1774,7 +1874,7 @@
             // 
             this.cboSlot3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboSlot3.FormattingEnabled = true;
-            this.cboSlot3.Location = new System.Drawing.Point(85, 130);
+            this.cboSlot3.Location = new System.Drawing.Point(98, 130);
             this.cboSlot3.Name = "cboSlot3";
             this.cboSlot3.Size = new System.Drawing.Size(132, 21);
             this.cboSlot3.TabIndex = 0;
@@ -1784,7 +1884,7 @@
             // 
             this.cboSlot9.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboSlot9.FormattingEnabled = true;
-            this.cboSlot9.Location = new System.Drawing.Point(85, 322);
+            this.cboSlot9.Location = new System.Drawing.Point(98, 322);
             this.cboSlot9.Name = "cboSlot9";
             this.cboSlot9.Size = new System.Drawing.Size(132, 21);
             this.cboSlot9.TabIndex = 0;
@@ -1794,7 +1894,7 @@
             // 
             this.cboSlot5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboSlot5.FormattingEnabled = true;
-            this.cboSlot5.Location = new System.Drawing.Point(85, 194);
+            this.cboSlot5.Location = new System.Drawing.Point(98, 194);
             this.cboSlot5.Name = "cboSlot5";
             this.cboSlot5.Size = new System.Drawing.Size(132, 21);
             this.cboSlot5.TabIndex = 0;
@@ -1804,7 +1904,7 @@
             // 
             this.cboSlot1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboSlot1.FormattingEnabled = true;
-            this.cboSlot1.Location = new System.Drawing.Point(85, 66);
+            this.cboSlot1.Location = new System.Drawing.Point(98, 66);
             this.cboSlot1.Name = "cboSlot1";
             this.cboSlot1.Size = new System.Drawing.Size(132, 21);
             this.cboSlot1.TabIndex = 0;
@@ -1814,7 +1914,7 @@
             // 
             this.cboSlot10.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboSlot10.FormattingEnabled = true;
-            this.cboSlot10.Location = new System.Drawing.Point(85, 354);
+            this.cboSlot10.Location = new System.Drawing.Point(98, 354);
             this.cboSlot10.Name = "cboSlot10";
             this.cboSlot10.Size = new System.Drawing.Size(132, 21);
             this.cboSlot10.TabIndex = 0;
@@ -1824,7 +1924,7 @@
             // 
             this.cboSlot6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboSlot6.FormattingEnabled = true;
-            this.cboSlot6.Location = new System.Drawing.Point(85, 226);
+            this.cboSlot6.Location = new System.Drawing.Point(98, 226);
             this.cboSlot6.Name = "cboSlot6";
             this.cboSlot6.Size = new System.Drawing.Size(132, 21);
             this.cboSlot6.TabIndex = 0;
@@ -1834,7 +1934,7 @@
             // 
             this.cboSlot2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboSlot2.FormattingEnabled = true;
-            this.cboSlot2.Location = new System.Drawing.Point(85, 98);
+            this.cboSlot2.Location = new System.Drawing.Point(98, 98);
             this.cboSlot2.Name = "cboSlot2";
             this.cboSlot2.Size = new System.Drawing.Size(132, 21);
             this.cboSlot2.TabIndex = 0;
@@ -1844,7 +1944,7 @@
             // 
             this.cboSlot8.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboSlot8.FormattingEnabled = true;
-            this.cboSlot8.Location = new System.Drawing.Point(85, 290);
+            this.cboSlot8.Location = new System.Drawing.Point(98, 290);
             this.cboSlot8.Name = "cboSlot8";
             this.cboSlot8.Size = new System.Drawing.Size(132, 21);
             this.cboSlot8.TabIndex = 0;
@@ -1854,7 +1954,7 @@
             // 
             this.cboSlot4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboSlot4.FormattingEnabled = true;
-            this.cboSlot4.Location = new System.Drawing.Point(85, 162);
+            this.cboSlot4.Location = new System.Drawing.Point(98, 162);
             this.cboSlot4.Name = "cboSlot4";
             this.cboSlot4.Size = new System.Drawing.Size(132, 21);
             this.cboSlot4.TabIndex = 0;
@@ -1864,7 +1964,7 @@
             // 
             this.cboSlot0.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboSlot0.FormattingEnabled = true;
-            this.cboSlot0.Location = new System.Drawing.Point(85, 34);
+            this.cboSlot0.Location = new System.Drawing.Point(98, 34);
             this.cboSlot0.Name = "cboSlot0";
             this.cboSlot0.Size = new System.Drawing.Size(132, 21);
             this.cboSlot0.TabIndex = 0;
@@ -2314,6 +2414,8 @@
             this.Load += new System.EventHandler(this.frmMainPage_Load);
             this.gboAutoFill.ResumeLayout(false);
             this.gboAutoFill.PerformLayout();
+            this.pnlOptionsGen2.ResumeLayout(false);
+            this.pnlOptionsGen2.PerformLayout();
             this.pnlLuckyPower.ResumeLayout(false);
             this.pnlLuckyPower.PerformLayout();
             this.pnlGen5Options.ResumeLayout(false);
@@ -2570,6 +2672,14 @@
         private System.Windows.Forms.ToolStripMenuItem shinyToolStripMenuItem;
         internal System.Windows.Forms.Label lblIntimidateLevel;
         private System.Windows.Forms.NumericUpDown nudIntimidateLevel;
+        internal System.Windows.Forms.ComboBox cboMapsCrystal;
+        internal System.Windows.Forms.ComboBox cboMapsGS;
+        internal System.Windows.Forms.Panel pnlOptionsGen2;
+        internal System.Windows.Forms.Label lblTimeDispGSC;
+        internal System.Windows.Forms.Label lblSwarmDispGSC;
+        internal System.Windows.Forms.ComboBox cboTimeGSC;
+        internal System.Windows.Forms.ComboBox cboSwarmGSC;
+        private System.Windows.Forms.CheckBox chkBugCatching;
     }
 }
 

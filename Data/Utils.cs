@@ -26,19 +26,24 @@ namespace PokemonEncCalc
         internal static List<string> FormNamesCurrentLang;
 
         // Current language map names
-        internal static List<string> MapsRS;
-        internal static List<string> MapsEmer;
-        internal static List<string> MapsFRLG;
-        internal static List<string> MapsDP;
-        internal static List<string> MapsPt;
-        internal static List<string> MapsHGSS;
-        internal static List<string> MapsBW;
-        internal static List<string> MapsB2W2;
-        internal static List<string> MapsXY;
-        internal static List<string> MapsOR;
-        internal static List<string> MapsAS;
+        internal static List<string> MapNamesGS;
+        internal static List<string> MapNamesC;
+        internal static List<string> MapNamesRS;
+        internal static List<string> MapNamesE;
+        internal static List<string> MapNamesFRLG;
+        internal static List<string> MapNamesDP;
+        internal static List<string> MapNamesPt;
+        internal static List<string> MapNamesHGSS;
+        internal static List<string> MapNamesBW;
+        internal static List<string> MapNamesB2W2;
+        internal static List<string> MapNamesXY;
+        internal static List<string> MapNamesOR;
+        internal static List<string> MapNamesAS;
 
-        // List of all maps from Gen 3 to Gen 6
+        // List of all maps from Gen 2 to Gen 6
+        internal static List<AreaMapGen2> MapsGold;
+        internal static List<AreaMapGen2> MapsSilver;
+        internal static List<AreaMapGen2> MapsCrystal;
         internal static List<AreaMapGen3> MapsRuby;
         internal static List<AreaMapGen3> MapsSapphire;
         internal static List<AreaMapGen3> MapsEmerald;
@@ -579,6 +584,10 @@ namespace PokemonEncCalc
 
         internal static void loadEncounterSlotData()
         {
+            loadSlotsGold();
+            loadSlotsSilver();
+            loadSlotsCrystal();
+            loadSlotsHeartGold();
             loadSlotsRuby();
             loadSlotsSapphire();
             loadSlotsEmerald();
@@ -597,6 +606,42 @@ namespace PokemonEncCalc
             loadSlotsY();
             loadSlotsOmegaRuby();
             loadSlotsAlphaSapphire();
+        }
+
+        private static void loadSlotsGold()
+        {
+            int mapCount = Properties.Resources.GoldSlots.Length / 360;
+            MapsGold = new List<AreaMapGen2>();
+            for (int i = 0; i < mapCount; i++)
+            {
+                byte[] data = new byte[360];
+                data = Properties.Resources.GoldSlots.Skip(360 * i).Take(360).ToArray();
+                MapsGold.Add(new AreaMapGen2(data, Version.Gold, i));
+            }
+        }
+
+        private static void loadSlotsSilver()
+        {
+            int mapCount = Properties.Resources.SilverSlots.Length / 360;
+            MapsSilver = new List<AreaMapGen2>();
+            for (int i = 0; i < mapCount; i++)
+            {
+                byte[] data = new byte[360];
+                data = Properties.Resources.SilverSlots.Skip(360 * i).Take(360).ToArray();
+                MapsSilver.Add(new AreaMapGen2(data, Version.Silver, i));
+            }
+        }
+
+        private static void loadSlotsCrystal()
+        {
+            int mapCount = Properties.Resources.CrystalSlots.Length / 360;
+            MapsCrystal = new List<AreaMapGen2>();
+            for (int i = 0; i < mapCount; i++)
+            {
+                byte[] data = new byte[360];
+                data = Properties.Resources.CrystalSlots.Skip(360 * i).Take(360).ToArray();
+                MapsCrystal.Add(new AreaMapGen2(data, Version.Crystal, i));
+            }
         }
 
         private static void loadSlotsRuby()

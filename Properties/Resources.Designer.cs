@@ -16363,6 +16363,16 @@ namespace PokemonEncCalc.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
+        internal static byte[] CrystalSlots {
+            get {
+                object obj = ResourceManager.GetObject("CrystalSlots", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
         internal static byte[] DiamondSlots {
             get {
                 object obj = ResourceManager.GetObject("DiamondSlots", resourceCulture);
@@ -17741,6 +17751,16 @@ namespace PokemonEncCalc.Properties {
         internal static string formsKR {
             get {
                 return ResourceManager.GetString("formsKR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] GoldSlots {
+            get {
+                object obj = ResourceManager.GetObject("GoldSlots", resourceCulture);
+                return ((byte[])(obj));
             }
         }
         
@@ -34226,6 +34246,72 @@ namespace PokemonEncCalc.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Sprout Tower
+        ///Tin Tower
+        ///Burned Tower – 1F
+        ///Burned Tower – B1F
+        ///National Park
+        ///Ruins of Alph – Outside
+        ///Ruins of Alph – Inside
+        ///Union Cave – 1F
+        ///Union Cave – B1F
+        ///Union Cave – B2F
+        ///Slowpoke Well – 1F
+        ///Slowpoke Well – B1F
+        ///Ilex Forest
+        ///Mt. Mortar – 1F
+        ///Mt. Mortar – 1F-2
+        ///Mt. Mortar – 1F-3
+        ///Mt. Mortar – B1F
+        ///Ice Path – 1F
+        ///Ice Path – B1F
+        ///Ice Path – B2F
+        ///Ice Path – B3F
+        ///Whirl Islands – Entrance
+        ///Whirl Islands – B1F
+        ///Whirl Islands – B2F
+        ///Whirl Islands – B1F Middle
+        ///Whirl Islands – B2F Middle
+        ///Mt. Silver – Outs [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Maps_C_EN {
+            get {
+                return ResourceManager.GetString("Maps_C_EN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tour Chétiflor
+        ///Tour Ferraille
+        ///Tour Cendrée – RDC
+        ///Tour Cendrée – Sous-Sol
+        ///Parc Naturel
+        ///Ruines d&apos;Alpha – Extérieur
+        ///Ruines d&apos;Alpha – Intérieur
+        ///Caves Jumelles – RDC
+        ///Caves Jumelles – SS1
+        ///Caves Jumelles – SS2
+        ///Puits Ramoloss – RDC
+        ///Puits Ramoloss – Sous-Sol
+        ///Bois aux Chênes
+        ///Mont Creuset – RDC Entrée
+        ///Mont Creuset – RDC Intérieur
+        ///Mont Creuset – RDC Fond
+        ///Mont Creuset – Sous-Sol
+        ///Route de Glace – RDC
+        ///Route de Glace – SS1
+        ///Route de Glace – SS2
+        ///Route de Glace – SS3
+        ///Tourb&apos;Îles – Entrée
+        ///Tourb&apos;Îles – SS1        /// [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Maps_C_FR {
+            get {
+                return ResourceManager.GetString("Maps_C_FR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Resort Area
         ///Twinleaf Town
         ///Celestic Town
@@ -34459,6 +34545,71 @@ namespace PokemonEncCalc.Properties {
         internal static string Maps_FRLG_FR {
             get {
                 return ResourceManager.GetString("Maps_FRLG_FR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sprout Tower
+        ///Tin Tower
+        ///Burned Tower – 1F
+        ///Burned Tower – B1F
+        ///National Park
+        ///Ruins of Alph – Outside
+        ///Ruins of Alph – Inside
+        ///Union Cave – 1F
+        ///Union Cave – B1F
+        ///Union Cave – B2F
+        ///Slowpoke Well – 1F
+        ///Slowpoke Well – B1F
+        ///Ilex Forest
+        ///Mt. Mortar – 1F
+        ///Mt. Mortar – 1F-2
+        ///Mt. Mortar – 1F-3
+        ///Mt. Mortar – B1F
+        ///Ice Path – 1F / B1F
+        ///Ice Path – B2F
+        ///Ice Path – B3F
+        ///Whirl Islands – Entrance
+        ///Whirl Islands – B1F / B2F
+        ///Whirl Islands – B1F Middle
+        ///Whirl Islands – B2F Middle
+        ///Mt. Silver – Outside
+        ///Mt. Silver – Entranc [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Maps_GS_EN {
+            get {
+                return ResourceManager.GetString("Maps_GS_EN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tour Chétiflor
+        ///Tour Ferraille
+        ///Tour Cendrée – RDC
+        ///Tour Cendrée – Sous-Sol
+        ///Parc Naturel
+        ///Ruines d&apos;Alpha – Extérieur
+        ///Ruines d&apos;Alpha – Intérieur
+        ///Caves Jumelles – RDC
+        ///Caves Jumelles – SS1
+        ///Caves Jumelles – SS2
+        ///Puits Ramoloss – RDC
+        ///Puits Ramoloss – Sous-Sol
+        ///Bois aux Chênes
+        ///Mont Creuset – RDC Entrée
+        ///Mont Creuset – RDC Intérieur
+        ///Mont Creuset – RDC Fond
+        ///Mont Creuset – Sous-Sol
+        ///Route de Glace – RDC / SS1
+        ///Route de Glace – SS2
+        ///Route de Glace – SS3
+        ///Tourb&apos;Îles – Entrée
+        ///Tourb&apos;Îles – SS1 / SS2
+        ///Tourb&apos;Île [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Maps_GS_FR {
+            get {
+                return ResourceManager.GetString("Maps_GS_FR", resourceCulture);
             }
         }
         
@@ -35964,6 +36115,16 @@ namespace PokemonEncCalc.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
+        internal static byte[] SilverSlots {
+            get {
+                object obj = ResourceManager.GetObject("SilverSlots", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
         internal static byte[] SoulSilverSlots {
             get {
                 object obj = ResourceManager.GetObject("SoulSilverSlots", resourceCulture);
@@ -35982,7 +36143,10 @@ namespace PokemonEncCalc.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Rubin
+        ///   Looks up a localized string similar to Goldene
+        ///Silberne
+        ///Kristall
+        ///Rubin
         ///Saphir
         ///Smaragd
         ///Feuerrote
@@ -36008,7 +36172,10 @@ namespace PokemonEncCalc.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Ruby
+        ///   Looks up a localized string similar to Gold
+        ///Silver
+        ///Crystal
+        ///Ruby
         ///Sapphire
         ///Emerald
         ///Fire Red
@@ -36034,7 +36201,10 @@ namespace PokemonEncCalc.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Rubí
+        ///   Looks up a localized string similar to Oro
+        ///Plata
+        ///Cristal
+        ///Rubí
         ///Zafiro
         ///Esmeralda
         ///Rojofuego
@@ -36060,7 +36230,10 @@ namespace PokemonEncCalc.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Rubis
+        ///   Looks up a localized string similar to Or
+        ///Argent
+        ///Cristal
+        ///Rubis
         ///Saphir
         ///Émeraude
         ///Rouge-Feu
@@ -36086,7 +36259,10 @@ namespace PokemonEncCalc.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Rubino
+        ///   Looks up a localized string similar to Oro
+        ///Argento
+        ///Cristallo
+        ///Rubino
         ///Zaffiro
         ///Smeraldo
         ///RossoFuoco
@@ -36112,7 +36288,10 @@ namespace PokemonEncCalc.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to ルビー
+        ///   Looks up a localized string similar to 金
+        ///銀
+        ///クリスタル
+        ///ルビー
         ///サファイア
         ///エメラルド
         ///ファイアレッド
@@ -36138,7 +36317,10 @@ namespace PokemonEncCalc.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 루비
+        ///   Looks up a localized string similar to 금
+        ///은
+        ///Crystal
+        ///루비
         ///사파이어
         ///에메랄드
         ///파이어레드

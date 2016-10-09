@@ -20,7 +20,7 @@ namespace PokemonEncCalc
             }
             set {
                 // EffectivePercentage change must follow the same change ratio as Percentage
-                decimal newPercentage = Math.Max(Math.Min(value, 100), 0);
+                decimal newPercentage = Math.Max(value, 0);
 
                 if (_percentage == 0) _effectivePercentage = newPercentage;
                 else _effectivePercentage *= newPercentage / _percentage;
@@ -42,7 +42,7 @@ namespace PokemonEncCalc
             Species = species;
             MinLevel = Math.Max(Math.Min(MinLv, (byte)100), (byte)1);
             MaxLevel = Math.Max(Math.Min(MaxLv, (byte)100), (byte)1);
-            Percentage = Math.Max(Math.Min(percent, 100), 0);
+            Percentage = Math.Max(percent, 0);
             EffectivePercentage = (effPercent == 0) ? percent : effPercent;
         }
 

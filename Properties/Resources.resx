@@ -10057,4 +10057,25 @@
   <data name="questionMark" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images\questionMark.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="CrystalSlots" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\CrystalSlots.dat;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="GoldSlots" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\GoldSlots.dat;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Maps_C_EN" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\strings\en\Maps_C.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
+  <data name="Maps_C_FR" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\strings\fr\Maps_C.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
+  <data name="Maps_GS_EN" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\strings\en\Maps_GS.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
+  <data name="Maps_GS_FR" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\strings\fr\Maps_GS.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
+  <data name="SilverSlots" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\SilverSlots.dat;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

@@ -14,8 +14,8 @@ namespace PokemonEncCalc
         protected EncounterSlot[] SurfSlots;
         protected EncounterSlot[] SuperRodSlots;
 
+        protected abstract void createEncounterSlotArray(ref EncounterSlot[] slotArray, byte[] data, decimal[] percentArray);
 
-        
 
     }
 }
