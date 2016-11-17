@@ -11,8 +11,10 @@ namespace PokemonEncCalc
     static class Program
     {
 
-        internal readonly static string version = "5.8.1";
-        internal readonly static Version startingVersion = Version.Gold;
+        internal const string VERSION = "5.8.1";
+        internal const int RELEASED_POKEMON = 721;
+        internal const int RELEASED_ALT_FORMS = 84;
+        internal const Version STARTING_VERSION = Version.Gold;
 
         /// <summary>
         /// The main entry point for the application.
@@ -26,7 +28,8 @@ namespace PokemonEncCalc
                 detectSystemLanguage();
 
             // Load data
-            Utils.initializePokemonList();
+            PokemonTables.PopulatePokemonTables();
+            Utils.initializePokemonNames();
             Utils.loadEncounterSlotData();
             Utils.initializeMoves();
 

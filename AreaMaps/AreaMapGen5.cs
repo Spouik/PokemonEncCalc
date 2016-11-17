@@ -207,7 +207,8 @@ namespace PokemonEncCalc
             {
                 species = (short)(BitConverter.ToInt16(data, 4 * i) & 0x3FF);
                 formid = (byte)(data[4 * i + 1] >> 3);
-                p = Utils.PokemonList[species - 1];
+                if (version == Version.Black || version == Version.White) p = PokemonTables.pokemonBWTable[species];
+                else p = PokemonTables.pokemonB2W2Table[species];
                 if (formid > 0)
                     if (p.FormCount() >= formid)
                         if (p.Forms[formid - 1] != null)

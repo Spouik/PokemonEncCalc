@@ -47,7 +47,7 @@ namespace PokemonEncCalc
 
         private void cmdCalc_Click(object sender, EventArgs e)
         {
-            Version version = (Version)(cboVersion.SelectedIndex + (int)Program.startingVersion);
+            Version version = (Version)(cboVersion.SelectedIndex + (int)Program.STARTING_VERSION);
             Ability ability = (chkAbility.Checked && pnlAbility.Visible) 
                 ? (Ability)(encounterOptions[1].FindIndex(s => s.Equals(cboAbility.SelectedItem)) + 1)
                 : Ability.None;
@@ -146,7 +146,7 @@ namespace PokemonEncCalc
 
         private void frmMainPage_Load(object sender, EventArgs e)
         {
-            Text = "Pokémon Encounter Calculator - Ver. " + Program.version;
+            Text = "Pokémon Encounter Calculator - Ver. " + Program.VERSION;
             Utils.changeLanguage(Properties.Settings.Default.Language);
             loadPokemonNames();
             renameControls();
@@ -598,7 +598,7 @@ namespace PokemonEncCalc
                         chkRepel.Enabled = true;
                         break;
                     case EncounterType.RockSmash:
-                        chkRepel.Enabled = (cboVersion.SelectedIndex < ((int)Version.Diamond - (int)Program.startingVersion));
+                        chkRepel.Enabled = (cboVersion.SelectedIndex < ((int)Version.Diamond - (int)Program.STARTING_VERSION));
                         break;
                     default:
                         chkRepel.Checked = false;
@@ -655,7 +655,7 @@ namespace PokemonEncCalc
                         chkRepel.Enabled = true;
                         break;
                     case EncounterType.RockSmash:
-                        chkRepel.Enabled = (cboVersion.SelectedIndex < ((int)Version.Diamond - (int)Program.startingVersion));
+                        chkRepel.Enabled = (cboVersion.SelectedIndex < ((int)Version.Diamond - (int)Program.STARTING_VERSION));
                         break;
                     default:
                         chkRepel.Checked = false;
@@ -829,7 +829,7 @@ namespace PokemonEncCalc
 
         private void changeEncounterOptionsGen5(object sender, EventArgs e)
         {
-            Version currentVersion = (Version)((int)Program.startingVersion + cboVersion.SelectedIndex);
+            Version currentVersion = (Version)((int)Program.STARTING_VERSION + cboVersion.SelectedIndex);
             switch (currentVersion)
             {
                 case Version.Black:
@@ -1497,7 +1497,7 @@ namespace PokemonEncCalc
             int currentMap;
             EncounterSlot[] newSlots = null;
             EncounterType type = (EncounterType)encounterOptions[0].FindIndex(s => s.Equals((string)cboEncounterType.SelectedItem));
-            Version currentVersion = (Version)((int)Program.startingVersion + cboVersion.SelectedIndex);
+            Version currentVersion = (Version)((int)Program.STARTING_VERSION + cboVersion.SelectedIndex);
             int gba = 0, time = 0, radio = 0;
             chkRepel.Enabled = false;
 
@@ -1524,7 +1524,7 @@ namespace PokemonEncCalc
                     break;
                 case EncounterType.RockSmash:
                     cboAbility.Items.Add(encounterOptions[1][4]);
-                    chkRepel.Enabled = (cboVersion.SelectedIndex < ((int)Version.Diamond - (int)Program.startingVersion));
+                    chkRepel.Enabled = (cboVersion.SelectedIndex < ((int)Version.Diamond - (int)Program.STARTING_VERSION));
                     break;
                 case EncounterType.OldRod:
                 case EncounterType.GoodRod:

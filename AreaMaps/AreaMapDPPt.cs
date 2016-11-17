@@ -263,7 +263,8 @@ namespace PokemonEncCalc
             {
                 species = (short)(BitConverter.ToInt16(data, 8 * i + 4) & 0x3FF);
                 formid = (byte)(data[8 * i + 5] >> 2);
-                p = Utils.PokemonList[species - 1];
+                if (version == Version.Platinum) p = PokemonTables.pokemonPtTable[species];
+                else p = PokemonTables.pokemonDPTable[species];
                 if (formid > 0)
                     if (p.FormCount() >= formid)
                         if (p.Forms[formid - 1] != null)
@@ -296,7 +297,8 @@ namespace PokemonEncCalc
             {
                 species = (short)(BitConverter.ToInt16(data, 4 * s) & 0x3FF);
                 formid = (byte)(data[4 * s + 1] >> 2);
-                p = Utils.PokemonList[species - 1];
+                if (version == Version.Platinum) p = PokemonTables.pokemonPtTable[species];
+                else p = PokemonTables.pokemonDPTable[species];
                 if (formid > 0)
                     if (p.FormCount() >= formid)
                         if (p.Forms[formid - 1] != null)

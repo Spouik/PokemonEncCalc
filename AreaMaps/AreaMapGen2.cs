@@ -289,7 +289,8 @@ namespace PokemonEncCalc
             {
                 species = (short)(BitConverter.ToInt16(data, 4 * i + 2) & 0x3FF);
                 formid = (byte)(data[4 * i + 3] >> 2);
-                p = Utils.PokemonList[species - 1];
+                p = PokemonTables.pokemonGSTable[species];
+                if(version == Version.Crystal) p = PokemonTables.pokemonCrystalTable[species];
                 if (formid > 0)
                     if (p.FormCount() >= formid)
                         if (p.Forms[formid - 1] != null)

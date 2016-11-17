@@ -35812,6 +35812,36 @@ namespace PokemonEncCalc.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] PokemonInfo4 {
+            get {
+                object obj = ResourceManager.GetObject("PokemonInfo4", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] PokemonInfo5 {
+            get {
+                object obj = ResourceManager.GetObject("PokemonInfo5", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] PokemonInfo6 {
+            get {
+                object obj = ResourceManager.GetObject("PokemonInfo6", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Bulbasaur
         ///Ivysaur
         ///Venusaur

@@ -75,6 +75,14 @@
     <Compile Include="AreaMaps\AreaMapORAS.cs" />
     <Compile Include="AreaMaps\AreaMapXY.cs" />
     <Compile Include="Data\Move.cs" />
+    <Compile Include="PokemonInfo\PokemonB2W2.cs" />
+    <Compile Include="PokemonInfo\PokemonCrystal.cs" />
+    <Compile Include="PokemonInfo\PokemonDP.cs" />
+    <Compile Include="PokemonInfo\PokemonBW.cs" />
+    <Compile Include="PokemonInfo\PokemonEmerald.cs" />
+    <Compile Include="PokemonInfo\PokemonGS.cs" />
+    <Compile Include="PokemonInfo\PokemonHGSS.cs" />
+    <Compile Include="PokemonInfo\PokemonORAS.cs" />
     <Compile Include="Forms\About.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,7 +138,12 @@
       <DependentUpon>main.cs</DependentUpon>
     </Compile>
     <Compile Include="EncounterSlots\HordeSlots.cs" />
-    <Compile Include="Data\Pokemon.cs" />
+    <Compile Include="PokemonInfo\Pokemon.cs" />
+    <Compile Include="PokemonInfo\PokemonPt.cs" />
+    <Compile Include="PokemonInfo\PokemonFRLG.cs" />
+    <Compile Include="PokemonInfo\PokemonRS.cs" />
+    <Compile Include="PokemonInfo\PokemonTables.cs" />
+    <Compile Include="PokemonInfo\PokemonXY.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -203,6 +216,9 @@
     <None Include="Resources\data\PearlSlots.dat" />
     <None Include="Resources\data\PlatinumSlots.dat" />
     <None Include="Resources\data\PokemonData.dat" />
+    <None Include="Resources\data\PokemonInfo4.dat" />
+    <None Include="Resources\data\PokemonInfo5.dat" />
+    <None Include="Resources\data\PokemonInfo6.dat" />
     <None Include="Resources\data\RubySlots.dat" />
     <None Include="Resources\data\SapphireSlots.dat" />
     <None Include="Resources\data\SilverSlots.dat" />

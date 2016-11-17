@@ -104,9 +104,9 @@ namespace PokemonEncCalc
 
         private void cboPokemon_SelectedIndexChanged(object sender, EventArgs e)
         {
-            txtCaptureRate.Text = Utils.PokemonList[cboPokemon.SelectedIndex].CatchRate.ToString();
+            txtCaptureRate.Text = PokemonTables.pokemonXYTable[cboPokemon.SelectedIndex + 1].CatchRate.ToString();
             if (cboGeneration.SelectedIndex == 3 && rdORAS.Checked)
-                txtCaptureRate.Text = Utils.PokemonList[cboPokemon.SelectedIndex].CatchRateORAS.ToString();
+                txtCaptureRate.Text = PokemonTables.pokemonORASTable[cboPokemon.SelectedIndex + 1].CatchRate.ToString();
 
             pctPokemon.Image = (Image)Properties.Resources.ResourceManager.GetObject("m" + (cboPokemon.SelectedIndex + 1) 
                 + (Properties.Settings.Default.ShinySprites ? "s" : ""));
@@ -120,18 +120,18 @@ namespace PokemonEncCalc
                 case 0:
                 case 1:
                     pnlGen5.Visible = pnlGen6Games.Visible = cboCapturePower.Visible = lblCapturePower.Visible = pnlPokedexGen6.Visible = false;
-                    txtCaptureRate.Text = Utils.PokemonList[cboPokemon.SelectedIndex].CatchRate.ToString();
+                    txtCaptureRate.Text = PokemonTables.pokemonXYTable[cboPokemon.SelectedIndex + 1].CatchRate.ToString();
                     break;
                 case 2:
                     pnlGen5.Visible = cboCapturePower.Visible = lblCapturePower.Visible = true;
                     pnlGen6Games.Visible = pnlPokedexGen6.Visible = false;
-                    txtCaptureRate.Text = Utils.PokemonList[cboPokemon.SelectedIndex].CatchRate.ToString();
+                    txtCaptureRate.Text = PokemonTables.pokemonXYTable[cboPokemon.SelectedIndex + 1].CatchRate.ToString();
                     break;
                 case 3:
                     pnlGen5.Visible = false;
                     pnlGen6Games.Visible = cboCapturePower.Visible = lblCapturePower.Visible = pnlPokedexGen6.Visible = true;
-                    if (rdORAS.Checked) txtCaptureRate.Text = Utils.PokemonList[cboPokemon.SelectedIndex].CatchRateORAS.ToString();
-                    else txtCaptureRate.Text = Utils.PokemonList[cboPokemon.SelectedIndex].CatchRate.ToString();
+                    if (rdORAS.Checked) txtCaptureRate.Text = PokemonTables.pokemonORASTable[cboPokemon.SelectedIndex + 1].CatchRate.ToString();
+                    else txtCaptureRate.Text = PokemonTables.pokemonXYTable[cboPokemon.SelectedIndex + 1].CatchRate.ToString();
 
                     break;
                 default: break;
@@ -140,12 +140,12 @@ namespace PokemonEncCalc
 
         private void rdXY_CheckedChanged(object sender, EventArgs e)
         {
-            txtCaptureRate.Text = Utils.PokemonList[cboPokemon.SelectedIndex].CatchRate.ToString();
+            txtCaptureRate.Text = PokemonTables.pokemonXYTable[cboPokemon.SelectedIndex + 1].CatchRate.ToString();
         }
 
         private void rdORAS_CheckedChanged(object sender, EventArgs e)
         {
-            txtCaptureRate.Text = Utils.PokemonList[cboPokemon.SelectedIndex].CatchRateORAS.ToString();
+            txtCaptureRate.Text = PokemonTables.pokemonORASTable[cboPokemon.SelectedIndex + 1].CatchRate.ToString();
         }
 
         private void cboBall_SelectedIndexChanged(object sender, EventArgs e)
@@ -187,7 +187,7 @@ namespace PokemonEncCalc
             decimal statusBonus = 1;
             int currentHP = int.Parse(txtCurrentHP.Text);
             int maxHP = int.Parse(txtMaxHP.Text);
-            Pokemon p = Utils.PokemonList[cboPokemon.SelectedIndex];
+            Pokemon p = PokemonTables.pokemonXYTable[cboPokemon.SelectedIndex + 1];
 
             // Get specific informaton for capture calculation
             int pokedex = 0;
@@ -309,7 +309,7 @@ namespace PokemonEncCalc
                     break;
 
                 case Ball.FastBall:
-                    if (p.Spe_Old >= 100)
+                    if (p.Spe >= 100)
                         catchRate *= 4;
                     break;
 

@@ -82,7 +82,7 @@ namespace PokemonEncCalc
                 {
                     species = (short)(BitConverter.ToInt16(dexnav, 4 * i) & 0x3FF);
                     formid = (byte)(dexnav[4 * i + 1] >> 2);
-                    p = Utils.PokemonList[species - 1];
+                    p = PokemonTables.pokemonORASTable[species];
                     if (formid > 0)
                         if (p.FormCount() > formid)
                             if (p.Forms[formid] != null)
@@ -119,7 +119,7 @@ namespace PokemonEncCalc
                 {
                     species = (short)(BitConverter.ToInt16(hordes, 4 * i) & 0x3FF);
                     formid = (byte)(hordes[4 * i + 1] >> 2);
-                    p = Utils.PokemonList[species - 1];
+                    p = PokemonTables.pokemonORASTable[species];
                     if (formid > 0)
                         if (p.FormCount() > formid)
                             if (p.Forms[formid] != null)
@@ -137,7 +137,7 @@ namespace PokemonEncCalc
                 {
                     species = (short)(BitConverter.ToInt16(hordes, 4 * i + 20) & 0x3FF);
                     formid = (byte)(hordes[4 * i + 21] >> 2);
-                    p = Utils.PokemonList[species - 1];
+                    p = PokemonTables.pokemonORASTable[species];
                     if (formid > 0)
                         if (p.FormCount() > formid)
                             if (p.Forms[formid] != null)
@@ -155,7 +155,7 @@ namespace PokemonEncCalc
                 {
                     species = (short)(BitConverter.ToInt16(hordes, 4 * i + 40) & 0x3FF);
                     formid = (byte)(hordes[4 * i + 41] >> 2);
-                    p = Utils.PokemonList[species - 1];
+                    p = PokemonTables.pokemonORASTable[species];
                     if (formid > 0)
                         if (p.FormCount() > formid)
                             if (p.Forms[formid] != null)
@@ -251,7 +251,7 @@ namespace PokemonEncCalc
             {
                 species = (short)(BitConverter.ToInt16(data, 4 * i) & 0x3FF);
                 formid = (byte)(data[4 * i + 1] >> 2);
-                p = Utils.PokemonList[species - 1];
+                p = PokemonTables.pokemonORASTable[species];
                 if (formid > 0)
                     if (p.FormCount() >= formid)
                         if (p.Forms[formid - 1] != null)
