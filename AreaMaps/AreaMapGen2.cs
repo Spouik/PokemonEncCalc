@@ -9,21 +9,21 @@ namespace PokemonEncCalc
     class AreaMapGen2 : AreaMap
     {
 
-        EncounterSlot[] WalkDaySlots;
-        EncounterSlot[] WalkNightSlots;
-        EncounterSlot[] OldRodSlots;
-        EncounterSlot[] GoodRodSlots;
-        EncounterSlot[] GoodRodNightSlots;
-        EncounterSlot[] SuperRodNightSlots;
-        EncounterSlot[] RockSmashSlots;
-        EncounterSlot[] OutbreakMorningSlots;
-        EncounterSlot[] OutbreakDaySlots;
-        EncounterSlot[] OutbreakNightSlots;
-        EncounterSlot[] OutbreakSurfSlots;
-        EncounterSlot[] OutbreakOldRodSlots;
-        EncounterSlot[] OutbreakGoodRodSlots;
-        EncounterSlot[] OutbreakSuperRodSlots;
-        EncounterSlot[] BugCatchingSlots;
+        protected EncounterSlot[] WalkDaySlots;
+        protected EncounterSlot[] WalkNightSlots;
+        protected EncounterSlot[] OldRodSlots;
+        protected EncounterSlot[] GoodRodSlots;
+        protected EncounterSlot[] GoodRodNightSlots;
+        protected EncounterSlot[] SuperRodNightSlots;
+        protected EncounterSlot[] RockSmashSlots;
+        protected EncounterSlot[] OutbreakMorningSlots;
+        protected EncounterSlot[] OutbreakDaySlots;
+        protected EncounterSlot[] OutbreakNightSlots;
+        protected EncounterSlot[] OutbreakSurfSlots;
+        protected EncounterSlot[] OutbreakOldRodSlots;
+        protected EncounterSlot[] OutbreakGoodRodSlots;
+        protected EncounterSlot[] OutbreakSuperRodSlots;
+        protected EncounterSlot[] BugCatchingSlots;
 
 
         private static decimal[] percentGrass = new decimal[] { 30, 30, 20, 10, 5, 4, 1 };
@@ -276,8 +276,7 @@ namespace PokemonEncCalc
         protected override void createEncounterSlotArray(ref EncounterSlot[] slotArray, byte[] data, decimal[] percentArray)
         {
             Pokemon p;
-            short species;
-            byte formid;
+            short speciesID;
 
             int nbSlots = data.Length / 4;
 
@@ -287,14 +286,8 @@ namespace PokemonEncCalc
             slotArray = new EncounterSlot[nbSlots];
             for (int i = 0; i < nbSlots; i++)
             {
-                species = (short)(BitConverter.ToInt16(data, 4 * i + 2) & 0x3FF);
-                formid = (byte)(data[4 * i + 3] >> 2);
-                p = PokemonTables.pokemonGSTable[species];
-                if(version == Version.Crystal) p = PokemonTables.pokemonCrystalTable[species];
-                if (formid > 0)
-                    if (p.FormCount() >= formid)
-                        if (p.Forms[formid - 1] != null)
-                            p = p.Forms[formid - 1];
+                speciesID = BitConverter.ToInt16(data, 4 * i + 2);
+                p = PokemonTables.getPokemon(speciesID, version);
                 slotArray[i] = new EncounterSlot(p, data[4 * i], data[4 * i + 1], percentArray[i]);
             }
         }

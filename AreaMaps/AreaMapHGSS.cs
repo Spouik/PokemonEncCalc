@@ -5,20 +5,20 @@ namespace PokemonEncCalc
 {
     class AreaMapHGSS : AreaMap
     {
-        EncounterSlot[] OldRodSlots;
-        EncounterSlot[] GoodRodSlots;
-        EncounterSlot[] DaySlots;
-        EncounterSlot[] NightSlots;
-        EncounterSlot[] SwarmWalkSlots;
-        EncounterSlot[] SwarmSurfSlots;
-        EncounterSlot[] SwarmOldRodSlots;
-        EncounterSlot[] SwarmGoodRodSlots;
-        EncounterSlot[] SwarmSuperRodSlots;
-        EncounterSlot[] NightGoodRodSlots;
-        EncounterSlot[] NightSuperRodSlots;
-        EncounterSlot[] HoennRadioSlots;
-        EncounterSlot[] SinnohRadioSlots;
-        EncounterSlot[] RockSmashSlots;
+        protected EncounterSlot[] OldRodSlots;
+        protected EncounterSlot[] GoodRodSlots;
+        protected EncounterSlot[] DaySlots;
+        protected EncounterSlot[] NightSlots;
+        protected EncounterSlot[] SwarmWalkSlots;
+        protected EncounterSlot[] SwarmSurfSlots;
+        protected EncounterSlot[] SwarmOldRodSlots;
+        protected EncounterSlot[] SwarmGoodRodSlots;
+        protected EncounterSlot[] SwarmSuperRodSlots;
+        protected EncounterSlot[] NightGoodRodSlots;
+        protected EncounterSlot[] NightSuperRodSlots;
+        protected EncounterSlot[] HoennRadioSlots;
+        protected EncounterSlot[] SinnohRadioSlots;
+        protected EncounterSlot[] RockSmashSlots;
 
         private static decimal[] percentGrass = new decimal[] { 20, 20, 10, 10, 10, 10, 5, 5, 4, 4, 1, 1 };
         private static decimal[] percentSurf = new decimal[] { 60, 30, 5, 4, 1 };
@@ -310,8 +310,7 @@ namespace PokemonEncCalc
         protected override void createEncounterSlotArray(ref EncounterSlot[] slotArray, byte[] data, decimal[] percentArray)
         {
             Pokemon p;
-            short species;
-            byte formid;
+            short speciesID;
 
             int nbSlots = data.Length / 4;
             
@@ -319,13 +318,9 @@ namespace PokemonEncCalc
 
             for (int i = 0; i < nbSlots; i++)
             {
-                species = (short)(BitConverter.ToInt16(data, 4 * i + 2) & 0x3FF);
-                formid = (byte)(data[4 * i + 3] >> 2);
-                p = PokemonTables.pokemonHGSSTable[species];
-                if (formid > 0)
-                    if (p.FormCount() >= formid)
-                        if (p.Forms[formid - 1] != null)
-                            p = p.Forms[formid - 1];
+                speciesID = BitConverter.ToInt16(data, 4 * i + 2);
+                p = PokemonTables.getPokemon(speciesID, version);
+
                 slotArray[i] = new EncounterSlot(p, data[4*i], data[4*i + 1], percentArray[i]);
             }
 
@@ -335,8 +330,7 @@ namespace PokemonEncCalc
         {
 
             Pokemon p;
-            short species;
-            byte formid;
+            short speciesID;
 
             int nbSlots = affectedSlots.Length;
             decimal r = data.Length / (2*nbSlots);
@@ -347,13 +341,8 @@ namespace PokemonEncCalc
             slotArray = new EncounterSlot[nbSlots];
             for (int s = 0; s < nbSlots; s++)
             {
-                species = (short)(BitConverter.ToInt16(data, 2 * (int)(s * r)) & 0x3FF);
-                formid = (byte)(data[2 * (int)(s * r) + 1] >> 2);
-                p = PokemonTables.pokemonHGSSTable[species];
-                if (formid > 0)
-                    if (p.FormCount() >= formid)
-                        if (p.Forms[formid - 1] != null)
-                            p = p.Forms[formid - 1];
+                speciesID = BitConverter.ToInt16(data, 2 * (int)(s * r));
+                p = PokemonTables.getPokemon(speciesID, version);
                 slotArray[s] = new EncounterSlot(p, regularData[4 * affectedSlots[s]], regularData[4 * affectedSlots[s]+1], percentage[affectedSlots[s]]);
             }
         }

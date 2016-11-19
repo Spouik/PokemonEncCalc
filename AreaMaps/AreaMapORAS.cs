@@ -8,14 +8,14 @@ namespace PokemonEncCalc
 {
     class AreaMapORAS : AreaMap
     {
-        EncounterSlot[] TallGrassSlots;
-        EncounterSlot[] RockSmashSlots;
-        EncounterSlot[] OldRodSlots;
-        EncounterSlot[] GoodRodSlots;
-        EncounterSlot[] Horde1;
-        EncounterSlot[] Horde2;
-        EncounterSlot[] Horde3;
-        EncounterSlot[] DexNav;
+        protected EncounterSlot[] TallGrassSlots;
+        protected EncounterSlot[] RockSmashSlots;
+        protected EncounterSlot[] OldRodSlots;
+        protected EncounterSlot[] GoodRodSlots;
+        protected EncounterSlot[] Horde1;
+        protected EncounterSlot[] Horde2;
+        protected EncounterSlot[] Horde3;
+        protected EncounterSlot[] DexNav;
 
         private static decimal[] percentGrass = new decimal[] { 10, 10, 10, 10, 10, 10, 10, 10, 10, 5, 4, 1 };
         private static decimal[] percentSurf = new decimal[] { 50, 30, 15, 4, 1 };
@@ -238,8 +238,7 @@ namespace PokemonEncCalc
         protected override void createEncounterSlotArray(ref EncounterSlot[] slotArray, byte[] data, decimal[] percentArray)
         {
             Pokemon p;
-            short species;
-            byte formid;
+            short speciesID;
 
             int nbSlots = data.Length / 4;
 
@@ -249,13 +248,8 @@ namespace PokemonEncCalc
             slotArray = new EncounterSlot[nbSlots];
             for (int i = 0; i < nbSlots; i++)
             {
-                species = (short)(BitConverter.ToInt16(data, 4 * i) & 0x3FF);
-                formid = (byte)(data[4 * i + 1] >> 2);
-                p = PokemonTables.pokemonORASTable[species];
-                if (formid > 0)
-                    if (p.FormCount() >= formid)
-                        if (p.Forms[formid - 1] != null)
-                            p = p.Forms[formid - 1];
+                speciesID = BitConverter.ToInt16(data, 4 * i);
+                p = PokemonTables.getPokemon(speciesID, version);
                 slotArray[i] = new EncounterSlot(p, data[4 * i + 2], data[4 * i + 3], percentArray[i]);
             }
         }

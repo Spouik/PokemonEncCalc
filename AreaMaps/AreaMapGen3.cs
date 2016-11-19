@@ -5,9 +5,9 @@ namespace PokemonEncCalc
 {
     internal class AreaMapGen3 : AreaMap
     {
-        EncounterSlot[] OldRodSlots;
-        EncounterSlot[] GoodRodSlots;
-        EncounterSlot[] RockSmashSlots;
+        protected EncounterSlot[] OldRodSlots;
+        protected EncounterSlot[] GoodRodSlots;
+        protected EncounterSlot[] RockSmashSlots;
 
         private static decimal[] percentGrass = new decimal[] {20, 20, 10, 10, 10, 10, 5, 5, 4, 4, 1, 1 };
         private static decimal[] percentSurf = new decimal[] { 60, 30, 5, 4, 1 };
@@ -20,8 +20,7 @@ namespace PokemonEncCalc
         {
 
             Pokemon p;
-            short species;
-            byte formid;
+            short speciesID;
 
             int nbSlots = data.Length / 4;
 
@@ -31,15 +30,8 @@ namespace PokemonEncCalc
             slotArray = new EncounterSlot[nbSlots];
             for (int i = 0; i < nbSlots; i++)
             {
-                species = (short)(BitConverter.ToInt16(data, 4 * i + 2) & 0x3FF);
-                formid = (byte)(data[4 * i + 3] >> 2);
-                if (version == Version.Emerald) p = PokemonTables.pokemonEmeraldTable[species];
-                else if (version == Version.FireRed || version == Version.LeafGreen) p = PokemonTables.pokemonFRLGTable[species];
-                else p = PokemonTables.pokemonRSTable[species];
-                if (formid > 0)
-                    if (p.FormCount() >= formid)
-                        if (p.Forms[formid - 1] != null)
-                            p = p.Forms[formid - 1];
+                speciesID = BitConverter.ToInt16(data, 4 * i + 2);
+                p = PokemonTables.getPokemon(speciesID, version);
                 slotArray[i] = new EncounterSlot(p, data[4 * i], data[4 * i + 1], percentArray[i]);
             }
 

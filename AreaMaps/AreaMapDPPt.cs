@@ -5,19 +5,19 @@ namespace PokemonEncCalc
 {
     class AreaMapDPPt : AreaMap
     {
-        EncounterSlot[] OldRodSlots;
-        EncounterSlot[] GoodRodSlots;
-        EncounterSlot[] Day;
-        EncounterSlot[] Night;
-        EncounterSlot[] Swarm;
-        EncounterSlot[] PokeRadar;
+        protected EncounterSlot[] OldRodSlots;
+        protected EncounterSlot[] GoodRodSlots;
+        protected EncounterSlot[] Day;
+        protected EncounterSlot[] Night;
+        protected EncounterSlot[] Swarm;
+        protected EncounterSlot[] PokeRadar;
 
         // GBA-slot specific EncounterSlot
-        EncounterSlot[] Ruby;
-        EncounterSlot[] Sapphire;
-        EncounterSlot[] Emerald;
-        EncounterSlot[] FireRed;
-        EncounterSlot[] LeafGreen;
+        protected EncounterSlot[] Ruby;
+        protected EncounterSlot[] Sapphire;
+        protected EncounterSlot[] Emerald;
+        protected EncounterSlot[] FireRed;
+        protected EncounterSlot[] LeafGreen;
 
 
         private static decimal[] percentGrass = new decimal[] { 20, 20, 10, 10, 10, 10, 5, 5, 4, 4, 1, 1 };
@@ -249,8 +249,7 @@ namespace PokemonEncCalc
         protected override void createEncounterSlotArray(ref EncounterSlot[] slotArray, byte[] data, decimal[] percentArray)
         {
             Pokemon p;
-            short species;
-            byte formid;
+            short speciesID;
             byte minLv, maxLv;
 
             int nbSlots = data.Length / 8;
@@ -261,14 +260,9 @@ namespace PokemonEncCalc
             slotArray = new EncounterSlot[nbSlots];
             for (int i = 0; i < nbSlots; i++)
             {
-                species = (short)(BitConverter.ToInt16(data, 8 * i + 4) & 0x3FF);
-                formid = (byte)(data[8 * i + 5] >> 2);
-                if (version == Version.Platinum) p = PokemonTables.pokemonPtTable[species];
-                else p = PokemonTables.pokemonDPTable[species];
-                if (formid > 0)
-                    if (p.FormCount() >= formid)
-                        if (p.Forms[formid - 1] != null)
-                            p = p.Forms[formid - 1];
+                speciesID = BitConverter.ToInt16(data, 8 * i + 4);
+                p = PokemonTables.getPokemon(speciesID, version);
+
                 maxLv = data[8 * i];
                 minLv = data[8 * i + 1];
                 if (minLv == 0) minLv = maxLv;
@@ -280,8 +274,7 @@ namespace PokemonEncCalc
         {
 
             Pokemon p;
-            short species;
-            byte formid;
+            short speciesID;
             byte minLv, maxLv;
 
             int nbSlots = data.Length / 4;
@@ -295,14 +288,9 @@ namespace PokemonEncCalc
             slotArray = new EncounterSlot[nbSlots];
             for (int s = 0; s < nbSlots; s++)
             {
-                species = (short)(BitConverter.ToInt16(data, 4 * s) & 0x3FF);
-                formid = (byte)(data[4 * s + 1] >> 2);
-                if (version == Version.Platinum) p = PokemonTables.pokemonPtTable[species];
-                else p = PokemonTables.pokemonDPTable[species];
-                if (formid > 0)
-                    if (p.FormCount() >= formid)
-                        if (p.Forms[formid - 1] != null)
-                            p = p.Forms[formid - 1];
+                speciesID = BitConverter.ToInt16(data, 4 * s);
+                 p = PokemonTables.getPokemon(speciesID, version);
+
                 maxLv = regularData[8 * affectedSlots[s]];
                 minLv = regularData[8 * affectedSlots[s] + 1];
                 if (minLv == 0) minLv = maxLv;

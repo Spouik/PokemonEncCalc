@@ -73,6 +73,7 @@
     <Compile Include="AreaMaps\AreaMapGen5.cs" />
     <Compile Include="AreaMaps\AreaMapHGSS.cs" />
     <Compile Include="AreaMaps\AreaMapORAS.cs" />
+    <Compile Include="AreaMaps\AreaMapSuMo.cs" />
     <Compile Include="AreaMaps\AreaMapXY.cs" />
     <Compile Include="Data\Move.cs" />
     <Compile Include="PokemonInfo\PokemonB2W2.cs" />

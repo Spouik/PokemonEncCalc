@@ -27,6 +27,10 @@ namespace PokemonEncCalc
                                                         720,323,428,373,15 // ORAS
                                                     };
 
+        internal static readonly short[] FormTableSuMo = {
+
+
+        };
 
 
         internal static PokemonGS[] pokemonGSTable { get; set; }
@@ -301,6 +305,50 @@ namespace PokemonEncCalc
             p.FormNameES = Properties.Resources.formsES.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[formID];
             p.FormNameJP = Properties.Resources.formsJP.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[formID];
             p.FormNameKR = Properties.Resources.formsKR.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[formID];
+        }
+
+        internal static Pokemon getPokemon(short speciesID, Version v)
+        {
+            short natID = (short)(speciesID & 0x3ff);
+            switch (v)
+            {
+                case Version.Gold:
+                case Version.Silver:
+                    return pokemonGSTable[natID].getSpeciesForm(speciesID);
+                case Version.Crystal:
+                    return pokemonCrystalTable[natID].getSpeciesForm(speciesID);
+                case Version.Ruby:
+                case Version.Sapphire:
+                    return pokemonRSTable[natID].getSpeciesForm(speciesID);
+                case Version.FireRed:
+                case Version.LeafGreen:
+                    return pokemonFRLGTable[natID].getSpeciesForm(speciesID);
+                case Version.Emerald:
+                    return pokemonEmeraldTable[natID].getSpeciesForm(speciesID);
+                case Version.Diamond:
+                case Version.Pearl:
+                    return pokemonDPTable[natID].getSpeciesForm(speciesID);
+                case Version.Platinum:
+                    return pokemonPtTable[natID].getSpeciesForm(speciesID);
+                case Version.HeartGold:
+                case Version.SoulSilver:
+                    return pokemonHGSSTable[natID].getSpeciesForm(speciesID);
+                case Version.Black:
+                case Version.White:
+                    return pokemonBWTable[natID].getSpeciesForm(speciesID);
+                case Version.Black2:
+                case Version.White2:
+                    return pokemonB2W2Table[natID].getSpeciesForm(speciesID);
+                case Version.X:
+                case Version.Y:
+                    return pokemonXYTable[natID].getSpeciesForm(speciesID);
+                case Version.OmegaRuby:
+                case Version.AlphaSapphire:
+                    return pokemonORASTable[natID].getSpeciesForm(speciesID);
+
+                default: return null;
+            }
+            
         }
 
 

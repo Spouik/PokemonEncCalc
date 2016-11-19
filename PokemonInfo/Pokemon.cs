@@ -86,6 +86,17 @@ namespace PokemonEncCalc
             }
         }
 
+        internal virtual Pokemon getSpeciesForm(short speciesID)
+        {
+            short formID = (short)((speciesID >> 10) & 0x3f);
+            if (this is PokemonBW || this is PokemonB2W2) formID = (short)((speciesID >> 11) & 0x1f);
+
+            if (formID == 0) return this;
+            if (formID > FormCount()) return this;
+            if (Forms[formID - 1] == null) return this;
+            return Forms[formID - 1];
+        }
+
 
         ///*
         // * Constructor going to resource to instanciate object
