@@ -28,8 +28,33 @@ namespace PokemonEncCalc
                                                     };
 
         internal static readonly short[] FormTableSuMo = {
+            386, 386, 386, 413, 413, 492, 487, 479, 479, 479, 479, 479, 351, 351, 351, 421, 422, 423, 550, 555, 648, 646, 646, 647, 641, 642, 645,
+            94, // M-Gengar
+            678, 676, 676, 676, 676, 676, 676, 676, 676, 676,
+            282, 181, 3, 6, 6, 150, 150, 257, 308, 229, 306, 354, 248, 212, 127, 142, 448, 460, // XY Megas
+            681, // Aegislash
+            9, 115, 130, 359, 65, 214, 303, 310, 445, 380, 381, // Other XY Megas
+            710, 710, 710, 711, 711, 711, 670, 670, 670, 670, 670, // Pumpkaboo/Gourgeist/Floette
+            260, 254, 302, 334, 475, 531, 319, 80, 208, 18, 362, 719, 376, 382, 383, 384, 720, 323, 428, 373, 15, // ORAS Megas / Primals / Hoopa
 
+            // Sun/Moon new forms
+            746, 741, 741, 741, 745,
+            19, 20, 20, 26, 27, 28, 37, 38, 52, 53, 74, 75, 76, 88, 89, 103, 105, // Alolan formes
+            658, 658, 718, 718, 718, 718, // Ash-Greninja / Zygarde
+            774, 774, 774, 774, 774, 774, 774, 774, 774, 774, 774, 774, 774, // Minior
+            50, 51, // Alolan Diglett/Dugtrio
+            778, 778, 778, // Mimikyu
+            801, // Magearna
+            25, 25, 25, 25, 25, 25, // Cosplay Pikachu ? Or Cap ?
+            735, 738, 754, 758, 784 // Totem Pokémon
+        };
 
+        // Pokémon forms with no data, but have appearance change
+        // These will take the default form data
+        internal static readonly short[] OtherFormTableSuMo =
+        {
+            201, 201, 201, 201, 201, 201, 201, 201, 201, 201, 201, 201, 201, 201, 201, 201, 201, 201, 201, 201, 201, 201, 201, 201, 201, 201, 201,
+            412, 412, 585, 585, 585, 586, 586, 586, 669, 669, 669, 669, 671, 671, 671, 671
         };
 
 
@@ -45,6 +70,7 @@ namespace PokemonEncCalc
         internal static PokemonB2W2[] pokemonB2W2Table { get; set; }
         internal static PokemonXY[] pokemonXYTable { get; set; }
         internal static PokemonORAS[] pokemonORASTable { get; set; }
+        internal static PokemonSuMo[] pokemonSuMoTable { get; set; }
 
         internal static void PopulatePokemonTables()
         {
@@ -61,6 +87,7 @@ namespace PokemonEncCalc
             pokemonB2W2Table = new PokemonB2W2[PokemonB2W2.RELEASED_POKEMON + 1];
             pokemonXYTable = new PokemonXY[PokemonXY.RELEASED_POKEMON + 1];
             pokemonORASTable = new PokemonORAS[PokemonORAS.RELEASED_POKEMON + 1];
+            pokemonSuMoTable = new PokemonSuMo[PokemonSuMo.RELEASED_POKEMON + 1];
 
             // Populate tables 
             // Gen 2-3 tables now use gen 4 Pokémon data. 
@@ -137,6 +164,12 @@ namespace PokemonEncCalc
                 setNames(pokemonORASTable[i]);
             }
 
+            for (short i = 0; i <= PokemonSuMo.RELEASED_POKEMON; i++)
+            {
+                pokemonSuMoTable[i] = new PokemonSuMo(i, Properties.Resources.PokemonInfo7.Skip(PokemonSuMo.SIZE * i).Take(PokemonSuMo.SIZE).ToArray());
+                setNames(pokemonSuMoTable[i]);
+            }
+
             // Add forms
             // Gen 2-3 tables now use gen 4 Pokémon data. 
             // TODO: Change data to match gen when they'll be added.           
@@ -147,7 +180,7 @@ namespace PokemonEncCalc
                 pokemonGSTable[FormTable[f]].addForm(p);
 
                 p.Form = (byte)pokemonGSTable[FormTable[f]].Forms.Count;
-                setFormNames(p, (short)(TOTAL_POKEMON + f));
+                setFormNames(p, (short)(PokemonORAS.RELEASED_POKEMON + f));
             }
 
             for (short f = 0; f < PokemonCrystal.RELEASED_FORMS; f++)
@@ -157,7 +190,7 @@ namespace PokemonEncCalc
                 pokemonCrystalTable[FormTable[f]].addForm(p);
 
                 p.Form = (byte)pokemonCrystalTable[FormTable[f]].Forms.Count;
-                setFormNames(p, (short)(TOTAL_POKEMON + f));
+                setFormNames(p, (short)(PokemonORAS.RELEASED_POKEMON + f));
             }
 
             for (short f = 0; f < PokemonRS.RELEASED_FORMS; f++)
@@ -167,7 +200,7 @@ namespace PokemonEncCalc
                 pokemonRSTable[FormTable[f]].addForm(p);
 
                 p.Form = (byte)pokemonRSTable[FormTable[f]].Forms.Count;
-                setFormNames(p, (short)(TOTAL_POKEMON + f));
+                setFormNames(p, (short)(PokemonORAS.RELEASED_POKEMON + f));
             }
 
             for (short f = 0; f < PokemonEmerald.RELEASED_FORMS; f++)
@@ -177,7 +210,7 @@ namespace PokemonEncCalc
                 pokemonEmeraldTable[FormTable[f]].addForm(p);
 
                 p.Form = (byte)pokemonEmeraldTable[FormTable[f]].Forms.Count;
-                setFormNames(p, (short)(TOTAL_POKEMON + f));
+                setFormNames(p, (short)(PokemonORAS.RELEASED_POKEMON + f));
             }
 
             for (short f = 0; f < PokemonFRLG.RELEASED_FORMS; f++)
@@ -187,7 +220,7 @@ namespace PokemonEncCalc
                 pokemonFRLGTable[FormTable[f]].addForm(p);
 
                 p.Form = (byte)pokemonFRLGTable[FormTable[f]].Forms.Count;
-                setFormNames(p, (short)(TOTAL_POKEMON + f));
+                setFormNames(p, (short)(PokemonORAS.RELEASED_POKEMON + f));
             }
 
             for (short f = 0; f < PokemonDP.RELEASED_FORMS; f++)
@@ -197,7 +230,7 @@ namespace PokemonEncCalc
                 pokemonDPTable[FormTable[f]].addForm(p);
 
                 p.Form = (byte)pokemonDPTable[FormTable[f]].Forms.Count;
-                setFormNames(p, (short)(TOTAL_POKEMON + f));
+                setFormNames(p, (short)(PokemonORAS.RELEASED_POKEMON + f));
             }
 
             for (short f = 0; f < PokemonPt.RELEASED_FORMS; f++)
@@ -207,7 +240,7 @@ namespace PokemonEncCalc
                 pokemonPtTable[FormTable[f]].addForm(p);
 
                 p.Form = (byte)pokemonPtTable[FormTable[f]].Forms.Count;
-                setFormNames(p, (short)(TOTAL_POKEMON + f));
+                setFormNames(p, (short)(PokemonORAS.RELEASED_POKEMON + f));
             }
 
             for (short f = 0; f < PokemonHGSS.RELEASED_FORMS; f++)
@@ -217,7 +250,7 @@ namespace PokemonEncCalc
                 pokemonHGSSTable[FormTable[f]].addForm(p);
 
                 p.Form = (byte)pokemonHGSSTable[FormTable[f]].Forms.Count;
-                setFormNames(p, (short)(TOTAL_POKEMON + f));
+                setFormNames(p, (short)(PokemonORAS.RELEASED_POKEMON + f));
             }
 
             for (short f = 0; f < PokemonBW.RELEASED_FORMS; f++)
@@ -227,7 +260,7 @@ namespace PokemonEncCalc
                 pokemonBWTable[FormTable[f]].addForm(p);
 
                 p.Form = (byte)pokemonBWTable[FormTable[f]].Forms.Count;
-                setFormNames(p, (short)(TOTAL_POKEMON + f));
+                setFormNames(p, (short)(PokemonORAS.RELEASED_POKEMON + f));
             }
 
             for (short f = 0; f < PokemonB2W2.RELEASED_FORMS; f++)
@@ -237,7 +270,7 @@ namespace PokemonEncCalc
                 pokemonB2W2Table[FormTable[f]].addForm(p);
 
                 p.Form = (byte)pokemonB2W2Table[FormTable[f]].Forms.Count;
-                setFormNames(p, (short)(TOTAL_POKEMON + f));
+                setFormNames(p, (short)(PokemonORAS.RELEASED_POKEMON + f));
             }
 
             for (short f = 0; f < PokemonXY.RELEASED_FORMS; f++)
@@ -247,7 +280,7 @@ namespace PokemonEncCalc
                 pokemonXYTable[FormTable[f]].addForm(p);
 
                 p.Form = (byte)pokemonXYTable[FormTable[f]].Forms.Count;
-                setFormNames(p, (short)(TOTAL_POKEMON + f));
+                setFormNames(p, (short)(PokemonORAS.RELEASED_POKEMON + f));
             }
 
             for (short f = 0; f < PokemonORAS.RELEASED_FORMS; f++)
@@ -257,7 +290,28 @@ namespace PokemonEncCalc
                 pokemonORASTable[FormTable[f]].addForm(p);
 
                 p.Form = (byte)pokemonORASTable[FormTable[f]].Forms.Count;
-                setFormNames(p, (short)(TOTAL_POKEMON + f));
+                setFormNames(p, (short)(PokemonORAS.RELEASED_POKEMON + f));
+            }
+
+            for (short f = 0; f < PokemonSuMo.RELEASED_FORMS; f++)
+            {
+                PokemonSuMo p = new PokemonSuMo(FormTableSuMo[f], Properties.Resources.PokemonInfo7.Skip(PokemonSuMo.SIZE * (PokemonSuMo.RELEASED_POKEMON + f + 1))
+                    .Take(PokemonSuMo.SIZE).ToArray());
+                pokemonSuMoTable[FormTableSuMo[f]].addForm(p);
+
+                p.Form = (byte)pokemonSuMoTable[FormTableSuMo[f]].Forms.Count;
+                setFormNames(p, (short)(PokemonSuMo.RELEASED_POKEMON + f));
+            }
+
+            // Other Sun/moon forms
+            for (short f = 0; f < OtherFormTableSuMo.Length; f++)
+            {
+                PokemonSuMo p = new PokemonSuMo(OtherFormTableSuMo[f], Properties.Resources.PokemonInfo7.Skip(PokemonSuMo.SIZE * (OtherFormTableSuMo[f]))
+                    .Take(PokemonSuMo.SIZE).ToArray());
+                pokemonSuMoTable[OtherFormTableSuMo[f]].addForm(p);
+
+                p.Form = (byte)pokemonSuMoTable[OtherFormTableSuMo[f]].Forms.Count;
+                setFormNames(p, (short)(PokemonSuMo.RELEASED_POKEMON + PokemonSuMo.RELEASED_FORMS + f));
             }
 
         }
@@ -275,18 +329,33 @@ namespace PokemonEncCalc
             p.NameKR = Properties.Resources.pokemonKR.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[p.NatID - 1];
 
             // Pokémon Form name
-            p.FormNameEN = Properties.Resources.formsEN.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[p.NatID - 1];
-            p.FormNameFR = Properties.Resources.formsFR.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[p.NatID - 1];
-            p.FormNameDE = Properties.Resources.formsDE.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[p.NatID - 1];
-            p.FormNameIT = Properties.Resources.formsIT.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[p.NatID - 1];
-            p.FormNameES = Properties.Resources.formsES.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[p.NatID - 1];
-            p.FormNameJP = Properties.Resources.formsJP.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[p.NatID - 1];
-            p.FormNameKR = Properties.Resources.formsKR.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[p.NatID - 1];
+
+            if(p is PokemonSuMo)
+            {
+                p.FormNameEN = Properties.Resources.formsSuMoEN.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[p.NatID - 1];
+                p.FormNameFR = Properties.Resources.formsSuMoFR.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[p.NatID - 1];
+                p.FormNameDE = Properties.Resources.formsSuMoDE.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[p.NatID - 1];
+                p.FormNameIT = Properties.Resources.formsSuMoIT.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[p.NatID - 1];
+                p.FormNameES = Properties.Resources.formsSuMoES.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[p.NatID - 1];
+                p.FormNameJP = Properties.Resources.formsSuMoJP.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[p.NatID - 1];
+                p.FormNameKR = Properties.Resources.formsSuMoKR.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[p.NatID - 1];
+            }
+            else
+            {
+                p.FormNameEN = Properties.Resources.formsEN.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[p.NatID - 1];
+                p.FormNameFR = Properties.Resources.formsFR.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[p.NatID - 1];
+                p.FormNameDE = Properties.Resources.formsDE.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[p.NatID - 1];
+                p.FormNameIT = Properties.Resources.formsIT.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[p.NatID - 1];
+                p.FormNameES = Properties.Resources.formsES.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[p.NatID - 1];
+                p.FormNameJP = Properties.Resources.formsJP.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[p.NatID - 1];
+                p.FormNameKR = Properties.Resources.formsKR.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[p.NatID - 1];
+            }
         }
 
         private static void setFormNames(Pokemon p, short formID)
         {
             if (p.NatID == 0) return;
+
 
             // Pokémon name
             p.NameEN = Properties.Resources.pokemonEN.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[p.NatID - 1];
@@ -298,13 +367,32 @@ namespace PokemonEncCalc
             p.NameKR = Properties.Resources.pokemonKR.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[p.NatID - 1];
 
             // Pokémon Form name
-            p.FormNameEN = Properties.Resources.formsEN.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[formID];
-            p.FormNameFR = Properties.Resources.formsFR.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[formID];
-            p.FormNameDE = Properties.Resources.formsDE.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[formID];
-            p.FormNameIT = Properties.Resources.formsIT.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[formID];
-            p.FormNameES = Properties.Resources.formsES.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[formID];
-            p.FormNameJP = Properties.Resources.formsJP.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[formID];
-            p.FormNameKR = Properties.Resources.formsKR.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[formID];
+
+            // Sun/Moon Form names
+            if (p is PokemonSuMo)
+            {
+
+                p.FormNameEN = Properties.Resources.formsSuMoEN.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[formID];
+                p.FormNameFR = Properties.Resources.formsSuMoFR.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[formID];
+                p.FormNameDE = Properties.Resources.formsSuMoDE.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[formID];
+                p.FormNameIT = Properties.Resources.formsSuMoIT.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[formID];
+                p.FormNameES = Properties.Resources.formsSuMoES.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[formID];
+                p.FormNameJP = Properties.Resources.formsSuMoJP.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[formID];
+                p.FormNameKR = Properties.Resources.formsSuMoKR.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[formID];
+            }
+            else
+            {
+
+                p.FormNameEN = Properties.Resources.formsEN.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[formID];
+                p.FormNameFR = Properties.Resources.formsFR.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[formID];
+                p.FormNameDE = Properties.Resources.formsDE.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[formID];
+                p.FormNameIT = Properties.Resources.formsIT.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[formID];
+                p.FormNameES = Properties.Resources.formsES.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[formID];
+                p.FormNameJP = Properties.Resources.formsJP.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[formID];
+                p.FormNameKR = Properties.Resources.formsKR.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[formID];
+            }
+
+            
         }
 
         internal static Pokemon getPokemon(short speciesID, Version v)

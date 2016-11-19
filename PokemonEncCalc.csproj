@@ -143,6 +143,7 @@
     <Compile Include="PokemonInfo\PokemonPt.cs" />
     <Compile Include="PokemonInfo\PokemonFRLG.cs" />
     <Compile Include="PokemonInfo\PokemonRS.cs" />
+    <Compile Include="PokemonInfo\PokemonSuMo.cs" />
     <Compile Include="PokemonInfo\PokemonTables.cs" />
     <Compile Include="PokemonInfo\PokemonXY.cs" />
     <Compile Include="Program.cs" />
@@ -220,6 +221,7 @@
     <None Include="Resources\data\PokemonInfo4.dat" />
     <None Include="Resources\data\PokemonInfo5.dat" />
     <None Include="Resources\data\PokemonInfo6.dat" />
+    <None Include="Resources\data\PokemonInfo7.dat" />
     <None Include="Resources\data\RubySlots.dat" />
     <None Include="Resources\data\SapphireSlots.dat" />
     <None Include="Resources\data\SilverSlots.dat" />
@@ -314,6 +316,13 @@
     <None Include="Resources\strings\en\interface.txt" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\strings\kr\formsSuMo.txt" />
+    <None Include="Resources\strings\jp\formsSuMo.txt" />
+    <None Include="Resources\strings\it\formsSuMo.txt" />
+    <None Include="Resources\strings\es\formsSuMo.txt" />
+    <None Include="Resources\strings\de\formsSuMo.txt" />
+    <None Include="Resources\strings\fr\formsSuMo.txt" />
+    <None Include="Resources\strings\en\formsSuMo.txt" />
     <None Include="Resources\strings\fr\Maps_GS.txt" />
     <None Include="Resources\strings\fr\Maps_C.txt" />
     <None Include="Resources\strings\en\Maps_GS.txt" />

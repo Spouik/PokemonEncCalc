@@ -10087,4 +10087,28 @@
   <data name="PokemonInfo6" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\data\PokemonInfo6.dat;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="formsSuMoDE" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\strings\de\formsSuMo.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
+  <data name="formsSuMoEN" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\strings\en\formsSuMo.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
+  <data name="formsSuMoES" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\strings\es\formsSuMo.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
+  <data name="formsSuMoFR" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\strings\fr\formsSuMo.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
+  <data name="formsSuMoIT" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\strings\it\formsSuMo.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
+  <data name="formsSuMoJP" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\strings\jp\formsSuMo.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
+  <data name="formsSuMoKR" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\strings\kr\formsSuMo.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
+  <data name="PokemonInfo7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\PokemonInfo7.dat;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

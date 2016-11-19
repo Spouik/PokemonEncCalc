@@ -23,7 +23,7 @@ namespace PokemonEncCalc
             for(int i = 0; i < nbTables; i++)
             {
                 Slots[i] = new EncounterSlot[10];
-                for(int j = 0; j < 10; j++) Slots[i][j] = new EncounterSlot()
+                //for(int j = 0; j < 10; j++) Slots[i][j] = new EncounterSlot()
 
             }
         }
