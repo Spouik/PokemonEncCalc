@@ -248,7 +248,7 @@ namespace PokemonEncCalc
             // Change Slot
             if(currentSlots != null)
                 if(slot < currentSlots.Length)
-                    currentSlots[slot] = new EncounterSlot(Utils.PokemonList[((ComboBox)sender).SelectedIndex],
+                    currentSlots[slot] = new EncounterSlot(PokemonTables.changePokemon(currentSlots[slot].Species, (short)((ComboBox)sender).SelectedIndex),
                                                     (byte)((NumericUpDown)gboSlots.Controls.Find("nudMinLv" + slot, true)[0]).Value,
                                                     (byte)((NumericUpDown)gboSlots.Controls.Find("nudMaxLv" + slot, true)[0]).Value,
                                                     Decimal.Parse(((Label)gboSlots.Controls.Find("lblPercent" + slot, true)[0]).Text.Split(new[] { ' ' })[0]));
@@ -277,38 +277,45 @@ namespace PokemonEncCalc
             {
                 case Version.Gold:
                 case Version.Silver:
+                    repopulateComboboxes(PokemonGS.RELEASED_POKEMON);
                     cboMapsGS.Visible = true;
                     pnlOptionsGen2.Visible = true;
                     changeEncounterOptionsGoldSilver();
                     break;
                 case Version.Crystal:
+                    repopulateComboboxes(PokemonCrystal.RELEASED_POKEMON);
                     cboMapsCrystal.Visible = true;
                     pnlOptionsGen2.Visible = true;
                     changeEncounterOptionsCrystal();
                     break;
                 case Version.Ruby:
                 case Version.Sapphire:
+                    repopulateComboboxes(PokemonRS.RELEASED_POKEMON);
                     cboMapsRubySapp.Visible = true;
                     changeEncounterOptionsRubySapp();
                     break;
                 case Version.Emerald:
+                    repopulateComboboxes(PokemonEmerald.RELEASED_POKEMON);
                     cboMapsEmer.Visible = true;
                     pnlAbility.Visible = true;
                     changeEncounterOptionsEmerald();
                     break;
                 case Version.FireRed:
                 case Version.LeafGreen:
+                    repopulateComboboxes(PokemonFRLG.RELEASED_POKEMON);
                     cboMapsFireLeaf.Visible = true;
                     changeEncounterOptionsFireLeaf();
                     break;
                 case Version.Diamond:
                 case Version.Pearl:
+                    repopulateComboboxes(PokemonDP.RELEASED_POKEMON);
                     cboMapsDP.Visible = true;
                     pnlAbility.Visible = true;
                     pnlDPPtOptions.Visible = true;
                     changeEncounterOptionsDP();
                     break;
                 case Version.Platinum:
+                    repopulateComboboxes(PokemonPt.RELEASED_POKEMON);
                     cboMapsPlat.Visible = true;
                     pnlAbility.Visible = true;
                     pnlDPPtOptions.Visible = true;
@@ -316,6 +323,7 @@ namespace PokemonEncCalc
                     break;
                 case Version.HeartGold:
                 case Version.SoulSilver:
+                    repopulateComboboxes(PokemonHGSS.RELEASED_POKEMON);
                     cboMapsHGSS.Visible = true;
                     pnlAbility.Visible = true;
                     pnlHGSSOptions.Visible = true;
@@ -323,6 +331,7 @@ namespace PokemonEncCalc
                     break;
                 case Version.Black:
                 case Version.White:
+                    repopulateComboboxes(PokemonBW.RELEASED_POKEMON);
                     cboMapsBW.Visible = true;
                     pnlAbility.Visible = true;
                     pnlGen5Options.Visible = true;
@@ -330,6 +339,7 @@ namespace PokemonEncCalc
                     break;
                 case Version.Black2:
                 case Version.White2:
+                    repopulateComboboxes(PokemonB2W2.RELEASED_POKEMON);
                     cboMapsB2W2.Visible = true;
                     pnlAbility.Visible = true;
                     pnlGen5Options.Visible = true;
@@ -338,22 +348,38 @@ namespace PokemonEncCalc
                     break;
                 case Version.X:
                 case Version.Y:
+                    repopulateComboboxes(PokemonXY.RELEASED_POKEMON);
                     cboMapsXY.Visible = true;
                     pnlAbility.Visible = true;
                     changeEncounterOptionsXY();
                     break;
                 case Version.OmegaRuby:
+                    repopulateComboboxes(PokemonORAS.RELEASED_POKEMON);
                     cboMapsOR.Visible = true;
                     pnlAbility.Visible = true;
                     changeEncounterOptionsOR();
                     break;
                 case Version.AlphaSapphire:
+                    repopulateComboboxes(PokemonORAS.RELEASED_POKEMON);
                     cboMapsAS.Visible = true;
                     pnlAbility.Visible = true;
                     changeEncounterOptionsAS();
                     break;
                 default:
                     break;
+            }
+        }
+
+        private void repopulateComboboxes(int n)
+        {
+            foreach (Control o in gboSlots.Controls)
+            {
+                if (!(o is ComboBox)) continue;
+
+                ComboBox c = (ComboBox)o;
+            
+                c.Items.Clear();
+                c.Items.AddRange(Utils.NamesCurrentLang.Take(n).ToArray());
             }
         }
 

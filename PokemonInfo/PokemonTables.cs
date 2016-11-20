@@ -439,6 +439,32 @@ namespace PokemonEncCalc
             
         }
 
+        // Get pokemon species and keep the format of the previous species.
+        internal static Pokemon changePokemon(Pokemon current, short newID)
+        {
+            if (current is PokemonGS) return getPokemon(newID, Version.Gold);
+            if (current is PokemonCrystal) return getPokemon(newID, Version.Crystal);
+
+            if (current is PokemonRS) return getPokemon(newID, Version.Ruby);
+            if (current is PokemonEmerald) return getPokemon(newID, Version.Emerald);
+            if (current is PokemonFRLG) return getPokemon(newID, Version.FireRed);
+
+            if (current is PokemonDP) return getPokemon(newID, Version.Diamond);
+            if (current is PokemonPt) return getPokemon(newID, Version.Platinum);
+            if (current is PokemonHGSS) return getPokemon(newID, Version.HeartGold);
+
+            if (current is PokemonBW) return getPokemon(newID, Version.Black);
+            if (current is PokemonB2W2) return getPokemon(newID, Version.Black2);
+
+            if (current is PokemonXY) return getPokemon(newID, Version.X);
+            if (current is PokemonORAS) return getPokemon(newID, Version.OmegaRuby);
+
+            if (current is PokemonSuMo) return getPokemon(newID, Version.Sun);
+
+            return null;
+        }
+
+
 
     }
 }

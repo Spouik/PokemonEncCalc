@@ -42,7 +42,7 @@ namespace PokemonEncCalc
             if (allowedFormChanges.Contains(data.Species.NatID))
             {
                 // Get form 0:
-                Pokemon form0 = Utils.PokemonList[data.Species.NatID - 1];
+                Pokemon form0 = PokemonTables.changePokemon(data.Species, data.Species.NatID);
 
                 cboFormList.Items.Add(form0.getFormName());
 
@@ -67,8 +67,8 @@ namespace PokemonEncCalc
         private void cboFormList_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            data.Species = (cboFormList.SelectedIndex == 0) ? Utils.PokemonList[data.Species.NatID - 1]
-                                                            : Utils.PokemonList[data.Species.NatID - 1].Forms[cboFormList.SelectedIndex - 1];
+            data.Species = (cboFormList.SelectedIndex == 0) ? PokemonTables.changePokemon(data.Species, data.Species.NatID)
+                                                            : PokemonTables.changePokemon(data.Species, data.Species.NatID).Forms[cboFormList.SelectedIndex - 1];
 
             // Change minisprite
             pctMinisprite.Image = (Image)Properties.Resources.ResourceManager.GetObject(

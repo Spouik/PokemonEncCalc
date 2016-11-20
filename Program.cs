@@ -29,7 +29,6 @@ namespace PokemonEncCalc
 
             // Load data
             PokemonTables.PopulatePokemonTables();
-            Utils.initializePokemonNames();
             Utils.loadEncounterSlotData();
             Utils.initializeMoves();
 

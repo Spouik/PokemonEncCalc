@@ -5,25 +5,26 @@ using System.Linq;
 namespace PokemonEncCalc
 {
     public static class Utils{
-        internal static List<Pokemon> PokemonList;
-        static List<string> NamesEN;
-        static List<string> NamesFR;
-        static List<string> NamesDE;
-        static List<string> NamesES;
-        static List<string> NamesIT;
-        static List<string> NamesJP;
-        static List<string> NamesKR;
-        static List<string> FormNamesEN;
-        static List<string> FormNamesFR;
-        static List<string> FormNamesDE;
-        static List<string> FormNamesES;
-        static List<string> FormNamesIT;
-        static List<string> FormNamesJP;
-        static List<string> FormNamesKR;
+        //internal static List<Pokemon> PokemonList;
+        //static List<string> NamesEN;
+        //static List<string> NamesFR;
+        //static List<string> NamesDE;
+        //static List<string> NamesES;
+        //static List<string> NamesIT;
+        //static List<string> NamesJP;
+        //static List<string> NamesKR;
+        //static List<string> FormNamesEN;
+        //static List<string> FormNamesFR;
+        //static List<string> FormNamesDE;
+        //static List<string> FormNamesES;
+        //static List<string> FormNamesIT;
+        //static List<string> FormNamesJP;
+        //static List<string> FormNamesKR;
 
         //Current language names
         internal static List<string> NamesCurrentLang;
         internal static List<string> FormNamesCurrentLang;
+        internal static List<string> FormNamesCurrentLangSuMo;
 
         // Current language map names
         internal static List<string> MapNamesGS;
@@ -39,8 +40,10 @@ namespace PokemonEncCalc
         internal static List<string> MapNamesXY;
         internal static List<string> MapNamesOR;
         internal static List<string> MapNamesAS;
+        internal static List<string> MapNamesSun;
+        internal static List<string> MapNamesMoon;
 
-        // List of all maps from Gen 2 to Gen 6
+        // List of all maps from Gen 2 to Gen 7
         internal static List<AreaMapGen2> MapsGold;
         internal static List<AreaMapGen2> MapsSilver;
         internal static List<AreaMapGen2> MapsCrystal;
@@ -62,6 +65,9 @@ namespace PokemonEncCalc
         internal static List<AreaMapXY> MapsY;
         internal static List<AreaMapORAS> MapsOmegaRuby;
         internal static List<AreaMapORAS> MapsAlphaSapphire;
+        internal static List<AreaMapSuMo> MapsSun;
+        internal static List<AreaMapSuMo> MapsMoon;
+
 
         // Map tables for gen4/gen5 games
         internal static int[] mapTablesDP = new int[] { 178, 176, 177, 53, 179, 180, 181, 182, 54, 55, 8, 9, 23, 24, 25, 26, 27, 28, 63, 69,
@@ -121,41 +127,6 @@ namespace PokemonEncCalc
         internal static List<string> moveNamesGen5;
         internal static List<string> moveNamesGen6;
 
-        internal static void initializePokemonNames()
-        {
-            NamesEN = new List<string>();
-            NamesFR = new List<string>();
-            NamesDE = new List<string>();
-            NamesES = new List<string>();
-            NamesIT = new List<string>();
-            NamesJP = new List<string>();
-            NamesKR = new List<string>();
-            FormNamesEN = new List<string>();
-            FormNamesFR = new List<string>();
-            FormNamesDE = new List<string>();
-            FormNamesES = new List<string>();
-            FormNamesIT = new List<string>();
-            FormNamesJP = new List<string>();
-            FormNamesKR = new List<string>();
-
-            NamesEN.AddRange(Properties.Resources.pokemonEN.Split(new [] {'\r', '\n'}, StringSplitOptions.RemoveEmptyEntries).Take(Program.RELEASED_POKEMON));
-            NamesFR.AddRange(Properties.Resources.pokemonFR.Split(new [] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries).Take(Program.RELEASED_POKEMON));
-            NamesDE.AddRange(Properties.Resources.pokemonDE.Split(new [] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries).Take(Program.RELEASED_POKEMON));
-            NamesES.AddRange(Properties.Resources.pokemonES.Split(new [] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries).Take(Program.RELEASED_POKEMON));
-            NamesIT.AddRange(Properties.Resources.pokemonIT.Split(new [] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries).Take(Program.RELEASED_POKEMON));
-            NamesJP.AddRange(Properties.Resources.pokemonJP.Split(new [] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries).Take(Program.RELEASED_POKEMON));
-            NamesKR.AddRange(Properties.Resources.pokemonKR.Split(new [] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries).Take(Program.RELEASED_POKEMON));
-
-            FormNamesEN.AddRange(Properties.Resources.formsEN.Split(new [] { '\r', '\n'}, StringSplitOptions.RemoveEmptyEntries).Take(Program.RELEASED_POKEMON + Program.RELEASED_ALT_FORMS));
-            FormNamesFR.AddRange(Properties.Resources.formsFR.Split(new[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries).Take(Program.RELEASED_POKEMON + Program.RELEASED_ALT_FORMS));
-            FormNamesDE.AddRange(Properties.Resources.formsDE.Split(new[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries).Take(Program.RELEASED_POKEMON + Program.RELEASED_ALT_FORMS));
-            FormNamesES.AddRange(Properties.Resources.formsES.Split(new[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries).Take(Program.RELEASED_POKEMON + Program.RELEASED_ALT_FORMS));
-            FormNamesIT.AddRange(Properties.Resources.formsIT.Split(new[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries).Take(Program.RELEASED_POKEMON + Program.RELEASED_ALT_FORMS));
-            FormNamesJP.AddRange(Properties.Resources.formsJP.Split(new[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries).Take(Program.RELEASED_POKEMON + Program.RELEASED_ALT_FORMS));
-            FormNamesKR.AddRange(Properties.Resources.formsKR.Split(new[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries).Take(Program.RELEASED_POKEMON + Program.RELEASED_ALT_FORMS));
-
-
-        }
 
         //internal static void initializePokemonList()
         //{
@@ -200,7 +171,7 @@ namespace PokemonEncCalc
         //        byte[] data = new byte[24];
         //        short natID = BitConverter.ToInt16(Properties.Resources.MegasData, (i) * 26);
         //        Array.Copy(Properties.Resources.MegasData, (i) * 26 + 2, data, 0, 24);
-                
+
         //        PokemonList[natID - 1].addForm(new Pokemon(natID,  data));
         //    }
 
@@ -227,36 +198,46 @@ namespace PokemonEncCalc
         internal static void changeLanguage(int langID)
         {
             string controlNames = "";
+            NamesCurrentLang = new List<string>();
+            FormNamesCurrentLang = new List<string>();
+            FormNamesCurrentLangSuMo = new List<string>();
             switch (langID) {
                 case 1:
-                    NamesCurrentLang = NamesEN;
-                    FormNamesCurrentLang = FormNamesEN;
+                    NamesCurrentLang.AddRange(Properties.Resources.pokemonEN.Split(new[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries));
+                    FormNamesCurrentLang.AddRange(Properties.Resources.formsEN.Split(new[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries));
+                    FormNamesCurrentLangSuMo.AddRange(Properties.Resources.formsSuMoEN.Split(new[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries));
                     controlNames = Properties.Resources.interfaceEN;
                     break;
                 case 2:
-                    NamesCurrentLang = NamesFR;
-                    FormNamesCurrentLang = FormNamesFR;
+                    NamesCurrentLang.AddRange(Properties.Resources.pokemonFR.Split(new[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries));
+                    FormNamesCurrentLang.AddRange(Properties.Resources.formsFR.Split(new[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries));
+                    FormNamesCurrentLangSuMo.AddRange(Properties.Resources.formsSuMoFR.Split(new[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries));
                     controlNames = Properties.Resources.interfaceFR;
                     break;
                 case 3:
-                    NamesCurrentLang = NamesDE;
-                    FormNamesCurrentLang = FormNamesDE;
+                    NamesCurrentLang.AddRange(Properties.Resources.pokemonDE.Split(new[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries));
+                    FormNamesCurrentLang.AddRange(Properties.Resources.formsDE.Split(new[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries));
+                    FormNamesCurrentLangSuMo.AddRange(Properties.Resources.formsSuMoDE.Split(new[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries));
                     break;
                 case 4:
-                    NamesCurrentLang = NamesES;
-                    FormNamesCurrentLang = FormNamesES;
+                    NamesCurrentLang.AddRange(Properties.Resources.pokemonES.Split(new[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries));
+                    FormNamesCurrentLang.AddRange(Properties.Resources.formsES.Split(new[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries));
+                    FormNamesCurrentLangSuMo.AddRange(Properties.Resources.formsSuMoES.Split(new[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries));
                     break;
                 case 5:
-                    NamesCurrentLang = NamesIT;
-                    FormNamesCurrentLang = FormNamesIT;
+                    NamesCurrentLang.AddRange(Properties.Resources.pokemonIT.Split(new[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries));
+                    FormNamesCurrentLang.AddRange(Properties.Resources.formsIT.Split(new[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries));
+                    FormNamesCurrentLangSuMo.AddRange(Properties.Resources.formsSuMoIT.Split(new[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries));
                     break;
                 case 6:
-                    NamesCurrentLang = NamesJP;
-                    FormNamesCurrentLang = FormNamesJP;
+                    NamesCurrentLang.AddRange(Properties.Resources.pokemonJP.Split(new[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries));
+                    FormNamesCurrentLang.AddRange(Properties.Resources.formsJP.Split(new[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries));
+                    FormNamesCurrentLangSuMo.AddRange(Properties.Resources.formsSuMoJP.Split(new[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries));
                     break;
                 case 7:
-                    NamesCurrentLang = NamesKR;
-                    FormNamesCurrentLang = FormNamesKR;
+                    NamesCurrentLang.AddRange(Properties.Resources.pokemonKR.Split(new[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries));
+                    FormNamesCurrentLang.AddRange(Properties.Resources.formsKR.Split(new[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries));
+                    FormNamesCurrentLangSuMo.AddRange(Properties.Resources.formsSuMoKR.Split(new[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries));
                     break;
                 default:
                     break;
