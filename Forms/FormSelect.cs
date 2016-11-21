@@ -37,6 +37,8 @@ namespace PokemonEncCalc
             { 678, new[] {1 } }, //Meowstic
             { 710, new[] {1, 2, 3} }, //Pumpkaboo
             { 711, new[] {1, 2, 3} }, //Gourgeist
+            { 741, new[] {1, 2, 3} }, //Oricorio
+            { 745, new[] {1 } }, //Lycanroc
 
             //Alolan formes
             {19, new[] {1 } },

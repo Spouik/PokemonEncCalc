@@ -53,7 +53,7 @@ namespace PokemonEncCalc
         /// <returns>Returns the regular slots of the specified table, or null if the specified table does not exist</returns>
         internal EncounterSlot[] getSlots(int TableNo, bool Night)
         {
-            if (TableNo * 2 >= NumberTables) return null;
+            if (TableNo >= NumberTables) return null;
             return Slots[TableNo * 2 + (Night ? 1 : 0)].Where(s => s.Percentage != 0).ToArray();
         }
 
