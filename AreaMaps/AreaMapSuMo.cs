@@ -29,8 +29,8 @@ namespace PokemonEncCalc
                 // Regular Slots
                 for (int j = 0; j < 10; j++)
                     Slots[i][j] = new EncounterSlot(
-                    PokemonTables.getPokemon(BitConverter.ToInt16(data, 384 * i + 2 * j + 16), version),
-                    data[336 * i + 4], data[384 * i + 5], data[384 * i + j + 6]);
+                    PokemonTables.getPokemon(BitConverter.ToInt16(data, 384 * i + 4 * j + 16 - 28 * (i %2)), version),
+                    data[384 * i + 4 - 28 * (i % 2)], data[384 * i + 5 - 28 * (i % 2)], data[384 * i + j + 6 - 28 * (i % 2)]);
 
                 // SOS Slots
                 SOS_Slots[i] = new EncounterSlot[7][];
@@ -39,8 +39,8 @@ namespace PokemonEncCalc
                     SOS_Slots[i][sos] = new EncounterSlot[10];
                     for(int j = 0; j < 10; j++)
                         SOS_Slots[i][sos][j] = new EncounterSlot(
-                        PokemonTables.getPokemon(BitConverter.ToInt16(data, 384 * i + 2 * j + sos * 20 + 36), version),
-                        data[384 * i + 4], data[384 * i + 5], data[384 * i + j + 6]);
+                        PokemonTables.getPokemon(BitConverter.ToInt16(data, 384 * i + 4 * j + sos * 20 + 56 - 28 * (i % 2)), version),
+                        data[384 * i + 4 - 28 * (i % 2)], data[384 * i + 5 - 28 * (i % 2)], data[384 * i + j + 6 - 28 * (i % 2)]);
                 }
             }
         }
@@ -54,7 +54,7 @@ namespace PokemonEncCalc
         internal EncounterSlot[] getSlots(int TableNo, bool Night)
         {
             if (TableNo * 2 >= NumberTables) return null;
-            return Slots[TableNo * 2 + (Night ? 1 : 0)];
+            return Slots[TableNo * 2 + (Night ? 1 : 0)].Where(s => s.Percentage != 0).ToArray();
         }
 
 

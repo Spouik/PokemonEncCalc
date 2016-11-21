@@ -266,7 +266,8 @@ namespace PokemonEncCalc
                 = cboMapsXY.Visible = cboMapsOR.Visible = cboMapsAS.Visible = pnlAbility.Visible = pnlDPPtOptions.Visible
                 = pnlHGSSOptions.Visible = pnlGen5Options.Visible = pnlLuckyPower.Visible
                 = lblHelpRoute120.Visible = lblHelpTurnback.Visible 
-                = cboMapsGS.Visible = cboMapsCrystal.Visible = pnlOptionsGen2.Visible = false;
+                = cboMapsGS.Visible = cboMapsCrystal.Visible = pnlOptionsGen2.Visible 
+                = cboMapsSuMo.Visible = pnl_SunMoonOptions.Visible = false;
 
 
 
@@ -365,6 +366,15 @@ namespace PokemonEncCalc
                     pnlAbility.Visible = true;
                     changeEncounterOptionsAS();
                     break;
+                case Version.Sun:
+                case Version.Moon:
+                    repopulateComboboxes(PokemonSuMo.RELEASED_POKEMON);
+                    cboMapsSuMo.Visible = true;
+                    pnlAbility.Visible = true;
+                    pnl_SunMoonOptions.Visible = true;
+                    changeEncounterOptionsSuMo();
+                    break;
+
                 default:
                     break;
             }
@@ -466,6 +476,8 @@ namespace PokemonEncCalc
             translateMaps(cboMapsOR, "Maps_OR_" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR" })[Properties.Settings.Default.Language - 1], ref Utils.MapNamesOR);
             // Maps AS:
             translateMaps(cboMapsAS, "Maps_AS_" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR" })[Properties.Settings.Default.Language - 1], ref Utils.MapNamesAS);
+            // Maps SuMo:
+            translateMaps(cboMapsSuMo, "Maps_SuMo_" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR" })[Properties.Settings.Default.Language - 1], ref Utils.MapNamesSuMo);
 
 
 
@@ -533,7 +545,7 @@ namespace PokemonEncCalc
 
         private void updateEncounterOptions()
         {
-            int[] comboboxIndexes = new int[11];
+            int[] comboboxIndexes = new int[12];
 
             comboboxIndexes[0] = Math.Max(cboSwarmDPPt.SelectedIndex, 0);
             comboboxIndexes[1] = Math.Max(cboSwarmHGSS.SelectedIndex, 0);
@@ -546,6 +558,8 @@ namespace PokemonEncCalc
             comboboxIndexes[8] = Math.Max(cboGBASlot.SelectedIndex, 0);
             comboboxIndexes[9] = Math.Max(cboSwarmGSC.SelectedIndex, 0);
             comboboxIndexes[10] = Math.Max(cboTimeGSC.SelectedIndex, 0);
+            comboboxIndexes[11] = Math.Max(cboDayNightSuMo.SelectedIndex, 0);
+
 
             // Refresh comboboxes
             cboSwarmDPPt.Items.Clear();
@@ -559,6 +573,8 @@ namespace PokemonEncCalc
             cboGBASlot.Items.Clear();
             cboSwarmGSC.Items.Clear();
             cboTimeGSC.Items.Clear();
+            cboDayNightSuMo.Items.Clear();
+
 
             try
             {
@@ -573,6 +589,8 @@ namespace PokemonEncCalc
                 cboSeason.Items.AddRange(encounterOptions[5].ToArray());
                 cboLuckyPower.Items.AddRange(encounterOptions[6].ToArray());
                 cboGBASlot.Items.AddRange(encounterOptions[7].ToArray());
+                cboDayNightSuMo.Items.Add(encounterOptions[3][1]);
+                cboDayNightSuMo.Items.Add(encounterOptions[3][2]);
 
                 cboSwarmDPPt.SelectedIndex = comboboxIndexes[0];
                 cboSwarmHGSS.SelectedIndex = comboboxIndexes[1];
@@ -585,6 +603,7 @@ namespace PokemonEncCalc
                 cboGBASlot.SelectedIndex = comboboxIndexes[8];
                 cboSwarmGSC.SelectedIndex = comboboxIndexes[9];
                 cboTimeGSC.SelectedIndex = comboboxIndexes[10];
+                cboDayNightSuMo.SelectedIndex = comboboxIndexes[11];
             }
             catch (ArgumentOutOfRangeException e)
             {
@@ -705,6 +724,27 @@ namespace PokemonEncCalc
 
         #region loadingEncounterSlots
 
+        private void changeEncounterOptionsSuMo(object sender, EventArgs e)
+        {
+            changeEncounterOptionsSuMo();
+        }
+
+        private void changeEncounterOptionsSuMo()
+        {
+            if (cboMapsSuMo.SelectedItem == null || cboMapsSuMo.Items.Count == 0)
+                return;
+
+            if (!cboMapsSuMo.Visible) return;
+
+            int selectedMap = cboMapsSuMo.SelectedIndex == -1 ? 0 : Utils.MapNamesSuMo.FindIndex(s => s.Equals((string)cboMapsSuMo.SelectedItem));
+
+            int selectedTable = cboTablesSuMo.SelectedIndex;
+            cboTablesSuMo.Items.Clear();
+            for (int i = 0; i < Utils.MapsSun[selectedMap].NumberTables; i++)
+                cboTablesSuMo.Items.Add("Table " + i);
+            if (cboTablesSuMo.Items.Count > selectedTable && selectedTable != -1) cboTablesSuMo.SelectedIndex = selectedTable;
+            else cboTablesSuMo.SelectedIndex = 0;
+        }
 
 
         private void changeEncounterOptionsAS(object sender, EventArgs e)
@@ -1525,6 +1565,7 @@ namespace PokemonEncCalc
             EncounterType type = (EncounterType)encounterOptions[0].FindIndex(s => s.Equals((string)cboEncounterType.SelectedItem));
             Version currentVersion = (Version)((int)Program.STARTING_VERSION + cboVersion.SelectedIndex);
             int gba = 0, time = 0, radio = 0;
+            int selectedTableSuMo = cboTablesSuMo.SelectedIndex;
             chkRepel.Enabled = false;
 
             Ability selectedAbility = (Ability)(encounterOptions[1].FindIndex(s=> s==(string)(cboAbility.SelectedItem)) + 1);
@@ -1533,37 +1574,44 @@ namespace PokemonEncCalc
             cboAbility.Items.Clear();
             cboAbility.Items.Add(encounterOptions[1][0]);
             cboAbility.Items.Add(encounterOptions[1][1]);
-            switch (type)
-            {
-                case EncounterType.Walking:
-                case EncounterType.DarkGrass:
-                case EncounterType.Surf:
-                case EncounterType.RedFlowers:
-                case EncounterType.YellowFlowers:
-                case EncounterType.PurpleFlowers:
-                case EncounterType.TallGrass:
-                case EncounterType.Diving:
-                case EncounterType.ShallowWater:
-                    cboAbility.Items.Add(encounterOptions[1][2]);
-                    cboAbility.Items.Add(encounterOptions[1][4]);
-                    chkRepel.Enabled = true;
-                    break;
-                case EncounterType.RockSmash:
-                    cboAbility.Items.Add(encounterOptions[1][4]);
-                    chkRepel.Enabled = (cboVersion.SelectedIndex < ((int)Version.Diamond - (int)Program.STARTING_VERSION));
-                    break;
-                case EncounterType.OldRod:
-                case EncounterType.GoodRod:
-                case EncounterType.SuperRod:
-                    if (currentVersion < Version.X)  // Keen-Eye / Intimidate doesn't work on Gen6 due to fishing mechanics
-                        cboAbility.Items.Add(encounterOptions[1][4]);
 
-                    chkRepel.Checked = false;
-                    break;
-                default:
-                    chkRepel.Checked = false;
-                    break;
+            if(currentVersion == Version.Sun || currentVersion == Version.Moon)
+            {
+                chkRepel.Checked = chkRepel.Visible = false; // No repel (the whole table is affceted by the same levels)
+
             }
+            else
+                switch (type)
+                {
+                    case EncounterType.Walking:
+                    case EncounterType.DarkGrass:
+                    case EncounterType.Surf:
+                    case EncounterType.RedFlowers:
+                    case EncounterType.YellowFlowers:
+                    case EncounterType.PurpleFlowers:
+                    case EncounterType.TallGrass:
+                    case EncounterType.Diving:
+                    case EncounterType.ShallowWater:
+                        cboAbility.Items.Add(encounterOptions[1][2]);
+                        cboAbility.Items.Add(encounterOptions[1][4]);
+                        chkRepel.Enabled = true;
+                        break;
+                    case EncounterType.RockSmash:
+                        cboAbility.Items.Add(encounterOptions[1][4]);
+                        chkRepel.Enabled = (cboVersion.SelectedIndex < ((int)Version.Diamond - (int)Program.STARTING_VERSION));
+                        break;
+                    case EncounterType.OldRod:
+                    case EncounterType.GoodRod:
+                    case EncounterType.SuperRod:
+                        if (currentVersion < Version.X)  // Keen-Eye / Intimidate doesn't work on Gen6 due to fishing mechanics
+                            cboAbility.Items.Add(encounterOptions[1][4]);
+
+                        chkRepel.Checked = false;
+                        break;
+                    default:
+                        chkRepel.Checked = false;
+                        break;
+                }
 
             switch (currentVersion)
             {
@@ -1687,6 +1735,15 @@ namespace PokemonEncCalc
                     currentMap = Utils.MapNamesAS.FindIndex(s => s.Equals((string)cboMapsAS.SelectedItem));
                     newSlots = Utils.MapsAlphaSapphire[currentMap].getSlots(type);
                     break;
+                case Version.Sun:
+                    currentMap = Utils.MapNamesSuMo.FindIndex(s => s.Equals((string)cboMapsSuMo.SelectedItem));
+                    newSlots = Utils.MapsSun[currentMap].getSlots(selectedTableSuMo, cboDayNightSuMo.SelectedIndex == 1);
+                    break;
+                case Version.Moon:
+                    currentMap = Utils.MapNamesSuMo.FindIndex(s => s.Equals((string)cboMapsSuMo.SelectedItem));
+                    newSlots = Utils.MapsMoon[currentMap].getSlots(selectedTableSuMo, cboDayNightSuMo.SelectedIndex == 1);
+                    break;
+
                 default:
                     break;
 

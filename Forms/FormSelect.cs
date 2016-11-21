@@ -111,7 +111,7 @@ namespace PokemonEncCalc
         {
 
             data.Species = (cboFormList.SelectedIndex == 0) ? PokemonTables.changePokemon(data.Species, data.Species.NatID)
-                                                            : PokemonTables.changePokemon(data.Species, data.Species.NatID).Forms[allowedFormChanges[data.Species.NatID][cboFormList.SelectedIndex - 1]];
+                                                            : PokemonTables.changePokemon(data.Species, data.Species.NatID).Forms[allowedFormChanges[data.Species.NatID][cboFormList.SelectedIndex - 1]-1];
 
             // Change minisprite
             pctMinisprite.Image = (Image)Properties.Resources.ResourceManager.GetObject(

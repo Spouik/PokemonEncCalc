@@ -450,6 +450,8 @@
     <None Include="Resources\strings\en\interface.txt" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\strings\fr\Maps_SuMo.txt" />
+    <None Include="Resources\strings\en\Maps_SuMo.txt" />
     <None Include="Resources\strings\kr\formsSuMo.txt" />
     <None Include="Resources\strings\jp\formsSuMo.txt" />
     <None Include="Resources\strings\it\formsSuMo.txt" />

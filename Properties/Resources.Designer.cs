@@ -36851,6 +36851,104 @@ namespace PokemonEncCalc.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Location 0
+        ///Location 1
+        ///Location 2
+        ///Location 3
+        ///Location 4
+        ///Location 5
+        ///Location 6
+        ///Location 7
+        ///Location 8
+        ///Location 9
+        ///Location 10
+        ///Location 11
+        ///Location 12
+        ///Location 13
+        ///Location 14
+        ///Location 15
+        ///Location 16
+        ///Location 17
+        ///Location 18
+        ///Location 19
+        ///Location 20
+        ///Location 21
+        ///Location 22
+        ///Location 23
+        ///Location 24
+        ///Location 25
+        ///Location 26
+        ///Location 27
+        ///Location 28
+        ///Location 29
+        ///Location 30
+        ///Location 31
+        ///Location 32
+        ///Location 33
+        ///Location 34
+        ///Location 35
+        ///Location 36
+        ///Location 37
+        ///Location 38
+        ///Location 39
+        ///Lo [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Maps_SuMo_EN {
+            get {
+                return ResourceManager.GetString("Maps_SuMo_EN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Location 0
+        ///Location 1
+        ///Location 2
+        ///Location 3
+        ///Location 4
+        ///Location 5
+        ///Location 6
+        ///Location 7
+        ///Location 8
+        ///Location 9
+        ///Location 10
+        ///Location 11
+        ///Location 12
+        ///Location 13
+        ///Location 14
+        ///Location 15
+        ///Location 16
+        ///Location 17
+        ///Location 18
+        ///Location 19
+        ///Location 20
+        ///Location 21
+        ///Location 22
+        ///Location 23
+        ///Location 24
+        ///Location 25
+        ///Location 26
+        ///Location 27
+        ///Location 28
+        ///Location 29
+        ///Location 30
+        ///Location 31
+        ///Location 32
+        ///Location 33
+        ///Location 34
+        ///Location 35
+        ///Location 36
+        ///Location 37
+        ///Location 38
+        ///Location 39
+        ///Lo [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Maps_SuMo_FR {
+            get {
+                return ResourceManager.GetString("Maps_SuMo_FR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Azure Bay
         ///Connecting Cave
         ///Frost Cavern
@@ -38796,7 +38894,9 @@ namespace PokemonEncCalc.Properties {
         ///X
         ///Y
         ///Omega Rubin
-        ///Alpha Saphir.
+        ///Alpha Saphir
+        ///Sonne
+        ///Mond.
         /// </summary>
         internal static string versionsDE {
             get {
@@ -38825,7 +38925,9 @@ namespace PokemonEncCalc.Properties {
         ///X
         ///Y
         ///Omega Ruby
-        ///Alpha Sapphire.
+        ///Alpha Sapphire
+        ///Sun
+        ///Moon.
         /// </summary>
         internal static string versionsEN {
             get {
@@ -38854,7 +38956,9 @@ namespace PokemonEncCalc.Properties {
         ///X
         ///Y
         ///Rubí Omega
-        ///Zafiro Alfa.
+        ///Zafiro Alfa
+        ///Sol
+        ///Luna.
         /// </summary>
         internal static string versionsES {
             get {
@@ -38883,7 +38987,9 @@ namespace PokemonEncCalc.Properties {
         ///X
         ///Y
         ///Rubis Oméga
-        ///Saphir Alpha.
+        ///Saphir Alpha
+        ///Soleil
+        ///Lune.
         /// </summary>
         internal static string versionsFR {
             get {
@@ -38912,7 +39018,9 @@ namespace PokemonEncCalc.Properties {
         ///X
         ///Y
         ///Rubno Omega
-        ///Zaffiro Alpha.
+        ///Zaffiro Alpha
+        ///Sole
+        ///Luna.
         /// </summary>
         internal static string versionsIT {
             get {
@@ -38941,7 +39049,9 @@ namespace PokemonEncCalc.Properties {
         ///X
         ///Y
         ///オメガルビー
-        ///アルファサファイア.
+        ///アルファサファイア
+        ///サン
+        ///ムーン.
         /// </summary>
         internal static string versionsJP {
             get {
@@ -38970,7 +39080,9 @@ namespace PokemonEncCalc.Properties {
         ///X
         ///Y
         ///오메가루비
-        ///알파사파이어.
+        ///알파사파이어
+        ///썬
+        ///문.
         /// </summary>
         internal static string versionsKR {
             get {

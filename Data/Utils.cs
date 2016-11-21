@@ -40,8 +40,7 @@ namespace PokemonEncCalc
         internal static List<string> MapNamesXY;
         internal static List<string> MapNamesOR;
         internal static List<string> MapNamesAS;
-        internal static List<string> MapNamesSun;
-        internal static List<string> MapNamesMoon;
+        internal static List<string> MapNamesSuMo;
 
         // List of all maps from Gen 2 to Gen 7
         internal static List<AreaMapGen2> MapsGold;
