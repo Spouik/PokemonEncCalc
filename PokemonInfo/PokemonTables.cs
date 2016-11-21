@@ -8,7 +8,6 @@ namespace PokemonEncCalc
 {
     internal static class PokemonTables
     {
-        private const int TOTAL_POKEMON = 721;
 
         internal static readonly short[] FormTable =  { 201,201,201,201,201,201,201,201,201,201,201,201,201,201,201,201,201,
                                                         201,201,201,201,201,201,201,201,201,201, // Gen 2
@@ -433,6 +432,9 @@ namespace PokemonEncCalc
                 case Version.OmegaRuby:
                 case Version.AlphaSapphire:
                     return pokemonORASTable[natID].getSpeciesForm(speciesID);
+                case Version.Sun:
+                case Version.Moon:
+                    return pokemonSuMoTable[natID].getSpeciesForm(speciesID);
 
                 default: return null;
             }

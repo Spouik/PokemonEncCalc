@@ -587,6 +587,8 @@ namespace PokemonEncCalc
             loadSlotsY();
             loadSlotsOmegaRuby();
             loadSlotsAlphaSapphire();
+            loadSlotsSun();
+            loadSlotsMoon();
         }
 
         private static void loadSlotsGold()
@@ -840,6 +842,29 @@ namespace PokemonEncCalc
                 MapsAlphaSapphire.Add(new AreaMapORAS(data, Version.AlphaSapphire, i));
             }
         }
+
+        private static void loadSlotsSun()
+        {
+            int mapCount = 67;
+            MapsSun = new List<AreaMapSuMo>();
+            for(int i = 0; i < mapCount; i++)
+            {
+                byte[] data = ((byte[])Properties.Resources.ResourceManager.GetObject("S_Location_" + i)).Skip(0x80).ToArray();
+                MapsSun.Add(new AreaMapSuMo(data, Version.Sun));
+            }
+        }
+
+        private static void loadSlotsMoon()
+        {
+            int mapCount = 67;
+            MapsMoon = new List<AreaMapSuMo>();
+            for (int i = 0; i < mapCount; i++)
+            {
+                byte[] data = ((byte[])Properties.Resources.ResourceManager.GetObject("M_Location_" + i)).Skip(0x80).ToArray();
+                MapsMoon.Add(new AreaMapSuMo(data, Version.Moon));
+            }
+        }
+
 
         #endregion
 

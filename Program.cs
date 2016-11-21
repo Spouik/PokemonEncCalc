@@ -12,8 +12,6 @@ namespace PokemonEncCalc
     {
 
         internal const string VERSION = "5.8.1";
-        internal const int RELEASED_POKEMON = 721;
-        internal const int RELEASED_ALT_FORMS = 84;
         internal const Version STARTING_VERSION = Version.Gold;
 
         /// <summary>
