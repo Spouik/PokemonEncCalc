@@ -16,9 +16,9 @@ namespace PokemonEncCalc
 
         internal AreaMapSuMo(byte[] data, Version version)
         {
-            if (data.Length % 336 != 0) return; //All tables should be 336-byte long
+            if (data.Length % 384 != 0) return; //All tables should be 384-byte long
 
-            int nbTables = data.Length / 336;
+            int nbTables = data.Length / 384;
 
             Slots = new EncounterSlot[nbTables][];
             SOS_Slots = new EncounterSlot[nbTables][][];
@@ -29,8 +29,8 @@ namespace PokemonEncCalc
                 // Regular Slots
                 for (int j = 0; j < 10; j++)
                     Slots[i][j] = new EncounterSlot(
-                    PokemonTables.getPokemon(BitConverter.ToInt16(data, 336 * i + 2 * j + 16), version),
-                    data[336 * i + 4], data[336 * i + 5], data[336 * i + j + 6]);
+                    PokemonTables.getPokemon(BitConverter.ToInt16(data, 384 * i + 2 * j + 16), version),
+                    data[336 * i + 4], data[384 * i + 5], data[384 * i + j + 6]);
 
                 // SOS Slots
                 SOS_Slots[i] = new EncounterSlot[7][];
@@ -39,8 +39,8 @@ namespace PokemonEncCalc
                     SOS_Slots[i][sos] = new EncounterSlot[10];
                     for(int j = 0; j < 10; j++)
                         SOS_Slots[i][sos][j] = new EncounterSlot(
-                        PokemonTables.getPokemon(BitConverter.ToInt16(data, 336 * i + 2 * j + sos * 20 + 36), version),
-                        data[336 * i + 4], data[336 * i + 5], data[336 * i + j + 6]);
+                        PokemonTables.getPokemon(BitConverter.ToInt16(data, 384 * i + 2 * j + sos * 20 + 36), version),
+                        data[384 * i + 4], data[384 * i + 5], data[384 * i + j + 6]);
                 }
             }
         }
