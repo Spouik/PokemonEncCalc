@@ -31,6 +31,8 @@ namespace PokemonEncCalc
         internal override byte SpD { get { return Data[5]; } set { Data[5] = value; } }
         internal override byte Spe { get { return Data[3]; } set { Data[3] = value; } }
 
+        internal byte CallRate => Data[0x1B];
+
         internal PokemonSuMo(short id, byte[] data)
         {
             if (data.Length != SIZE) throw new ArgumentException();

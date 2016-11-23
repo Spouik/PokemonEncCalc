@@ -79,12 +79,14 @@ namespace PokemonEncCalc
             if (cboMapsXY.Visible) r += (string)(cboMapsXY.SelectedItem);
             if (cboMapsOR.Visible) r += (string)(cboMapsOR.SelectedItem);
             if (cboMapsAS.Visible) r += (string)(cboMapsAS.SelectedItem);
+            if (cboMapsSuMo.Visible) r += (string)(cboMapsSuMo.SelectedItem);
 
             // Version
             r += " (" + (string)(cboVersion.SelectedItem) + ")";
 
-            // Encounter Type
-            r += " - " + cboEncounterType.SelectedItem + Environment.NewLine + Environment.NewLine;
+            // Encounter Type (or table for SuMo)
+            if (cboMapsSuMo.Visible) r += " - " + cboTablesSuMo.SelectedItem + Environment.NewLine + Environment.NewLine;
+            else r += " - " + cboEncounterType.SelectedItem + Environment.NewLine + Environment.NewLine;
 
             // Repel
             if (chkRepel.Checked) r += chkRepel.Text + " " + lblLevelRepelDisp.Text + " " + nudLevelRepel.Value;
@@ -116,6 +118,7 @@ namespace PokemonEncCalc
                 r += (r.EndsWith(Environment.NewLine) ? "" : " - ") + cboTimeDPPt.SelectedItem;
             if (pnlHGSSOptions.Visible && cboTimeHGSS.Enabled)
                 r += (r.EndsWith(Environment.NewLine) ? "" : " - ") + cboTimeHGSS.SelectedItem;
+            if (pnl_SunMoonOptions.Visible) r += (r.EndsWith(Environment.NewLine) ? "" : " - ") + cboDayNightSuMo.SelectedItem;
 
             // GBA Slot
             if (pnlDPPtOptions.Visible && cboGBASlot.Enabled && cboGBASlot.SelectedIndex > 0)
