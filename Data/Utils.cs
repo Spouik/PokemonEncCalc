@@ -5,21 +5,7 @@ using System.Linq;
 namespace PokemonEncCalc
 {
     public static class Utils{
-        //internal static List<Pokemon> PokemonList;
-        //static List<string> NamesEN;
-        //static List<string> NamesFR;
-        //static List<string> NamesDE;
-        //static List<string> NamesES;
-        //static List<string> NamesIT;
-        //static List<string> NamesJP;
-        //static List<string> NamesKR;
-        //static List<string> FormNamesEN;
-        //static List<string> FormNamesFR;
-        //static List<string> FormNamesDE;
-        //static List<string> FormNamesES;
-        //static List<string> FormNamesIT;
-        //static List<string> FormNamesJP;
-        //static List<string> FormNamesKR;
+
 
         //Current language names
         internal static List<string> NamesCurrentLang;
@@ -126,73 +112,6 @@ namespace PokemonEncCalc
         internal static List<string> moveNamesGen5;
         internal static List<string> moveNamesGen6;
 
-
-        //internal static void initializePokemonList()
-        //{
-        //    initializePokemonNames();
-        //    PokemonList = new List<Pokemon>();
-        //    int len = Properties.Resources.PokemonData.Length / 48;
-
-        //    // Instanciate all 721 Pokemon (regular Forms only)
-        //    for (short i = 0; i < len; i++)
-        //    {
-        //        byte[] data = new byte[48];
-        //        Array.Copy(Properties.Resources.PokemonData, (i) * 48, data, 0, 48);
-        //        PokemonList.Add(new Pokemon((short)(i + 1), data));
-        //        PokemonList[i].NameEN = NamesEN[i];
-        //        PokemonList[i].NameFR = NamesFR[i];
-        //        PokemonList[i].NameES = NamesES[i];
-        //        PokemonList[i].NameDE = NamesDE[i];
-        //        PokemonList[i].NameIT = NamesIT[i];
-        //        PokemonList[i].NameJP = NamesJP[i];
-        //        PokemonList[i].NameKR = NamesKR[i];
-
-        //        PokemonList[i].FormNameEN = FormNamesEN[i];
-        //        PokemonList[i].FormNameDE = FormNamesDE[i];
-        //        PokemonList[i].FormNameES = FormNamesES[i];
-        //        PokemonList[i].FormNameFR = FormNamesFR[i];
-        //        PokemonList[i].FormNameIT = FormNamesIT[i];
-        //        PokemonList[i].FormNameJP = FormNamesJP[i];
-        //        PokemonList[i].FormNameKR = FormNamesKR[i];
-
-
-        //    }
-        //    initializeForms();
-        //}
-
-        //private static void initializeForms()
-        //{
-        //    // Add Mega Evolutions
-        //    int len = Properties.Resources.MegasData.Length / 26;
-
-        //    for (short i = 0; i < len; i++)
-        //    {
-        //        byte[] data = new byte[24];
-        //        short natID = BitConverter.ToInt16(Properties.Resources.MegasData, (i) * 26);
-        //        Array.Copy(Properties.Resources.MegasData, (i) * 26 + 2, data, 0, 24);
-
-        //        PokemonList[natID - 1].addForm(new Pokemon(natID,  data));
-        //    }
-
-        //    // Add other alternative forms
-        //    len = Properties.Resources.FormsData.Length / 48;
-        //    for (short i = 0; i < len; i++)
-        //    {
-        //        byte[] data = new byte[48];
-        //        Array.Copy(Properties.Resources.FormsData, (i) * 48, data, 0, 48);
-        //        Pokemon p = new Pokemon((short)FormIDs[i], data);
-        //        p.FormNameEN = FormNamesEN[721 + i];
-        //        p.FormNameDE = FormNamesDE[721 + i];
-        //        p.FormNameES = FormNamesES[721 + i];
-        //        p.FormNameFR = FormNamesFR[721 + i];
-        //        p.FormNameIT = FormNamesIT[721 + i];
-        //        p.FormNameJP = FormNamesJP[721 + i];
-        //        p.FormNameKR = FormNamesKR[721 + i];
-        //        PokemonList[FormIDs[i]-1].addForm(p);
-        //    }
-
-        //    //throw new NotImplementedException();
-        //}
 
         internal static void changeLanguage(int langID)
         {

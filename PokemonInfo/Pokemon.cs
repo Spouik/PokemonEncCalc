@@ -96,6 +96,10 @@ namespace PokemonEncCalc
             if (Forms[formID - 1] == null) return this;
             return Forms[formID - 1];
         }
-        
+
+        internal virtual int getNbReleased()
+        {
+            return 0;
+        }
     }
 }

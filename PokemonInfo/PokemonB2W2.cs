@@ -51,5 +51,10 @@ namespace PokemonEncCalc
         {
             return Forms.Count;
         }
+
+        internal override int getNbReleased()
+        {
+            return RELEASED_POKEMON;
+        }
     }
 }

@@ -151,7 +151,6 @@ namespace PokemonEncCalc
         {
             Text = "Pokémon Encounter Calculator - Ver. " + Program.VERSION;
             Utils.changeLanguage(Properties.Settings.Default.Language);
-            loadPokemonNames();
             renameControls();
             renameMenuStrip();
             renameComboboxes();
@@ -183,24 +182,6 @@ namespace PokemonEncCalc
             }
         }
 
-        private void loadPokemonNames()
-        {
-            // Loads Pokémon names in the comboboxes
-            foreach (Control b in gboSlots.Controls)
-            {
-                if (b is ComboBox)
-                {
-                    int selected = 0;
-                    if (((ComboBox)b).Items.Count != 0)
-                    {
-                        selected = ((ComboBox)b).SelectedIndex;
-                        ((ComboBox)b).Items.Clear();
-                    }
-                    ((ComboBox)b).Items.AddRange(Utils.NamesCurrentLang.ToArray());
-                    ((ComboBox)b).SelectedIndex = selected;
-                }
-            }
-        }
 
         private void englishToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -213,7 +194,8 @@ namespace PokemonEncCalc
             renameControls();
             renameMenuStrip();
             renameComboboxes();
-            loadPokemonNames();
+            repopulateComboboxes(currentSlots[0].Species.getNbReleased());
+            update();
         }
 
         private void frenchToolStripMenuItem_Click(object sender, EventArgs e)
@@ -227,7 +209,8 @@ namespace PokemonEncCalc
             renameControls();
             renameMenuStrip();
             renameComboboxes();
-            loadPokemonNames();
+            repopulateComboboxes(currentSlots[0].Species.getNbReleased());
+            update();
         }
 
         private void changeMinisprite(object sender, EventArgs e)
@@ -251,7 +234,7 @@ namespace PokemonEncCalc
             // Change Slot
             if(currentSlots != null)
                 if(slot < currentSlots.Length)
-                    currentSlots[slot] = new EncounterSlot(PokemonTables.changePokemon(currentSlots[slot].Species, (short)((ComboBox)sender).SelectedIndex),
+                    currentSlots[slot] = new EncounterSlot(PokemonTables.changePokemon(currentSlots[slot].Species, (short)(((ComboBox)sender).SelectedIndex + 1)),
                                                     (byte)((NumericUpDown)gboSlots.Controls.Find("nudMinLv" + slot, true)[0]).Value,
                                                     (byte)((NumericUpDown)gboSlots.Controls.Find("nudMaxLv" + slot, true)[0]).Value,
                                                     Decimal.Parse(((Label)gboSlots.Controls.Find("lblPercent" + slot, true)[0]).Text.Split(new[] { ' ' })[0]));
