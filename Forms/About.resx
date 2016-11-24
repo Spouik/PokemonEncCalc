@@ -126,6 +126,16 @@
   <metadata name="lblAboutFR.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="lblAboutFR.Text" xml:space="preserve">
+    <value>Remerciements à :
+
+- MaitreArmand pour ses précieuses informations concernant les Encounter Slots et les capacités spéciales.
+
+- Mario, Metarkrai, Agent Hydro et les autres pour leurs rapports de bugs/erreur ainsi que leurs suggestions pour l'amélioration du logiciel.
+
+- Les sites eggmove.com, dragonflycave.com, serebii.net, smogon.com et projectpokemon.com.
+</value>
+  </data>
   <metadata name="lklRepository.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -135,6 +145,16 @@
   <metadata name="lblAboutEN.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="lblAboutEN.Text" xml:space="preserve">
+    <value>Thanks to :
+
+- MaitreArmand for information concerning Encounter Slots and Abilities effects outside of battle.
+
+- Mario, Metarkrai, Agent Hydro and others for bug reports and suggestions to improve this app.
+
+- Websites eggmove.com, dragonflycave.com, serebii.net, smogon.com and projectpokemon.com. for various information.
+</value>
+  </data>
   <metadata name="pictureBox1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -202,43 +222,11 @@ Ver. 5.0 :	- Added : English translation.
 
 	            Ver. 5.8.1 :	- Fixed : GSC Rock Smash, which was never displayed.
 			- Fixed : Crystal maps, where exceptions may occur in certain situations.
-			- Fixed : Translation error (a text label was not translated properly)</value>
+			- Fixed : Translation error (a text label was not translated properly)
+
+	Ver. 5.9 :	- Added : Sun/Moon Pokémon data &amp; Encounter data.
+		- Fixed : Base Speed check for Fast Ball calculation.</value>
   </data>
-  <metadata name="lblAboutFR.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="lblAboutFR.Text" xml:space="preserve">
-    <value>Remerciements à :
-
-- MaitreArmand pour ses précieuses informations concernant les Encounter Slots et les capacités spéciales.
-
-- Mario, Metarkrai, Agent Hydro et les autres pour leurs rapports de bugs/erreur ainsi que leurs suggestions pour l'amélioration du logiciel.
-
-- Les sites eggmove.com, dragonflycave.com, serebii.net, smogon.com et projectpokemon.com.
-</value>
-  </data>
-  <metadata name="lklRepository.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblReport.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblAboutEN.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="lblAboutEN.Text" xml:space="preserve">
-    <value>Thanks to :
-
-- MaitreArmand for information concerning Encounter Slots and Abilities effects outside of battle.
-
-- Mario, Metarkrai, Agent Hydro and others for bug reports and suggestions to improve this app.
-
-- Websites eggmove.com, dragonflycave.com, serebii.net, smogon.com and projectpokemon.com. for various information.
-</value>
-  </data>
-  <metadata name="pictureBox1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>

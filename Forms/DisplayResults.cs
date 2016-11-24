@@ -42,7 +42,7 @@ namespace PokemonEncCalc
                 p.Size = new Size(100, 120);
                 PictureBox pct = new PictureBox();
                 pct.Size = new Size(96, 96);
-                pct.SizeMode = PictureBoxSizeMode.CenterImage;
+                pct.SizeMode = PictureBoxSizeMode.Zoom;
                 pct.Image = (Image)Properties.Resources.ResourceManager.GetObject("_" + (slot.Species.NatID) + (Properties.Settings.Default.ShinySprites ? "s" : "") + (slot.Species.Form != 0 ? ("_" + slot.Species.Form) : ""));
                 Label l = new Label();
                 l.Size = new Size(96, 20);
