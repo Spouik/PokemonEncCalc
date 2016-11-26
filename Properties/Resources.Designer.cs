@@ -18643,6 +18643,16 @@ namespace PokemonEncCalc.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap b26 {
+            get {
+                object obj = ResourceManager.GetObject("b26", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap b3 {
             get {
                 object obj = ResourceManager.GetObject("b3", resourceCulture);
@@ -18732,7 +18742,8 @@ namespace PokemonEncCalc.Properties {
         ///Heavy Ball
         ///Fast Ball
         ///Love Ball
-        ///Sport Ball.
+        ///Sport Ball
+        ///Beast Ball.
         /// </summary>
         internal static string ballsEN {
             get {
@@ -18762,7 +18773,8 @@ namespace PokemonEncCalc.Properties {
         ///Masse Ball
         ///Speed Ball
         ///Love Ball
-        ///Compét&apos;Ball.
+        ///Compét&apos;Ball
+        ///Ultra Ball.
         /// </summary>
         internal static string ballsFR {
             get {

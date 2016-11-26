@@ -154,6 +154,8 @@ namespace PokemonEncCalc
             for (short i = 0; i <= PokemonXY.RELEASED_POKEMON; i++)
             {
                 pokemonXYTable[i] = new PokemonXY(i, Properties.Resources.PokemonInfo6.Skip(PokemonXY.SIZE * i).Take(PokemonXY.SIZE).ToArray());
+                if (new[] { 382, 383 }.Contains(i)) pokemonXYTable[i].CatchRate = 5;
+                if (i == 384) pokemonXYTable[i].CatchRate = 3;
                 setNames(pokemonXYTable[i]);
             }
 

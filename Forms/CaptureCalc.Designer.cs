@@ -62,9 +62,6 @@
             this.pnlDive = new System.Windows.Forms.Panel();
             this.rdNotUnderWater = new System.Windows.Forms.RadioButton();
             this.rdUnderWater = new System.Windows.Forms.RadioButton();
-            this.pnlGen6Games = new System.Windows.Forms.Panel();
-            this.rdORAS = new System.Windows.Forms.RadioButton();
-            this.rdXY = new System.Windows.Forms.RadioButton();
             this.txtCaptureRate = new System.Windows.Forms.TextBox();
             this.pnlGen5 = new System.Windows.Forms.Panel();
             this.chkDarkGrass = new System.Windows.Forms.CheckBox();
@@ -96,6 +93,7 @@
             this.lblCriticalCaptureDisp = new System.Windows.Forms.Label();
             this.lblCriticalChanceDisp = new System.Windows.Forms.Label();
             this.lblCaptureChanceDisp5 = new System.Windows.Forms.Label();
+            this.chkORAS = new System.Windows.Forms.CheckBox();
             this.pnlNightCave.SuspendLayout();
             this.pnlFished.SuspendLayout();
             this.pnlLove.SuspendLayout();
@@ -108,7 +106,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudTurn)).BeginInit();
             this.pnlAlreadyCaught.SuspendLayout();
             this.pnlDive.SuspendLayout();
-            this.pnlGen6Games.SuspendLayout();
             this.pnlGen5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudPokedexGen5)).BeginInit();
             this.pnlPokedexGen6.SuspendLayout();
@@ -496,39 +493,6 @@
             this.rdUnderWater.UseMnemonic = false;
             this.rdUnderWater.UseVisualStyleBackColor = true;
             // 
-            // pnlGen6Games
-            // 
-            this.pnlGen6Games.Controls.Add(this.rdORAS);
-            this.pnlGen6Games.Controls.Add(this.rdXY);
-            this.pnlGen6Games.Location = new System.Drawing.Point(384, 172);
-            this.pnlGen6Games.Name = "pnlGen6Games";
-            this.pnlGen6Games.Size = new System.Drawing.Size(168, 23);
-            this.pnlGen6Games.TabIndex = 6;
-            // 
-            // rdORAS
-            // 
-            this.rdORAS.AutoSize = true;
-            this.rdORAS.Location = new System.Drawing.Point(82, 3);
-            this.rdORAS.Name = "rdORAS";
-            this.rdORAS.Size = new System.Drawing.Size(55, 17);
-            this.rdORAS.TabIndex = 0;
-            this.rdORAS.Text = "ORAS";
-            this.rdORAS.UseVisualStyleBackColor = true;
-            this.rdORAS.CheckedChanged += new System.EventHandler(this.rdORAS_CheckedChanged);
-            // 
-            // rdXY
-            // 
-            this.rdXY.AutoSize = true;
-            this.rdXY.Checked = true;
-            this.rdXY.Location = new System.Drawing.Point(18, 3);
-            this.rdXY.Name = "rdXY";
-            this.rdXY.Size = new System.Drawing.Size(39, 17);
-            this.rdXY.TabIndex = 0;
-            this.rdXY.TabStop = true;
-            this.rdXY.Text = "XY";
-            this.rdXY.UseVisualStyleBackColor = true;
-            this.rdXY.CheckedChanged += new System.EventHandler(this.rdXY_CheckedChanged);
-            // 
             // txtCaptureRate
             // 
             this.txtCaptureRate.Location = new System.Drawing.Point(304, 174);
@@ -860,11 +824,25 @@
             this.lblCaptureChanceDisp5.Text = "Chances of capturing";
             this.lblCaptureChanceDisp5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // chkORAS
+            // 
+            this.chkORAS.Appearance = System.Windows.Forms.Appearance.Button;
+            this.chkORAS.Location = new System.Drawing.Point(43, 50);
+            this.chkORAS.Name = "chkORAS";
+            this.chkORAS.Size = new System.Drawing.Size(48, 21);
+            this.chkORAS.TabIndex = 14;
+            this.chkORAS.Text = "XY";
+            this.chkORAS.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.chkORAS.UseVisualStyleBackColor = true;
+            this.chkORAS.Visible = false;
+            this.chkORAS.CheckedChanged += new System.EventHandler(this.chkORAS_CheckedChanged);
+            // 
             // frmCaptureCalc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.chkORAS);
             this.Controls.Add(this.pnlPokedexGen6);
             this.Controls.Add(this.pnlResult3_4);
             this.Controls.Add(this.pnlResult5_6);
@@ -883,7 +861,6 @@
             this.Controls.Add(this.pnlTimer);
             this.Controls.Add(this.pnlAlreadyCaught);
             this.Controls.Add(this.pnlDive);
-            this.Controls.Add(this.pnlGen6Games);
             this.Controls.Add(this.txtCaptureRate);
             this.Controls.Add(this.pnlGen5);
             this.Controls.Add(this.pctPokemon);
@@ -922,8 +899,6 @@
             this.pnlAlreadyCaught.PerformLayout();
             this.pnlDive.ResumeLayout(false);
             this.pnlDive.PerformLayout();
-            this.pnlGen6Games.ResumeLayout(false);
-            this.pnlGen6Games.PerformLayout();
             this.pnlGen5.ResumeLayout(false);
             this.pnlGen5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudPokedexGen5)).EndInit();
@@ -959,9 +934,6 @@
         private System.Windows.Forms.CheckBox chkDarkGrass;
         private System.Windows.Forms.Label lblPokedexGen5;
         private System.Windows.Forms.TextBox txtCaptureRate;
-        private System.Windows.Forms.Panel pnlGen6Games;
-        private System.Windows.Forms.RadioButton rdORAS;
-        private System.Windows.Forms.RadioButton rdXY;
         private System.Windows.Forms.Panel pnlDive;
         private System.Windows.Forms.RadioButton rdNotUnderWater;
         private System.Windows.Forms.RadioButton rdUnderWater;
@@ -1010,5 +982,6 @@
         private System.Windows.Forms.Label lblCriticalCaptureDisp;
         private System.Windows.Forms.Label lblCriticalChanceDisp;
         private System.Windows.Forms.Label lblCaptureChanceDisp5;
+        private System.Windows.Forms.CheckBox chkORAS;
     }
 }

@@ -1428,6 +1428,7 @@
     <None Include="Resources\images\minisprites\m89_1.png" />
     <None Include="Resources\images\minisprites\m103_1.png" />
     <None Include="Resources\images\minisprites\m105_1.png" />
+    <None Include="Resources\images\balls\b26.png" />
     <Content Include="Resources\images\minisprites_s\0.png" />
     <Content Include="Resources\images\minisprites_s\1.png" />
     <Content Include="Resources\images\minisprites_s\10.png" />

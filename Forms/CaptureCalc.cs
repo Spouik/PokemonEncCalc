@@ -14,6 +14,8 @@ namespace PokemonEncCalc
     {
 
         private List<string> balls;
+        private List<Pokemon> PokemonList;
+        private int generation = 0;
 
         private string[][] capturePower = new string[][]{ 
             
@@ -53,6 +55,8 @@ namespace PokemonEncCalc
 
         };
 
+        private string[] oras = new string[] { "", "ORAS", "ROSA", "", "", "", "", "" };
+
         public frmCaptureCalc()
         {
             InitializeComponent();
@@ -62,35 +66,26 @@ namespace PokemonEncCalc
 
         private void initializeComboboxes()
         {
-            // cboPokemon
-            cboPokemon.Items.AddRange(Utils.NamesCurrentLang.ToArray());
-            cboPokemon.SelectedIndex = 0;            
-            
-            
-            // cboGeneration
-            for (int i = 3; i < 7; i++)
-                cboGeneration.Items.Add(lblGeneration.Text + " " + i);
-            cboGeneration.SelectedIndex = 0;
-
-
-
-            // cboBalls
             balls = new List<string>();
+            PokemonList = new List<Pokemon>();
+
+            // Balls
             switch (Properties.Settings.Default.Language)
             {
                 case 2:
-                    balls.AddRange(Properties.Resources.ballsFR.Split(new[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries));
+                    balls.AddRange(Properties.Resources.ballsFR.Split(new[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries));
                     break;
                 default:
-                    balls.AddRange(Properties.Resources.ballsEN.Split(new[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries));
+                    balls.AddRange(Properties.Resources.ballsEN.Split(new[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries));
                     break;
             }
 
-            // Poké Ball, Great Ball and Ultra Ball alwys first, others are sorted alphabetically
-            cboBall.Items.AddRange(balls.Where(s=>balls.IndexOf(s) < 3).ToArray());
-            cboBall.Items.AddRange(balls.Where(s => (balls.IndexOf(s) > 2)).OrderBy(s=> s).ToArray());
 
-            cboBall.SelectedIndex = 0;
+            // cboGeneration
+            for (int i = 3; i <= 7; i++)
+                cboGeneration.Items.Add(lblGeneration.Text + " " + i);
+            cboGeneration.SelectedIndex = 0;
+
 
             // Capture Power
             cboCapturePower.Items.AddRange(capturePower[Properties.Settings.Default.Language]);
@@ -102,11 +97,86 @@ namespace PokemonEncCalc
 
         }
 
+        /// <summary>
+        /// Refreshes the list of Pokémon and Balls available in the selected generation.
+        /// </summary>
+        private void refreshComboboxes()
+        {
+            // Pokémon List
+            int p = cboPokemon.SelectedIndex;
+            if (cboPokemon.Items.Count == 0) p = 0;
+            cboPokemon.Items.Clear();
+            PokemonList.Clear();
+            switch (generation)
+            {
+                case 3:
+                    PokemonList.AddRange(PokemonTables.pokemonEmeraldTable);
+                    break;
+                case 4:
+                    PokemonList.AddRange(PokemonTables.pokemonHGSSTable);
+                    break;
+                case 5:
+                    PokemonList.AddRange(PokemonTables.pokemonB2W2Table);
+                    break;
+                case 6:
+                    if(chkORAS.Checked)
+                        PokemonList.AddRange(PokemonTables.pokemonORASTable);
+                    else
+                        PokemonList.AddRange(PokemonTables.pokemonXYTable);
+                    break;
+                case 7:
+                    PokemonList.AddRange(PokemonTables.pokemonSuMoTable);
+                    break;
+                default: break;
+            }
+            switch (Properties.Settings.Default.Language)
+            {
+                case 2:
+                    cboPokemon.Items.AddRange(PokemonList.Where(i => i.NatID != 0).Select(s => s.NameFR).ToArray());
+                    break;
+                default:
+                    cboPokemon.Items.AddRange(PokemonList.Where(i => i.NatID != 0).Select(s => s.NameEN).ToArray());
+                    break;
+            }
+            cboPokemon.SelectedIndex = cboPokemon.Items.Count > p ? p : 0;
+
+            // Balls
+            int bs = 0;
+            if(cboBall.SelectedIndex != -1)
+                bs = balls.FindIndex(s => s == cboBall.SelectedItem.ToString());
+
+            List<int> availableBalls = new List<int>();
+            switch (generation)
+            {
+                case 3:
+                    availableBalls.AddRange(new[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 });
+                    break;
+                case 4:
+                    availableBalls.AddRange(new[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21 });
+                    break;
+                case 5:
+                case 6:
+                    availableBalls.AddRange(new[] { 0, 1, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 });
+                    break;
+                case 7:
+                    availableBalls.AddRange(new[] { 0, 1, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22 });
+                    break;
+            }
+            cboBall.Items.Clear();
+            List<string> b = new List<string>();
+            foreach(int i in availableBalls) b.Add(balls[i]);
+
+            // PokéBall, GreatBall and UltraBall always first, others sorted alphabetically
+            cboBall.Items.AddRange(b.Where(s => b.IndexOf(s) < 3).ToArray());
+            cboBall.Items.AddRange(b.Where(s => (b.IndexOf(s) > 2)).OrderBy(s => s).ToArray());
+
+            cboBall.SelectedItem = cboBall.Items.Contains(balls[bs]) ? balls[bs] : cboBall.Items[0];
+        }
+
         private void cboPokemon_SelectedIndexChanged(object sender, EventArgs e)
         {
-            txtCaptureRate.Text = PokemonTables.pokemonXYTable[cboPokemon.SelectedIndex + 1].CatchRate.ToString();
-            if (cboGeneration.SelectedIndex == 3 && rdORAS.Checked)
-                txtCaptureRate.Text = PokemonTables.pokemonORASTable[cboPokemon.SelectedIndex + 1].CatchRate.ToString();
+
+            txtCaptureRate.Text = PokemonList[cboPokemon.SelectedIndex + 1].CatchRate.ToString();
 
             pctPokemon.Image = (Image)Properties.Resources.ResourceManager.GetObject("m" + (cboPokemon.SelectedIndex + 1) 
                 + (Properties.Settings.Default.ShinySprites ? "s" : ""));
@@ -115,38 +185,25 @@ namespace PokemonEncCalc
 
         private void cboGeneration_SelectedIndexChanged(object sender, EventArgs e)
         {
-            switch (cboGeneration.SelectedIndex)
+            generation = cboGeneration.SelectedIndex + 3;
+            refreshComboboxes();
+            pnlGen5.Visible = chkORAS.Visible = cboCapturePower.Visible = lblCapturePower.Visible = pnlPokedexGen6.Visible = false;
+            switch (generation)
             {
-                case 0:
-                case 1:
-                    pnlGen5.Visible = pnlGen6Games.Visible = cboCapturePower.Visible = lblCapturePower.Visible = pnlPokedexGen6.Visible = false;
-                    txtCaptureRate.Text = PokemonTables.pokemonXYTable[cboPokemon.SelectedIndex + 1].CatchRate.ToString();
-                    break;
-                case 2:
+                case 5:
                     pnlGen5.Visible = cboCapturePower.Visible = lblCapturePower.Visible = true;
-                    pnlGen6Games.Visible = pnlPokedexGen6.Visible = false;
-                    txtCaptureRate.Text = PokemonTables.pokemonXYTable[cboPokemon.SelectedIndex + 1].CatchRate.ToString();
                     break;
-                case 3:
-                    pnlGen5.Visible = false;
-                    pnlGen6Games.Visible = cboCapturePower.Visible = lblCapturePower.Visible = pnlPokedexGen6.Visible = true;
-                    if (rdORAS.Checked) txtCaptureRate.Text = PokemonTables.pokemonORASTable[cboPokemon.SelectedIndex + 1].CatchRate.ToString();
-                    else txtCaptureRate.Text = PokemonTables.pokemonXYTable[cboPokemon.SelectedIndex + 1].CatchRate.ToString();
-
+                case 6:
+                    chkORAS.Visible = cboCapturePower.Visible = lblCapturePower.Visible = pnlPokedexGen6.Visible = true;
+                    break;
+                case 7:
+                    pnlPokedexGen6.Visible = true;
                     break;
                 default: break;
             }
         }
 
-        private void rdXY_CheckedChanged(object sender, EventArgs e)
-        {
-            txtCaptureRate.Text = PokemonTables.pokemonXYTable[cboPokemon.SelectedIndex + 1].CatchRate.ToString();
-        }
 
-        private void rdORAS_CheckedChanged(object sender, EventArgs e)
-        {
-            txtCaptureRate.Text = PokemonTables.pokemonORASTable[cboPokemon.SelectedIndex + 1].CatchRate.ToString();
-        }
 
         private void cboBall_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -187,7 +244,7 @@ namespace PokemonEncCalc
             decimal statusBonus = 1;
             int currentHP = int.Parse(txtCurrentHP.Text);
             int maxHP = int.Parse(txtMaxHP.Text);
-            Pokemon p = PokemonTables.pokemonXYTable[cboPokemon.SelectedIndex + 1];
+            Pokemon p = PokemonList[cboPokemon.SelectedIndex + 1];
 
             // Get specific informaton for capture calculation
             int pokedex = 0;
@@ -197,86 +254,23 @@ namespace PokemonEncCalc
 
             pnlResult3_4.Visible = pnlResult5_6.Visible = false;
 
-            // Checks
-
-            // Check Pokémon & Generation match
-            //  + Check ball available (HGSS only & those introduced in gen 4)
-            switch (cboGeneration.SelectedIndex)
-            {
-                case 0:
-                    if(p.NatID > 386)
-                    {
-                        string msg = messageBoxes[Properties.Settings.Default.Language][0];
-                        msg = msg.Replace("{0}", (string)cboPokemon.SelectedItem);
-                        msg = msg.Replace("{1}", "3");
-                        MessageBox.Show(msg, "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        return;
-                    }
-                    if (kurtBalls.Contains(ball) || gen4Balls.Contains(ball))
-                    {
-                        string msg = messageBoxes[Properties.Settings.Default.Language][1];
-                        msg = msg.Replace("{0}", (string)cboBall.SelectedItem);
-                        msg = msg.Replace("{1}", "3");
-                        MessageBox.Show(msg, "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        return;
-                    }
-                    break;
-                case 1:
-                    if (p.NatID > 493)
-                    {
-                        string msg = messageBoxes[Properties.Settings.Default.Language][0];
-                        msg = msg.Replace("{0}", (string)cboPokemon.SelectedItem);
-                        msg = msg.Replace("{1}", "4");
-                        MessageBox.Show(msg, "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        return;
-                    }
-                    break;
-                case 2:
-                    if (p.NatID > 649)
-                    {
-                        string msg = messageBoxes[Properties.Settings.Default.Language][0];
-                        msg = msg.Replace("{0}", (string)cboPokemon.SelectedItem);
-                        msg = msg.Replace("{1}", "5");
-                        MessageBox.Show(msg, "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        return;
-                    }
-                    if (kurtBalls.Contains(ball))
-                    {
-                        string msg = messageBoxes[Properties.Settings.Default.Language][1];
-                        msg = msg.Replace("{0}", (string)cboBall.SelectedItem);
-                        msg = msg.Replace("{1}", "5");
-                        MessageBox.Show(msg, "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        return;
-                    }
-                    break;
-                case 3:
-                    if (kurtBalls.Contains(ball))
-                    {
-                        string msg = messageBoxes[Properties.Settings.Default.Language][1];
-                        msg = msg.Replace("{0}", (string)cboBall.SelectedItem);
-                        msg = msg.Replace("{1}", "6");
-                        MessageBox.Show(msg, "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        return;
-                    }
-                    break;
-                default:
-                    break;
-            }
-
             // Specific capture modifiers (gen 5 & 6)
             // Capture power & Pokedex
-            if (cboGeneration.SelectedIndex == 2)
+            if (generation == 5)
             {    // Generation 5
                 capturePower = (new[] { 1m, 1.1m, 1.2m, 1.3m })[cboCapturePower.SelectedIndex];
                 pokedex = (int)nudPokedexGen5.Value;
             }
-            if (cboGeneration.SelectedIndex == 3)
+            if (generation == 6)
             {    // Generation 6
                 capturePower = (new[] { 1m, 1.5m, 2m, 2.5m })[cboCapturePower.SelectedIndex];
                 pokedex = (int)nudPokedexGen6.Value;
             }
+            if (generation == 7) //Generation 7 (no capture power)
+                pokedex = (int)nudPokedexGen6.Value;
+
             // Dark Grass (gen 5)
-            if(cboGeneration.SelectedIndex == 2 && chkDarkGrass.Checked)
+            if(generation == 5 && chkDarkGrass.Checked)
             {
                 darkGrass = 1229m/4096m;
                 if (pokedex > 30) darkGrass = 2048m / 4096m;
@@ -286,8 +280,8 @@ namespace PokemonEncCalc
                 if (pokedex > 600) darkGrass = 1m;
             }
 
-            // Critical capture (generations 5 & 6)
-            if(cboGeneration.SelectedIndex >= 2)
+            // Critical capture (generation 5 onwards)
+            if(generation >= 5)
             {
                 if (pokedex > 30) criticalCatch = 0.5m;
                 if (pokedex > 150) criticalCatch = 1m;
@@ -305,12 +299,15 @@ namespace PokemonEncCalc
                     break;
 
                 case Ball.DuskBall:
-                    if (rdNightCave.Checked) ballBonus = 3.5m;
+                    if (rdNightCave.Checked) ballBonus = generation == 7 ? 3 : 3.5m;
                     break;
 
                 case Ball.FastBall:
                     if (p.Spe >= 100)
-                        catchRate *= 4;
+                    {
+                        if (generation == 4) catchRate *= 4;
+                        if (generation == 7) ballBonus = 4;
+                    }
                     break;
 
                 case Ball.GreatBall:
@@ -321,61 +318,86 @@ namespace PokemonEncCalc
 
                 case Ball.HeavyBall:
                     // Apply catchRate modifiers
-                    
-                    if (p.Weight < 2048) catchRate -= 20; // Should apply if weight > 102.4kg, but actually applies to > 204.8kg due to a bug.
-                    if (p.Weight >= 2048) catchRate += 20;
-                    if (p.Weight >= 3072) catchRate += 10; // actually +30, as the condition above is true if this one is true
-                    if (p.Weight >= 4096) catchRate += 10; // actually +40, for the same reason as above
-                    
+                    if (generation == 4)
+                    {
+                        if (p.Weight < 2048) catchRate -= 20; // Should apply if weight < 102.4kg, but actually applies to < 204.8kg due to a bug.
+                        if (p.Weight >= 2048) catchRate += 20;
+                        if (p.Weight >= 3072) catchRate += 10; // actually +30, as the condition above is true if this one is true
+                        if (p.Weight >= 4096) catchRate += 10; // actually +40, for the same reason as above
+                    }
+                    if(generation == 7)
+                    {
+                        if (p.Weight < 1000) catchRate -= 20;
+                        if (p.Weight > 2000) catchRate += 20;
+                        if (p.Weight > 3000) catchRate += 10; // actually +30, as the condition above is true if this one is true
+                    }
                     break;
 
                 case Ball.LevelBall:
                     decimal levelDiff = nudLevelOwn.Value / nudLevelWild.Value;
-                    if (levelDiff > 1) catchRate *= 2;
-                    if (levelDiff > 2) catchRate *= 2; // *4 if 2 < levelDiff <= 4 (as condition above is always true if this one is true)
-                    if (levelDiff > 4) catchRate *= 2; // *8 if levelDiff > 4
-                    
+                    if (generation == 4)
+                    {
+                        if (levelDiff > 1) catchRate *= 2;
+                        if (levelDiff > 2) catchRate *= 2; // *4 if 2 < levelDiff <= 4 (as condition above is always true if this one is true)
+                        if (levelDiff > 4) catchRate *= 2; // *8 if levelDiff > 4
+                    }
+                    if (generation == 7)
+                    {
+                        if (levelDiff > 1) ballBonus = 2;
+                        if (levelDiff > 2) ballBonus *= 2; // *4 if 2 < levelDiff <= 4 (as condition above is always true if this one is true)
+                        if (levelDiff > 4) ballBonus *= 2; // *8 if levelDiff > 4
+                    }
                     break;
 
                 case Ball.LoveBall:
-                    if (rdLove.Checked) catchRate *= 8;
-                    
+                    if (rdLove.Checked)
+                    {
+                        if (generation == 4) catchRate *= 8;
+                        if (generation == 7) ballBonus = 8;
+                    }
                     break;
 
                 case Ball.LureBall:
-                    if (rdFished.Checked) catchRate *= 3;
-                    
+                    if (rdFished.Checked)
+                    {
+                        if (generation == 4) catchRate *= 3;
+                        if (generation == 7) ballBonus = 5;
+                    }
                     break;
 
                 case Ball.MoonBall:
-                    if (new[] { 29, 30, 31, 32, 33, 34, 35, 36, 39, 40, 300, 301 }.Contains(p.NatID))
-                        catchRate *= 4;
-                    
+                    if (new[] { 29, 30, 31, 32, 33, 34, 35, 36, 39, 40, 300, 301, 517, 518 }.Contains(p.NatID))
+                    {
+                        if (generation == 4) catchRate *= 4;
+                        if (generation == 7) ballBonus = 4;
+                    }
                     break;
 
                 case Ball.NestBall:
-                    int a = cboGeneration.SelectedIndex <= 1 ? 40 : 41;
+                    int a = generation <= 4 ? 40 : 41;
                     ballBonus = ((a - (int)nudNest.Value)) / 10;
+                    if (generation == 7) ballBonus = (8 - 0.2m * ((int)nudNest.Value - 1));
                     if (ballBonus < 1) ballBonus = 1;
                     break;
 
                 case Ball.NetBall:
                     if (p.Type1 == Type.Bug || p.Type2 == Type.Bug || p.Type1 == Type.Water || p.Type2 == Type.Water)
-                        ballBonus = 3;
+                        ballBonus = (generation == 7) ? 3.5m : 3;
                     break;
 
                 case Ball.QuickBall:
-                    if (nudTurn.Value == 1) ballBonus = cboGeneration.SelectedIndex == 1 ? 4 : 5; // x4 if gen 4, x5 otherwise          
+                    if (nudTurn.Value == 1) ballBonus = generation == 4 ? 4 : 5; // x4 if gen 4, x5 otherwise          
                     break;
 
                 case Ball.RepeatBall:
-                    if (rdAlreadyCaught.Checked) ballBonus = 3;
+                    if (rdAlreadyCaught.Checked) ballBonus = (generation == 7) ? 3.5m : 3;
                     break;
 
                 case Ball.TimerBall:
                     int turnsPassed = (int)nudTurn.Value - 1;
-                    if (cboGeneration.SelectedIndex <= 1) ballBonus = (turnsPassed + 10) / 10;
-                    else ballBonus = (decimal)turnsPassed * 1229 / 4096 + 1;
+                    if (generation <= 4) ballBonus = (turnsPassed + 10) / 10;
+                    if (generation == 5) ballBonus = (decimal)turnsPassed * 1229 / 4096 + 1;
+                    if (generation >= 6) ballBonus = 1 + 0.3m * turnsPassed;
                     if (ballBonus > 4) ballBonus = 4;
                     break;
 
@@ -383,29 +405,35 @@ namespace PokemonEncCalc
                     ballBonus = 2;
                     break;
 
+                case Ball.BeastBall:
+                    ballBonus = new[] { 793, 794, 795, 796, 797, 798, 799 }.Contains(p.NatID) ? 5 : 0.1m;
+                    break;
+
                 default:
                     ballBonus = 1;
                     break;
             }
+            // Check Ultra Beasts
+            if (new[] { 793, 794, 795, 796, 797, 798, 799 }.Contains(p.NatID) && ball != Ball.BeastBall) ballBonus = 0.1m;
             // Checks catchRate value (should be between 1 and 255)
             if (catchRate < 0) catchRate = 1; // Does not apply if catchRate == 0 (due to a bug), but as no Pokémon can have a catchRate of 20, this never happens.
             if (catchRate > 255) catchRate = 255;
 
             // status modifier
             if (cboStatus.SelectedIndex > 0) statusBonus = 1.5m;
-            if (cboStatus.SelectedIndex > 3) statusBonus = cboGeneration.SelectedIndex > 1 ? 2.5m : 2;
+            if (cboStatus.SelectedIndex > 3) statusBonus = generation > 4 ? 2.5m : 2;
 
             // Probability calculation
             decimal pr;
             decimal cc;
             decimal ccCapture;
-            if (cboGeneration.SelectedIndex <= 1)
+            if (generation <= 4)
             {
                 pr = catchCalcGen3_4(catchRate, ballBonus, statusBonus, currentHP, maxHP);
                 lblCaptureResult3.Text = Math.Round(10000 * pr) / 100 + " %";
                 pnlResult3_4.Visible = true;
             }
-            if(cboGeneration.SelectedIndex == 2)
+            if(generation == 5)
             {
                 pr = catchCalcGen5(catchRate, ballBonus, statusBonus, currentHP, maxHP, darkGrass, capturePower);
                 cc = criticalChanceGen5_6(catchRate, ballBonus, statusBonus, currentHP, maxHP, darkGrass, capturePower, criticalCatch);
@@ -416,8 +444,9 @@ namespace PokemonEncCalc
                 pnlResult5_6.Visible = true;
 
             }
-            if (cboGeneration.SelectedIndex == 3)
+            if (generation >= 6)
             {
+                if (generation == 7) capturePower = 1;
                 pr = catchCalcGen6(catchRate, ballBonus, statusBonus, currentHP, maxHP, capturePower);
                 cc = criticalChanceGen5_6(catchRate, ballBonus, statusBonus, currentHP, maxHP, 1, capturePower, criticalCatch);
                 ccCapture = criticalCalcGen6(catchRate, ballBonus, statusBonus, currentHP, maxHP, capturePower);
@@ -509,6 +538,15 @@ namespace PokemonEncCalc
             decimal a = down(round(down(round(round((3 * maxHP - 2 * currentHP) * darkGrass) * catchRate * bonusBall) / (3 * maxHP)) * bonusStatus) * capturePower);
             if (a > 255) a = 255;
             return Math.Min(1, down(a * criticalRate / 6) / 256);
+        }
+
+        private void chkORAS_CheckedChanged(object sender, EventArgs e)
+        {
+            chkORAS.Text = chkORAS.Checked ? oras[Properties.Settings.Default.Language] : "XY";
+            PokemonList.Clear();
+            if (chkORAS.Checked) PokemonList.AddRange(PokemonTables.pokemonORASTable);
+            else PokemonList.AddRange(PokemonTables.pokemonXYTable);
+            txtCaptureRate.Text = PokemonList[cboPokemon.SelectedIndex + 1].CatchRate.ToString();
         }
     }
     
