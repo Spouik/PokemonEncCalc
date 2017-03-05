@@ -333,7 +333,7 @@ namespace PokemonEncCalc
             short speciesID;
 
             int nbSlots = affectedSlots.Length;
-            decimal r = data.Length / (2*nbSlots);
+            decimal r = data.Length / (decimal)(2*nbSlots);
 
             if (percentage.Length < nbSlots)
                 throw new Exception("percentage is smaller than Encounter slot data.");
