@@ -1563,7 +1563,7 @@ namespace PokemonEncCalc
 
             if(currentVersion == Version.Sun || currentVersion == Version.Moon)
             {
-                chkRepel.Checked = chkRepel.Visible = false; // No repel (the whole table is affceted by the same levels)
+                chkRepel.Checked = chkRepel.Visible = false; // No repel (the whole table is affected by the same levels)
 
             }
             else
@@ -1585,6 +1585,7 @@ namespace PokemonEncCalc
                     case EncounterType.RockSmash:
                         cboAbility.Items.Add(encounterOptions[1][4]);
                         chkRepel.Enabled = (cboVersion.SelectedIndex < ((int)Version.Diamond - (int)Program.STARTING_VERSION));
+                        chkRepel.Checked &= chkRepel.Enabled; //Force uncheck if the checkbox is disabled.
                         break;
                     case EncounterType.OldRod:
                     case EncounterType.GoodRod:
@@ -1738,7 +1739,10 @@ namespace PokemonEncCalc
             if (cboAbility.Items.Contains(encounterOptions[1][(int)selectedAbility - 1]))
                 cboAbility.SelectedItem = encounterOptions[1][(int)selectedAbility - 1];
             else
+            {
                 cboAbility.SelectedIndex = 0;
+                chkAbility.Checked = false;
+            }
 
 
             if (newSlots == null)
