@@ -1561,9 +1561,9 @@ namespace PokemonEncCalc
             cboAbility.Items.Add(encounterOptions[1][0]);
             cboAbility.Items.Add(encounterOptions[1][1]);
 
-            if(currentVersion == Version.Sun || currentVersion == Version.Moon)
+            if (currentVersion == Version.Sun || currentVersion == Version.Moon)
             {
-                chkRepel.Checked = chkRepel.Visible = false; // No repel (the whole table is affected by the same levels)
+                chkRepel.Checked = false; // No repel (the whole table is affected by the same levels)
 
             }
             else
