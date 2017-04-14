@@ -22,7 +22,7 @@ namespace PokemonEncCalc
         internal override int Height { get { return BitConverter.ToUInt16(Data, 36); } set { BitConverter.GetBytes((ushort)value).CopyTo(Data, 36); } }
         internal override int Weight { get { return BitConverter.ToUInt16(Data, 38); } set { BitConverter.GetBytes((ushort)value).CopyTo(Data, 38); } }
         internal override byte CatchRate { get { return Data[8]; } set { Data[8] = value; } }
-        internal override byte GenderRatio { get { return Data[18]; } set { Data[18] = value; } }
+        internal override byte GenderRatio { get { return Data[16]; } set { Data[16] = value; } }
         // Accessing Base stats data..
         internal override byte HP { get { return Data[0]; } set { Data[0] = value; } }
         internal override byte Atk { get { return Data[1]; } set { Data[1] = value; } }
