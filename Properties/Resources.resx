@@ -8644,10 +8644,10 @@
   <data name="m370" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images\minisprites\m370.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="m370_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="m670_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images\minisprites\m370_4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="m370_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="m670_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images\minisprites\m370_5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="m371" type="System.Resources.ResXFileRef, System.Windows.Forms">
@@ -11212,60 +11212,6 @@
   <data name="AlphaSapphireSlots" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\data\AlphaSapphireSlots.dat;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="_103_1s" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\images\sprites_s\103_1s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="_105_1s" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\images\sprites_s\105_1s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="_19_1s" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\images\sprites_s\19_1s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="_20_1s" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\images\sprites_s\20_1s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="_26_1s" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\images\sprites_s\26_1s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="_27_1s" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\images\sprites_s\27_1s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="_28_1s" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\images\sprites_s\28_1s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="_37_1s" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\images\sprites_s\37_1s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="_38_1s" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\images\sprites_s\38_1s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="_50_1s" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\images\sprites_s\50_1s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="_51_1s" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\images\sprites_s\51_1s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="_52_1s" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\images\sprites_s\52_1s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="_53_1s" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\images\sprites_s\53_1s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="_658_2s" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\images\sprites_s\658_2s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="_718_1s" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\images\sprites_s\718_1s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="_718_2s" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\images\sprites_s\718_2s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="_718_3s" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\images\sprites_s\718_3s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="_718_4s" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\images\sprites_s\718_4s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="_722s" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images\sprites_s\722s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -11326,15 +11272,6 @@
   <data name="_741s" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images\sprites_s\741s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="_741_1s" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\images\sprites_s\741_1s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="_741_2s" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\images\sprites_s\741_2s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="_741_3s" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\images\sprites_s\741_3s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="_742s" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images\sprites_s\742s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -11347,14 +11284,8 @@
   <data name="_745s" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images\sprites_s\745s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="_745_1s" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\images\sprites_s\745_1s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="_746s" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images\sprites_s\746s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="_746_1s" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\images\sprites_s\746_1s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="_747s" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images\sprites_s\747s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -11364,9 +11295,6 @@
   </data>
   <data name="_749s" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images\sprites_s\749s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="_74_1s" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\images\sprites_s\74_1s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="_750s" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images\sprites_s\750s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -11398,9 +11326,6 @@
   <data name="_759s" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images\sprites_s\759s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="_75_1s" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\images\sprites_s\75_1s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="_760s" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images\sprites_s\760s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -11431,9 +11356,6 @@
   <data name="_769s" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images\sprites_s\769s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="_76_1s" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\images\sprites_s\76_1s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="_770s" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images\sprites_s\770s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -11448,45 +11370,6 @@
   </data>
   <data name="_774s" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images\sprites_s\774s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="_774_10s" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\images\sprites_s\774_10s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="_774_11s" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\images\sprites_s\774_11s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="_774_12s" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\images\sprites_s\774_12s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="_774_13s" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\images\sprites_s\774_13s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="_774_1s" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\images\sprites_s\774_1s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="_774_2s" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\images\sprites_s\774_2s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="_774_3s" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\images\sprites_s\774_3s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="_774_4s" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\images\sprites_s\774_4s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="_774_5s" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\images\sprites_s\774_5s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="_774_6s" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\images\sprites_s\774_6s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="_774_7s" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\images\sprites_s\774_7s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="_774_8s" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\images\sprites_s\774_8s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="_774_9s" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\images\sprites_s\774_9s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="_775s" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images\sprites_s\775s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -11572,17 +11455,8 @@
   <data name="_801s" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images\sprites_s\801s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="_801_1s" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\images\sprites_s\801_1s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="_802s" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images\sprites_s\802s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="_88_1s" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\images\sprites_s\88_1s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="_89_1s" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\images\sprites_s\89_1s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="b26" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images\balls\b26.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -11590,10 +11464,475 @@
   <data name="HGSSsafari" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\data\HGSSsafari.dat;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="m103s_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\103_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m105s_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\105_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m19s_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\19_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m20s_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\20_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m26s_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\26_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m27s_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\27_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m28s_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\28_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m37s_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\37_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m38s_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\38_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m50s_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\50_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m51s_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\51_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m52s_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\52_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m53s_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\53_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m722s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\722.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m723s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\723.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m724s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\724.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m725s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\725.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m726s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\726.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m727s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\727.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m728s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\728.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m729s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\729.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m730s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\730.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m731s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\731.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m732s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\732.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m733s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\733.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m734s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\734.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m735s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\735.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m736s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\736.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m737s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\737.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m738s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\738.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m739s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\739.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m740s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\740.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m741s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\741.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m741s_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\741_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m741s_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\741_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m741s_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\741_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m742s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\742.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m743s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\743.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m744s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\744.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m745s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\745.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m745s_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\745_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m746s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\746.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m746s_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\746_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m747s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\747.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m748s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\748.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m749s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\749.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m74s_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\74_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m750s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\750.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m751s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\751.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m752s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\752.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m753s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\753.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m754s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\754.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m755s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\755.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m756s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\756.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m757s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\757.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m758s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\758.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m759s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\759.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m75s_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\75_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m760s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\760.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m761s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\761.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m762s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\762.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m763s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\763.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m764s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\764.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m765s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\765.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m766s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\766.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m767s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\767.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m768s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\768.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m769s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\769.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m76s_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\76_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m770s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\770.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m771s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\771.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m772s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\772.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m773s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\773.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m774s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\774_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m774s_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\774_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m774s_10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\774_10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m774s_11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\774_11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m774s_12" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\774_12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m774s_13" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\774_13.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m774s_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\774.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m774s_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\774_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m774s_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\774_4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m774s_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\774_5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m774s_6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\774_6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m774s_7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\774_7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m774s_8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\774_8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m774s_9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\774_9.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m775s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\775.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m776s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\776.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m777s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\777.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m778s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\778.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m779s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\779.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m780s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\780.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m781s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\781.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m782s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\782.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m783s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\783.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m784s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\784.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m785s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\785.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m786s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\786.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m787s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\787.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m788s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\788.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m789s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\789.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m790s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\790.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m791s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\791.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m792s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\792.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m793s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\793.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m794s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\794.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m795s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\795.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m796s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\796.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m797s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\797.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m798s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\798.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m799s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\799.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m800s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\800.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m801s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\801.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m801s_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\801_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m802s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\802.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m88s_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\88_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m89s_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\89_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Maps_HGSS_SafariEN" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\strings\en\Maps_HGSS_Safari.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
   </data>
   <data name="Maps_HGSS_SafariFR" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\strings\fr\Maps_HGSS_Safari.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
+  <data name="_103s_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\sprites_s\103s-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_105s_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\sprites_s\105s-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_19s_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\sprites_s\19s-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_20s_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\sprites_s\20s-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_26s_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\sprites_s\26s-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_27s_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\sprites_s\27s-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_28s_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\sprites_s\28s-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_37s_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\sprites_s\37s-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_38s_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\sprites_s\38s-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_50s_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\sprites_s\50s-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_51s_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\sprites_s\51s-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_52s_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\sprites_s\52s-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_53s_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\sprites_s\53s-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_658s_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\sprites_s\658s-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_658s_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\sprites_s\658s-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_718s_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\sprites_s\718s-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_718s_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\sprites_s\718s-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_718s_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\sprites_s\718s-3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_718s_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\sprites_s\718s-4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_74s_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\sprites_s\74s-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_75s_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\sprites_s\75s-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_76s_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\sprites_s\76s-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_774s_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\sprites_s\774s-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_774s_10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\sprites_s\774s-10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_774s_11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\sprites_s\774s-11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_774s_12" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\sprites_s\774s-12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_774s_13" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\sprites_s\774s-13.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_774s_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\sprites_s\774s-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_774s_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\sprites_s\774s-3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_774s_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\sprites_s\774s-4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_774s_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\sprites_s\774s-5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_774s_6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\sprites_s\774s-6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_774s_7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\sprites_s\774s-7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_774s_8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\sprites_s\774s-8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_774s_9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\sprites_s\774s-9.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_88s_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\sprites_s\88s-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_89s_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\sprites_s\89s-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
