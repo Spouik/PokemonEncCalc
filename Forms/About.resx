@@ -230,6 +230,7 @@ Ver. 5.0 :	- Added : English translation.
 	            Ver. 5.9.1 :	- Added : Sun &amp; Moon capture calculation.
 
 	Ver. 5.10 : - Added : HGSS Safari Zone encounter data.
+		  - Added : Gen 7 Pokémon shiny sprites &amp; minisprites (thanks @Shinyhunter_map).
 		  - Fixed : Cute Charm Calculation (misreading of the gender ratio).
 		  - Fixed : Hoenn/Sinnoh sound (HGSS slots).
 		  - Fixed : Repel checkbox bug occuring where Sun/Moon are selected.
