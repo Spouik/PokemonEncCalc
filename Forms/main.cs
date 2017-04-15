@@ -253,7 +253,7 @@ namespace PokemonEncCalc
                 = pnlHGSSOptions.Visible = pnlGen5Options.Visible = pnlLuckyPower.Visible
                 = lblHelpRoute120.Visible = lblHelpTurnback.Visible 
                 = cboMapsGS.Visible = cboMapsCrystal.Visible = pnlOptionsGen2.Visible 
-                = cboMapsSuMo.Visible = pnl_SunMoonOptions.Visible = false;
+                = cboMapsSuMo.Visible = pnl_SunMoonOptions.Visible = pnlHGSSSafari.Visible = false;
 
 
 
@@ -464,7 +464,8 @@ namespace PokemonEncCalc
             translateMaps(cboMapsAS, "Maps_AS_" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR" })[Properties.Settings.Default.Language - 1], ref Utils.MapNamesAS);
             // Maps SuMo:
             translateMaps(cboMapsSuMo, "Maps_SuMo_" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR" })[Properties.Settings.Default.Language - 1], ref Utils.MapNamesSuMo);
-
+            // Maps HGSS Safari:
+            translateMaps(cboSafariArea, "Maps_HGSS_Safari" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR" })[Properties.Settings.Default.Language - 1], ref Utils.MapNamesSafariHGSS);
 
 
         }
@@ -1011,6 +1012,13 @@ namespace PokemonEncCalc
             foreach (Control c in pnlHGSSOptions.Controls)
                 c.Enabled = false;
 
+            //Special map: Safari Zone
+            if (map == 117)
+            {
+                lblTimeHGSSDisp.Enabled = true;
+                cboTimeHGSS.Enabled = true;
+                return;
+            }
             
 
             if ((string)(cboEncounterType.SelectedItem) == encounterOptions[0][0])
@@ -1081,24 +1089,49 @@ namespace PokemonEncCalc
             if (!cboMapsHGSS.Visible) return;
 
             string encounterType = cboEncounterType.SelectedItem == null ? "" : (string)cboEncounterType.SelectedItem;
-            int selectedMap = cboMapsHGSS.SelectedIndex == -1 ? 0 : Utils.mapTablesHGSS[Utils.MapNamesHGSS.FindIndex(s => s.Equals((string)cboMapsHGSS.SelectedItem))];
 
+            int selectedMap;
+
+            if (cboMapsHGSS.SelectedIndex == -1) selectedMap = 0; 
+            else
+            {
+                selectedMap = Utils.MapNamesHGSS.FindIndex(s => s.Equals((string)cboMapsHGSS.SelectedItem));
+                if (selectedMap != 117) selectedMap = Utils.mapTablesHGSS[selectedMap];
+                   
+            }
 
             cboEncounterType.Items.Clear();
 
-            if (Utils.MapsHeartGold[selectedMap].isExistingEncounterType(EncounterType.Walking))
+            if (selectedMap == 117)
+            {
+                pnlHGSSSafari.Visible = true;
                 cboEncounterType.Items.Add(encounterOptions[0][0]);
-            if (Utils.MapsHeartGold[selectedMap].isExistingEncounterType(EncounterType.Surf))
-                cboEncounterType.Items.Add(encounterOptions[0][1]);
-            if (Utils.MapsHeartGold[selectedMap].isExistingEncounterType(EncounterType.RockSmash))
-                cboEncounterType.Items.Add(encounterOptions[0][2]);
-            if (Utils.MapsHeartGold[selectedMap].isExistingEncounterType(EncounterType.OldRod))
-                cboEncounterType.Items.Add(encounterOptions[0][3]);
-            if (Utils.MapsHeartGold[selectedMap].isExistingEncounterType(EncounterType.GoodRod))
-                cboEncounterType.Items.Add(encounterOptions[0][4]);
-            if (Utils.MapsHeartGold[selectedMap].isExistingEncounterType(EncounterType.SuperRod))
-                cboEncounterType.Items.Add(encounterOptions[0][5]);
-
+                int area = cboSafariArea.SelectedIndex;
+                if (Utils.MapsSafariHGSS[area].isThereWater())
+                {
+                    cboEncounterType.Items.Add(encounterOptions[0][1]);
+                    cboEncounterType.Items.Add(encounterOptions[0][3]);
+                    cboEncounterType.Items.Add(encounterOptions[0][4]);
+                    cboEncounterType.Items.Add(encounterOptions[0][5]);
+                }
+                
+            }
+            else
+            {
+                pnlHGSSSafari.Visible = false;
+                if (Utils.MapsHeartGold[selectedMap].isExistingEncounterType(EncounterType.Walking))
+                    cboEncounterType.Items.Add(encounterOptions[0][0]);
+                if (Utils.MapsHeartGold[selectedMap].isExistingEncounterType(EncounterType.Surf))
+                    cboEncounterType.Items.Add(encounterOptions[0][1]);
+                if (Utils.MapsHeartGold[selectedMap].isExistingEncounterType(EncounterType.RockSmash))
+                    cboEncounterType.Items.Add(encounterOptions[0][2]);
+                if (Utils.MapsHeartGold[selectedMap].isExistingEncounterType(EncounterType.OldRod))
+                    cboEncounterType.Items.Add(encounterOptions[0][3]);
+                if (Utils.MapsHeartGold[selectedMap].isExistingEncounterType(EncounterType.GoodRod))
+                    cboEncounterType.Items.Add(encounterOptions[0][4]);
+                if (Utils.MapsHeartGold[selectedMap].isExistingEncounterType(EncounterType.SuperRod))
+                    cboEncounterType.Items.Add(encounterOptions[0][5]);
+            }
             if (cboEncounterType.Items.Contains(encounterType))
             {
                 cboEncounterType.SelectedItem = encounterType;
@@ -1546,6 +1579,11 @@ namespace PokemonEncCalc
 
         void loadSlotData(object sender, EventArgs e)
         {
+            loadSlotData();
+        }
+
+        void loadSlotData()
+        {
             int currentMap;
             EncounterSlot[] newSlots = null;
             EncounterType type = (EncounterType)encounterOptions[0].FindIndex(s => s.Equals((string)cboEncounterType.SelectedItem));
@@ -1672,19 +1710,42 @@ namespace PokemonEncCalc
                     break;
                 case Version.HeartGold:
                     cboAbility.Items.Add(encounterOptions[1][3]);
-                    currentMap = Utils.mapTablesHGSS[Utils.MapNamesHGSS.FindIndex(s => s.Equals((string)cboMapsHGSS.SelectedItem))];
+                    //currentMap = Utils.mapTablesHGSS[Utils.MapNamesHGSS.FindIndex(s => s.Equals((string)cboMapsHGSS.SelectedItem))];
+                    currentMap = Utils.MapNamesHGSS.FindIndex(s => s.Equals((string)cboMapsHGSS.SelectedItem));
+                    currentMap = currentMap == 117 ? 117 : Utils.mapTablesHGSS[currentMap];
                     changeSpecialOptionsHGSS(currentMap);
                     radio = cboRadio.Enabled ? cboRadio.SelectedIndex : 0;
                     time = cboTimeHGSS.Enabled ? cboTimeHGSS.SelectedIndex : 0;
-                    newSlots = Utils.MapsHeartGold[currentMap].getSlots(type, (cboSwarmHGSS.Enabled && (cboSwarmHGSS.SelectedIndex == 1)), time, radio);
+                    if (currentMap == 117)
+                    {
+                        newSlots = Utils.MapsSafariHGSS[cboSafariArea.SelectedIndex].getSlots(type, time,
+                            (int)nudSafariPlainsBks.Value, (int)nudSafariForestBks.Value, (int)nudSafariRockBks.Value, (int)nudSafariWaterBks.Value,
+                            (int)nudSafariDays.Value);
+                    }
+                    else
+                    {
+                        newSlots = Utils.MapsHeartGold[currentMap].getSlots(type, (cboSwarmHGSS.Enabled && (cboSwarmHGSS.SelectedIndex == 1)), time, radio);
+                    }
                     break;
                 case Version.SoulSilver:
                     cboAbility.Items.Add(encounterOptions[1][3]);
-                    currentMap = Utils.mapTablesHGSS[Utils.MapNamesHGSS.FindIndex(s => s.Equals((string)cboMapsHGSS.SelectedItem))];
+                    //currentMap = Utils.mapTablesHGSS[Utils.MapNamesHGSS.FindIndex(s => s.Equals((string)cboMapsHGSS.SelectedItem))];
+                    currentMap = Utils.MapNamesHGSS.FindIndex(s => s.Equals((string)cboMapsHGSS.SelectedItem));
+                    currentMap = currentMap == 117 ? 117 : Utils.mapTablesHGSS[currentMap];
                     changeSpecialOptionsHGSS(currentMap);
                     radio = cboRadio.Enabled ? cboRadio.SelectedIndex : 0;
                     time = cboTimeHGSS.Enabled ? cboTimeHGSS.SelectedIndex : 0;
-                    newSlots = Utils.MapsSoulSilver[currentMap].getSlots(type, (cboSwarmHGSS.Enabled && (cboSwarmHGSS.SelectedIndex == 1)), time, radio);
+                    if (currentMap == 117)
+                    {
+                        newSlots = Utils.MapsSafariHGSS[cboSafariArea.SelectedIndex].getSlots(type, time,
+                            (int)nudSafariPlainsBks.Value, (int)nudSafariForestBks.Value, (int)nudSafariRockBks.Value, (int)nudSafariWaterBks.Value,
+                            (int)nudSafariDays.Value);
+
+                    }
+                    else
+                    {
+                        newSlots = Utils.MapsSoulSilver[currentMap].getSlots(type, (cboSwarmHGSS.Enabled && (cboSwarmHGSS.SelectedIndex == 1)), time, radio);
+                    }
                     break;
                 case Version.Black:
                     currentMap = Utils.mapTablesBW[Utils.MapNamesBW.FindIndex(s => s.Equals((string)cboMapsBW.SelectedItem))];
@@ -1903,6 +1964,41 @@ namespace PokemonEncCalc
         private void chkBugCatching_CheckedChanged(object sender, EventArgs e)
         {
             cboTimeGSC.Enabled = lblTimeDispGSC.Enabled = chkBugCatching.Checked;
+        }
+
+        private void nudSafariPlainsBks_ValueChanged(object sender, EventArgs e)
+        {
+            updateBlockNumber();
+            loadSlotData();
+        }
+
+
+        private void updateBlockNumber()
+        {
+            nudSafariPlainsBks.Maximum = 30 - nudSafariForestBks.Value - nudSafariRockBks.Value - nudSafariWaterBks.Value;
+            nudSafariForestBks.Maximum = 30 - nudSafariPlainsBks.Value - nudSafariRockBks.Value - nudSafariWaterBks.Value;
+            nudSafariRockBks.Maximum = 30 - nudSafariPlainsBks.Value - nudSafariForestBks.Value - nudSafariWaterBks.Value;
+            nudSafariWaterBks.Maximum = 30 - nudSafariPlainsBks.Value - nudSafariForestBks.Value - nudSafariRockBks.Value;
+            lblSafariBlocksCount.Text = "(" + (nudSafariPlainsBks.Value + nudSafariForestBks.Value + nudSafariRockBks.Value + nudSafariWaterBks.Value) + "/30)";
+
+        }
+
+        private void nudSafariForestBks_ValueChanged(object sender, EventArgs e)
+        {
+            updateBlockNumber();
+            loadSlotData();
+        }
+
+        private void nudSafariRockBks_ValueChanged(object sender, EventArgs e)
+        {
+            updateBlockNumber();
+            loadSlotData();
+        }
+
+        private void nudSafariWaterBks_ValueChanged(object sender, EventArgs e)
+        {
+            updateBlockNumber();
+            loadSlotData();
         }
     }
 }

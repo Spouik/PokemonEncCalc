@@ -27,6 +27,7 @@ namespace PokemonEncCalc
         internal static List<string> MapNamesOR;
         internal static List<string> MapNamesAS;
         internal static List<string> MapNamesSuMo;
+        internal static List<string> MapNamesSafariHGSS;
 
         // List of all maps from Gen 2 to Gen 7
         internal static List<AreaMapGen2> MapsGold;
@@ -52,6 +53,7 @@ namespace PokemonEncCalc
         internal static List<AreaMapORAS> MapsAlphaSapphire;
         internal static List<AreaMapSuMo> MapsSun;
         internal static List<AreaMapSuMo> MapsMoon;
+        internal static List<AreaMapHGSSSafari> MapsSafariHGSS;
 
 
         // Map tables for gen4/gen5 games
@@ -507,6 +509,7 @@ namespace PokemonEncCalc
             loadSlotsAlphaSapphire();
             loadSlotsSun();
             loadSlotsMoon();
+            loadSlotsHGSSsafari();
         }
 
         private static void loadSlotsGold()
@@ -781,6 +784,19 @@ namespace PokemonEncCalc
                 byte[] data = ((byte[])Properties.Resources.ResourceManager.GetObject("M_Location_" + i)).Skip(0x80).ToArray();
                 MapsMoon.Add(new AreaMapSuMo(data, Version.Moon));
             }
+        }
+
+        private static void loadSlotsHGSSsafari()
+        {
+            int mapCount = 12;
+            MapsSafariHGSS = new List<AreaMapHGSSSafari>();
+            for (int i = 0; i < mapCount; i++)
+            {
+                byte[] data = new byte[912];
+                data = Properties.Resources.HGSSsafari.Skip(912 * i + 148).Take(912).ToArray();
+                MapsSafariHGSS.Add(new AreaMapHGSSSafari(data, Version.HeartGold, i));
+            }
+                
         }
 
 

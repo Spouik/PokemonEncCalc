@@ -21470,6 +21470,16 @@ namespace PokemonEncCalc.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] HGSSsafari {
+            get {
+                object obj = ResourceManager.GetObject("HGSSsafari", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap HoneyTree {
@@ -40203,6 +40213,46 @@ namespace PokemonEncCalc.Properties {
         internal static string Maps_HGSS_FR {
             get {
                 return ResourceManager.GetString("Maps_HGSS_FR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Plains
+        ///Meadow
+        ///Savannah
+        ///Peak
+        ///Rocky Beach
+        ///Wetland
+        ///Forest
+        ///Swamp
+        ///Marshland
+        ///Wasteland
+        ///Mountain
+        ///Desert.
+        /// </summary>
+        internal static string Maps_HGSS_SafariEN {
+            get {
+                return ResourceManager.GetString("Maps_HGSS_SafariEN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Prairie
+        ///Champ de fleurs
+        ///Savane
+        ///Rochers
+        ///Rocs et lac
+        ///Terre humide
+        ///Bois
+        ///Bois et lacs
+        ///Marais
+        ///Terre aride
+        ///Montagne
+        ///Désert.
+        /// </summary>
+        internal static string Maps_HGSS_SafariFR {
+            get {
+                return ResourceManager.GetString("Maps_HGSS_SafariFR", resourceCulture);
             }
         }
         

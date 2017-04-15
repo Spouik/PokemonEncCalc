@@ -72,6 +72,7 @@
     <Compile Include="AreaMaps\AreaMapGen3.cs" />
     <Compile Include="AreaMaps\AreaMapGen5.cs" />
     <Compile Include="AreaMaps\AreaMapHGSS.cs" />
+    <Compile Include="AreaMaps\AreaMapHGSSSafari.cs" />
     <Compile Include="AreaMaps\AreaMapORAS.cs" />
     <Compile Include="AreaMaps\AreaMapSuMo.cs" />
     <Compile Include="AreaMaps\AreaMapXY.cs" />
@@ -208,6 +209,7 @@
     <None Include="Resources\data\FormsData.dat" />
     <None Include="Resources\data\GoldSlots.dat" />
     <None Include="Resources\data\HeartGoldSlots.dat" />
+    <None Include="Resources\data\HGSSsafari.dat" />
     <None Include="Resources\data\LeafGreenSlots.dat" />
     <None Include="Resources\data\MegasData.dat" />
     <None Include="Resources\data\Moon\M_Location_0.bin" />
@@ -450,6 +452,8 @@
     <None Include="Resources\strings\en\interface.txt" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\strings\fr\Maps_HGSS_Safari.txt" />
+    <None Include="Resources\strings\en\Maps_HGSS_Safari.txt" />
     <None Include="Resources\strings\fr\Maps_SuMo.txt" />
     <None Include="Resources\strings\en\Maps_SuMo.txt" />
     <None Include="Resources\strings\kr\formsSuMo.txt" />
