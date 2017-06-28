@@ -87,3 +87,4 @@ build/
 *.cache
 *.suo
 *.suo
+.vs/PokemonEncCalc/v14/.suo

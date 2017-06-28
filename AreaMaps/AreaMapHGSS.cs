@@ -23,9 +23,9 @@ namespace PokemonEncCalc
         private static decimal[] percentGrass = new decimal[] { 20, 20, 10, 10, 10, 10, 5, 5, 4, 4, 1, 1 };
         private static decimal[] percentSurf = new decimal[] { 60, 30, 5, 4, 1 };
         private static decimal[] percentRockSmash = new decimal[] { 90, 10 };
-        private static decimal[] percentOldRod = new decimal[] { 60, 30, 5, 4, 1 };
-        private static decimal[] percentGoodRod = new decimal[] { 40, 40, 15, 4, 1 };
-        private static decimal[] percentSuperRod = new decimal[] { 40, 40, 15, 4, 1 };
+        private static decimal[] percentOldRod = new decimal[] { 40, 30, 15, 10, 5 };
+        private static decimal[] percentGoodRod = new decimal[] { 40, 30, 15, 10, 5 };
+        private static decimal[] percentSuperRod = new decimal[] { 40, 30, 15, 10, 5 };
 
 
         internal AreaMapHGSS(byte[] data, Version version, int idMap)
