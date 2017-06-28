@@ -1013,7 +1013,7 @@ namespace PokemonEncCalc
                 c.Enabled = false;
 
             //Special map: Safari Zone
-            if (map == 117)
+            if (map == -1)
             {
                 lblTimeHGSSDisp.Enabled = true;
                 cboTimeHGSS.Enabled = true;
@@ -1096,13 +1096,13 @@ namespace PokemonEncCalc
             else
             {
                 selectedMap = Utils.MapNamesHGSS.FindIndex(s => s.Equals((string)cboMapsHGSS.SelectedItem));
-                if (selectedMap != 117) selectedMap = Utils.mapTablesHGSS[selectedMap];
+                selectedMap = (selectedMap == 117) ? -1 : selectedMap = Utils.mapTablesHGSS[selectedMap];
                    
             }
 
             cboEncounterType.Items.Clear();
 
-            if (selectedMap == 117)
+            if (selectedMap == -1)
             {
                 pnlHGSSSafari.Visible = true;
                 cboEncounterType.Items.Add(encounterOptions[0][0]);
@@ -1712,11 +1712,11 @@ namespace PokemonEncCalc
                     cboAbility.Items.Add(encounterOptions[1][3]);
                     //currentMap = Utils.mapTablesHGSS[Utils.MapNamesHGSS.FindIndex(s => s.Equals((string)cboMapsHGSS.SelectedItem))];
                     currentMap = Utils.MapNamesHGSS.FindIndex(s => s.Equals((string)cboMapsHGSS.SelectedItem));
-                    currentMap = currentMap == 117 ? 117 : Utils.mapTablesHGSS[currentMap];
+                    currentMap = currentMap == 117 ? -1 : Utils.mapTablesHGSS[currentMap];
                     changeSpecialOptionsHGSS(currentMap);
                     radio = cboRadio.Enabled ? cboRadio.SelectedIndex : 0;
                     time = cboTimeHGSS.Enabled ? cboTimeHGSS.SelectedIndex : 0;
-                    if (currentMap == 117)
+                    if (currentMap == -1)
                     {
                         newSlots = Utils.MapsSafariHGSS[cboSafariArea.SelectedIndex].getSlots(type, time,
                             (int)nudSafariPlainsBks.Value, (int)nudSafariForestBks.Value, (int)nudSafariRockBks.Value, (int)nudSafariWaterBks.Value,
@@ -1731,11 +1731,11 @@ namespace PokemonEncCalc
                     cboAbility.Items.Add(encounterOptions[1][3]);
                     //currentMap = Utils.mapTablesHGSS[Utils.MapNamesHGSS.FindIndex(s => s.Equals((string)cboMapsHGSS.SelectedItem))];
                     currentMap = Utils.MapNamesHGSS.FindIndex(s => s.Equals((string)cboMapsHGSS.SelectedItem));
-                    currentMap = currentMap == 117 ? 117 : Utils.mapTablesHGSS[currentMap];
+                    currentMap = currentMap == 117 ? -1 : Utils.mapTablesHGSS[currentMap];
                     changeSpecialOptionsHGSS(currentMap);
                     radio = cboRadio.Enabled ? cboRadio.SelectedIndex : 0;
                     time = cboTimeHGSS.Enabled ? cboTimeHGSS.SelectedIndex : 0;
-                    if (currentMap == 117)
+                    if (currentMap == -1)
                     {
                         newSlots = Utils.MapsSafariHGSS[cboSafariArea.SelectedIndex].getSlots(type, time,
                             (int)nudSafariPlainsBks.Value, (int)nudSafariForestBks.Value, (int)nudSafariRockBks.Value, (int)nudSafariWaterBks.Value,
