@@ -372,6 +372,7 @@ namespace PokemonEncCalc
                         if (new[] { 0, 254, 255 }.Contains(s.Species.GenderRatio)) s.EffectivePercentage *= 3;
 
                     decimal sum = slots.Sum(s => s.EffectivePercentage);
+                    if (sum == 0) break; // Repel level is too high. Prevents DivisionByZero exception when recalculating effective percentages.
 
                     foreach (EncounterSlot s in slots)
                         s.EffectivePercentage *= (100 / sum);
@@ -476,6 +477,7 @@ namespace PokemonEncCalc
 
         internal static int cuteCharmExpectation(List<EncounterSlot> data)
         {
+            if (data.Sum(s => s.Percentage) == 0) return 0;
             decimal c = data.Where(s => new[] { 0, 254, 255 }.Contains(s.Species.GenderRatio)).Sum(s => s.Percentage);
             decimal gendered = data.Sum(s => s.Percentage) - c;
             return (int)Math.Round((gendered + c) / (c / 8192 + (gendered / 24576)));

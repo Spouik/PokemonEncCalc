@@ -82,8 +82,8 @@ namespace PokemonEncCalc
         {
             if (!cuteCharm) return;
             int odds = Utils.cuteCharmExpectation(data);
-            pbarCuteCharm.Value = (24576 - odds) * 1000 / 16384;
-            lblCuteCharm.Text += " 1/" + odds;
+            pbarCuteCharm.Value = odds == 0 ? 0 : (24576 - odds) * 1000 / 16384;
+            lblCuteCharm.Text += odds == 0 ? " 0" : " 1/" + odds;
             lblCuteCharm.Visible = true;
             pbarCuteCharm.Visible = true;
         }
