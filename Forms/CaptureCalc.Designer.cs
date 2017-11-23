@@ -94,6 +94,7 @@
             this.lblCriticalChanceDisp = new System.Windows.Forms.Label();
             this.lblCaptureChanceDisp5 = new System.Windows.Forms.Label();
             this.chkORAS = new System.Windows.Forms.CheckBox();
+            this.chkUltra = new System.Windows.Forms.CheckBox();
             this.pnlNightCave.SuspendLayout();
             this.pnlFished.SuspendLayout();
             this.pnlLove.SuspendLayout();
@@ -837,11 +838,25 @@
             this.chkORAS.Visible = false;
             this.chkORAS.CheckedChanged += new System.EventHandler(this.chkORAS_CheckedChanged);
             // 
+            // chkUltra
+            // 
+            this.chkUltra.Appearance = System.Windows.Forms.Appearance.Button;
+            this.chkUltra.Location = new System.Drawing.Point(43, 50);
+            this.chkUltra.Name = "chkUltra";
+            this.chkUltra.Size = new System.Drawing.Size(48, 21);
+            this.chkUltra.TabIndex = 15;
+            this.chkUltra.Text = "S/M";
+            this.chkUltra.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.chkUltra.UseVisualStyleBackColor = true;
+            this.chkUltra.Visible = false;
+            this.chkUltra.CheckedChanged += new System.EventHandler(this.chkUltra_CheckedChanged);
+            // 
             // frmCaptureCalc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.chkUltra);
             this.Controls.Add(this.chkORAS);
             this.Controls.Add(this.pnlPokedexGen6);
             this.Controls.Add(this.pnlResult3_4);
@@ -983,5 +998,6 @@
         private System.Windows.Forms.Label lblCriticalChanceDisp;
         private System.Windows.Forms.Label lblCaptureChanceDisp5;
         private System.Windows.Forms.CheckBox chkORAS;
+        private System.Windows.Forms.CheckBox chkUltra;
     }
 }

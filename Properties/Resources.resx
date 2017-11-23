@@ -11935,4 +11935,562 @@
   <data name="_89s_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images\sprites_s\89s-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="m745s_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\745_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m745_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites\m745_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m800s_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\800_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m800s_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\800_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m800s_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\800_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m800_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites\m800_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m800_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites\m800_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m800_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites\m800_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m803" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites\m803.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m803s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\803.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m804" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites\m804.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m804s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\804.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m805" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites\m805.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m805s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\805.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m806" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites\m806.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m806s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\806.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m807" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites\m807.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="m807s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\minisprites_s\807.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Maps_USUM_EN" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\strings\en\Maps_USUM.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
+  <data name="Maps_USUM_FR" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\strings\fr\Maps_USUM.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
+  <data name="UM_Location_0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraMoon\UM_Location_0.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="UM_Location_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraMoon\UM_Location_1.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="UM_Location_10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraMoon\UM_Location_10.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="UM_Location_11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraMoon\UM_Location_11.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="UM_Location_12" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraMoon\UM_Location_12.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="UM_Location_13" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraMoon\UM_Location_13.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="UM_Location_14" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraMoon\UM_Location_14.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="UM_Location_15" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraMoon\UM_Location_15.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="UM_Location_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraMoon\UM_Location_16.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="UM_Location_17" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraMoon\UM_Location_17.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="UM_Location_18" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraMoon\UM_Location_18.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="UM_Location_19" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraMoon\UM_Location_19.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="UM_Location_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraMoon\UM_Location_2.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="UM_Location_20" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraMoon\UM_Location_20.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="UM_Location_21" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraMoon\UM_Location_21.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="UM_Location_22" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraMoon\UM_Location_22.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="UM_Location_23" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraMoon\UM_Location_23.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="UM_Location_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraMoon\UM_Location_24.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="UM_Location_25" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraMoon\UM_Location_25.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="UM_Location_26" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraMoon\UM_Location_26.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="UM_Location_27" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraMoon\UM_Location_27.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="UM_Location_28" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraMoon\UM_Location_28.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="UM_Location_29" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraMoon\UM_Location_29.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="UM_Location_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraMoon\UM_Location_3.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="UM_Location_30" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraMoon\UM_Location_30.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="UM_Location_31" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraMoon\UM_Location_31.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="UM_Location_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraMoon\UM_Location_32.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="UM_Location_33" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraMoon\UM_Location_33.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="UM_Location_34" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraMoon\UM_Location_34.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="UM_Location_35" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraMoon\UM_Location_35.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="UM_Location_36" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraMoon\UM_Location_36.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="UM_Location_37" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraMoon\UM_Location_37.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="UM_Location_38" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraMoon\UM_Location_38.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="UM_Location_39" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraMoon\UM_Location_39.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="UM_Location_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraMoon\UM_Location_4.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="UM_Location_40" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraMoon\UM_Location_40.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="UM_Location_41" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraMoon\UM_Location_41.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="UM_Location_42" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraMoon\UM_Location_42.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="UM_Location_43" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraMoon\UM_Location_43.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="UM_Location_44" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraMoon\UM_Location_44.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="UM_Location_45" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraMoon\UM_Location_45.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="UM_Location_46" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraMoon\UM_Location_46.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="UM_Location_47" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraMoon\UM_Location_47.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="UM_Location_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraMoon\UM_Location_48.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="UM_Location_49" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraMoon\UM_Location_49.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="UM_Location_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraMoon\UM_Location_5.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="UM_Location_50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraMoon\UM_Location_50.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="UM_Location_51" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraMoon\UM_Location_51.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="UM_Location_52" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraMoon\UM_Location_52.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="UM_Location_53" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraMoon\UM_Location_53.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="UM_Location_54" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraMoon\UM_Location_54.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="UM_Location_55" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraMoon\UM_Location_55.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="UM_Location_56" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraMoon\UM_Location_56.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="UM_Location_57" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraMoon\UM_Location_57.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="UM_Location_58" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraMoon\UM_Location_58.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="UM_Location_59" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraMoon\UM_Location_59.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="UM_Location_6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraMoon\UM_Location_6.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="UM_Location_60" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraMoon\UM_Location_60.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="UM_Location_61" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraMoon\UM_Location_61.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="UM_Location_62" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraMoon\UM_Location_62.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="UM_Location_63" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraMoon\UM_Location_63.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="UM_Location_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraMoon\UM_Location_64.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="UM_Location_65" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraMoon\UM_Location_65.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="UM_Location_66" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraMoon\UM_Location_66.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="UM_Location_67" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraMoon\UM_Location_67.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="UM_Location_68" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraMoon\UM_Location_68.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="UM_Location_69" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraMoon\UM_Location_69.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="UM_Location_7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraMoon\UM_Location_7.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="UM_Location_70" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraMoon\UM_Location_70.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="UM_Location_8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraMoon\UM_Location_8.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="UM_Location_9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraMoon\UM_Location_9.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="formsUSUM_DE" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\strings\de\formsUSUM.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
+  <data name="formsUSUM_EN" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\strings\en\formsUSUM.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
+  <data name="formsUSUM_ES" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\strings\es\formsUSUM.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
+  <data name="formsUSUM_FR" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\strings\fr\formsUSUM.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
+  <data name="formsUSUM_IT" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\strings\it\formsUSUM.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
+  <data name="formsUSUM_JP" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\strings\jp\formsUSUM.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
+  <data name="formsUSUM_KR" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\strings\kr\formsUSUM.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
+  <data name="PokemonInfoU" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\PokemonInfoU.dat;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="US_Location_0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraSun\US_Location_0.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="US_Location_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraSun\US_Location_1.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="US_Location_10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraSun\US_Location_10.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="US_Location_11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraSun\US_Location_11.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="US_Location_12" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraSun\US_Location_12.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="US_Location_13" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraSun\US_Location_13.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="US_Location_14" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraSun\US_Location_14.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="US_Location_15" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraSun\US_Location_15.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="US_Location_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraSun\US_Location_16.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="US_Location_17" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraSun\US_Location_17.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="US_Location_18" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraSun\US_Location_18.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="US_Location_19" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraSun\US_Location_19.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="US_Location_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraSun\US_Location_2.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="US_Location_20" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraSun\US_Location_20.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="US_Location_21" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraSun\US_Location_21.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="US_Location_22" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraSun\US_Location_22.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="US_Location_23" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraSun\US_Location_23.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="US_Location_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraSun\US_Location_24.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="US_Location_25" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraSun\US_Location_25.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="US_Location_26" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraSun\US_Location_26.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="US_Location_27" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraSun\US_Location_27.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="US_Location_28" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraSun\US_Location_28.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="US_Location_29" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraSun\US_Location_29.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="US_Location_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraSun\US_Location_3.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="US_Location_30" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraSun\US_Location_30.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="US_Location_31" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraSun\US_Location_31.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="US_Location_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraSun\US_Location_32.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="US_Location_33" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraSun\US_Location_33.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="US_Location_34" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraSun\US_Location_34.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="US_Location_35" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraSun\US_Location_35.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="US_Location_36" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraSun\US_Location_36.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="US_Location_37" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraSun\US_Location_37.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="US_Location_38" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraSun\US_Location_38.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="US_Location_39" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraSun\US_Location_39.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="US_Location_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraSun\US_Location_4.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="US_Location_40" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraSun\US_Location_40.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="US_Location_41" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraSun\US_Location_41.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="US_Location_42" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraSun\US_Location_42.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="US_Location_43" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraSun\US_Location_43.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="US_Location_44" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraSun\US_Location_44.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="US_Location_45" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraSun\US_Location_45.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="US_Location_46" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraSun\US_Location_46.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="US_Location_47" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraSun\US_Location_47.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="US_Location_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraSun\US_Location_48.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="US_Location_49" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraSun\US_Location_49.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="US_Location_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraSun\US_Location_5.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="US_Location_50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraSun\US_Location_50.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="US_Location_51" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraSun\US_Location_51.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="US_Location_52" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraSun\US_Location_52.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="US_Location_53" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraSun\US_Location_53.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="US_Location_54" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraSun\US_Location_54.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="US_Location_55" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraSun\US_Location_55.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="US_Location_56" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraSun\US_Location_56.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="US_Location_57" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraSun\US_Location_57.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="US_Location_58" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraSun\US_Location_58.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="US_Location_59" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraSun\US_Location_59.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="US_Location_6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraSun\US_Location_6.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="US_Location_60" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraSun\US_Location_60.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="US_Location_61" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraSun\US_Location_61.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="US_Location_62" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraSun\US_Location_62.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="US_Location_63" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraSun\US_Location_63.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="US_Location_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraSun\US_Location_64.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="US_Location_65" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraSun\US_Location_65.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="US_Location_66" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraSun\US_Location_66.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="US_Location_67" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraSun\US_Location_67.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="US_Location_68" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraSun\US_Location_68.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="US_Location_69" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraSun\US_Location_69.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="US_Location_7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraSun\US_Location_7.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="US_Location_70" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraSun\US_Location_70.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="US_Location_8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraSun\US_Location_8.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="US_Location_9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\data\UltraSun\US_Location_9.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="_800s_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\sprites_s\800s-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_800s_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\sprites_s\800s-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_800s_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\sprites_s\800s-3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_800_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\sprites\800_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_800_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\sprites\800_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_800_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\sprites\800_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_803" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\sprites\803.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_803s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\sprites_s\803s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_804" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\sprites\804.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_804s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\sprites_s\804s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_805" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\sprites\805.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_805s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\sprites_s\805s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_806" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\sprites\806.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_806s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\sprites_s\806s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_807" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\sprites\807.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_807s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images\sprites_s\807s.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

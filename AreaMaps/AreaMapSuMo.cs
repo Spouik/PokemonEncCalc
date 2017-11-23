@@ -8,6 +8,7 @@ namespace PokemonEncCalc
 {
 
     // Since Sun/Moon encounter slot structure changes drastically from other generations, this class is not a child class of AreaMap 
+    // Also suppors USUM
     class AreaMapSuMo
     {
         private EncounterSlot[][] Slots;

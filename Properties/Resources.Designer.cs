@@ -17873,9 +17873,69 @@ namespace PokemonEncCalc.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _800_1 {
+            get {
+                object obj = ResourceManager.GetObject("_800_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _800_2 {
+            get {
+                object obj = ResourceManager.GetObject("_800_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _800_3 {
+            get {
+                object obj = ResourceManager.GetObject("_800_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _800s {
             get {
                 object obj = ResourceManager.GetObject("_800s", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _800s_1 {
+            get {
+                object obj = ResourceManager.GetObject("_800s_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _800s_2 {
+            get {
+                object obj = ResourceManager.GetObject("_800s_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _800s_3 {
+            get {
+                object obj = ResourceManager.GetObject("_800s_3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -17926,6 +17986,106 @@ namespace PokemonEncCalc.Properties {
         internal static System.Drawing.Bitmap _802s {
             get {
                 object obj = ResourceManager.GetObject("_802s", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _803 {
+            get {
+                object obj = ResourceManager.GetObject("_803", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _803s {
+            get {
+                object obj = ResourceManager.GetObject("_803s", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _804 {
+            get {
+                object obj = ResourceManager.GetObject("_804", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _804s {
+            get {
+                object obj = ResourceManager.GetObject("_804s", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _805 {
+            get {
+                object obj = ResourceManager.GetObject("_805", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _805s {
+            get {
+                object obj = ResourceManager.GetObject("_805s", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _806 {
+            get {
+                object obj = ResourceManager.GetObject("_806", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _806s {
+            get {
+                object obj = ResourceManager.GetObject("_806s", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _807 {
+            get {
+                object obj = ResourceManager.GetObject("_807", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _807s {
+            get {
+                object obj = ResourceManager.GetObject("_807s", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -20147,7 +20307,7 @@ namespace PokemonEncCalc.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to  
+        ///   Looks up a localized string similar to ﻿ 
         /// 
         /// 
         /// 
@@ -20317,7 +20477,7 @@ namespace PokemonEncCalc.Properties {
         /// 
         /// 
         /// 
-        ///         /// [rest of string was truncated]&quot;;.
+        ///  [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string formsSuMoDE {
             get {
@@ -20326,7 +20486,7 @@ namespace PokemonEncCalc.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to  
+        ///   Looks up a localized string similar to ﻿ 
         /// 
         /// 
         /// 
@@ -20496,7 +20656,7 @@ namespace PokemonEncCalc.Properties {
         /// 
         /// 
         /// 
-        ///         /// [rest of string was truncated]&quot;;.
+        ///  [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string formsSuMoEN {
             get {
@@ -20505,7 +20665,7 @@ namespace PokemonEncCalc.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to  
+        ///   Looks up a localized string similar to ﻿ 
         /// 
         /// 
         /// 
@@ -20675,7 +20835,7 @@ namespace PokemonEncCalc.Properties {
         /// 
         /// 
         /// 
-        ///         /// [rest of string was truncated]&quot;;.
+        ///  [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string formsSuMoES {
             get {
@@ -20684,7 +20844,7 @@ namespace PokemonEncCalc.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to  
+        ///   Looks up a localized string similar to ﻿ 
         /// 
         /// 
         /// 
@@ -20854,7 +21014,7 @@ namespace PokemonEncCalc.Properties {
         /// 
         /// 
         /// 
-        ///         /// [rest of string was truncated]&quot;;.
+        ///  [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string formsSuMoFR {
             get {
@@ -20863,7 +21023,7 @@ namespace PokemonEncCalc.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to  
+        ///   Looks up a localized string similar to ﻿ 
         /// 
         /// 
         /// 
@@ -21033,7 +21193,7 @@ namespace PokemonEncCalc.Properties {
         /// 
         /// 
         /// 
-        ///         /// [rest of string was truncated]&quot;;.
+        ///  [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string formsSuMoIT {
             get {
@@ -21042,7 +21202,7 @@ namespace PokemonEncCalc.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to  
+        ///   Looks up a localized string similar to ﻿ 
         /// 
         /// 
         /// 
@@ -21212,11 +21372,190 @@ namespace PokemonEncCalc.Properties {
         /// 
         /// 
         /// 
-        ///         /// [rest of string was truncated]&quot;;.
+        ///  [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string formsSuMoJP {
             get {
                 return ResourceManager.GetString("formsSuMoJP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ﻿ 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        ///  [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string formsSuMoKR {
+            get {
+                return ResourceManager.GetString("formsSuMoKR", resourceCulture);
             }
         }
         
@@ -21393,9 +21732,1083 @@ namespace PokemonEncCalc.Properties {
         /// 
         ///         /// [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string formsSuMoKR {
+        internal static string formsUSUM_DE {
             get {
-                return ResourceManager.GetString("formsSuMoKR", resourceCulture);
+                return ResourceManager.GetString("formsUSUM_DE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to  
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        ///         /// [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string formsUSUM_EN {
+            get {
+                return ResourceManager.GetString("formsUSUM_EN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to  
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        ///         /// [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string formsUSUM_ES {
+            get {
+                return ResourceManager.GetString("formsUSUM_ES", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to  
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        ///         /// [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string formsUSUM_FR {
+            get {
+                return ResourceManager.GetString("formsUSUM_FR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to  
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        ///         /// [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string formsUSUM_IT {
+            get {
+                return ResourceManager.GetString("formsUSUM_IT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to  
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        ///         /// [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string formsUSUM_JP {
+            get {
+                return ResourceManager.GetString("formsUSUM_JP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to  
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        ///         /// [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string formsUSUM_KR {
+            get {
+                return ResourceManager.GetString("formsUSUM_KR", resourceCulture);
             }
         }
         
@@ -38589,6 +40002,16 @@ namespace PokemonEncCalc.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap m745_2 {
+            get {
+                object obj = ResourceManager.GetObject("m745_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap m745s {
             get {
                 object obj = ResourceManager.GetObject("m745s", resourceCulture);
@@ -38602,6 +40025,16 @@ namespace PokemonEncCalc.Properties {
         internal static System.Drawing.Bitmap m745s_1 {
             get {
                 object obj = ResourceManager.GetObject("m745s_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap m745s_2 {
+            get {
+                object obj = ResourceManager.GetObject("m745s_2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -40169,9 +41602,69 @@ namespace PokemonEncCalc.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap m800_1 {
+            get {
+                object obj = ResourceManager.GetObject("m800_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap m800_2 {
+            get {
+                object obj = ResourceManager.GetObject("m800_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap m800_3 {
+            get {
+                object obj = ResourceManager.GetObject("m800_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap m800s {
             get {
                 object obj = ResourceManager.GetObject("m800s", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap m800s_1 {
+            get {
+                object obj = ResourceManager.GetObject("m800s_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap m800s_2 {
+            get {
+                object obj = ResourceManager.GetObject("m800s_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap m800s_3 {
+            get {
+                object obj = ResourceManager.GetObject("m800s_3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -40232,6 +41725,106 @@ namespace PokemonEncCalc.Properties {
         internal static System.Drawing.Bitmap m802s {
             get {
                 object obj = ResourceManager.GetObject("m802s", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap m803 {
+            get {
+                object obj = ResourceManager.GetObject("m803", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap m803s {
+            get {
+                object obj = ResourceManager.GetObject("m803s", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap m804 {
+            get {
+                object obj = ResourceManager.GetObject("m804", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap m804s {
+            get {
+                object obj = ResourceManager.GetObject("m804s", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap m805 {
+            get {
+                object obj = ResourceManager.GetObject("m805", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap m805s {
+            get {
+                object obj = ResourceManager.GetObject("m805s", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap m806 {
+            get {
+                object obj = ResourceManager.GetObject("m806", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap m806s {
+            get {
+                object obj = ResourceManager.GetObject("m806s", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap m807 {
+            get {
+                object obj = ResourceManager.GetObject("m807", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap m807s {
+            get {
+                object obj = ResourceManager.GetObject("m807s", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -41695,6 +43288,116 @@ namespace PokemonEncCalc.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Map 0
+        ///Map 1
+        ///Map 2
+        ///Map 3
+        ///Map 4
+        ///Map 5
+        ///Map 6
+        ///Map 7
+        ///Map 8
+        ///Map 9
+        ///Map 10
+        ///Map 11
+        ///Map 12
+        ///Map 13
+        ///Map 14
+        ///Map 15
+        ///Map 16
+        ///Map 17
+        ///Map 18
+        ///Map 19
+        ///Map 20
+        ///Map 21
+        ///Map 22
+        ///Map 23
+        ///Map 24
+        ///Map 25
+        ///Map 26
+        ///Map 27
+        ///Map 28
+        ///Map 29
+        ///Map 30
+        ///Map 31
+        ///Map 32
+        ///Map 33
+        ///Map 34
+        ///Map 35
+        ///Map 36
+        ///Map 37
+        ///Map 38
+        ///Map 39
+        ///Map 40
+        ///Map 41
+        ///Map 42
+        ///Map 43
+        ///Map 44
+        ///Map 45
+        ///Map 46
+        ///Map 47
+        ///Map 48
+        ///Map 49
+        ///Map 50
+        ///Map 51
+        ///Map 52
+        ///Map 53
+        ///Map 54
+        ///Map 55
+        ///Map 56
+        ///Map 57
+        ///Map 58
+        ///Map 59
+        ///Map 60
+        ///Map 61
+        ///Map 62
+        ///Map 63
+        ///Map 64
+        ///Ma [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Maps_USUM_EN {
+            get {
+                return ResourceManager.GetString("Maps_USUM_EN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Route 1
+        ///Ekaeka (Plage) / Mer de Mele-Mele
+        ///Ekaeka (Zone commerciale)
+        ///Route 3 / Baie de Kala&apos;e
+        ///Route 2
+        ///Colline Dicarat (Grotte)
+        ///Colline Dicarat (Extérieur)
+        ///Cimetière d&apos;Ekaeka
+        ///Jardin de Mele-Mele
+        ///Grotte Verlamer
+        ///Champ de Baies
+        ///Grotte de la Plage
+        ///Grotte Verdoyante
+        ///École des Dresseurs
+        ///Route 4
+        ///Ohana
+        ///Route 5
+        ///Route 6
+        ///Route 7
+        ///Route 8
+        ///Route 9
+        ///Plage Hano-Hano
+        ///Tunnel Perce-Mont
+        ///Colline Memento / Côte Reculée d&apos;Akala
+        ///Tunnel Taupiqueur
+        ///Parc Volcanique
+        ///Colline Clapotis
+        ///Colline Clapotis (Repaire  [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Maps_USUM_FR {
+            get {
+                return ResourceManager.GetString("Maps_USUM_FR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Azure Bay
         ///Connecting Cave
         ///Frost Cavern
@@ -42614,6 +44317,16 @@ namespace PokemonEncCalc.Properties {
         internal static byte[] PokemonInfo7 {
             get {
                 object obj = ResourceManager.GetObject("PokemonInfo7", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] PokemonInfoU {
+            get {
+                object obj = ResourceManager.GetObject("PokemonInfoU", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -43590,6 +45303,1426 @@ namespace PokemonEncCalc.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] UM_Location_0 {
+            get {
+                object obj = ResourceManager.GetObject("UM_Location_0", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] UM_Location_1 {
+            get {
+                object obj = ResourceManager.GetObject("UM_Location_1", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] UM_Location_10 {
+            get {
+                object obj = ResourceManager.GetObject("UM_Location_10", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] UM_Location_11 {
+            get {
+                object obj = ResourceManager.GetObject("UM_Location_11", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] UM_Location_12 {
+            get {
+                object obj = ResourceManager.GetObject("UM_Location_12", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] UM_Location_13 {
+            get {
+                object obj = ResourceManager.GetObject("UM_Location_13", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] UM_Location_14 {
+            get {
+                object obj = ResourceManager.GetObject("UM_Location_14", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] UM_Location_15 {
+            get {
+                object obj = ResourceManager.GetObject("UM_Location_15", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] UM_Location_16 {
+            get {
+                object obj = ResourceManager.GetObject("UM_Location_16", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] UM_Location_17 {
+            get {
+                object obj = ResourceManager.GetObject("UM_Location_17", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] UM_Location_18 {
+            get {
+                object obj = ResourceManager.GetObject("UM_Location_18", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] UM_Location_19 {
+            get {
+                object obj = ResourceManager.GetObject("UM_Location_19", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] UM_Location_2 {
+            get {
+                object obj = ResourceManager.GetObject("UM_Location_2", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] UM_Location_20 {
+            get {
+                object obj = ResourceManager.GetObject("UM_Location_20", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] UM_Location_21 {
+            get {
+                object obj = ResourceManager.GetObject("UM_Location_21", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] UM_Location_22 {
+            get {
+                object obj = ResourceManager.GetObject("UM_Location_22", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] UM_Location_23 {
+            get {
+                object obj = ResourceManager.GetObject("UM_Location_23", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] UM_Location_24 {
+            get {
+                object obj = ResourceManager.GetObject("UM_Location_24", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] UM_Location_25 {
+            get {
+                object obj = ResourceManager.GetObject("UM_Location_25", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] UM_Location_26 {
+            get {
+                object obj = ResourceManager.GetObject("UM_Location_26", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] UM_Location_27 {
+            get {
+                object obj = ResourceManager.GetObject("UM_Location_27", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] UM_Location_28 {
+            get {
+                object obj = ResourceManager.GetObject("UM_Location_28", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] UM_Location_29 {
+            get {
+                object obj = ResourceManager.GetObject("UM_Location_29", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] UM_Location_3 {
+            get {
+                object obj = ResourceManager.GetObject("UM_Location_3", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] UM_Location_30 {
+            get {
+                object obj = ResourceManager.GetObject("UM_Location_30", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] UM_Location_31 {
+            get {
+                object obj = ResourceManager.GetObject("UM_Location_31", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] UM_Location_32 {
+            get {
+                object obj = ResourceManager.GetObject("UM_Location_32", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] UM_Location_33 {
+            get {
+                object obj = ResourceManager.GetObject("UM_Location_33", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] UM_Location_34 {
+            get {
+                object obj = ResourceManager.GetObject("UM_Location_34", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] UM_Location_35 {
+            get {
+                object obj = ResourceManager.GetObject("UM_Location_35", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] UM_Location_36 {
+            get {
+                object obj = ResourceManager.GetObject("UM_Location_36", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] UM_Location_37 {
+            get {
+                object obj = ResourceManager.GetObject("UM_Location_37", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] UM_Location_38 {
+            get {
+                object obj = ResourceManager.GetObject("UM_Location_38", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] UM_Location_39 {
+            get {
+                object obj = ResourceManager.GetObject("UM_Location_39", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] UM_Location_4 {
+            get {
+                object obj = ResourceManager.GetObject("UM_Location_4", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] UM_Location_40 {
+            get {
+                object obj = ResourceManager.GetObject("UM_Location_40", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] UM_Location_41 {
+            get {
+                object obj = ResourceManager.GetObject("UM_Location_41", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] UM_Location_42 {
+            get {
+                object obj = ResourceManager.GetObject("UM_Location_42", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] UM_Location_43 {
+            get {
+                object obj = ResourceManager.GetObject("UM_Location_43", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] UM_Location_44 {
+            get {
+                object obj = ResourceManager.GetObject("UM_Location_44", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] UM_Location_45 {
+            get {
+                object obj = ResourceManager.GetObject("UM_Location_45", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] UM_Location_46 {
+            get {
+                object obj = ResourceManager.GetObject("UM_Location_46", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] UM_Location_47 {
+            get {
+                object obj = ResourceManager.GetObject("UM_Location_47", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] UM_Location_48 {
+            get {
+                object obj = ResourceManager.GetObject("UM_Location_48", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] UM_Location_49 {
+            get {
+                object obj = ResourceManager.GetObject("UM_Location_49", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] UM_Location_5 {
+            get {
+                object obj = ResourceManager.GetObject("UM_Location_5", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] UM_Location_50 {
+            get {
+                object obj = ResourceManager.GetObject("UM_Location_50", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] UM_Location_51 {
+            get {
+                object obj = ResourceManager.GetObject("UM_Location_51", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] UM_Location_52 {
+            get {
+                object obj = ResourceManager.GetObject("UM_Location_52", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] UM_Location_53 {
+            get {
+                object obj = ResourceManager.GetObject("UM_Location_53", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] UM_Location_54 {
+            get {
+                object obj = ResourceManager.GetObject("UM_Location_54", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] UM_Location_55 {
+            get {
+                object obj = ResourceManager.GetObject("UM_Location_55", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] UM_Location_56 {
+            get {
+                object obj = ResourceManager.GetObject("UM_Location_56", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] UM_Location_57 {
+            get {
+                object obj = ResourceManager.GetObject("UM_Location_57", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] UM_Location_58 {
+            get {
+                object obj = ResourceManager.GetObject("UM_Location_58", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] UM_Location_59 {
+            get {
+                object obj = ResourceManager.GetObject("UM_Location_59", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] UM_Location_6 {
+            get {
+                object obj = ResourceManager.GetObject("UM_Location_6", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] UM_Location_60 {
+            get {
+                object obj = ResourceManager.GetObject("UM_Location_60", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] UM_Location_61 {
+            get {
+                object obj = ResourceManager.GetObject("UM_Location_61", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] UM_Location_62 {
+            get {
+                object obj = ResourceManager.GetObject("UM_Location_62", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] UM_Location_63 {
+            get {
+                object obj = ResourceManager.GetObject("UM_Location_63", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] UM_Location_64 {
+            get {
+                object obj = ResourceManager.GetObject("UM_Location_64", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] UM_Location_65 {
+            get {
+                object obj = ResourceManager.GetObject("UM_Location_65", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] UM_Location_66 {
+            get {
+                object obj = ResourceManager.GetObject("UM_Location_66", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] UM_Location_67 {
+            get {
+                object obj = ResourceManager.GetObject("UM_Location_67", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] UM_Location_68 {
+            get {
+                object obj = ResourceManager.GetObject("UM_Location_68", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] UM_Location_69 {
+            get {
+                object obj = ResourceManager.GetObject("UM_Location_69", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] UM_Location_7 {
+            get {
+                object obj = ResourceManager.GetObject("UM_Location_7", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] UM_Location_70 {
+            get {
+                object obj = ResourceManager.GetObject("UM_Location_70", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] UM_Location_8 {
+            get {
+                object obj = ResourceManager.GetObject("UM_Location_8", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] UM_Location_9 {
+            get {
+                object obj = ResourceManager.GetObject("UM_Location_9", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] US_Location_0 {
+            get {
+                object obj = ResourceManager.GetObject("US_Location_0", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] US_Location_1 {
+            get {
+                object obj = ResourceManager.GetObject("US_Location_1", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] US_Location_10 {
+            get {
+                object obj = ResourceManager.GetObject("US_Location_10", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] US_Location_11 {
+            get {
+                object obj = ResourceManager.GetObject("US_Location_11", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] US_Location_12 {
+            get {
+                object obj = ResourceManager.GetObject("US_Location_12", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] US_Location_13 {
+            get {
+                object obj = ResourceManager.GetObject("US_Location_13", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] US_Location_14 {
+            get {
+                object obj = ResourceManager.GetObject("US_Location_14", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] US_Location_15 {
+            get {
+                object obj = ResourceManager.GetObject("US_Location_15", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] US_Location_16 {
+            get {
+                object obj = ResourceManager.GetObject("US_Location_16", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] US_Location_17 {
+            get {
+                object obj = ResourceManager.GetObject("US_Location_17", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] US_Location_18 {
+            get {
+                object obj = ResourceManager.GetObject("US_Location_18", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] US_Location_19 {
+            get {
+                object obj = ResourceManager.GetObject("US_Location_19", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] US_Location_2 {
+            get {
+                object obj = ResourceManager.GetObject("US_Location_2", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] US_Location_20 {
+            get {
+                object obj = ResourceManager.GetObject("US_Location_20", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] US_Location_21 {
+            get {
+                object obj = ResourceManager.GetObject("US_Location_21", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] US_Location_22 {
+            get {
+                object obj = ResourceManager.GetObject("US_Location_22", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] US_Location_23 {
+            get {
+                object obj = ResourceManager.GetObject("US_Location_23", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] US_Location_24 {
+            get {
+                object obj = ResourceManager.GetObject("US_Location_24", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] US_Location_25 {
+            get {
+                object obj = ResourceManager.GetObject("US_Location_25", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] US_Location_26 {
+            get {
+                object obj = ResourceManager.GetObject("US_Location_26", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] US_Location_27 {
+            get {
+                object obj = ResourceManager.GetObject("US_Location_27", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] US_Location_28 {
+            get {
+                object obj = ResourceManager.GetObject("US_Location_28", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] US_Location_29 {
+            get {
+                object obj = ResourceManager.GetObject("US_Location_29", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] US_Location_3 {
+            get {
+                object obj = ResourceManager.GetObject("US_Location_3", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] US_Location_30 {
+            get {
+                object obj = ResourceManager.GetObject("US_Location_30", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] US_Location_31 {
+            get {
+                object obj = ResourceManager.GetObject("US_Location_31", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] US_Location_32 {
+            get {
+                object obj = ResourceManager.GetObject("US_Location_32", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] US_Location_33 {
+            get {
+                object obj = ResourceManager.GetObject("US_Location_33", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] US_Location_34 {
+            get {
+                object obj = ResourceManager.GetObject("US_Location_34", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] US_Location_35 {
+            get {
+                object obj = ResourceManager.GetObject("US_Location_35", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] US_Location_36 {
+            get {
+                object obj = ResourceManager.GetObject("US_Location_36", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] US_Location_37 {
+            get {
+                object obj = ResourceManager.GetObject("US_Location_37", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] US_Location_38 {
+            get {
+                object obj = ResourceManager.GetObject("US_Location_38", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] US_Location_39 {
+            get {
+                object obj = ResourceManager.GetObject("US_Location_39", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] US_Location_4 {
+            get {
+                object obj = ResourceManager.GetObject("US_Location_4", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] US_Location_40 {
+            get {
+                object obj = ResourceManager.GetObject("US_Location_40", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] US_Location_41 {
+            get {
+                object obj = ResourceManager.GetObject("US_Location_41", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] US_Location_42 {
+            get {
+                object obj = ResourceManager.GetObject("US_Location_42", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] US_Location_43 {
+            get {
+                object obj = ResourceManager.GetObject("US_Location_43", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] US_Location_44 {
+            get {
+                object obj = ResourceManager.GetObject("US_Location_44", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] US_Location_45 {
+            get {
+                object obj = ResourceManager.GetObject("US_Location_45", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] US_Location_46 {
+            get {
+                object obj = ResourceManager.GetObject("US_Location_46", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] US_Location_47 {
+            get {
+                object obj = ResourceManager.GetObject("US_Location_47", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] US_Location_48 {
+            get {
+                object obj = ResourceManager.GetObject("US_Location_48", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] US_Location_49 {
+            get {
+                object obj = ResourceManager.GetObject("US_Location_49", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] US_Location_5 {
+            get {
+                object obj = ResourceManager.GetObject("US_Location_5", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] US_Location_50 {
+            get {
+                object obj = ResourceManager.GetObject("US_Location_50", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] US_Location_51 {
+            get {
+                object obj = ResourceManager.GetObject("US_Location_51", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] US_Location_52 {
+            get {
+                object obj = ResourceManager.GetObject("US_Location_52", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] US_Location_53 {
+            get {
+                object obj = ResourceManager.GetObject("US_Location_53", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] US_Location_54 {
+            get {
+                object obj = ResourceManager.GetObject("US_Location_54", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] US_Location_55 {
+            get {
+                object obj = ResourceManager.GetObject("US_Location_55", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] US_Location_56 {
+            get {
+                object obj = ResourceManager.GetObject("US_Location_56", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] US_Location_57 {
+            get {
+                object obj = ResourceManager.GetObject("US_Location_57", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] US_Location_58 {
+            get {
+                object obj = ResourceManager.GetObject("US_Location_58", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] US_Location_59 {
+            get {
+                object obj = ResourceManager.GetObject("US_Location_59", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] US_Location_6 {
+            get {
+                object obj = ResourceManager.GetObject("US_Location_6", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] US_Location_60 {
+            get {
+                object obj = ResourceManager.GetObject("US_Location_60", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] US_Location_61 {
+            get {
+                object obj = ResourceManager.GetObject("US_Location_61", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] US_Location_62 {
+            get {
+                object obj = ResourceManager.GetObject("US_Location_62", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] US_Location_63 {
+            get {
+                object obj = ResourceManager.GetObject("US_Location_63", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] US_Location_64 {
+            get {
+                object obj = ResourceManager.GetObject("US_Location_64", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] US_Location_65 {
+            get {
+                object obj = ResourceManager.GetObject("US_Location_65", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] US_Location_66 {
+            get {
+                object obj = ResourceManager.GetObject("US_Location_66", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] US_Location_67 {
+            get {
+                object obj = ResourceManager.GetObject("US_Location_67", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] US_Location_68 {
+            get {
+                object obj = ResourceManager.GetObject("US_Location_68", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] US_Location_69 {
+            get {
+                object obj = ResourceManager.GetObject("US_Location_69", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] US_Location_7 {
+            get {
+                object obj = ResourceManager.GetObject("US_Location_7", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] US_Location_70 {
+            get {
+                object obj = ResourceManager.GetObject("US_Location_70", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] US_Location_8 {
+            get {
+                object obj = ResourceManager.GetObject("US_Location_8", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] US_Location_9 {
+            get {
+                object obj = ResourceManager.GetObject("US_Location_9", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Goldene
         ///Silberne
         ///Kristall
@@ -43612,7 +46745,9 @@ namespace PokemonEncCalc.Properties {
         ///Omega Rubin
         ///Alpha Saphir
         ///Sonne
-        ///Mond.
+        ///Mond
+        ///Ultrasonne
+        ///Ultramond.
         /// </summary>
         internal static string versionsDE {
             get {
@@ -43643,7 +46778,9 @@ namespace PokemonEncCalc.Properties {
         ///Omega Ruby
         ///Alpha Sapphire
         ///Sun
-        ///Moon.
+        ///Moon
+        ///Ultra Sun
+        ///Ultra Moon.
         /// </summary>
         internal static string versionsEN {
             get {
@@ -43674,7 +46811,9 @@ namespace PokemonEncCalc.Properties {
         ///Rubí Omega
         ///Zafiro Alfa
         ///Sol
-        ///Luna.
+        ///Luna
+        ///Ultrasol
+        ///Ultraluna.
         /// </summary>
         internal static string versionsES {
             get {
@@ -43705,7 +46844,9 @@ namespace PokemonEncCalc.Properties {
         ///Rubis Oméga
         ///Saphir Alpha
         ///Soleil
-        ///Lune.
+        ///Lune
+        ///Ultra-Soleil
+        ///Ultra-Lune.
         /// </summary>
         internal static string versionsFR {
             get {
@@ -43736,7 +46877,9 @@ namespace PokemonEncCalc.Properties {
         ///Rubno Omega
         ///Zaffiro Alpha
         ///Sole
-        ///Luna.
+        ///Luna
+        ///Ultrasole
+        ///Ultraluna.
         /// </summary>
         internal static string versionsIT {
             get {
@@ -43767,7 +46910,9 @@ namespace PokemonEncCalc.Properties {
         ///オメガルビー
         ///アルファサファイア
         ///サン
-        ///ムーン.
+        ///ムーン
+        ///ウルトラサン
+        ///ウルトラムーン.
         /// </summary>
         internal static string versionsJP {
             get {
@@ -43798,7 +46943,9 @@ namespace PokemonEncCalc.Properties {
         ///오메가루비
         ///알파사파이어
         ///썬
-        ///문.
+        ///문
+        ///울트라썬
+        ///울트라문.
         /// </summary>
         internal static string versionsKR {
             get {

@@ -27,6 +27,7 @@ namespace PokemonEncCalc
         internal static List<string> MapNamesOR;
         internal static List<string> MapNamesAS;
         internal static List<string> MapNamesSuMo;
+        internal static List<string> MapNamesUSUM;
         internal static List<string> MapNamesSafariHGSS;
 
         // List of all maps from Gen 2 to Gen 7
@@ -53,6 +54,8 @@ namespace PokemonEncCalc
         internal static List<AreaMapORAS> MapsAlphaSapphire;
         internal static List<AreaMapSuMo> MapsSun;
         internal static List<AreaMapSuMo> MapsMoon;
+        internal static List<AreaMapSuMo> MapsUltraSun;
+        internal static List<AreaMapSuMo> MapsUltraMoon;
         internal static List<AreaMapHGSSSafari> MapsSafariHGSS;
 
 
@@ -509,8 +512,12 @@ namespace PokemonEncCalc
             loadSlotsAlphaSapphire();
             loadSlotsSun();
             loadSlotsMoon();
+            loadSlotsUltraSun();
+            loadSlotsUltraMoon();
             loadSlotsHGSSsafari();
         }
+
+
 
         private static void loadSlotsGold()
         {
@@ -785,6 +792,30 @@ namespace PokemonEncCalc
                 MapsMoon.Add(new AreaMapSuMo(data, Version.Moon));
             }
         }
+
+        private static void loadSlotsUltraSun()
+        {
+            int mapCount = 71;
+            MapsUltraSun = new List<AreaMapSuMo>();
+            for (int i = 0; i < mapCount; i++)
+            {
+                byte[] data = ((byte[])Properties.Resources.ResourceManager.GetObject("US_Location_" + i)).Skip(0x80).ToArray();
+                MapsUltraSun.Add(new AreaMapSuMo(data, Version.UltraSun));
+            }
+        }
+
+        private static void loadSlotsUltraMoon()
+        {
+            int mapCount = 71;
+            MapsUltraMoon = new List<AreaMapSuMo>();
+            for (int i = 0; i < mapCount; i++)
+            {
+                byte[] data = ((byte[])Properties.Resources.ResourceManager.GetObject("UM_Location_" + i)).Skip(0x80).ToArray();
+                MapsUltraMoon.Add(new AreaMapSuMo(data, Version.UltraMoon));
+            }
+        }
+
+
 
         private static void loadSlotsHGSSsafari()
         {

@@ -56,15 +56,19 @@ namespace PokemonEncCalc
         };
 
         private string[] oras = new string[] { "", "ORAS", "ROSA", "", "", "", "", "" };
+        private string[] sunmoon = new string[] { "", "SM", "SL", "", "", "", "", "" };
+        private string[] ultra = new string[] { "", "USUM", "USUL", "", "", "", "", "" };
+        private int[] ultrabeasts = new int[] { 793, 794, 795, 796, 797, 798, 799, 803, 804, 805, 806 };
 
         public frmCaptureCalc()
         {
             InitializeComponent();
+            chkUltra.Text = sunmoon[Properties.Settings.Default.Language];
             renameControls();
-            initializeComboboxes();
+            InitializeComboboxes();
         }
 
-        private void initializeComboboxes()
+        private void InitializeComboboxes()
         {
             balls = new List<string>();
             PokemonList = new List<Pokemon>();
@@ -100,7 +104,7 @@ namespace PokemonEncCalc
         /// <summary>
         /// Refreshes the list of Pokémon and Balls available in the selected generation.
         /// </summary>
-        private void refreshComboboxes()
+        private void RefreshComboboxes()
         {
             // Pokémon List
             int p = cboPokemon.SelectedIndex;
@@ -125,7 +129,10 @@ namespace PokemonEncCalc
                         PokemonList.AddRange(PokemonTables.pokemonXYTable);
                     break;
                 case 7:
-                    PokemonList.AddRange(PokemonTables.pokemonSuMoTable);
+                    if (chkUltra.Checked)
+                        PokemonList.AddRange(PokemonTables.pokemonUSUMTable);
+                    else
+                        PokemonList.AddRange(PokemonTables.pokemonSuMoTable);
                     break;
                 default: break;
             }
@@ -138,7 +145,7 @@ namespace PokemonEncCalc
                     cboPokemon.Items.AddRange(PokemonList.Where(i => i.NatID != 0).Select(s => s.NameEN).ToArray());
                     break;
             }
-            cboPokemon.SelectedIndex = cboPokemon.Items.Count > p ? p : 0;
+            cboPokemon.SelectedIndex = cboPokemon.Items.Count > p ? p : cboPokemon.Items.Count - 1;
 
             // Balls
             int bs = 0;
@@ -186,8 +193,8 @@ namespace PokemonEncCalc
         private void cboGeneration_SelectedIndexChanged(object sender, EventArgs e)
         {
             generation = cboGeneration.SelectedIndex + 3;
-            refreshComboboxes();
-            pnlGen5.Visible = chkORAS.Visible = cboCapturePower.Visible = lblCapturePower.Visible = pnlPokedexGen6.Visible = false;
+            RefreshComboboxes();
+            pnlGen5.Visible = chkORAS.Visible = chkUltra.Visible = cboCapturePower.Visible = lblCapturePower.Visible = pnlPokedexGen6.Visible = false;
             switch (generation)
             {
                 case 5:
@@ -198,6 +205,7 @@ namespace PokemonEncCalc
                     break;
                 case 7:
                     pnlPokedexGen6.Visible = true;
+                    chkUltra.Visible = true;
                     break;
                 default: break;
             }
@@ -406,17 +414,25 @@ namespace PokemonEncCalc
                     break;
 
                 case Ball.BeastBall:
-                    ballBonus = new[] { 793, 794, 795, 796, 797, 798, 799 }.Contains(p.NatID) ? 5 : 0.1m;
+                    ballBonus = ultrabeasts.Contains(p.NatID) ? 5 : 410m / 4096m;
                     break;
 
                 default:
                     ballBonus = 1;
                     break;
             }
-            // Check Ultra Beasts
-            if (new[] { 793, 794, 795, 796, 797, 798, 799 }.Contains(p.NatID) && ball != Ball.BeastBall) ballBonus = 0.1m;
+            // Check Ultra Beasts with ordinary balls
+            if (ultrabeasts.Contains(p.NatID) && ball != Ball.BeastBall) ballBonus = 410m / 4096m;
             // Checks catchRate value (should be between 1 and 255)
-            if (catchRate < 0) catchRate = 1; // Does not apply if catchRate == 0 (due to a bug), but as no Pokémon can have a catchRate of 20, this never happens.
+            if (generation == 7)
+            {
+                if (catchRate <= 0) catchRate = chkUltra.Checked ? 1 : 0;
+            }
+            else
+            {
+                if (catchRate < 0) catchRate = 1; // Does not apply if catchRate == 0 (due to a bug), but as no Pokémon can have a catchRate of 20, this never happens.
+            }
+
             if (catchRate > 255) catchRate = 255;
 
             // status modifier
@@ -429,15 +445,15 @@ namespace PokemonEncCalc
             decimal ccCapture;
             if (generation <= 4)
             {
-                pr = catchCalcGen3_4(catchRate, ballBonus, statusBonus, currentHP, maxHP);
+                pr = CatchCalcGen3_4(catchRate, ballBonus, statusBonus, currentHP, maxHP);
                 lblCaptureResult3.Text = Math.Round(10000 * pr) / 100 + " %";
                 pnlResult3_4.Visible = true;
             }
             if(generation == 5)
             {
-                pr = catchCalcGen5(catchRate, ballBonus, statusBonus, currentHP, maxHP, darkGrass, capturePower);
+                pr = CatchCalcGen5(catchRate, ballBonus, statusBonus, currentHP, maxHP, darkGrass, capturePower);
                 cc = criticalChanceGen5_6(catchRate, ballBonus, statusBonus, currentHP, maxHP, darkGrass, capturePower, criticalCatch);
-                ccCapture = criticalCalcGen5(catchRate, ballBonus, statusBonus, currentHP, maxHP, darkGrass, capturePower);
+                ccCapture = CriticalCalcGen5(catchRate, ballBonus, statusBonus, currentHP, maxHP, darkGrass, capturePower);
                 lblCaptureResult5.Text = Math.Round(10000 * pr) / 100 + " %";
                 lblCriticalResult.Text = Math.Round(10000 * cc) / 100 + " %";
                 lblCriticalCaptureResult.Text = Math.Round(10000 * ccCapture) / 100 + " %";
@@ -458,10 +474,11 @@ namespace PokemonEncCalc
 
         }
 
-        private decimal catchCalcGen3_4(int catchRate, decimal bonusBall, decimal bonusStatus, int currentHP, int maxHP)
+        private decimal CatchCalcGen3_4(int catchRate, decimal bonusBall, decimal bonusStatus, int currentHP, int maxHP)
         {
             decimal a = Math.Floor(Math.Floor((3 * maxHP - 2 * currentHP) * Math.Floor(catchRate * bonusBall) / (3 * maxHP)) * bonusStatus);
             if (a >= 255) return 1; // Capture guaranteed
+            if (a == 0) return 0;
 
             decimal b = Math.Floor(1048560 / (decimal)Math.Floor(Math.Sqrt((double)Math.Floor(Math.Sqrt((double)Math.Floor(16711680m / a))))));
 
@@ -474,23 +491,24 @@ namespace PokemonEncCalc
 
         // Round functions
         // Round to the nearest 1/4096th
-        private decimal round(decimal a)
+        private decimal Round(decimal a)
         {
             return Math.Floor(4096 * a + 0.5m) / 4096;
         }
 
         // Round down to the nearest 1/4096th
-        private decimal down(decimal a)
+        private decimal Down(decimal a)
         {
             return Math.Floor(4096 * a) / 4096;
         }
 
-        private decimal catchCalcGen5(int catchRate, decimal bonusBall, decimal bonusStatus, int currentHP, int maxHP, decimal darkGrass, decimal capturePower)
+        private decimal CatchCalcGen5(int catchRate, decimal bonusBall, decimal bonusStatus, int currentHP, int maxHP, decimal darkGrass, decimal capturePower)
         {
-            decimal a = down(round(down(round(round((3 * maxHP - 2 * currentHP) * darkGrass) * catchRate * bonusBall) / (3 * maxHP)) * bonusStatus) * capturePower);
+            decimal a = Down(Round(Down(Round(Round((3 * maxHP - 2 * currentHP) * darkGrass) * catchRate * bonusBall) / (3 * maxHP)) * bonusStatus) * capturePower);
             if (a >= 255) return 1;
+            if (a == 0) return 0;
 
-            decimal b = down(65536 / round((decimal)Math.Sqrt((double)round((decimal)Math.Sqrt((double)round(255m / a))))));
+            decimal b = Down(65536 / Round((decimal)Math.Sqrt((double)Round((decimal)Math.Sqrt((double)Round(255m / a))))));
 
             decimal result = b / 65536;
             for (int i = 0; i < 2; i++)
@@ -499,22 +517,24 @@ namespace PokemonEncCalc
             return result;
         }
 
-        private decimal criticalCalcGen5(int catchRate, decimal bonusBall, decimal bonusStatus, int currentHP, int maxHP, decimal darkGrass, decimal capturePower)
+        private decimal CriticalCalcGen5(int catchRate, decimal bonusBall, decimal bonusStatus, int currentHP, int maxHP, decimal darkGrass, decimal capturePower)
         {
-            decimal a = down(round(down(round(round((3 * maxHP - 2 * currentHP) * darkGrass) * catchRate * bonusBall) / (3 * maxHP)) * bonusStatus) * capturePower);
+            decimal a = Down(Round(Down(Round(Round((3 * maxHP - 2 * currentHP) * darkGrass) * catchRate * bonusBall) / (3 * maxHP)) * bonusStatus) * capturePower);
             if (a >= 255) return 1;
+            if (a == 0) return 0;
 
-            decimal b = down(65536 / round((decimal)Math.Sqrt((double)round((decimal)Math.Sqrt((double)round(255m / a))))));
+            decimal b = Down(65536 / Round((decimal)Math.Sqrt((double)Round((decimal)Math.Sqrt((double)Round(255m / a))))));
 
             return b / 65536;
         }
 
         private decimal catchCalcGen6(int catchRate, decimal bonusBall, decimal bonusStatus, int currentHP, int maxHP, decimal capturePower)
         {
-            decimal a = down(round(down(round(round((3 * maxHP - 2 * currentHP)) * catchRate * bonusBall) / (3 * maxHP)) * bonusStatus) * capturePower);
+            decimal a = Down(Round(Down(Round(Round((3 * maxHP - 2 * currentHP)) * catchRate * bonusBall) / (3 * maxHP)) * bonusStatus) * capturePower);
             if (a >= 255) return 1;
+            if (a == 0) return 0;
 
-            decimal b = down(65536 / (decimal)Math.Pow((double)(255/ a), 3d/16d));
+            decimal b = Down(65536 / (decimal)Math.Pow((double)(255/ a), 3d/16d));
 
             decimal result = b / 65536;
             for (int i = 0; i < 2; i++)
@@ -525,19 +545,20 @@ namespace PokemonEncCalc
 
         private decimal criticalCalcGen6(int catchRate, decimal bonusBall, decimal bonusStatus, int currentHP, int maxHP, decimal capturePower)
         {
-            decimal a = down(round(down(round(round((3 * maxHP - 2 * currentHP)) * catchRate * bonusBall) / (3 * maxHP)) * bonusStatus) * capturePower);
+            decimal a = Down(Round(Down(Round(Round((3 * maxHP - 2 * currentHP)) * catchRate * bonusBall) / (3 * maxHP)) * bonusStatus) * capturePower);
             if (a >= 255) return 1;
+            if (a == 0) return 0;
 
-            decimal b = down(65536 / (decimal)Math.Pow((double)(255 / a), 3d / 16d));
+            decimal b = Down(65536 / (decimal)Math.Pow((double)(255 / a), 3d / 16d));
 
             return b / 65536;
         }
 
         private decimal criticalChanceGen5_6(int catchRate, decimal bonusBall, decimal bonusStatus, int currentHP, int maxHP, decimal darkGrass, decimal capturePower, decimal criticalRate) 
         {
-            decimal a = down(round(down(round(round((3 * maxHP - 2 * currentHP) * darkGrass) * catchRate * bonusBall) / (3 * maxHP)) * bonusStatus) * capturePower);
+            decimal a = Down(Round(Down(Round(Round((3 * maxHP - 2 * currentHP) * darkGrass) * catchRate * bonusBall) / (3 * maxHP)) * bonusStatus) * capturePower);
             if (a > 255) a = 255;
-            return Math.Min(1, down(a * criticalRate / 6) / 256);
+            return Math.Min(1, Down(a * criticalRate / 6) / 256);
         }
 
         private void chkORAS_CheckedChanged(object sender, EventArgs e)
@@ -546,6 +567,20 @@ namespace PokemonEncCalc
             PokemonList.Clear();
             if (chkORAS.Checked) PokemonList.AddRange(PokemonTables.pokemonORASTable);
             else PokemonList.AddRange(PokemonTables.pokemonXYTable);
+            txtCaptureRate.Text = PokemonList[cboPokemon.SelectedIndex + 1].CatchRate.ToString();
+        }
+
+        private void chkUltra_CheckedChanged(object sender, EventArgs e)
+        {
+            int p = cboPokemon.SelectedIndex;
+            if (cboPokemon.Items.Count == 0) p = 0;
+            ((CheckBox)sender).Text = ((CheckBox)sender).Checked ?
+                ultra[Properties.Settings.Default.Language] : sunmoon[Properties.Settings.Default.Language];
+            PokemonList.Clear();
+            if (chkUltra.Checked) PokemonList.AddRange(PokemonTables.pokemonUSUMTable);
+            else PokemonList.AddRange(PokemonTables.pokemonSuMoTable);
+            RefreshComboboxes();
+            cboPokemon.SelectedIndex = cboPokemon.Items.Count > p ? p : cboPokemon.Items.Count - 1;
             txtCaptureRate.Text = PokemonList[cboPokemon.SelectedIndex + 1].CatchRate.ToString();
         }
     }

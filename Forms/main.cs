@@ -80,12 +80,13 @@ namespace PokemonEncCalc
             if (cboMapsOR.Visible) r += (string)(cboMapsOR.SelectedItem);
             if (cboMapsAS.Visible) r += (string)(cboMapsAS.SelectedItem);
             if (cboMapsSuMo.Visible) r += (string)(cboMapsSuMo.SelectedItem);
+            if (cboMapsUSUM.Visible) r += (string)(cboMapsUSUM.SelectedItem);
 
             // Version
             r += " (" + (string)(cboVersion.SelectedItem) + ")";
 
-            // Encounter Type (or table for SuMo)
-            if (cboMapsSuMo.Visible) r += " - " + cboTablesSuMo.SelectedItem + Environment.NewLine + Environment.NewLine;
+            // Encounter Type (or table for Gen7)
+            if (cboMapsSuMo.Visible || cboMapsUSUM.Visible) r += " - " + cboTablesSuMo.SelectedItem + Environment.NewLine + Environment.NewLine;
             else r += " - " + cboEncounterType.SelectedItem + Environment.NewLine + Environment.NewLine;
 
             // Repel
@@ -253,7 +254,7 @@ namespace PokemonEncCalc
                 = pnlHGSSOptions.Visible = pnlGen5Options.Visible = pnlLuckyPower.Visible
                 = lblHelpRoute120.Visible = lblHelpTurnback.Visible 
                 = cboMapsGS.Visible = cboMapsCrystal.Visible = pnlOptionsGen2.Visible 
-                = cboMapsSuMo.Visible = pnl_SunMoonOptions.Visible = pnlHGSSSafari.Visible = false;
+                = cboMapsSuMo.Visible = cboMapsUSUM.Visible = pnl_SunMoonOptions.Visible = pnlHGSSSafari.Visible = false;
 
 
 
@@ -360,7 +361,14 @@ namespace PokemonEncCalc
                     pnl_SunMoonOptions.Visible = true;
                     changeEncounterOptionsSuMo();
                     break;
-
+                case Version.UltraSun:
+                case Version.UltraMoon:
+                    repopulateComboboxes(PokemonUSUM.RELEASED_POKEMON);
+                    cboMapsUSUM.Visible = true;
+                    pnlAbility.Visible = true;
+                    pnl_SunMoonOptions.Visible = true;
+                    changeEncounterOptionsUSUM();
+                    break;
                 default:
                     break;
             }
@@ -464,6 +472,8 @@ namespace PokemonEncCalc
             translateMaps(cboMapsAS, "Maps_AS_" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR" })[Properties.Settings.Default.Language - 1], ref Utils.MapNamesAS);
             // Maps SuMo:
             translateMaps(cboMapsSuMo, "Maps_SuMo_" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR" })[Properties.Settings.Default.Language - 1], ref Utils.MapNamesSuMo);
+            // Maps USUM:
+            translateMaps(cboMapsUSUM, "Maps_USUM_" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR" })[Properties.Settings.Default.Language - 1], ref Utils.MapNamesUSUM);
             // Maps HGSS Safari:
             translateMaps(cboSafariArea, "Maps_HGSS_Safari" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR" })[Properties.Settings.Default.Language - 1], ref Utils.MapNamesSafariHGSS);
 
@@ -710,6 +720,28 @@ namespace PokemonEncCalc
 
 
         #region loadingEncounterSlots
+
+        private void changeEncounterOptionsUSUM(object sender, EventArgs e)
+        {
+            changeEncounterOptionsUSUM();
+        }
+
+        private void changeEncounterOptionsUSUM()
+        {
+            if (cboMapsUSUM.SelectedItem == null || cboMapsUSUM.Items.Count == 0)
+                return;
+
+            if (!cboMapsUSUM.Visible) return;
+
+            int selectedMap = cboMapsUSUM.SelectedIndex == -1 ? 0 : Utils.MapNamesUSUM.FindIndex(s => s.Equals((string)cboMapsUSUM.SelectedItem));
+
+            int selectedTable = cboTablesSuMo.SelectedIndex;
+            cboTablesSuMo.Items.Clear();
+            for (int i = 0; i < Utils.MapsUltraSun[selectedMap].NumberTables; i++)
+                cboTablesSuMo.Items.Add("Table " + i);
+            if (cboTablesSuMo.Items.Count > selectedTable && selectedTable != -1) cboTablesSuMo.SelectedIndex = selectedTable;
+            else cboTablesSuMo.SelectedIndex = 0;
+        }
 
         private void changeEncounterOptionsSuMo(object sender, EventArgs e)
         {
@@ -1599,7 +1631,7 @@ namespace PokemonEncCalc
             cboAbility.Items.Add(encounterOptions[1][0]);
             cboAbility.Items.Add(encounterOptions[1][1]);
 
-            if (currentVersion == Version.Sun || currentVersion == Version.Moon)
+            if (currentVersion >= Version.Sun)
             {
                 chkRepel.Checked = false; // No repel (the whole table is affected by the same levels)
 
@@ -1790,6 +1822,15 @@ namespace PokemonEncCalc
                 case Version.Moon:
                     currentMap = Utils.MapNamesSuMo.FindIndex(s => s.Equals((string)cboMapsSuMo.SelectedItem));
                     newSlots = Utils.MapsMoon[currentMap].getSlots(selectedTableSuMo, cboDayNightSuMo.SelectedIndex == 1);
+                    break;
+                case Version.UltraSun:
+                    currentMap = Utils.MapNamesUSUM.FindIndex(s => s.Equals((string)cboMapsUSUM.SelectedItem));
+                    newSlots = Utils.MapsUltraSun[currentMap].getSlots(selectedTableSuMo, cboDayNightSuMo.SelectedIndex == 1);
+                    break;
+
+                case Version.UltraMoon:
+                    currentMap = Utils.MapNamesUSUM.FindIndex(s => s.Equals((string)cboMapsUSUM.SelectedItem));
+                    newSlots = Utils.MapsUltraMoon[currentMap].getSlots(selectedTableSuMo, cboDayNightSuMo.SelectedIndex == 1);
                     break;
 
                 default:

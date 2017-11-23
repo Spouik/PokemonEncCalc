@@ -44,8 +44,32 @@ namespace PokemonEncCalc
             50, 51, // Alolan Diglett/Dugtrio
             778, 778, 778, // Mimikyu
             801, // Magearna
-            25, 25, 25, 25, 25, 25, // Cosplay Pikachu ? Or Cap ?
+            25, 25, 25, 25, 25, 25, // Cap Pikachu
             735, 738, 754, 758, 784 // Totem Pokémon
+        };
+        internal static readonly short[] FormTableUSUM = {
+            386, 386, 386, 413, 413, 492, 487, 479, 479, 479, 479, 479, 351, 351, 351, 421, 422, 423, 550, 555, 648, 646, 646, 647, 641, 642, 645,
+            94, // M-Gengar
+            678, 676, 676, 676, 676, 676, 676, 676, 676, 676,
+            282, 181, 3, 6, 6, 150, 150, 257, 308, 229, 306, 354, 248, 212, 127, 142, 448, 460, // XY Megas
+            681, // Aegislash
+            9, 115, 130, 359, 65, 214, 303, 310, 445, 380, 381, // Other XY Megas
+            710, 710, 710, 711, 711, 711, 670, 670, 670, 670, 670, // Pumpkaboo/Gourgeist/Floette
+            260, 254, 302, 334, 475, 531, 319, 80, 208, 18, 362, 719, 376, 382, 383, 384, 720, 323, 428, 373, 15, // ORAS Megas / Primals / Hoopa
+
+            // Sun/Moon new forms
+            746, 741, 741, 741, 745, 745, // 2nd 745 is Dusk Lyanroc
+            19, 20, 20, 26, 27, 28, 37, 38, 52, 53, 74, 75, 76, 88, 89, 103, 105, 105, // Alolan formes + Totem Alolan Marowak
+            658, 658, 718, 718, 718, 718, // Ash-Greninja / Zygarde
+            774, 774, 774, 774, 774, 774, 774, 774, 774, 774, 774, 774, 774, // Minior
+            50, 51, // Alolan Diglett/Dugtrio
+            778, 778, 778, // Mimikyu
+            801, // Magearna
+            25, 25, 25, 25, 25, 25, 25, //  Cap Pikachu
+            735, 738, 754, 758, 784, // Totem Pokémon
+            800, 800, 800, //Necrozma
+            752, 777, 743, //USUM Totem
+            744 // Special Rockruff (evolves into Dusk Lycanroc)
         };
 
         // Pokémon forms with no data, but have appearance change
@@ -70,6 +94,7 @@ namespace PokemonEncCalc
         internal static PokemonXY[] pokemonXYTable { get; set; }
         internal static PokemonORAS[] pokemonORASTable { get; set; }
         internal static PokemonSuMo[] pokemonSuMoTable { get; set; }
+        internal static PokemonUSUM[] pokemonUSUMTable { get; set; }
 
         internal static void PopulatePokemonTables()
         {
@@ -87,6 +112,7 @@ namespace PokemonEncCalc
             pokemonXYTable = new PokemonXY[PokemonXY.RELEASED_POKEMON + 1];
             pokemonORASTable = new PokemonORAS[PokemonORAS.RELEASED_POKEMON + 1];
             pokemonSuMoTable = new PokemonSuMo[PokemonSuMo.RELEASED_POKEMON + 1];
+            pokemonUSUMTable = new PokemonUSUM[PokemonUSUM.RELEASED_POKEMON + 1];
 
             // Populate tables 
             // Gen 2-3 tables now use gen 4 Pokémon data. 
@@ -169,6 +195,12 @@ namespace PokemonEncCalc
             {
                 pokemonSuMoTable[i] = new PokemonSuMo(i, Properties.Resources.PokemonInfo7.Skip(PokemonSuMo.SIZE * i).Take(PokemonSuMo.SIZE).ToArray());
                 setNames(pokemonSuMoTable[i]);
+            }
+
+            for (short i = 0; i <= PokemonUSUM.RELEASED_POKEMON; i++)
+            {
+                pokemonUSUMTable[i] = new PokemonUSUM(i, Properties.Resources.PokemonInfoU.Skip(PokemonUSUM.SIZE * i).Take(PokemonUSUM.SIZE).ToArray());
+                setNames(pokemonUSUMTable[i]);
             }
 
             // Add forms
@@ -304,6 +336,16 @@ namespace PokemonEncCalc
                 setFormNames(p, (short)(PokemonSuMo.RELEASED_POKEMON + f));
             }
 
+            for (short f = 0; f < PokemonUSUM.RELEASED_FORMS; f++)
+            {
+                PokemonUSUM p = new PokemonUSUM(FormTableUSUM[f], Properties.Resources.PokemonInfoU.Skip(PokemonUSUM.SIZE * (PokemonUSUM.RELEASED_POKEMON + f + 1))
+                    .Take(PokemonUSUM.SIZE).ToArray());
+                pokemonUSUMTable[FormTableUSUM[f]].addForm(p);
+
+                p.Form = (byte)pokemonUSUMTable[FormTableUSUM[f]].Forms.Count;
+                setFormNames(p, (short)(PokemonUSUM.RELEASED_POKEMON + f));
+            }
+
             // Other Sun/moon forms
             for (short f = 0; f < OtherFormTableSuMo.Length; f++)
             {
@@ -313,6 +355,14 @@ namespace PokemonEncCalc
 
                 p.Form = (byte)pokemonSuMoTable[OtherFormTableSuMo[f]].Forms.Count;
                 setFormNames(p, (short)(PokemonSuMo.RELEASED_POKEMON + PokemonSuMo.RELEASED_FORMS + f));
+
+                // USUM
+                PokemonUSUM u = new PokemonUSUM(OtherFormTableSuMo[f], Properties.Resources.PokemonInfoU.Skip(PokemonUSUM.SIZE * (OtherFormTableSuMo[f]))
+    .Take(PokemonUSUM.SIZE).ToArray());
+                pokemonUSUMTable[OtherFormTableSuMo[f]].addForm(u);
+
+                u.Form = (byte)pokemonUSUMTable[OtherFormTableSuMo[f]].Forms.Count;
+                setFormNames(u, (short)(PokemonUSUM.RELEASED_POKEMON + PokemonUSUM.RELEASED_FORMS + f));
             }
 
         }
@@ -331,7 +381,18 @@ namespace PokemonEncCalc
 
             // Pokémon Form name
 
-            if(p is PokemonSuMo)
+            if (p is PokemonUSUM) {
+
+                p.FormNameEN = Properties.Resources.formsUSUM_EN.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[p.NatID - 1];
+                p.FormNameFR = Properties.Resources.formsUSUM_FR.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[p.NatID - 1];
+                p.FormNameDE = Properties.Resources.formsUSUM_DE.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[p.NatID - 1];
+                p.FormNameIT = Properties.Resources.formsUSUM_IT.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[p.NatID - 1];
+                p.FormNameES = Properties.Resources.formsUSUM_ES.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[p.NatID - 1];
+                p.FormNameJP = Properties.Resources.formsUSUM_JP.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[p.NatID - 1];
+                p.FormNameKR = Properties.Resources.formsUSUM_KR.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[p.NatID - 1];
+
+            }
+            else if(p is PokemonSuMo)
             {
                 p.FormNameEN = Properties.Resources.formsSuMoEN.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[p.NatID - 1];
                 p.FormNameFR = Properties.Resources.formsSuMoFR.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[p.NatID - 1];
@@ -370,7 +431,19 @@ namespace PokemonEncCalc
             // Pokémon Form name
 
             // Sun/Moon Form names
-            if (p is PokemonSuMo)
+            if (p is PokemonUSUM)
+            {
+
+                p.FormNameEN = Properties.Resources.formsUSUM_EN.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[formID];
+                p.FormNameFR = Properties.Resources.formsUSUM_FR.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[formID];
+                p.FormNameDE = Properties.Resources.formsUSUM_DE.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[formID];
+                p.FormNameIT = Properties.Resources.formsUSUM_IT.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[formID];
+                p.FormNameES = Properties.Resources.formsUSUM_ES.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[formID];
+                p.FormNameJP = Properties.Resources.formsUSUM_JP.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[formID];
+                p.FormNameKR = Properties.Resources.formsUSUM_KR.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[formID];
+            }
+
+            else if (p is PokemonSuMo)
             {
 
                 p.FormNameEN = Properties.Resources.formsSuMoEN.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[formID];
@@ -437,6 +510,9 @@ namespace PokemonEncCalc
                 case Version.Sun:
                 case Version.Moon:
                     return pokemonSuMoTable[natID].getSpeciesForm(speciesID);
+                case Version.UltraSun:
+                case Version.UltraMoon:
+                    return pokemonUSUMTable[natID].getSpeciesForm(speciesID);
 
                 default: return null;
             }
@@ -463,7 +539,9 @@ namespace PokemonEncCalc
             if (current is PokemonXY) return getPokemon(newID, Version.X);
             if (current is PokemonORAS) return getPokemon(newID, Version.OmegaRuby);
 
+            if (current is PokemonUSUM) return getPokemon(newID, Version.UltraSun);
             if (current is PokemonSuMo) return getPokemon(newID, Version.Sun);
+
 
             return null;
         }

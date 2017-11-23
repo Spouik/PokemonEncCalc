@@ -32,6 +32,7 @@
             this.cmdClose = new System.Windows.Forms.Button();
             this.cmdCalc = new System.Windows.Forms.Button();
             this.gboAutoFill = new System.Windows.Forms.GroupBox();
+            this.cboMapsUSUM = new System.Windows.Forms.ComboBox();
             this.pnlTurnback = new System.Windows.Forms.Panel();
             this.lblTurnback = new System.Windows.Forms.Label();
             this.pctTurnback = new System.Windows.Forms.PictureBox();
@@ -339,6 +340,7 @@
             // 
             // gboAutoFill
             // 
+            this.gboAutoFill.Controls.Add(this.cboMapsUSUM);
             this.gboAutoFill.Controls.Add(this.pnlTurnback);
             this.gboAutoFill.Controls.Add(this.pnlRoute120);
             this.gboAutoFill.Controls.Add(this.pnlAbility);
@@ -379,6 +381,18 @@
             this.gboAutoFill.TabIndex = 2;
             this.gboAutoFill.TabStop = false;
             this.gboAutoFill.Text = "Encounter Slots Auto Fill";
+            // 
+            // cboMapsUSUM
+            // 
+            this.cboMapsUSUM.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboMapsUSUM.FormattingEnabled = true;
+            this.cboMapsUSUM.Location = new System.Drawing.Point(152, 42);
+            this.cboMapsUSUM.Name = "cboMapsUSUM";
+            this.cboMapsUSUM.Size = new System.Drawing.Size(242, 21);
+            this.cboMapsUSUM.Sorted = true;
+            this.cboMapsUSUM.TabIndex = 18;
+            this.cboMapsUSUM.Visible = false;
+            this.cboMapsUSUM.SelectedIndexChanged += new System.EventHandler(this.changeEncounterOptionsUSUM);
             // 
             // pnlTurnback
             // 
@@ -2946,6 +2960,7 @@
         private System.Windows.Forms.Label lblSafariBlocks;
         private System.Windows.Forms.Label lblSafariPlainsBks;
         private System.Windows.Forms.Label lblSafariBlocksCount;
+        internal System.Windows.Forms.ComboBox cboMapsUSUM;
     }
 }
 
