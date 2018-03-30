@@ -23742,9 +23742,89 @@ namespace PokemonEncCalc.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
+        internal static byte[] M_Location_64 {
+            get {
+                object obj = ResourceManager.GetObject("M_Location_64", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] M_Location_65 {
+            get {
+                object obj = ResourceManager.GetObject("M_Location_65", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] M_Location_66 {
+            get {
+                object obj = ResourceManager.GetObject("M_Location_66", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] M_Location_67 {
+            get {
+                object obj = ResourceManager.GetObject("M_Location_67", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] M_Location_68 {
+            get {
+                object obj = ResourceManager.GetObject("M_Location_68", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] M_Location_69 {
+            get {
+                object obj = ResourceManager.GetObject("M_Location_69", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
         internal static byte[] M_Location_7 {
             get {
                 object obj = ResourceManager.GetObject("M_Location_7", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] M_Location_70 {
+            get {
+                object obj = ResourceManager.GetObject("M_Location_70", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] M_Location_71 {
+            get {
+                object obj = ResourceManager.GetObject("M_Location_71", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -43216,12 +43296,12 @@ namespace PokemonEncCalc.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Route 1 / Melemele Sea
-        ///Hau’oli City (Beachfront) / Melemele Sea
+        ///   Looks up a localized string similar to Melemele Sea (Route 1)
+        ///Hau’oli City (Beachfront)
         ///Hau’oli City (Shopping District)
         ///Route 3
         ///Route 2
-        ///Ten Carat Hill (Inside)
+        ///Ten Carat Hill (Cave)
         ///Ten Carat Hill (Outside)
         ///Hau’oli Cemetery
         ///Melemele Meadow
@@ -43237,14 +43317,15 @@ namespace PokemonEncCalc.Properties {
         ///Route 8
         ///Route 9
         ///Hano Beach
-        ///Memorial Hill / Akala Outskirts
+        ///Memorial Hill
         ///Diglett’s Tunnel
         ///Wela Volcano Park
         ///Brooklet Hill
         ///Brooklet Hill (Totem&apos;s Den)
         ///Lush Jungle (Entrance)
         ///Lush Jungle (Inside - Left)
-        ///L [rest of string was truncated]&quot;;.
+        ///Lush Jungle (Inside - Right)
+        ///Lush J [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string Maps_SuMo_EN {
             get {
@@ -43253,12 +43334,12 @@ namespace PokemonEncCalc.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Route 1 / Mer de Mele-Mele
-        ///Ekaeka (Plage) / Mer de Mele-Mele
+        ///   Looks up a localized string similar to Mer de Mele-Mele (Route 1)
+        ///Ekaeka (Plage)
         ///Ekaeka (Zone commerciale)
         ///Route 3
         ///Route 2
-        ///Colline Dicarat (Intérieur)
+        ///Colline Dicarat (Grotte)
         ///Colline Dicarat (Extérieur)
         ///Cimetière d&apos;Ekaeka
         ///Jardin de Mele-Mele
@@ -43274,12 +43355,13 @@ namespace PokemonEncCalc.Properties {
         ///Route 8
         ///Route 9
         ///Plage Hano-Hano
-        ///Colline Memento / Côte Reculée d&apos;Akala
+        ///Colline Memento
         ///Tunnel Taupiqueur
         ///Parc Volcanique
         ///Colline Clapotis
         ///Colline Clapotis (Repaire du Dominant)
-        ///Jungle Sombrefeuille [rest of string was truncated]&quot;;.
+        ///Jungle Sombrefeuille (Entrée)
+        ///Jungle Sombrefeuille (Fond - Gauch [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string Maps_SuMo_FR {
             get {
@@ -43288,72 +43370,35 @@ namespace PokemonEncCalc.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Map 0
-        ///Map 1
-        ///Map 2
-        ///Map 3
-        ///Map 4
-        ///Map 5
-        ///Map 6
-        ///Map 7
-        ///Map 8
-        ///Map 9
-        ///Map 10
-        ///Map 11
-        ///Map 12
-        ///Map 13
-        ///Map 14
-        ///Map 15
-        ///Map 16
-        ///Map 17
-        ///Map 18
-        ///Map 19
-        ///Map 20
-        ///Map 21
-        ///Map 22
-        ///Map 23
-        ///Map 24
-        ///Map 25
-        ///Map 26
-        ///Map 27
-        ///Map 28
-        ///Map 29
-        ///Map 30
-        ///Map 31
-        ///Map 32
-        ///Map 33
-        ///Map 34
-        ///Map 35
-        ///Map 36
-        ///Map 37
-        ///Map 38
-        ///Map 39
-        ///Map 40
-        ///Map 41
-        ///Map 42
-        ///Map 43
-        ///Map 44
-        ///Map 45
-        ///Map 46
-        ///Map 47
-        ///Map 48
-        ///Map 49
-        ///Map 50
-        ///Map 51
-        ///Map 52
-        ///Map 53
-        ///Map 54
-        ///Map 55
-        ///Map 56
-        ///Map 57
-        ///Map 58
-        ///Map 59
-        ///Map 60
-        ///Map 61
-        ///Map 62
-        ///Map 63
-        ///Map 64
-        ///Ma [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to Route 1 / Melemele Sea
+        ///Hau’oli City (Beachfront) / Melemele Sea
+        ///Hau’oli City (Shopping District)
+        ///Route 3 / Kala&apos;e Bay
+        ///Route 2
+        ///Ten Carat Hill (Cave)
+        ///Ten Carat Hill (Outside)
+        ///Hau’oli Cemetery
+        ///Melemele Meadow
+        ///Seaward Cave
+        ///Berry Fields
+        ///Sandy Cave
+        ///Verdant Cavern
+        ///Trainer School
+        ///Route 4
+        ///Paniola Town
+        ///Route 5
+        ///Route 6
+        ///Route 7
+        ///Route 8
+        ///Route 9
+        ///Hano Beach
+        ///Dividing Peak Tunnel
+        ///Memorial Hill / Akala Outskirts
+        ///Diglett’s Tunnel
+        ///Wela Volcano Park
+        ///Brooklet Hill
+        ///Brooklet Hill (Totem&apos;s Den)
+        ///Lush Jung [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string Maps_USUM_EN {
             get {
@@ -43362,7 +43407,7 @@ namespace PokemonEncCalc.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Route 1
+        ///   Looks up a localized string similar to Route 1 / Mer de Mele-Mele
         ///Ekaeka (Plage) / Mer de Mele-Mele
         ///Ekaeka (Zone commerciale)
         ///Route 3 / Baie de Kala&apos;e
@@ -43389,7 +43434,7 @@ namespace PokemonEncCalc.Properties {
         ///Tunnel Taupiqueur
         ///Parc Volcanique
         ///Colline Clapotis
-        ///Colline Clapotis (Repaire  [rest of string was truncated]&quot;;.
+        ///Colline [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string Maps_USUM_FR {
             get {
@@ -45235,9 +45280,89 @@ namespace PokemonEncCalc.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
+        internal static byte[] S_Location_64 {
+            get {
+                object obj = ResourceManager.GetObject("S_Location_64", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] S_Location_65 {
+            get {
+                object obj = ResourceManager.GetObject("S_Location_65", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] S_Location_66 {
+            get {
+                object obj = ResourceManager.GetObject("S_Location_66", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] S_Location_67 {
+            get {
+                object obj = ResourceManager.GetObject("S_Location_67", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] S_Location_68 {
+            get {
+                object obj = ResourceManager.GetObject("S_Location_68", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] S_Location_69 {
+            get {
+                object obj = ResourceManager.GetObject("S_Location_69", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
         internal static byte[] S_Location_7 {
             get {
                 object obj = ResourceManager.GetObject("S_Location_7", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] S_Location_70 {
+            get {
+                object obj = ResourceManager.GetObject("S_Location_70", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] S_Location_71 {
+            get {
+                object obj = ResourceManager.GetObject("S_Location_71", resourceCulture);
                 return ((byte[])(obj));
             }
         }

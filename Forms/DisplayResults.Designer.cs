@@ -36,12 +36,14 @@
             this.cmdClose = new System.Windows.Forms.Button();
             this.lblInfo = new System.Windows.Forms.Label();
             this.pnlResults = new System.Windows.Forms.Panel();
+            this.pnlBars = new System.Windows.Forms.Panel();
+            this.pnlBars.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblRepel
             // 
             this.lblRepel.AutoSize = true;
-            this.lblRepel.Location = new System.Drawing.Point(9, 558);
+            this.lblRepel.Location = new System.Drawing.Point(3, 10);
             this.lblRepel.Name = "lblRepel";
             this.lblRepel.Size = new System.Drawing.Size(136, 13);
             this.lblRepel.TabIndex = 4;
@@ -51,7 +53,7 @@
             // lblCuteCharm
             // 
             this.lblCuteCharm.AutoSize = true;
-            this.lblCuteCharm.Location = new System.Drawing.Point(9, 596);
+            this.lblCuteCharm.Location = new System.Drawing.Point(3, 48);
             this.lblCuteCharm.Name = "lblCuteCharm";
             this.lblCuteCharm.Size = new System.Drawing.Size(192, 13);
             this.lblCuteCharm.TabIndex = 4;
@@ -60,7 +62,7 @@
             // 
             // pbarRepel
             // 
-            this.pbarRepel.Location = new System.Drawing.Point(12, 574);
+            this.pbarRepel.Location = new System.Drawing.Point(6, 26);
             this.pbarRepel.Maximum = 1000;
             this.pbarRepel.Name = "pbarRepel";
             this.pbarRepel.Size = new System.Drawing.Size(920, 10);
@@ -69,7 +71,7 @@
             // 
             // pbarCuteCharm
             // 
-            this.pbarCuteCharm.Location = new System.Drawing.Point(12, 612);
+            this.pbarCuteCharm.Location = new System.Drawing.Point(6, 64);
             this.pbarCuteCharm.Maximum = 1000;
             this.pbarCuteCharm.Name = "pbarCuteCharm";
             this.pbarCuteCharm.Size = new System.Drawing.Size(920, 10);
@@ -79,7 +81,7 @@
             // cmdClose
             // 
             this.cmdClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.cmdClose.Location = new System.Drawing.Point(399, 637);
+            this.cmdClose.Location = new System.Drawing.Point(397, 91);
             this.cmdClose.Name = "cmdClose";
             this.cmdClose.Size = new System.Drawing.Size(146, 32);
             this.cmdClose.TabIndex = 2;
@@ -102,26 +104,35 @@
             this.pnlResults.Size = new System.Drawing.Size(920, 460);
             this.pnlResults.TabIndex = 0;
             // 
+            // pnlBars
+            // 
+            this.pnlBars.Controls.Add(this.cmdClose);
+            this.pnlBars.Controls.Add(this.lblRepel);
+            this.pnlBars.Controls.Add(this.lblCuteCharm);
+            this.pnlBars.Controls.Add(this.pbarCuteCharm);
+            this.pnlBars.Controls.Add(this.pbarRepel);
+            this.pnlBars.Location = new System.Drawing.Point(0, 546);
+            this.pnlBars.Name = "pnlBars";
+            this.pnlBars.Size = new System.Drawing.Size(944, 131);
+            this.pnlBars.TabIndex = 5;
+            // 
             // frmDisplayResults
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(944, 681);
-            this.Controls.Add(this.lblRepel);
-            this.Controls.Add(this.lblCuteCharm);
-            this.Controls.Add(this.pbarRepel);
-            this.Controls.Add(this.pbarCuteCharm);
-            this.Controls.Add(this.cmdClose);
             this.Controls.Add(this.lblInfo);
             this.Controls.Add(this.pnlResults);
+            this.Controls.Add(this.pnlBars);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmDisplayResults";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "DisplayResults";
             this.Load += new System.EventHandler(this.frmDisplayResults_Load);
+            this.pnlBars.ResumeLayout(false);
+            this.pnlBars.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -134,5 +145,6 @@
         private System.Windows.Forms.ProgressBar pbarRepel;
         private System.Windows.Forms.Label lblCuteCharm;
         private System.Windows.Forms.Label lblRepel;
+        private System.Windows.Forms.Panel pnlBars;
     }
 }

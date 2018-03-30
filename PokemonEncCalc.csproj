@@ -277,7 +277,12 @@
     <None Include="Resources\data\Moon\M_Location_64.bin" />
     <None Include="Resources\data\Moon\M_Location_65.bin" />
     <None Include="Resources\data\Moon\M_Location_66.bin" />
+    <None Include="Resources\data\Moon\M_Location_67.bin" />
+    <None Include="Resources\data\Moon\M_Location_68.bin" />
+    <None Include="Resources\data\Moon\M_Location_69.bin" />
     <None Include="Resources\data\Moon\M_Location_7.bin" />
+    <None Include="Resources\data\Moon\M_Location_70.bin" />
+    <None Include="Resources\data\Moon\M_Location_71.bin" />
     <None Include="Resources\data\Moon\M_Location_8.bin" />
     <None Include="Resources\data\Moon\M_Location_9.bin" />
     <None Include="Resources\data\MovesGen3.dat" />
@@ -361,7 +366,12 @@
     <None Include="Resources\data\Sun\S_Location_64.bin" />
     <None Include="Resources\data\Sun\S_Location_65.bin" />
     <None Include="Resources\data\Sun\S_Location_66.bin" />
+    <None Include="Resources\data\Sun\S_Location_67.bin" />
+    <None Include="Resources\data\Sun\S_Location_68.bin" />
+    <None Include="Resources\data\Sun\S_Location_69.bin" />
     <None Include="Resources\data\Sun\S_Location_7.bin" />
+    <None Include="Resources\data\Sun\S_Location_70.bin" />
+    <None Include="Resources\data\Sun\S_Location_71.bin" />
     <None Include="Resources\data\Sun\S_Location_8.bin" />
     <None Include="Resources\data\Sun\S_Location_9.bin" />
     <None Include="Resources\data\UltraMoon\UM_Location_0.bin" />
@@ -433,9 +443,6 @@
     <None Include="Resources\data\UltraMoon\UM_Location_69.bin" />
     <None Include="Resources\data\UltraMoon\UM_Location_7.bin" />
     <None Include="Resources\data\UltraMoon\UM_Location_70.bin" />
-    <None Include="Resources\data\UltraMoon\UM_Location_71.bin" />
-    <None Include="Resources\data\UltraMoon\UM_Location_72.bin" />
-    <None Include="Resources\data\UltraMoon\UM_Location_73.bin" />
     <None Include="Resources\data\UltraMoon\UM_Location_8.bin" />
     <None Include="Resources\data\UltraMoon\UM_Location_9.bin" />
     <None Include="Resources\data\UltraSun\US_Location_0.bin" />
@@ -507,9 +514,6 @@
     <None Include="Resources\data\UltraSun\US_Location_69.bin" />
     <None Include="Resources\data\UltraSun\US_Location_7.bin" />
     <None Include="Resources\data\UltraSun\US_Location_70.bin" />
-    <None Include="Resources\data\UltraSun\US_Location_71.bin" />
-    <None Include="Resources\data\UltraSun\US_Location_72.bin" />
-    <None Include="Resources\data\UltraSun\US_Location_73.bin" />
     <None Include="Resources\data\UltraSun\US_Location_8.bin" />
     <None Include="Resources\data\UltraSun\US_Location_9.bin" />
     <None Include="Resources\data\White2Slots.dat" />

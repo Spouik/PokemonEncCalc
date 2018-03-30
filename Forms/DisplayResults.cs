@@ -36,10 +36,18 @@ namespace PokemonEncCalc
             int nbSlots = data.Count;
             int parentWidth = pnlResults.Width;
             int row = 0, column = 0;
+//#if DEBUG
+//            pnlResults.BorderStyle = BorderStyle.FixedSingle;
+//            pnlBars.BorderStyle = BorderStyle.FixedSingle;
+//#endif
+
             foreach(EncounterSlot slot in data)
             {
                 Panel p = new Panel();
                 p.Size = new Size(100, 120);
+#if DEBUG
+                p.BorderStyle = BorderStyle.FixedSingle;
+#endif
                 PictureBox pct = new PictureBox();
                 pct.Size = new Size(96, 96);
                 pct.SizeMode = PictureBoxSizeMode.Zoom;
@@ -57,14 +65,14 @@ namespace PokemonEncCalc
                 //int y = nbSlots / 4;
                 int b = (parentWidth - (x * 100 + (x - 1) * a)) / 2;
                 int d = nbSlots <= 12 ? (pnlResults.Height - (((nbSlots-1) / 4 + 1) * 120 + ((nbSlots-1) / 4) * 40)) / 2 : 20;
-                p.Location = new Point(b + column * (100 + a), d + row * (160));
+                p.Location = new Point(b + column * (100 + a), 20 + row * (160));
                 pnlResults.Controls.Add(p);
                 column++;
                 if(column == 4) { column = 0; row++; }
             }
-
-            repelDisp();
-            cuteCharmDisp();
+            pnlResults.Height = 0 + 160 * ((nbSlots-1) / 4 + 1);
+            DisplayBars();
+            Height = lblInfo.Height + pnlResults.Height + pnlBars.Height + 50;
             lblInfo.Text = encounterInfo;
         }
 
@@ -86,6 +94,13 @@ namespace PokemonEncCalc
             lblCuteCharm.Text += odds == 0 ? " 0" : " 1/" + odds;
             lblCuteCharm.Visible = true;
             pbarCuteCharm.Visible = true;
+        }
+
+        private void DisplayBars()
+        {
+            pnlBars.Location = new Point(0, pnlResults.Location.Y + pnlResults.Height);
+            repelDisp();
+            cuteCharmDisp();
         }
     }
 }

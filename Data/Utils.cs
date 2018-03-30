@@ -775,7 +775,7 @@ namespace PokemonEncCalc
 
         private static void loadSlotsSun()
         {
-            int mapCount = 64;
+            int mapCount = 72;
             MapsSun = new List<AreaMapSuMo>();
             for(int i = 0; i < mapCount; i++)
             {
@@ -786,7 +786,7 @@ namespace PokemonEncCalc
 
         private static void loadSlotsMoon()
         {
-            int mapCount = 64;
+            int mapCount = 72;
             MapsMoon = new List<AreaMapSuMo>();
             for (int i = 0; i < mapCount; i++)
             {
