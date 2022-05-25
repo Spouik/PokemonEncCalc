@@ -11,7 +11,7 @@ namespace PokemonEncCalc
     static class Program
     {
 
-        internal const string VERSION = "5.11";
+        internal const string VERSION = "5.12";
         internal const Version STARTING_VERSION = Version.Gold;
 
         /// <summary>
@@ -37,6 +37,8 @@ namespace PokemonEncCalc
         {
             if (CultureInfo.CurrentUICulture.Name.StartsWith("fr"))
                 Properties.Settings.Default.Language = 2;
+            else if (CultureInfo.CurrentUICulture.Name.StartsWith("chs"))
+                Properties.Settings.Default.Language = 8;
             else
                 Properties.Settings.Default.Language = 1;
         }

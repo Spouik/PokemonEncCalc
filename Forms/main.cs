@@ -40,6 +40,9 @@ namespace PokemonEncCalc
                 case 2:
                     frenchToolStripMenuItem.Checked = true;
                     break;
+                case 8:
+                    chinesesimplifiedToolStripMenuItem.Checked = true;
+                    break;
                 default: break;
             }
             
@@ -191,6 +194,7 @@ namespace PokemonEncCalc
             loadEncounterOptions(Language.English);
             frenchToolStripMenuItem.Checked = false;
             englishToolStripMenuItem.Checked = true;
+            chinesesimplifiedToolStripMenuItem.Checked = false;
             updateEncounterOptions();
             renameControls();
             renameMenuStrip();
@@ -206,6 +210,23 @@ namespace PokemonEncCalc
             loadEncounterOptions(Language.French);
             frenchToolStripMenuItem.Checked = true;
             englishToolStripMenuItem.Checked = false;
+            chinesesimplifiedToolStripMenuItem.Checked = false;
+            updateEncounterOptions();
+            renameControls();
+            renameMenuStrip();
+            renameComboboxes();
+            repopulateComboboxes(currentSlots[0].Species.getNbReleased());
+            update();
+        }
+
+        private void chinesesimplifiedToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.Language = 8;
+            Utils.changeLanguage(8);
+            loadEncounterOptions(Language.ChineseSimplified);
+            frenchToolStripMenuItem.Checked = false;
+            englishToolStripMenuItem.Checked = false;
+            chinesesimplifiedToolStripMenuItem.Checked = true;
             updateEncounterOptions();
             renameControls();
             renameMenuStrip();
@@ -443,39 +464,39 @@ namespace PokemonEncCalc
         {
             // Rename Comboboxes
             // Version:
-            translateComboBoxes(cboVersion, "versions" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR" })[Properties.Settings.Default.Language - 1]);
+            translateComboBoxes(cboVersion, "versions" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR", "CHS", "CHT" })[Properties.Settings.Default.Language - 1]);
             // Maps GS:
-            translateMaps(cboMapsGS, "Maps_GS_" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR" })[Properties.Settings.Default.Language - 1], ref Utils.MapNamesGS);
+            translateMaps(cboMapsGS, "Maps_GS_" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR", "CHS", "CHT" })[Properties.Settings.Default.Language - 1], ref Utils.MapNamesGS);
             // Maps C:
-            translateMaps(cboMapsCrystal, "Maps_C_" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR" })[Properties.Settings.Default.Language - 1], ref Utils.MapNamesC);
+            translateMaps(cboMapsCrystal, "Maps_C_" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR", "CHS", "CHT" })[Properties.Settings.Default.Language - 1], ref Utils.MapNamesC);
             // Maps RS:
-            translateMaps(cboMapsRubySapp, "Maps_RS_" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR" })[Properties.Settings.Default.Language - 1], ref Utils.MapNamesRS);
+            translateMaps(cboMapsRubySapp, "Maps_RS_" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR", "CHS", "CHT" })[Properties.Settings.Default.Language - 1], ref Utils.MapNamesRS);
             // Maps E:
-            translateMaps(cboMapsEmer, "Maps_E_" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR" })[Properties.Settings.Default.Language - 1], ref Utils.MapNamesE);
+            translateMaps(cboMapsEmer, "Maps_E_" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR", "CHS", "CHT" })[Properties.Settings.Default.Language - 1], ref Utils.MapNamesE);
             // Maps FRLG:
-            translateMaps(cboMapsFireLeaf, "Maps_FRLG_" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR" })[Properties.Settings.Default.Language - 1], ref Utils.MapNamesFRLG);
+            translateMaps(cboMapsFireLeaf, "Maps_FRLG_" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR", "CHS", "CHT" })[Properties.Settings.Default.Language - 1], ref Utils.MapNamesFRLG);
             // Maps DP:
-            translateMaps(cboMapsDP, "Maps_DP_" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR" })[Properties.Settings.Default.Language - 1], ref Utils.MapNamesDP);
+            translateMaps(cboMapsDP, "Maps_DP_" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR", "CHS", "CHT" })[Properties.Settings.Default.Language - 1], ref Utils.MapNamesDP);
             // Maps Pt:
-            translateMaps(cboMapsPlat, "Maps_Pt_" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR" })[Properties.Settings.Default.Language - 1], ref Utils.MapNamesPt);
+            translateMaps(cboMapsPlat, "Maps_Pt_" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR", "CHS", "CHT" })[Properties.Settings.Default.Language - 1], ref Utils.MapNamesPt);
             // Maps HGSS:
-            translateMaps(cboMapsHGSS, "Maps_HGSS_" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR" })[Properties.Settings.Default.Language - 1], ref Utils.MapNamesHGSS);
+            translateMaps(cboMapsHGSS, "Maps_HGSS_" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR", "CHS", "CHT" })[Properties.Settings.Default.Language - 1], ref Utils.MapNamesHGSS);
             // Maps BW:
-            translateMaps(cboMapsBW, "Maps_BW_" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR" })[Properties.Settings.Default.Language - 1], ref Utils.MapNamesBW);
+            translateMaps(cboMapsBW, "Maps_BW_" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR", "CHS", "CHT" })[Properties.Settings.Default.Language - 1], ref Utils.MapNamesBW);
             // Maps B2W2:
-            translateMaps(cboMapsB2W2, "Maps_B2W2_" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR" })[Properties.Settings.Default.Language - 1], ref Utils.MapNamesB2W2);
+            translateMaps(cboMapsB2W2, "Maps_B2W2_" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR", "CHS", "CHT" })[Properties.Settings.Default.Language - 1], ref Utils.MapNamesB2W2);
             // Maps XY:
-            translateMaps(cboMapsXY, "Maps_XY_" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR" })[Properties.Settings.Default.Language - 1], ref Utils.MapNamesXY);
+            translateMaps(cboMapsXY, "Maps_XY_" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR", "CHS", "CHT" })[Properties.Settings.Default.Language - 1], ref Utils.MapNamesXY);
             // Maps OR:
-            translateMaps(cboMapsOR, "Maps_OR_" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR" })[Properties.Settings.Default.Language - 1], ref Utils.MapNamesOR);
+            translateMaps(cboMapsOR, "Maps_OR_" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR", "CHS", "CHT" })[Properties.Settings.Default.Language - 1], ref Utils.MapNamesOR);
             // Maps AS:
-            translateMaps(cboMapsAS, "Maps_AS_" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR" })[Properties.Settings.Default.Language - 1], ref Utils.MapNamesAS);
+            translateMaps(cboMapsAS, "Maps_AS_" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR", "CHS", "CHT" })[Properties.Settings.Default.Language - 1], ref Utils.MapNamesAS);
             // Maps SuMo:
-            translateMaps(cboMapsSuMo, "Maps_SuMo_" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR" })[Properties.Settings.Default.Language - 1], ref Utils.MapNamesSuMo);
+            translateMaps(cboMapsSuMo, "Maps_SuMo_" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR", "CHS", "CHT" })[Properties.Settings.Default.Language - 1], ref Utils.MapNamesSuMo);
             // Maps USUM:
-            translateMaps(cboMapsUSUM, "Maps_USUM_" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR" })[Properties.Settings.Default.Language - 1], ref Utils.MapNamesUSUM);
+            translateMaps(cboMapsUSUM, "Maps_USUM_" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR", "CHS", "CHT" })[Properties.Settings.Default.Language - 1], ref Utils.MapNamesUSUM);
             // Maps HGSS Safari:
-            translateMaps(cboSafariArea, "Maps_HGSS_Safari" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR" })[Properties.Settings.Default.Language - 1], ref Utils.MapNamesSafariHGSS);
+            translateMaps(cboSafariArea, "Maps_HGSS_Safari" + (new[] { "EN", "FR", "DE", "ES", "IT", "JP", "KR", "CHS", "CHT" })[Properties.Settings.Default.Language - 1], ref Utils.MapNamesSafariHGSS);
 
 
         }
@@ -524,6 +545,9 @@ namespace PokemonEncCalc
                     break;
                 case Language.French:
                     encounteroptionstrings.AddRange(Properties.Resources.encounter_options_FR.Split(new[] { "!!" }, StringSplitOptions.RemoveEmptyEntries));
+                    break;
+                case Language.ChineseSimplified:
+                    encounteroptionstrings.AddRange(Properties.Resources.encounter_options_CHS.Split(new[] { "!!" }, StringSplitOptions.RemoveEmptyEntries));
                     break;
                 default:
                     break;

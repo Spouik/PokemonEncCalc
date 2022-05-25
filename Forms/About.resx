@@ -123,6 +123,19 @@
   <metadata name="tabpAbout.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <metadata name="lblAboutCHS.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="lblAboutCHS.Text" xml:space="preserve">
+    <value>特别鸣谢：
+
+- MaitreArmand，关于相遇槽位及对战外特性效果的资料。
+
+- Mario，Metarkrai，Agent Hydro等人，报告错误及提出改进本应用的建议。
+
+- 网站 eggmove.com，dragonflycave.com，serebii.net，smogon.com 和 projectpokemon.com，提供了许多资料。
+</value>
+  </data>
   <metadata name="lblAboutFR.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -238,7 +251,9 @@ Ver. 5.0 :	- Added : English translation.
 
 	Ver. 5.11 : - Added : USUM Pokémon Data and Encounter Data
 		  - Added : USUM Pokémon sprites &amp; minisprites (thanks @Shinyhunter_map for minisprites).
-		  - Fixed : Cute Charm calculation exception occuring when Repel level is too high.</value>
+		  - Fixed : Cute Charm calculation exception occuring when Repel level is too high.
+
+	Ver. 5.12 : - Added : ChineseSimplified translation (thanks @Wokann/卧看微尘 for CHS translation).</value>
   </data>
   <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
