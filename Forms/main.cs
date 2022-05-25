@@ -43,6 +43,9 @@ namespace PokemonEncCalc
                 case 8:
                     chinesesimplifiedToolStripMenuItem.Checked = true;
                     break;
+                case 9:
+                    chinesetraditionalToolStripMenuItem.Checked = true;
+                    break;
                 default: break;
             }
             
@@ -195,6 +198,7 @@ namespace PokemonEncCalc
             frenchToolStripMenuItem.Checked = false;
             englishToolStripMenuItem.Checked = true;
             chinesesimplifiedToolStripMenuItem.Checked = false;
+            chinesetraditionalToolStripMenuItem.Checked = false;
             updateEncounterOptions();
             renameControls();
             renameMenuStrip();
@@ -211,6 +215,7 @@ namespace PokemonEncCalc
             frenchToolStripMenuItem.Checked = true;
             englishToolStripMenuItem.Checked = false;
             chinesesimplifiedToolStripMenuItem.Checked = false;
+            chinesetraditionalToolStripMenuItem.Checked = false;
             updateEncounterOptions();
             renameControls();
             renameMenuStrip();
@@ -227,6 +232,24 @@ namespace PokemonEncCalc
             frenchToolStripMenuItem.Checked = false;
             englishToolStripMenuItem.Checked = false;
             chinesesimplifiedToolStripMenuItem.Checked = true;
+            chinesetraditionalToolStripMenuItem.Checked = false;
+            updateEncounterOptions();
+            renameControls();
+            renameMenuStrip();
+            renameComboboxes();
+            repopulateComboboxes(currentSlots[0].Species.getNbReleased());
+            update();
+        }
+
+        private void chinesetraditionalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.Language = 9;
+            Utils.changeLanguage(9);
+            loadEncounterOptions(Language.ChineseTraditional);
+            frenchToolStripMenuItem.Checked = false;
+            englishToolStripMenuItem.Checked = false;
+            chinesesimplifiedToolStripMenuItem.Checked = false;
+            chinesetraditionalToolStripMenuItem.Checked = true;
             updateEncounterOptions();
             renameControls();
             renameMenuStrip();
@@ -548,6 +571,9 @@ namespace PokemonEncCalc
                     break;
                 case Language.ChineseSimplified:
                     encounteroptionstrings.AddRange(Properties.Resources.encounter_options_CHS.Split(new[] { "!!" }, StringSplitOptions.RemoveEmptyEntries));
+                    break;
+                case Language.ChineseTraditional:
+                    encounteroptionstrings.AddRange(Properties.Resources.encounter_options_CHT.Split(new[] { "!!" }, StringSplitOptions.RemoveEmptyEntries));
                     break;
                 default:
                     break;

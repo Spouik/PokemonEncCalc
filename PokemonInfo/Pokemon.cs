@@ -44,7 +44,8 @@ namespace PokemonEncCalc
         internal string NameJP { get; set; }
         internal string NameKR { get; set; }
         internal string NameCHS { get; set; }
-		
+        internal string NameCHT { get; set; }
+
         // FormNames
 
         internal string FormNameDE { get; set; }
@@ -55,6 +56,7 @@ namespace PokemonEncCalc
         internal string FormNameJP { get; set; }
         internal string FormNameKR { get; set; }
         internal string FormNameCHS { get; set; }
+        internal string FormNameCHT { get; set; }
 
         internal abstract int FormCount();
 
@@ -70,6 +72,7 @@ namespace PokemonEncCalc
                 case 6: return NameJP;
                 case 7: return NameKR;
                 case 8: return NameCHS;
+                case 9: return NameCHT;
                 default: return NameEN;
             }
         }
@@ -86,6 +89,7 @@ namespace PokemonEncCalc
                 case 6: return FormNameJP == " " ? (NameJP + "のすがた") : FormNameJP;
                 case 7: return FormNameKR == " " ? (NameKR + "의 모습") : FormNameKR;
                 case 8: return FormNameCHS == " " ? (NameCHS + "的形态") : FormNameCHS;
+                case 9: return FormNameCHT == " " ? (NameCHT + "的形態") : FormNameCHT;
                 default: return FormNameEN == " " ? (NameEN + (NameEN.EndsWith("s") ? "'" : "'s") + " form") : FormNameEN;
             }
         }

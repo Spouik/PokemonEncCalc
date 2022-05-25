@@ -228,6 +228,7 @@
             this.englishToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.frenchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.chinesesimplifiedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.chinesetraditionalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pokémonSpritesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.normalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.shinyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -2599,31 +2600,39 @@
             this.languageToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.englishToolStripMenuItem,
             this.frenchToolStripMenuItem,
-            this.chinesesimplifiedToolStripMenuItem});
+            this.chinesesimplifiedToolStripMenuItem,
+            this.chinesetraditionalToolStripMenuItem});
             this.languageToolStripMenuItem.Name = "languageToolStripMenuItem";
-            this.languageToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
+            this.languageToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.languageToolStripMenuItem.Text = "Language";
             // 
             // englishToolStripMenuItem
             // 
             this.englishToolStripMenuItem.Name = "englishToolStripMenuItem";
-            this.englishToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.englishToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.englishToolStripMenuItem.Text = "English";
             this.englishToolStripMenuItem.Click += new System.EventHandler(this.englishToolStripMenuItem_Click);
             // 
             // frenchToolStripMenuItem
             // 
             this.frenchToolStripMenuItem.Name = "frenchToolStripMenuItem";
-            this.frenchToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.frenchToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.frenchToolStripMenuItem.Text = "French";
             this.frenchToolStripMenuItem.Click += new System.EventHandler(this.frenchToolStripMenuItem_Click);
             // 
             // chinesesimplifiedToolStripMenuItem
             // 
             this.chinesesimplifiedToolStripMenuItem.Name = "chinesesimplifiedToolStripMenuItem";
-            this.chinesesimplifiedToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.chinesesimplifiedToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.chinesesimplifiedToolStripMenuItem.Text = "ChineseSimplified";
             this.chinesesimplifiedToolStripMenuItem.Click += new System.EventHandler(this.chinesesimplifiedToolStripMenuItem_Click);
+            // 
+            // chineseTraditionalToolStripMenuItem
+            // 
+            this.chinesetraditionalToolStripMenuItem.Name = "chinesetraditionalToolStripMenuItem";
+            this.chinesetraditionalToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.chinesetraditionalToolStripMenuItem.Text = "ChineseTraditional";
+            this.chinesetraditionalToolStripMenuItem.Click += new System.EventHandler(this.chinesetraditionalToolStripMenuItem_Click);
             // 
             // pokémonSpritesToolStripMenuItem
             // 
@@ -2631,7 +2640,7 @@
             this.normalToolStripMenuItem,
             this.shinyToolStripMenuItem});
             this.pokémonSpritesToolStripMenuItem.Name = "pokémonSpritesToolStripMenuItem";
-            this.pokémonSpritesToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
+            this.pokémonSpritesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.pokémonSpritesToolStripMenuItem.Text = "Pokémon sprites";
             // 
             // normalToolStripMenuItem
@@ -2651,7 +2660,7 @@
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
@@ -2775,6 +2784,7 @@
         internal System.Windows.Forms.ToolStripMenuItem englishToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem frenchToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem chinesesimplifiedToolStripMenuItem;
+        internal System.Windows.Forms.ToolStripMenuItem chinesetraditionalToolStripMenuItem;
         internal System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         internal System.Windows.Forms.ComboBox cboSlot0;
         internal System.Windows.Forms.ComboBox cboSlot11;

@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAbout));
             this.tabAboutChangelog = new System.Windows.Forms.TabControl();
             this.tabpAbout = new System.Windows.Forms.TabPage();
+            this.lblAboutCHT = new System.Windows.Forms.Label();
             this.lblAboutCHS = new System.Windows.Forms.Label();
             this.lblAboutFR = new System.Windows.Forms.Label();
             this.lklRepository = new System.Windows.Forms.LinkLabel();
@@ -57,6 +58,7 @@
             // 
             // tabpAbout
             // 
+            this.tabpAbout.Controls.Add(this.lblAboutCHT);
             this.tabpAbout.Controls.Add(this.lblAboutCHS);
             this.tabpAbout.Controls.Add(this.lblAboutFR);
             this.tabpAbout.Controls.Add(this.lklRepository);
@@ -70,6 +72,15 @@
             this.tabpAbout.TabIndex = 0;
             this.tabpAbout.Text = "About";
             this.tabpAbout.UseVisualStyleBackColor = true;
+            // 
+            // lblAboutCHT
+            // 
+            this.lblAboutCHT.Location = new System.Drawing.Point(222, 49);
+            this.lblAboutCHT.Name = "lblAboutCHT";
+            this.lblAboutCHT.Size = new System.Drawing.Size(342, 144);
+            this.lblAboutCHT.TabIndex = 6;
+            this.lblAboutCHT.Text = resources.GetString("lblAboutCHT.Text");
+            this.lblAboutCHT.Visible = false;
             // 
             // lblAboutCHS
             // 
@@ -175,6 +186,7 @@
         private System.Windows.Forms.TabPage tabpAbout;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TabPage tabpChangelog;
+        private System.Windows.Forms.Label lblAboutCHT;
         private System.Windows.Forms.Label lblAboutCHS;
         private System.Windows.Forms.Label lblAboutFR;
         private System.Windows.Forms.LinkLabel lklRepository;

@@ -27,7 +27,8 @@ namespace PokemonEncCalc
            new string[] { "", "", "", "" },
            new string[] { "", "", "", "" },
            new string[] { "", "", "", "" },
-           new string[] { "无捕获之力", "捕获之力Lv.1", "捕获之力Lv.2", "捕获之力Lv.3" }
+           new string[] { "无捕获之力", "捕获之力Lv.1", "捕获之力Lv.2", "捕获之力Lv.3" },
+           new string[] { "無捕獲之力", "捕獲之力Lv.1", "捕獲之力Lv.2", "捕獲之力Lv.3" }
 
         };
 
@@ -41,7 +42,8 @@ namespace PokemonEncCalc
            new string[] { "", "", "", "", "", "" },
            new string[] { "", "", "", "", "", "" },
            new string[] { "", "", "", "", "", "" },
-           new string[] { "无", "麻痹", "中毒", "灼伤", "睡眠", "冰冻" }
+           new string[] { "无", "麻痹", "中毒", "灼伤", "睡眠", "冰冻" },
+           new string[] { "無", "麻痺", "中毒", "灼傷", "睡眠", "冰凍" }
 
         };
 
@@ -55,12 +57,13 @@ namespace PokemonEncCalc
            new string[] { "", "", "" },
            new string[] { "", "", "" },
            new string[] { "{0}在第{1}世代不可用", "这个{0}在第{1}世代不可用", "" },
+           new string[] { "{0}在第{1}世代不可用", "這個{0}在第{1}世代不可用", "" },
 
         };
 
-        private string[] oras = new string[] { "", "ORAS", "ROSA", "", "", "", "", "", "ORAS" };
-        private string[] sunmoon = new string[] { "", "SM", "SL", "", "", "", "", "", "SM" };
-        private string[] ultra = new string[] { "", "USUM", "USUL", "", "", "", "", "", "USUM" };
+        private string[] oras = new string[] { "", "ORAS", "ROSA", "", "", "", "", "", "ORAS", "ORAS" };
+        private string[] sunmoon = new string[] { "", "SM", "SL", "", "", "", "", "", "SM", "SM" };
+        private string[] ultra = new string[] { "", "USUM", "USUL", "", "", "", "", "", "USUM", "USUM" };
         private int[] ultrabeasts = new int[] { 793, 794, 795, 796, 797, 798, 799, 803, 804, 805, 806 };
 
         public frmCaptureCalc()
@@ -84,6 +87,9 @@ namespace PokemonEncCalc
                     break;
                 case 8:
                     balls.AddRange(Properties.Resources.ballsCHS.Split(new[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries));
+                    break;
+                case 9:
+                    balls.AddRange(Properties.Resources.ballsCHT.Split(new[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries));
                     break;
                 default:
                     balls.AddRange(Properties.Resources.ballsEN.Split(new[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries));
@@ -149,6 +155,9 @@ namespace PokemonEncCalc
                     break;
                 case 8:
                     cboPokemon.Items.AddRange(PokemonList.Where(i => i.NatID != 0).Select(s => s.NameCHS).ToArray());
+                    break;
+                case 9:
+                    cboPokemon.Items.AddRange(PokemonList.Where(i => i.NatID != 0).Select(s => s.NameCHT).ToArray());
                     break;
                 default:
                     cboPokemon.Items.AddRange(PokemonList.Where(i => i.NatID != 0).Select(s => s.NameEN).ToArray());

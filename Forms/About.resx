@@ -123,6 +123,19 @@
   <metadata name="tabpAbout.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+ <metadata name="lblAboutCHT.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="lblAboutCHT.Text" xml:space="preserve">
+    <value>特別鳴謝：
+
+- MaitreArmand，關於相遇槽位及對戰外特性效果的資料。
+
+- Mario，Metarkrai，Agent Hydro等人，報告錯誤及提出改進本應用的建議。
+
+- 網站 eggmove.com，dragonflycave.com，serebii.net，smogon.com 和 projectpokemon.com，提供了許多資料。
+</value>
+  </data>
   <metadata name="lblAboutCHS.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -253,7 +266,9 @@ Ver. 5.0 :	- Added : English translation.
 		  - Added : USUM Pokémon sprites &amp; minisprites (thanks @Shinyhunter_map for minisprites).
 		  - Fixed : Cute Charm calculation exception occuring when Repel level is too high.
 
-	Ver. 5.12 : - Added : ChineseSimplified translation (thanks @Wokann/卧看微尘 for CHS translation).</value>
+	Ver. 5.12 : - Added : ChineseSimplified translation (thanks @Wokann/卧看微尘 for CHS translation).
+  
+	Ver. 5.13 : - Added : ChineseTraditional translation (thanks @Wokann/卧看微尘 for CHT translation).</value>
   </data>
   <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
