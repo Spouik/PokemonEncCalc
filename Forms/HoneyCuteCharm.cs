@@ -22,7 +22,8 @@ namespace PokemonEncCalc
                                     "",
                                     "",
                                     "",
-                                    ""};
+                                    "",
+                                    "训练家TID（表ID）和SID（里ID）都必须介于0——65535之间"};
 
         private string[] tree = { "",
                                     "Possible Munchlax trees",
@@ -31,7 +32,8 @@ namespace PokemonEncCalc
                                     "",
                                     "",
                                     "",
-                                    ""};
+                                    "",
+                                    "可能出现小卡比兽的甜甜蜜树位置"};
 
         public frmHoneyCuteCharm()
         {
@@ -47,6 +49,9 @@ namespace PokemonEncCalc
                     break;
                 case 2:
                     honeyTrees.AddRange(Properties.Resources.honeyTreesLocationsFR.Split(new[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries));
+                    break;
+                case 8:
+                    honeyTrees.AddRange(Properties.Resources.honeyTreesLocationsCHS.Split(new[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries));
                     break;
                 default:
                     honeyTrees.AddRange(Properties.Resources.honeyTreesLocationsEN.Split(new[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries));

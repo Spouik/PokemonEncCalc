@@ -18831,7 +18831,38 @@ namespace PokemonEncCalc.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Poké Ball
+        ///   查找类似 精灵球
+        ///超级球
+        ///高级球
+        ///狩猎球
+        ///纪念球
+        ///豪华球
+        ///潜水球
+        ///捕网球
+        ///计时球
+        ///重复球
+        ///巢穴球
+        ///治愈球
+        ///先机球
+        ///黑暗球
+        ///诱饵球
+        ///友友球
+        ///月亮球
+        ///等级球
+        ///沉重球
+        ///速度球
+        ///甜蜜球
+        ///竞赛球
+        ///究极球 的本地化字符串。
+        /// </summary>
+        internal static string ballsCHS {
+            get {
+                return ResourceManager.GetString("ballsCHS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Poké Ball
         ///Great Ball
         ///Ultra Ball
         ///Safari Ball
@@ -18943,7 +18974,82 @@ namespace PokemonEncCalc.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to !
+        ///   查找类似 !
+        ///! 包含所有相遇类型和其他相遇选项文本
+        ///!
+        ///
+        ///!!! 相遇类型
+        ///
+        ///走路
+        ///水面
+        ///碎岩
+        ///垂钓（破旧钓竿）
+        ///垂钓（好钓竿）
+        ///垂钓（厉害钓竿）
+        ///颜色较深的草丛
+        ///摇动草丛/卷尘地面/飞行的宝可梦的影子
+        ///水纹水面（冲浪）
+        ///水纹水面（垂钓）
+        ///草丛
+        ///红色花圃
+        ///黄色花圃
+        ///紫色花圃
+        ///浅滩
+        ///水下（潜水）
+        ///
+        ///!!! 
+        ///
+        ///静电
+        ///磁力
+        ///活力/压迫感/干劲
+        ///迷人之躯
+        ///锐利目光/威吓
+        ///
+        ///!!!
+        ///
+        ///非大量出现
+        ///大量出现
+        ///
+        ///!!!
+        ///
+        ///清晨
+        ///白天
+        ///夜晚
+        ///
+        ///!!!
+        ///
+        ///无广播
+        ///丰缘之声
+        ///神奥之声
+        ///
+        ///!!!
+        ///
+        ///春
+        ///夏
+        ///秋
+        ///冬
+        ///
+        ///!!!
+        ///幸运之力↑
+        ///幸运之力↑↑
+        ///幸运之力↑↑↑
+        ///
+        ///!!!
+        ///- 无 -
+        ///红宝石
+        ///蓝宝石
+        ///绿宝石
+        ///火红
+        ///叶绿 的本地化字符串。
+        /// </summary>
+        internal static string encounter_options_CHS {
+            get {
+                return ResourceManager.GetString("encounter_options_CHS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 !
         ///! Contains all encounter type and other encounter options strings
         ///!
         ///
@@ -19043,6 +19149,186 @@ namespace PokemonEncCalc.Properties {
             }
         }
         
+		/// <summary>
+        ///   查找类似  
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// [字符串的其余部分被截断]&quot;; 的本地化字符串。
+        /// </summary>
+        internal static string formsCHS {
+            get {
+                return ResourceManager.GetString("formsCHS", resourceCulture);
+            }
+        }
+		
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
@@ -19224,7 +19510,8 @@ namespace PokemonEncCalc.Properties {
         /// 
         /// 
         /// 
-        ///         /// [rest of string was truncated]&quot;;.
+        /// 
+        /// [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string formsDE {
             get {
@@ -19403,7 +19690,8 @@ namespace PokemonEncCalc.Properties {
         /// 
         /// 
         /// 
-        ///         /// [rest of string was truncated]&quot;;.
+        /// 
+        /// [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string formsEN {
             get {
@@ -19582,7 +19870,8 @@ namespace PokemonEncCalc.Properties {
         /// 
         /// 
         /// 
-        ///         /// [rest of string was truncated]&quot;;.
+        /// 
+        /// [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string formsES {
             get {
@@ -19761,7 +20050,8 @@ namespace PokemonEncCalc.Properties {
         /// 
         /// 
         /// 
-        ///         /// [rest of string was truncated]&quot;;.
+        /// 
+        /// [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string formsFR {
             get {
@@ -19940,7 +20230,8 @@ namespace PokemonEncCalc.Properties {
         /// 
         /// 
         /// 
-        ///         /// [rest of string was truncated]&quot;;.
+        /// 
+        /// [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string formsIT {
             get {
@@ -20119,7 +20410,8 @@ namespace PokemonEncCalc.Properties {
         /// 
         /// 
         /// 
-        ///         /// [rest of string was truncated]&quot;;.
+        /// 
+        /// [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string formsJP {
             get {
@@ -20298,7 +20590,8 @@ namespace PokemonEncCalc.Properties {
         /// 
         /// 
         /// 
-        ///         /// [rest of string was truncated]&quot;;.
+        /// 
+        /// [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string formsKR {
             get {
@@ -20306,6 +20599,186 @@ namespace PokemonEncCalc.Properties {
             }
         }
         
+		        
+        /// <summary>
+        ///   查找类似 ﻿ 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        ///  [字符串的其余部分被截断]&quot;; 的本地化字符串。
+        /// </summary>
+        internal static string formsSuMoCHS {
+            get {
+                return ResourceManager.GetString("formsSuMoCHS", resourceCulture);
+            }
+        }
+		
         /// <summary>
         ///   Looks up a localized string similar to ﻿ 
         /// 
@@ -20484,7 +20957,8 @@ namespace PokemonEncCalc.Properties {
                 return ResourceManager.GetString("formsSuMoDE", resourceCulture);
             }
         }
-        
+
+		
         /// <summary>
         ///   Looks up a localized string similar to ﻿ 
         /// 
@@ -21559,6 +22033,186 @@ namespace PokemonEncCalc.Properties {
             }
         }
         
+		        /// <summary>
+        ///   查找类似  
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// [字符串的其余部分被截断]&quot;; 的本地化字符串。
+        /// </summary>
+        internal static string formsUSUM_CHS {
+            get {
+                return ResourceManager.GetString("formsUSUM_CHS", resourceCulture);
+            }
+        }
+        
         /// <summary>
         ///   Looks up a localized string similar to  
         /// 
@@ -21730,7 +22384,8 @@ namespace PokemonEncCalc.Properties {
         /// 
         /// 
         /// 
-        ///         /// [rest of string was truncated]&quot;;.
+        /// 
+        /// [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string formsUSUM_DE {
             get {
@@ -21909,7 +22564,8 @@ namespace PokemonEncCalc.Properties {
         /// 
         /// 
         /// 
-        ///         /// [rest of string was truncated]&quot;;.
+        /// 
+        /// [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string formsUSUM_EN {
             get {
@@ -22088,7 +22744,8 @@ namespace PokemonEncCalc.Properties {
         /// 
         /// 
         /// 
-        ///         /// [rest of string was truncated]&quot;;.
+        /// 
+        /// [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string formsUSUM_ES {
             get {
@@ -22267,7 +22924,8 @@ namespace PokemonEncCalc.Properties {
         /// 
         /// 
         /// 
-        ///         /// [rest of string was truncated]&quot;;.
+        /// 
+        /// [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string formsUSUM_FR {
             get {
@@ -22446,7 +23104,8 @@ namespace PokemonEncCalc.Properties {
         /// 
         /// 
         /// 
-        ///         /// [rest of string was truncated]&quot;;.
+        /// 
+        /// [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string formsUSUM_IT {
             get {
@@ -22625,7 +23284,8 @@ namespace PokemonEncCalc.Properties {
         /// 
         /// 
         /// 
-        ///         /// [rest of string was truncated]&quot;;.
+        /// 
+        /// [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string formsUSUM_JP {
             get {
@@ -22804,7 +23464,8 @@ namespace PokemonEncCalc.Properties {
         /// 
         /// 
         /// 
-        ///         /// [rest of string was truncated]&quot;;.
+        /// 
+        /// [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string formsUSUM_KR {
             get {
@@ -22853,7 +23514,37 @@ namespace PokemonEncCalc.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Route 205 South
+        ///   查找类似 205号道路（南）,临苑之镇
+        ///205号道路（北）,临百代市
+        ///206号道路
+        ///207号道路
+        ///208号道路
+        ///209号道路
+        ///210号道路（南）,临随意镇
+        ///210号道路（北）,临神和镇
+        ///211号道路
+        ///212号道路（北）,临家缘市
+        ///212号道路（南）,临湿原市
+        ///213号道路
+        ///214号道路
+        ///215号道路
+        ///218号道路
+        ///221号道路
+        ///222号道路
+        ///山谷发电厂
+        ///百代森林
+        ///多多罗铁工厂
+        ///苑之花田
+        /// 的本地化字符串。
+        /// </summary>
+        internal static string honeyTreesLocationsCHS {
+            get {
+                return ResourceManager.GetString("honeyTreesLocationsCHS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Route 205 South
         ///Route 205 North
         ///Route 206
         ///Route 207
@@ -23067,6 +23758,33 @@ namespace PokemonEncCalc.Properties {
         
         /// <summary>
         ///   Looks up a localized string similar to !- This document is used for controls texts of the app
+        ///!
+        ///! Use exclamation mark to comment a line
+        ///!
+        ///! Use a triple exclamation mark (!!!) with 
+        ///! the name of the form as a separator
+        ///!------------------------------------------------------
+        ///
+        ///!!!frmMainPage
+        ///
+        ///! Menu strips
+        ///
+        ///toolsToolStripMenuItem = 工具
+        ///optionsToolStripMenuItem = 选项
+        ///languageToolStripMenuItem = 语言
+        ///aboutToolStripMenuItem = 关于
+        ///honeyCuteCharmToolStripMenuItem = 小卡比兽树和迷人之躯
+        ///captureToolStripMenuItem = 捕获率计算器
+        ///ppCounterToolStripMenuItem = [字符串的其余部分被截断]&quot;; 的本地化字符串。
+        /// </summary>
+        internal static string interfaceCHS {
+            get {
+                return ResourceManager.GetString("interfaceCHS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 !- This document is used for controls texts of the app
         ///!
         ///! Use exclamation mark to comment a line
         ///!
@@ -42404,7 +43122,50 @@ namespace PokemonEncCalc.Properties {
         ///Shoal Cave (High tide)
         ///Shoal Cave (Ice)
         ///Scorched Slab
-        ///Sea Mauville (O [rest of string was truncated]&quot;;.
+        ///Sea Mauville (O [字符串的其余部分被截断]&quot;; 的本地化字符串。
+        /// </summary>
+        internal static string Maps_AS_CHS {
+            get {
+                return ResourceManager.GetString("Maps_AS_CHS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Mossdeep City
+        ///Sootopolis City
+        ///Battle Resort
+        ///Petalburg Woods
+        ///Seafloor Cavern (Entrance)
+        ///Seafloor Cavern
+        ///Fiery path
+        ///Route 105
+        ///Route 106
+        ///Route 107
+        ///Route 108
+        ///Route 109
+        ///Route 122
+        ///Route 124
+        ///Route 125
+        ///Route 126
+        ///Route 127
+        ///Route 128
+        ///Route 129
+        ///Route 130
+        ///Route 131
+        ///Route 132
+        ///Route 133
+        ///Route 134
+        ///Petalburg City
+        ///Ever Grande City
+        ///Granite Cave (1F)
+        ///Granite Cave (B1F)
+        ///Granite Cave (B2F)
+        ///Cave of Origin
+        ///Shoal Cave (Low tide)
+        ///Shoal Cave (High tide)
+        ///Shoal Cave (Ice)
+        ///Scorched Slab
+        ///Sea Mauville (O [字符串的其余部分被截断]&quot;; 的本地化字符串。
         /// </summary>
         internal static string Maps_AS_EN {
             get {
@@ -42477,7 +43238,38 @@ namespace PokemonEncCalc.Properties {
         ///Chargestone Cave (RDC)
         ///Chargestone Cave (B1F)
         ///Chargestone Cave (B2F)
-        ///Seaside Cave ( [rest of string was truncated]&quot;;.
+        ///Seaside Cave ( [字符串的其余部分被截断]&quot;; 的本地化字符串。
+        /// </summary>
+        internal static string Maps_B2W2_CHS {
+            get {
+                return ResourceManager.GetString("Maps_B2W2_CHS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Abundant Shrine
+        ///Undella Bay
+        ///LostLorn Forest
+        ///Relic Castle (1F / B1F)
+        ///Relic Castle (B6F)
+        ///Relic Castle (Pyrax Room)
+        ///Relic Passage (To Castelia City)
+        ///Relic Passage (To Relic Castle)
+        ///Relic Passage (To PWT)
+        ///Desert Resort (Entrance)
+        ///Desert Resort (Inside)
+        ///Castelia Sewers
+        ///Guidance Chamber
+        ///Icirrus City
+        ///Pinwheel Forest (Outside)
+        ///Pinwheel Forest (Inside)
+        ///Giant Chasm (Outside)
+        ///Giant Chasm (Cave)
+        ///Giant Chasm (Plain)
+        ///Chargestone Cave (RDC)
+        ///Chargestone Cave (B1F)
+        ///Chargestone Cave (B2F)
+        ///Seaside Cave ( [字符串的其余部分被截断]&quot;; 的本地化字符串。
         /// </summary>
         internal static string Maps_B2W2_EN {
             get {
@@ -42537,7 +43329,38 @@ namespace PokemonEncCalc.Properties {
         ///Giant Chasm (Deep cave)
         ///Chargestone Cave (RDC)
         ///Chargestone Cave (B1F)
-        ///Chargesto [rest of string was truncated]&quot;;.
+        ///Chargesto [字符串的其余部分被截断]&quot;; 的本地化字符串。
+        /// </summary>
+        internal static string Maps_BW_CHS {
+            get {
+                return ResourceManager.GetString("Maps_BW_CHS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Challenger&apos;s Cave (1F)
+        ///Challenger&apos;s Cave (B1F)
+        ///Challenger&apos;s Cave (B2F)
+        ///Abundant Shrine
+        ///Undella Bay
+        ///LostLorn Forest
+        ///Relic Castle (1F / B1F)
+        ///Relic Castle (B2F / B3F / B4F / B5F)
+        ///Relic Castle (B6F)
+        ///Relic Castle (Pyrax Room)
+        ///Desert Resort (Entrance)
+        ///Desert Resort (Inside)
+        ///Guidance Chamber
+        ///Icirrus City
+        ///Pinwheel Forest (Outside)
+        ///Pinwheel Forest (Inside)
+        ///Giant Chasm (Outside)
+        ///Giant Chasm (Cave)
+        ///Giant Chasm (Plain)
+        ///Giant Chasm (Deep cave)
+        ///Chargestone Cave (RDC)
+        ///Chargestone Cave (B1F)
+        ///Chargesto [字符串的其余部分被截断]&quot;; 的本地化字符串。
         /// </summary>
         internal static string Maps_BW_EN {
             get {
@@ -42600,7 +43423,42 @@ namespace PokemonEncCalc.Properties {
         ///Whirl Islands – B2F
         ///Whirl Islands – B1F Middle
         ///Whirl Islands – B2F Middle
-        ///Mt. Silver – Outs [rest of string was truncated]&quot;;.
+        ///Mt. Silver – Outs [字符串的其余部分被截断]&quot;; 的本地化字符串。
+        /// </summary>
+        internal static string Maps_C_CHS {
+            get {
+                return ResourceManager.GetString("Maps_C_CHS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Sprout Tower
+        ///Tin Tower
+        ///Burned Tower – 1F
+        ///Burned Tower – B1F
+        ///National Park
+        ///Ruins of Alph – Outside
+        ///Ruins of Alph – Inside
+        ///Union Cave – 1F
+        ///Union Cave – B1F
+        ///Union Cave – B2F
+        ///Slowpoke Well – 1F
+        ///Slowpoke Well – B1F
+        ///Ilex Forest
+        ///Mt. Mortar – 1F
+        ///Mt. Mortar – 1F-2
+        ///Mt. Mortar – 1F-3
+        ///Mt. Mortar – B1F
+        ///Ice Path – 1F
+        ///Ice Path – B1F
+        ///Ice Path – B2F
+        ///Ice Path – B3F
+        ///Whirl Islands – Entrance
+        ///Whirl Islands – B1F
+        ///Whirl Islands – B2F
+        ///Whirl Islands – B1F Middle
+        ///Whirl Islands – B2F Middle
+        ///Mt. Silver – Outs [字符串的其余部分被截断]&quot;; 的本地化字符串。
         /// </summary>
         internal static string Maps_C_EN {
             get {
@@ -42631,7 +43489,8 @@ namespace PokemonEncCalc.Properties {
         ///Route de Glace – SS2
         ///Route de Glace – SS3
         ///Tourb&apos;Îles – Entrée
-        ///Tourb&apos;Îles – SS1        /// [rest of string was truncated]&quot;;.
+        ///Tourb&apos;Îles – SS1
+        /// [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string Maps_C_FR {
             get {
@@ -42665,7 +43524,41 @@ namespace PokemonEncCalc.Properties {
         ///Wayward Cave (B1F)
         ///Ruins Maniac&apos;s Cave (0-9 Unown)
         ///Ruins Maniac&apos;s Cave (10-25 Unown)
-        ///Ir [rest of string was truncated]&quot;;.
+        ///Ir [字符串的其余部分被截断]&quot;; 的本地化字符串。
+        /// </summary>
+        internal static string Maps_DP_CHS {
+            get {
+                return ResourceManager.GetString("Maps_DP_CHS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Resort Area
+        ///Twinleaf Town
+        ///Celestic Town
+        ///Ravaged Path
+        ///Route 220
+        ///Route 223
+        ///Route 226
+        ///Route 230
+        ///Oreburgh Gate (1F)
+        ///Oreburgh Gate (B1F)
+        ///Eterna Forest
+        ///Fuego Ironworks
+        ///Great Marsh (Area 1)
+        ///Great Marsh (Area 2)
+        ///Great Marsh (Area 3)
+        ///Great Marsh (Area 4)
+        ///Great Marsh (Area 5)
+        ///Great Marsh (Area 6)
+        ///Turnback Cave (Before Pillar 1)
+        ///Turnback Cave (After Pillar 1)
+        ///Turnback Cave (After Pillar 2)
+        ///Wayward Cave (1F)
+        ///Wayward Cave (B1F)
+        ///Ruins Maniac&apos;s Cave (0-9 Unown)
+        ///Ruins Maniac&apos;s Cave (10-25 Unown)
+        ///Ir [字符串的其余部分被截断]&quot;; 的本地化字符串。
         /// </summary>
         internal static string Maps_DP_EN {
             get {
@@ -42742,7 +43635,52 @@ namespace PokemonEncCalc.Properties {
         ///Altering Cave
         ///Cave of Origin (Entrance)
         ///Cave of Origin (Inside)
-        ///Shoal Cave (1F / B1F)        /// [rest of string was truncated]&quot;;.
+        ///Shoal Cave (1F / B1F)
+        /// [字符串的其余部分被截断]&quot;; 的本地化字符串。
+        /// </summary>
+        internal static string Maps_E_CHS {
+            get {
+                return ResourceManager.GetString("Maps_E_CHS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Mossdeep City
+        ///Sootopolis City
+        ///Petalburg Woods
+        ///Seafloor Cavern
+        ///Fiery Path
+        ///Route 105
+        ///Route 106
+        ///Route 107
+        ///Route 108
+        ///Route 109
+        ///Route 122
+        ///Route 124
+        ///Route 125
+        ///Route 126
+        ///Route 127
+        ///Route 128
+        ///Route 129
+        ///Route 130
+        ///Route 131
+        ///Route 132
+        ///Route 133
+        ///Route 134
+        ///Petalburg City
+        ///Abandoned Ship
+        ///Ever Grande City
+        ///Underwater
+        ///Artisan Cave
+        ///Granite Cave (1F-1)
+        ///Granite Cave (1F-2)
+        ///Granite Cave (B1F)
+        ///Granite Cave (B2F)
+        ///Altering Cave
+        ///Cave of Origin (Entrance)
+        ///Cave of Origin (Inside)
+        ///Shoal Cave (1F / B1F)
+        /// [字符串的其余部分被截断]&quot;; 的本地化字符串。
         /// </summary>
         internal static string Maps_E_EN {
             get {
@@ -42828,6 +43766,47 @@ namespace PokemonEncCalc.Properties {
         ///Icefall Cave (1F)
         ///Icefall Cave (B [rest of string was truncated]&quot;;.
         /// </summary>
+        internal static string Maps_FRLG_CHS {
+            get {
+                return ResourceManager.GetString("Maps_FRLG_CHS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Water Path
+        ///Cerulean City
+        ///Berry Forest
+        ///Pallet Town
+        ///Resort Gorgeous
+        ///Sevault Canyon
+        ///Cape Brink
+        ///Vermilion City
+        ///Diglett&apos;s Cave
+        ///Cerulean Cave (1F)
+        ///Cerulean Cave (B1F)
+        ///Cerulean Cave (B2F)
+        ///Celadon City
+        ///Power Plant
+        ///Monean Chamber
+        ///Liptoo Chamber
+        ///Weepeth Chamber
+        ///Dilford Chamber
+        ///Scufib Chamber
+        ///Rixy Chamber
+        ///Viapois Chamber
+        ///Green Path
+        ///Route 19
+        ///Route 20
+        ///Route 21
+        ///Cinnabar Island
+        ///Canyon Entrance
+        ///Pattern Bush
+        ///Viridian Forest 
+        ///Rock Tunnel (1F)
+        ///Rock Tunnel (B1F)
+        ///Icefall Cave (1F)
+        ///Icefall Cave (B [字符串的其余部分被截断]&quot;; 的本地化字符串。
+        /// </summary>
         internal static string Maps_FRLG_EN {
             get {
                 return ResourceManager.GetString("Maps_FRLG_EN", resourceCulture);
@@ -42902,7 +43881,41 @@ namespace PokemonEncCalc.Properties {
         ///Whirl Islands – B1F Middle
         ///Whirl Islands – B2F Middle
         ///Mt. Silver – Outside
-        ///Mt. Silver – Entranc [rest of string was truncated]&quot;;.
+        ///Mt. Silver – Entranc [字符串的其余部分被截断]&quot;; 的本地化字符串。
+        /// </summary>
+        internal static string Maps_GS_CHS {
+            get {
+                return ResourceManager.GetString("Maps_GS_CHS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Sprout Tower
+        ///Tin Tower
+        ///Burned Tower – 1F
+        ///Burned Tower – B1F
+        ///National Park
+        ///Ruins of Alph – Outside
+        ///Ruins of Alph – Inside
+        ///Union Cave – 1F
+        ///Union Cave – B1F
+        ///Union Cave – B2F
+        ///Slowpoke Well – 1F
+        ///Slowpoke Well – B1F
+        ///Ilex Forest
+        ///Mt. Mortar – 1F
+        ///Mt. Mortar – 1F-2
+        ///Mt. Mortar – 1F-3
+        ///Mt. Mortar – B1F
+        ///Ice Path – 1F / B1F
+        ///Ice Path – B2F
+        ///Ice Path – B3F
+        ///Whirl Islands – Entrance
+        ///Whirl Islands – B1F / B2F
+        ///Whirl Islands – B1F Middle
+        ///Whirl Islands – B2F Middle
+        ///Mt. Silver – Outside
+        ///Mt. Silver – Entranc [字符串的其余部分被截断]&quot;; 的本地化字符串。
         /// </summary>
         internal static string Maps_GS_EN {
             get {
@@ -42973,7 +43986,47 @@ namespace PokemonEncCalc.Properties {
         ///Mt. Silver (1F)
         ///Mt. Silver (2F)
         ///Mt. Silver (3F)
-        ///Mt. Silver [rest of string was truncated]&quot;;.
+        ///Mt. Silver [字符串的其余部分被截断]&quot;; 的本地化字符串。
+        /// </summary>
+        internal static string Maps_HGSS_CHS {
+            get {
+                return ResourceManager.GetString("Maps_HGSS_CHS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Dragon&apos;s Den
+        ///Dark Cave (Route 31)
+        ///Dark Cave (Route 45)
+        ///Cerulean City
+        ///Ilex Forest
+        ///New Bark Town
+        ///Pallet Town
+        ///Vermilion City
+        ///Diglett&apos;s Cave
+        ///Cerulean Cave (2F)
+        ///Cerulean Cave (1F)
+        ///Cerulean Cave (B1F)
+        ///Union Cave (1F)
+        ///Union Cave (B1F)
+        ///Union Cave (B2F)
+        ///Celadon City
+        ///Route 19
+        ///Route 20
+        ///Route 21
+        ///Route 40
+        ///Route 41
+        ///Tohjo Falls
+        ///Cinnabar Island
+        ///Blackthorn City
+        ///Viridian Forest
+        ///Rock Tunnel (1F)
+        ///Rock Tunnel (B1F)
+        ///Mt. Silver (1F – Center)
+        ///Mt. Silver (1F)
+        ///Mt. Silver (2F)
+        ///Mt. Silver (3F)
+        ///Mt. Silver [字符串的其余部分被截断]&quot;; 的本地化字符串。
         /// </summary>
         internal static string Maps_HGSS_EN {
             get {
@@ -42982,7 +44035,7 @@ namespace PokemonEncCalc.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Antre du Dragon
+        ///   查找类似 Antre du Dragon
         ///Antre Noir (Route 31)
         ///Antre Noir (Route 45)
         ///Azuria
@@ -43011,7 +44064,8 @@ namespace PokemonEncCalc.Properties {
         ///Grotte (Sous-sol)
         ///Grotte Argentée (RDC – Centre)
         ///Grotte Argentée (RDC)
-        ///Grotte Argentée (1er)        /// [rest of string was truncated]&quot;;.
+        ///Grotte Argentée (1er)
+        /// [字符串的其余部分被截断]&quot;; 的本地化字符串。
         /// </summary>
         internal static string Maps_HGSS_FR {
             get {
@@ -43020,7 +44074,7 @@ namespace PokemonEncCalc.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Plains
+        ///   查找类似 Plains
         ///Meadow
         ///Savannah
         ///Peak
@@ -43031,7 +44085,27 @@ namespace PokemonEncCalc.Properties {
         ///Marshland
         ///Wasteland
         ///Mountain
-        ///Desert.
+        ///Desert 的本地化字符串。
+        /// </summary>
+        internal static string Maps_HGSS_SafariCHS {
+            get {
+                return ResourceManager.GetString("Maps_HGSS_SafariCHS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Plains
+        ///Meadow
+        ///Savannah
+        ///Peak
+        ///Rocky Beach
+        ///Wetland
+        ///Forest
+        ///Swamp
+        ///Marshland
+        ///Wasteland
+        ///Mountain
+        ///Desert 的本地化字符串。
         /// </summary>
         internal static string Maps_HGSS_SafariEN {
             get {
@@ -43040,7 +44114,7 @@ namespace PokemonEncCalc.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Prairie
+        ///   查找类似 Prairie
         ///Champ de fleurs
         ///Savane
         ///Rochers
@@ -43051,7 +44125,7 @@ namespace PokemonEncCalc.Properties {
         ///Marais
         ///Terre aride
         ///Montagne
-        ///Désert.
+        ///Désert 的本地化字符串。
         /// </summary>
         internal static string Maps_HGSS_SafariFR {
             get {
@@ -43060,7 +44134,7 @@ namespace PokemonEncCalc.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Mossdeep City
+        ///   查找类似 Mossdeep City
         ///Sootopolis City
         ///Battle Resort
         ///Petalburg Woods
@@ -43094,7 +44168,50 @@ namespace PokemonEncCalc.Properties {
         ///Shoal Cave (High tide)
         ///Shoal Cave (Ice)
         ///Scorched Slab
-        ///Sea Mauville (O [rest of string was truncated]&quot;;.
+        ///Sea Mauville (O [字符串的其余部分被截断]&quot;; 的本地化字符串。
+        /// </summary>
+        internal static string Maps_OR_CHS {
+            get {
+                return ResourceManager.GetString("Maps_OR_CHS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Mossdeep City
+        ///Sootopolis City
+        ///Battle Resort
+        ///Petalburg Woods
+        ///Seafloor Cavern (Entrance)
+        ///Seafloor Cavern
+        ///Fiery path
+        ///Route 105
+        ///Route 106
+        ///Route 107
+        ///Route 108
+        ///Route 109
+        ///Route 122
+        ///Route 124
+        ///Route 125
+        ///Route 126
+        ///Route 127
+        ///Route 128
+        ///Route 129
+        ///Route 130
+        ///Route 131
+        ///Route 132
+        ///Route 133
+        ///Route 134
+        ///Petalburg City
+        ///Ever Grande City
+        ///Granite Cave (1F)
+        ///Granite Cave (B1F)
+        ///Granite Cave (B2F)
+        ///Cave of Origin
+        ///Shoal Cave (Low tide)
+        ///Shoal Cave (High tide)
+        ///Shoal Cave (Ice)
+        ///Scorched Slab
+        ///Sea Mauville (O [字符串的其余部分被截断]&quot;; 的本地化字符串。
         /// </summary>
         internal static string Maps_OR_EN {
             get {
@@ -43103,7 +44220,7 @@ namespace PokemonEncCalc.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Algatia
+        ///   查找类似 Algatia
         ///Atalanopolis
         ///Atoll de Combat
         ///Bois Clémenti
@@ -43136,7 +44253,7 @@ namespace PokemonEncCalc.Properties {
         ///Grotte Tréfonds (Marée basse)
         ///Grotte Tréfonds (Marée haute)
         ///Grotte Tréfonds (Glace)
-        ///Gr [rest of string was truncated]&quot;;.
+        ///Gr [字符串的其余部分被截断]&quot;; 的本地化字符串。
         /// </summary>
         internal static string Maps_OR_FR {
             get {
@@ -43145,7 +44262,7 @@ namespace PokemonEncCalc.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Resort Area
+        ///   查找类似 Resort Area
         ///Twinleaf Town
         ///Celestic Town
         ///Ravaged Path
@@ -43169,7 +44286,40 @@ namespace PokemonEncCalc.Properties {
         ///Turnback Cave (After Pillar 2)
         ///Wayward Cave (1F)
         ///Wayward Cave (B1F)
-        ///Ruins Maniac&apos;s Cave (0-9 Unown [rest of string was truncated]&quot;;.
+        ///Ruins Maniac&apos;s Cave (0-9 Unown [字符串的其余部分被截断]&quot;; 的本地化字符串。
+        /// </summary>
+        internal static string Maps_Pt_CHS {
+            get {
+                return ResourceManager.GetString("Maps_Pt_CHS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Resort Area
+        ///Twinleaf Town
+        ///Celestic Town
+        ///Ravaged Path
+        ///Route 220
+        ///Route 223
+        ///Route 226
+        ///Route 230
+        ///Oreburgh Gate (1F)
+        ///Oreburgh Gate (B1F)
+        ///Eterna Forest
+        ///Fuego Ironworks
+        ///Great Marsh (Area 1)
+        ///Great Marsh (Area 2)
+        ///Great Marsh (Area 3)
+        ///Great Marsh (Area 4)
+        ///Great Marsh (Area 5)
+        ///Great Marsh (Area 6)
+        ///Turnback Cave (Before Pillar 1)
+        ///Turnback Cave (After Pillar 1) (1)
+        ///Turnback Cave (After Pillar 1) (2)
+        ///Turnback Cave (After Pillar 2)
+        ///Wayward Cave (1F)
+        ///Wayward Cave (B1F)
+        ///Ruins Maniac&apos;s Cave (0-9 Unown [字符串的其余部分被截断]&quot;; 的本地化字符串。
         /// </summary>
         internal static string Maps_Pt_EN {
             get {
@@ -43178,7 +44328,7 @@ namespace PokemonEncCalc.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Aire de Détente
+        ///   查找类似 Aire de Détente
         ///Bonaugure
         ///Celestia
         ///Chemin Rocheux
@@ -43202,7 +44352,7 @@ namespace PokemonEncCalc.Properties {
         ///Grotte Retour (Après Pilier 2)
         ///Grotte Revêche (RDC)
         ///Grotte Revêche (-1)
-        ///Grotte Ruineman. (0-9 Zar [rest of string was truncated]&quot;;.
+        ///Grotte Ruineman. (0-9 Zar [字符串的其余部分被截断]&quot;; 的本地化字符串。
         /// </summary>
         internal static string Maps_Pt_FR {
             get {
@@ -43211,7 +44361,7 @@ namespace PokemonEncCalc.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Mossdeep City
+        ///   查找类似 Mossdeep City
         ///Sootopolis City
         ///Petalburg Woods
         ///Seafloor Cavern
@@ -43245,7 +44395,50 @@ namespace PokemonEncCalc.Properties {
         ///Cave of Origin (Inside)
         ///Shoal Cave (1F / B1F)
         ///Shoal Cave (B2F)
-        ///Mont Pyre  [rest of string was truncated]&quot;;.
+        ///Mont Pyre  [字符串的其余部分被截断]&quot;; 的本地化字符串。
+        /// </summary>
+        internal static string Maps_RS_CHS {
+            get {
+                return ResourceManager.GetString("Maps_RS_CHS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Mossdeep City
+        ///Sootopolis City
+        ///Petalburg Woods
+        ///Seafloor Cavern
+        ///Fiery Path
+        ///Route 105
+        ///Route 106
+        ///Route 107
+        ///Route 108
+        ///Route 109
+        ///Route 122
+        ///Route 124
+        ///Route 125
+        ///Route 126
+        ///Route 127
+        ///Route 128
+        ///Route 129
+        ///Route 130
+        ///Route 131
+        ///Route 132
+        ///Route 133
+        ///Route 134
+        ///Petalburg City
+        ///Abandoned Ship
+        ///Ever Grande City
+        ///Underwater
+        ///Granite Cave (1F-1)
+        ///Granite Cave (1F-2)
+        ///Granite Cave (B1F)
+        ///Granite Cave (B2F)
+        ///Cave of Origin (Entrance)
+        ///Cave of Origin (Inside)
+        ///Shoal Cave (1F / B1F)
+        ///Shoal Cave (B2F)
+        ///Mont Pyre  [字符串的其余部分被截断]&quot;; 的本地化字符串。
         /// </summary>
         internal static string Maps_RS_EN {
             get {
@@ -43254,7 +44447,7 @@ namespace PokemonEncCalc.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Algatia
+        ///   查找类似 Algatia
         ///Atalanopolis
         ///Bois Clémenti
         ///Caverne Fondmer
@@ -43287,7 +44480,7 @@ namespace PokemonEncCalc.Properties {
         ///Grotte Origine (Entrée)
         ///Grotte Origine (Intérieur)
         ///Grotte Tréfonds (RDC / SS1)
-        ///Grotte Tréfonds (SS [rest of string was truncated]&quot;;.
+        ///Grotte Tréfonds (SS [字符串的其余部分被截断]&quot;; 的本地化字符串。
         /// </summary>
         internal static string Maps_RS_FR {
             get {
@@ -43296,7 +44489,7 @@ namespace PokemonEncCalc.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Melemele Sea (Route 1)
+        ///   查找类似 Route 1
         ///Hau’oli City (Beachfront)
         ///Hau’oli City (Shopping District)
         ///Route 3
@@ -43325,7 +44518,47 @@ namespace PokemonEncCalc.Properties {
         ///Lush Jungle (Entrance)
         ///Lush Jungle (Inside - Left)
         ///Lush Jungle (Inside - Right)
-        ///Lush J [rest of string was truncated]&quot;;.
+        ///Lush Jungle (Cave)
+        ///P [字符串的其余部分被截断]&quot;; 的本地化字符串。
+        /// </summary>
+        internal static string Maps_SuMo_CHS {
+            get {
+                return ResourceManager.GetString("Maps_SuMo_CHS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Route 1
+        ///Hau’oli City (Beachfront)
+        ///Hau’oli City (Shopping District)
+        ///Route 3
+        ///Route 2
+        ///Ten Carat Hill (Cave)
+        ///Ten Carat Hill (Outside)
+        ///Hau’oli Cemetery
+        ///Melemele Meadow
+        ///Seaward Cave
+        ///Berry Fields
+        ///Verdant Cavern
+        ///Trainer School
+        ///Route 4
+        ///Paniola Town
+        ///Route 5
+        ///Route 6
+        ///Route 7
+        ///Route 8
+        ///Route 9
+        ///Hano Beach
+        ///Memorial Hill
+        ///Diglett’s Tunnel
+        ///Wela Volcano Park
+        ///Brooklet Hill
+        ///Brooklet Hill (Totem&apos;s Den)
+        ///Lush Jungle (Entrance)
+        ///Lush Jungle (Inside - Left)
+        ///Lush Jungle (Inside - Right)
+        ///Lush Jungle (Cave)
+        ///P [字符串的其余部分被截断]&quot;; 的本地化字符串。
         /// </summary>
         internal static string Maps_SuMo_EN {
             get {
@@ -43334,7 +44567,7 @@ namespace PokemonEncCalc.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Mer de Mele-Mele (Route 1)
+        ///   查找类似 Route 1
         ///Ekaeka (Plage)
         ///Ekaeka (Zone commerciale)
         ///Route 3
@@ -43361,7 +44594,8 @@ namespace PokemonEncCalc.Properties {
         ///Colline Clapotis
         ///Colline Clapotis (Repaire du Dominant)
         ///Jungle Sombrefeuille (Entrée)
-        ///Jungle Sombrefeuille (Fond - Gauch [rest of string was truncated]&quot;;.
+        ///Jungle Sombrefeuille (Fond - Gauche)
+        ///Jungle Sombrefe [字符串的其余部分被截断]&quot;; 的本地化字符串。
         /// </summary>
         internal static string Maps_SuMo_FR {
             get {
@@ -43370,7 +44604,7 @@ namespace PokemonEncCalc.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Route 1 / Melemele Sea
+        ///   查找类似 Route 1 / Melemele Sea
         ///Hau’oli City (Beachfront) / Melemele Sea
         ///Hau’oli City (Shopping District)
         ///Route 3 / Kala&apos;e Bay
@@ -43398,7 +44632,44 @@ namespace PokemonEncCalc.Properties {
         ///Wela Volcano Park
         ///Brooklet Hill
         ///Brooklet Hill (Totem&apos;s Den)
-        ///Lush Jung [rest of string was truncated]&quot;;.
+        ///Lush Jung [字符串的其余部分被截断]&quot;; 的本地化字符串。
+        /// </summary>
+        internal static string Maps_USUM_CHS {
+            get {
+                return ResourceManager.GetString("Maps_USUM_CHS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Route 1 / Melemele Sea
+        ///Hau’oli City (Beachfront) / Melemele Sea
+        ///Hau’oli City (Shopping District)
+        ///Route 3 / Kala&apos;e Bay
+        ///Route 2
+        ///Ten Carat Hill (Cave)
+        ///Ten Carat Hill (Outside)
+        ///Hau’oli Cemetery
+        ///Melemele Meadow
+        ///Seaward Cave
+        ///Berry Fields
+        ///Sandy Cave
+        ///Verdant Cavern
+        ///Trainer School
+        ///Route 4
+        ///Paniola Town
+        ///Route 5
+        ///Route 6
+        ///Route 7
+        ///Route 8
+        ///Route 9
+        ///Hano Beach
+        ///Dividing Peak Tunnel
+        ///Memorial Hill / Akala Outskirts
+        ///Diglett’s Tunnel
+        ///Wela Volcano Park
+        ///Brooklet Hill
+        ///Brooklet Hill (Totem&apos;s Den)
+        ///Lush Jung [字符串的其余部分被截断]&quot;; 的本地化字符串。
         /// </summary>
         internal static string Maps_USUM_EN {
             get {
@@ -43407,7 +44678,7 @@ namespace PokemonEncCalc.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Route 1 / Mer de Mele-Mele
+        ///   查找类似 Route 1 / Mer de Mele-Mele
         ///Ekaeka (Plage) / Mer de Mele-Mele
         ///Ekaeka (Zone commerciale)
         ///Route 3 / Baie de Kala&apos;e
@@ -43434,7 +44705,7 @@ namespace PokemonEncCalc.Properties {
         ///Tunnel Taupiqueur
         ///Parc Volcanique
         ///Colline Clapotis
-        ///Colline [rest of string was truncated]&quot;;.
+        ///Colline [字符串的其余部分被截断]&quot;; 的本地化字符串。
         /// </summary>
         internal static string Maps_USUM_FR {
             get {
@@ -43443,7 +44714,7 @@ namespace PokemonEncCalc.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Azure Bay
+        ///   查找类似 Azure Bay
         ///Connecting Cave
         ///Frost Cavern
         ///Santalune Forest
@@ -43481,7 +44752,54 @@ namespace PokemonEncCalc.Properties {
         ///Victory Road (Room 2)
         ///Victory Road (Room 3)
         ///Victory Road (Room 4)
-        ///Victory Road (Outside –  [rest of string was truncated]&quot;;.
+        ///Victory Road (Outside –  [字符串的其余部分被截断]&quot;; 的本地化字符串。
+        /// </summary>
+        internal static string Maps_XY_CHS {
+            get {
+                return ResourceManager.GetString("Maps_XY_CHS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Azure Bay
+        ///Connecting Cave
+        ///Frost Cavern
+        ///Santalune Forest
+        ///Terminus Cave
+        ///Glittering Cave
+        ///Reflection Cave
+        ///Lost Hotel
+        ///Couriway Town
+        ///Parfum Palace
+        ///Cyllage City
+        ///Ambrette Town
+        ///Laverre City
+        ///Route 2
+        ///Route 3
+        ///Route 4
+        ///Route 5
+        ///Route 6
+        ///Route 7
+        ///Route 8
+        ///Route 9
+        ///Route 10
+        ///Route 11
+        ///Route 12
+        ///Route 13
+        ///Route 14
+        ///Route 15
+        ///Route 16
+        ///Route 17
+        ///Route 18
+        ///Route 19
+        ///Route 20
+        ///Route 21
+        ///Route 22
+        ///Victory Road (Room 1)
+        ///Victory Road (Room 2)
+        ///Victory Road (Room 3)
+        ///Victory Road (Room 4)
+        ///Victory Road (Outside –  [字符串的其余部分被截断]&quot;; 的本地化字符串。
         /// </summary>
         internal static string Maps_XY_EN {
             get {
@@ -43490,7 +44808,7 @@ namespace PokemonEncCalc.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Baie Azur
+        ///   查找类似 Baie Azur
         ///Cave Connecterre
         ///Caverne Gelée
         ///Forêt de Neuvartault
@@ -43526,7 +44844,7 @@ namespace PokemonEncCalc.Properties {
         ///Route 22
         ///Route Victoire (Zone intérieure 1)
         ///Route Victoire (Zone intérieure 2)
-        ///Route Victoire (Zone  [rest of string was truncated]&quot;;.
+        ///Route Victoire (Zone  [字符串的其余部分被截断]&quot;; 的本地化字符串。
         /// </summary>
         internal static string Maps_XY_FR {
             get {
@@ -43535,7 +44853,7 @@ namespace PokemonEncCalc.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
+        ///   查找 System.Byte[] 类型的本地化资源。
         /// </summary>
         internal static byte[] MegasData {
             get {
@@ -43545,7 +44863,7 @@ namespace PokemonEncCalc.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
+        ///   查找 System.Byte[] 类型的本地化资源。
         /// </summary>
         internal static byte[] MovesGen3 {
             get {
@@ -43555,7 +44873,7 @@ namespace PokemonEncCalc.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
+        ///   查找 System.Byte[] 类型的本地化资源。
         /// </summary>
         internal static byte[] MovesGen4 {
             get {
@@ -43565,7 +44883,7 @@ namespace PokemonEncCalc.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
+        ///   查找 System.Byte[] 类型的本地化资源。
         /// </summary>
         internal static byte[] MovesGen5 {
             get {
@@ -43575,7 +44893,7 @@ namespace PokemonEncCalc.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
+        ///   查找 System.Byte[] 类型的本地化资源。
         /// </summary>
         internal static byte[] MovesGen6 {
             get {
@@ -43585,7 +44903,7 @@ namespace PokemonEncCalc.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to POUND
+        ///   查找类似 POUND
         ///KARATE CHOP
         ///DOUBLESLAP
         ///COMET PUNCH
@@ -43635,7 +44953,66 @@ namespace PokemonEncCalc.Properties {
         ///SUPERSONIC
         ///SONICBOOM
         ///DISABLE
-        ///ACI [rest of string was truncated]&quot;;.
+        ///ACI [字符串的其余部分被截断]&quot;; 的本地化字符串。
+        /// </summary>
+        internal static string MovesNames3CHS {
+            get {
+                return ResourceManager.GetString("MovesNames3CHS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 POUND
+        ///KARATE CHOP
+        ///DOUBLESLAP
+        ///COMET PUNCH
+        ///MEGA PUNCH
+        ///PAY DAY
+        ///FIRE PUNCH
+        ///ICE PUNCH
+        ///THUNDERPUNCH
+        ///SCRATCH
+        ///VICEGRIP
+        ///GUILLOTINE
+        ///RAZOR WIND
+        ///SWORDS DANCE
+        ///CUT
+        ///GUST
+        ///WING ATTACK
+        ///WHIRLWIND
+        ///FLY
+        ///BIND
+        ///SLAM
+        ///VINE WHIP
+        ///STOMP
+        ///DOUBLE KICK
+        ///MEGA KICK
+        ///JUMP KICK
+        ///ROLLING KICK
+        ///SAND-ATTACK
+        ///HEADBUTT
+        ///HORN ATTACK
+        ///FURY ATTACK
+        ///HORN DRILL
+        ///TACKLE
+        ///BODY SLAM
+        ///WRAP
+        ///TAKE DOWN
+        ///THRASH
+        ///DOUBLE-EDGE
+        ///TAIL WHIP
+        ///POISON STING
+        ///TWINEEDLE
+        ///PIN MISSILE
+        ///LEER
+        ///BITE
+        ///GROWL
+        ///ROAR
+        ///SING
+        ///SUPERSONIC
+        ///SONICBOOM
+        ///DISABLE
+        ///ACI [字符串的其余部分被截断]&quot;; 的本地化字符串。
         /// </summary>
         internal static string MovesNames3EN {
             get {
@@ -43644,7 +45021,7 @@ namespace PokemonEncCalc.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to ECRAS&apos;FACE
+        ///   查找类似 ECRAS&apos;FACE
         ///POING-KARATE
         ///TORGNOLES
         ///POING COMETE
@@ -43689,7 +45066,7 @@ namespace PokemonEncCalc.Properties {
         ///GROZ&apos;YEUX
         ///MORSURE
         ///RUGISSEMENT
-        ///HURLEMEN [rest of string was truncated]&quot;;.
+        ///HURLEMEN [字符串的其余部分被截断]&quot;; 的本地化字符串。
         /// </summary>
         internal static string MovesNames3FR {
             get {
@@ -43698,7 +45075,7 @@ namespace PokemonEncCalc.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Pound
+        ///   查找类似 Pound
         ///Karate Chop
         ///DoubleSlap
         ///Comet Punch
@@ -43748,7 +45125,66 @@ namespace PokemonEncCalc.Properties {
         ///Supersonic
         ///SonicBoom
         ///Disable
-        ///Aci [rest of string was truncated]&quot;;.
+        ///Aci [字符串的其余部分被截断]&quot;; 的本地化字符串。
+        /// </summary>
+        internal static string MovesNames4CHS {
+            get {
+                return ResourceManager.GetString("MovesNames4CHS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Pound
+        ///Karate Chop
+        ///DoubleSlap
+        ///Comet Punch
+        ///Mega Punch
+        ///Pay Day
+        ///Fire Punch
+        ///Ice Punch
+        ///ThunderPunch
+        ///Scratch
+        ///ViceGrip
+        ///Guillotine
+        ///Razor Wind
+        ///Swords Dance
+        ///Cut
+        ///Gust
+        ///Wing Attack
+        ///Whirlwind
+        ///Fly
+        ///Bind
+        ///Slam
+        ///Vine Whip
+        ///Stomp
+        ///Double Kick
+        ///Mega Kick
+        ///Jump Kick
+        ///Rolling Kick
+        ///Sand-Attack
+        ///Headbutt
+        ///Horn Attack
+        ///Fury Attack
+        ///Horn Drill
+        ///Tackle
+        ///Body Slam
+        ///Wrap
+        ///Take Down
+        ///Thrash
+        ///Double-Edge
+        ///Tail Whip
+        ///Poison Sting
+        ///Twineedle
+        ///Pin Missile
+        ///Leer
+        ///Bite
+        ///Growl
+        ///Roar
+        ///Sing
+        ///Supersonic
+        ///SonicBoom
+        ///Disable
+        ///Aci [字符串的其余部分被截断]&quot;; 的本地化字符串。
         /// </summary>
         internal static string MovesNames4EN {
             get {
@@ -43863,6 +45299,65 @@ namespace PokemonEncCalc.Properties {
         ///Disable
         ///Aci [rest of string was truncated]&quot;;.
         /// </summary>
+        internal static string MovesNames5CHS {
+            get {
+                return ResourceManager.GetString("MovesNames5CHS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Pound
+        ///Karate Chop
+        ///DoubleSlap
+        ///Comet Punch
+        ///Mega Punch
+        ///Pay Day
+        ///Fire Punch
+        ///Ice Punch
+        ///ThunderPunch
+        ///Scratch
+        ///ViceGrip
+        ///Guillotine
+        ///Razor Wind
+        ///Swords Dance
+        ///Cut
+        ///Gust
+        ///Wing Attack
+        ///Whirlwind
+        ///Fly
+        ///Bind
+        ///Slam
+        ///Vine Whip
+        ///Stomp
+        ///Double Kick
+        ///Mega Kick
+        ///Jump Kick
+        ///Rolling Kick
+        ///Sand-Attack
+        ///Headbutt
+        ///Horn Attack
+        ///Fury Attack
+        ///Horn Drill
+        ///Tackle
+        ///Body Slam
+        ///Wrap
+        ///Take Down
+        ///Thrash
+        ///Double-Edge
+        ///Tail Whip
+        ///Poison Sting
+        ///Twineedle
+        ///Pin Missile
+        ///Leer
+        ///Bite
+        ///Growl
+        ///Roar
+        ///Sing
+        ///Supersonic
+        ///SonicBoom
+        ///Disable
+        ///Aci [字符串的其余部分被截断]&quot;; 的本地化字符串。
+        /// </summary>
         internal static string MovesNames5EN {
             get {
                 return ResourceManager.GetString("MovesNames5EN", resourceCulture);
@@ -43973,7 +45468,67 @@ namespace PokemonEncCalc.Properties {
         ///Sing
         ///Supersonic
         ///Sonic Boom
-        ///Disable        /// [rest of string was truncated]&quot;;.
+        ///Disable
+        /// [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string MovesNames6CHS {
+            get {
+                return ResourceManager.GetString("MovesNames6CHS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Pound
+        ///Karate Chop
+        ///Double Slap
+        ///Comet Punch
+        ///Mega Punch
+        ///Pay Day
+        ///Fire Punch
+        ///Ice Punch
+        ///Thunder Punch
+        ///Scratch
+        ///Vice Grip
+        ///Guillotine
+        ///Razor Wind
+        ///Swords Dance
+        ///Cut
+        ///Gust
+        ///Wing Attack
+        ///Whirlwind
+        ///Fly
+        ///Bind
+        ///Slam
+        ///Vine Whip
+        ///Stomp
+        ///Double Kick
+        ///Mega Kick
+        ///Jump Kick
+        ///Rolling Kick
+        ///Sand Attack
+        ///Headbutt
+        ///Horn Attack
+        ///Fury Attack
+        ///Horn Drill
+        ///Tackle
+        ///Body Slam
+        ///Wrap
+        ///Take Down
+        ///Thrash
+        ///Double-Edge
+        ///Tail Whip
+        ///Poison Sting
+        ///Twineedle
+        ///Pin Missile
+        ///Leer
+        ///Bite
+        ///Growl
+        ///Roar
+        ///Sing
+        ///Supersonic
+        ///Sonic Boom
+        ///Disable
+        /// [字符串的其余部分被截断]&quot;; 的本地化字符串。
         /// </summary>
         internal static string MovesNames6EN {
             get {
@@ -44066,7 +45621,120 @@ namespace PokemonEncCalc.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
+        ///   查找类似 妙蛙种子
+        ///妙蛙草
+        ///妙蛙花
+        ///小火龙
+        ///火恐龙
+        ///喷火龙
+        ///杰尼龟
+        ///卡咪龟
+        ///水箭龟
+        ///绿毛虫
+        ///铁甲蛹
+        ///巴大蝶
+        ///独角虫
+        ///铁壳蛹
+        ///大针蜂
+        ///波波
+        ///比比鸟
+        ///大比鸟
+        ///小拉达
+        ///拉达
+        ///烈雀
+        ///大嘴雀
+        ///阿柏蛇
+        ///阿柏怪
+        ///皮卡丘
+        ///雷丘
+        ///穿山鼠
+        ///穿山王
+        ///尼多兰
+        ///尼多娜
+        ///尼多后
+        ///尼多朗
+        ///尼多力诺
+        ///尼多王
+        ///皮皮
+        ///皮可西
+        ///六尾
+        ///九尾
+        ///胖丁
+        ///胖可丁
+        ///超音蝠
+        ///大嘴蝠
+        ///走路草
+        ///臭臭花
+        ///霸王花
+        ///派拉斯
+        ///派拉斯特
+        ///毛球
+        ///摩鲁蛾
+        ///地鼠
+        ///三地鼠
+        ///喵喵
+        ///猫老大
+        ///可达鸭
+        ///哥达鸭
+        ///猴怪
+        ///火暴猴
+        ///卡蒂狗
+        ///风速狗
+        ///蚊香蝌蚪
+        ///蚊香君
+        ///蚊香泳士
+        ///凯西
+        ///勇基拉
+        ///胡地
+        ///腕力
+        ///豪力
+        ///怪力
+        ///喇叭芽
+        ///口呆花
+        ///大食花
+        ///玛瑙水母
+        ///毒刺水母
+        ///小拳石
+        ///隆隆石
+        ///隆隆岩
+        ///小火马
+        ///烈焰马
+        ///呆呆兽
+        ///呆壳兽
+        ///小磁怪
+        ///三合一磁怪
+        ///大葱鸭
+        ///嘟嘟
+        ///嘟嘟利
+        ///小海狮
+        ///白海狮
+        ///臭泥
+        ///臭臭泥
+        ///大舌贝
+        ///刺甲贝
+        ///鬼斯
+        ///鬼斯通
+        ///耿鬼
+        ///大岩蛇
+        ///催眠貘
+        ///引梦貘人
+        ///大钳蟹
+        ///巨钳蟹
+        ///霹雳电球
+        ///顽皮雷弹
+        ///蛋蛋
+        ///椰蛋树
+        ///卡拉卡拉
+        ///嘎 [字符串的其余部分被截断]&quot;; 的本地化字符串。
+        /// </summary>
+        internal static string pokemonCHS {
+            get {
+                return ResourceManager.GetString("pokemonCHS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Byte[] 类型的本地化资源。
         /// </summary>
         internal static byte[] PokemonData {
             get {
@@ -46848,7 +48516,40 @@ namespace PokemonEncCalc.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Goldene
+        ///   查找类似 金
+        ///银
+        ///水晶
+        ///红宝石
+        ///蓝宝石
+        ///绿宝石
+        ///火红
+        ///叶绿
+        ///钻石
+        ///珍珠
+        ///白金
+        ///心金
+        ///魂银
+        ///黑
+        ///白
+        ///黑2
+        ///白2
+        ///X
+        ///Y
+        ///欧米伽红宝石
+        ///阿尔法蓝宝石
+        ///太阳
+        ///月亮
+        ///究极之日
+        ///究极之月 的本地化字符串。
+        /// </summary>
+        internal static string versionsCHS {
+            get {
+                return ResourceManager.GetString("versionsCHS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Goldene
         ///Silberne
         ///Kristall
         ///Rubin

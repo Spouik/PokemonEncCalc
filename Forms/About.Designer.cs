@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAbout));
             this.tabAboutChangelog = new System.Windows.Forms.TabControl();
             this.tabpAbout = new System.Windows.Forms.TabPage();
+            this.lblAboutCHS = new System.Windows.Forms.Label();
             this.lblAboutFR = new System.Windows.Forms.Label();
             this.lklRepository = new System.Windows.Forms.LinkLabel();
             this.lblReport = new System.Windows.Forms.Label();
@@ -51,11 +52,12 @@
             this.tabAboutChangelog.Location = new System.Drawing.Point(5, 5);
             this.tabAboutChangelog.Name = "tabAboutChangelog";
             this.tabAboutChangelog.SelectedIndex = 0;
-            this.tabAboutChangelog.Size = new System.Drawing.Size(587, 311);
+            this.tabAboutChangelog.Size = new System.Drawing.Size(587, 287);
             this.tabAboutChangelog.TabIndex = 0;
             // 
             // tabpAbout
             // 
+            this.tabpAbout.Controls.Add(this.lblAboutCHS);
             this.tabpAbout.Controls.Add(this.lblAboutFR);
             this.tabpAbout.Controls.Add(this.lklRepository);
             this.tabpAbout.Controls.Add(this.lblReport);
@@ -64,16 +66,25 @@
             this.tabpAbout.Location = new System.Drawing.Point(4, 22);
             this.tabpAbout.Name = "tabpAbout";
             this.tabpAbout.Padding = new System.Windows.Forms.Padding(3);
-            this.tabpAbout.Size = new System.Drawing.Size(579, 285);
+            this.tabpAbout.Size = new System.Drawing.Size(579, 261);
             this.tabpAbout.TabIndex = 0;
             this.tabpAbout.Text = "About";
             this.tabpAbout.UseVisualStyleBackColor = true;
             // 
+            // lblAboutCHS
+            // 
+            this.lblAboutCHS.Location = new System.Drawing.Point(222, 49);
+            this.lblAboutCHS.Name = "lblAboutCHS";
+            this.lblAboutCHS.Size = new System.Drawing.Size(342, 144);
+            this.lblAboutCHS.TabIndex = 5;
+            this.lblAboutCHS.Text = resources.GetString("lblAboutCHS.Text");
+            this.lblAboutCHS.Visible = false;
+            // 
             // lblAboutFR
             // 
-            this.lblAboutFR.Location = new System.Drawing.Point(222, 53);
+            this.lblAboutFR.Location = new System.Drawing.Point(222, 49);
             this.lblAboutFR.Name = "lblAboutFR";
-            this.lblAboutFR.Size = new System.Drawing.Size(342, 156);
+            this.lblAboutFR.Size = new System.Drawing.Size(342, 144);
             this.lblAboutFR.TabIndex = 4;
             this.lblAboutFR.Text = resources.GetString("lblAboutFR.Text");
             this.lblAboutFR.Visible = false;
@@ -81,9 +92,9 @@
             // lklRepository
             // 
             this.lklRepository.AutoSize = true;
-            this.lklRepository.Location = new System.Drawing.Point(159, 258);
+            this.lklRepository.Location = new System.Drawing.Point(159, 238);
             this.lklRepository.Name = "lklRepository";
-            this.lklRepository.Size = new System.Drawing.Size(241, 13);
+            this.lklRepository.Size = new System.Drawing.Size(263, 12);
             this.lklRepository.TabIndex = 3;
             this.lklRepository.TabStop = true;
             this.lklRepository.Text = "https://github.com/AngefloSH/PokemonEncCalc";
@@ -91,18 +102,18 @@
             // 
             // lblReport
             // 
-            this.lblReport.Location = new System.Drawing.Point(114, 224);
+            this.lblReport.Location = new System.Drawing.Point(39, 207);
             this.lblReport.Name = "lblReport";
-            this.lblReport.Size = new System.Drawing.Size(342, 34);
+            this.lblReport.Size = new System.Drawing.Size(525, 31);
             this.lblReport.TabIndex = 2;
             this.lblReport.Text = "To report a bug or an error, or for feature request, you can open an issue on the" +
     " repository :";
             // 
             // lblAboutEN
             // 
-            this.lblAboutEN.Location = new System.Drawing.Point(222, 53);
+            this.lblAboutEN.Location = new System.Drawing.Point(222, 49);
             this.lblAboutEN.Name = "lblAboutEN";
-            this.lblAboutEN.Size = new System.Drawing.Size(342, 156);
+            this.lblAboutEN.Size = new System.Drawing.Size(342, 144);
             this.lblAboutEN.TabIndex = 1;
             this.lblAboutEN.Text = resources.GetString("lblAboutEN.Text");
             this.lblAboutEN.Visible = false;
@@ -110,9 +121,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::PokemonEncCalc.Properties.Resources.questionMark;
-            this.pictureBox1.Location = new System.Drawing.Point(39, 72);
+            this.pictureBox1.Location = new System.Drawing.Point(39, 66);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(168, 83);
+            this.pictureBox1.Size = new System.Drawing.Size(168, 77);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -122,28 +133,28 @@
             this.tabpChangelog.Location = new System.Drawing.Point(4, 22);
             this.tabpChangelog.Name = "tabpChangelog";
             this.tabpChangelog.Padding = new System.Windows.Forms.Padding(3);
-            this.tabpChangelog.Size = new System.Drawing.Size(579, 285);
+            this.tabpChangelog.Size = new System.Drawing.Size(579, 261);
             this.tabpChangelog.TabIndex = 1;
             this.tabpChangelog.Text = "Changelog";
             this.tabpChangelog.UseVisualStyleBackColor = true;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(23, 23);
+            this.textBox1.Location = new System.Drawing.Point(23, 21);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBox1.Size = new System.Drawing.Size(532, 239);
+            this.textBox1.Size = new System.Drawing.Size(532, 221);
             this.textBox1.TabIndex = 0;
             this.textBox1.Text = resources.GetString("textBox1.Text");
             this.textBox1.WordWrap = false;
             // 
             // frmAbout
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(594, 320);
+            this.ClientSize = new System.Drawing.Size(594, 295);
             this.Controls.Add(this.tabAboutChangelog);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "frmAbout";
@@ -164,6 +175,7 @@
         private System.Windows.Forms.TabPage tabpAbout;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TabPage tabpChangelog;
+        private System.Windows.Forms.Label lblAboutCHS;
         private System.Windows.Forms.Label lblAboutFR;
         private System.Windows.Forms.LinkLabel lklRepository;
         private System.Windows.Forms.Label lblReport;

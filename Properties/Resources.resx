@@ -151,6 +151,9 @@
   <data name="pokemonKR" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\strings\kr\pokemon.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
   </data>
+  <data name="pokemonCHS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\strings\chs\pokemon.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
   <data name="FormsData" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\data\FormsData.dat;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -178,11 +181,17 @@
   <data name="formsKR" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\strings\kr\forms.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>
+  <data name="formsCHS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\strings\chs\forms.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
   <data name="interfaceEN" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\strings\en\interface.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
   </data>
   <data name="interfaceFR" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\strings\fr\interface.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
+  <data name="interfaceCHS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\strings\chs\interface.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
   </data>
   <data name="Maps_AS_EN" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\strings\en\Maps_AS.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
@@ -190,11 +199,17 @@
   <data name="Maps_AS_FR" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\strings\fr\Maps_AS.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
   </data>
+  <data name="Maps_AS_CHS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\strings\chs\Maps_AS.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
   <data name="Maps_B2W2_EN" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\strings\en\Maps_B2W2.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
   </data>
   <data name="Maps_B2W2_FR" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\strings\fr\Maps_B2W2.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
+  <data name="Maps_B2W2_CHS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\strings\chs\Maps_B2W2.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
   </data>
   <data name="Maps_BW_EN" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\strings\en\Maps_BW.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
@@ -202,11 +217,17 @@
   <data name="Maps_BW_FR" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\strings\fr\Maps_BW.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
   </data>
+  <data name="Maps_BW_CHS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\strings\chs\Maps_BW.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
   <data name="Maps_DP_EN" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\strings\en\Maps_DP.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
   </data>
   <data name="Maps_DP_FR" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\strings\fr\Maps_DP.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
+  <data name="Maps_DP_CHS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\strings\chs\Maps_DP.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
   </data>
   <data name="Maps_E_EN" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\strings\en\Maps_E.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
@@ -214,11 +235,17 @@
   <data name="Maps_E_FR" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\strings\fr\Maps_E.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
   </data>
+  <data name="Maps_E_CHS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\strings\chs\Maps_E.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
   <data name="Maps_FRLG_EN" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\strings\en\Maps_FRLG.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
   </data>
   <data name="Maps_FRLG_FR" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\strings\fr\Maps_FRLG.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
+  <data name="Maps_FRLG_CHS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\strings\chs\Maps_FRLG.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
   </data>
   <data name="Maps_HGSS_EN" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\strings\en\Maps_HGSS.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
@@ -226,11 +253,17 @@
   <data name="Maps_HGSS_FR" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\strings\fr\Maps_HGSS.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
   </data>
+  <data name="Maps_HGSS_CHS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\strings\chs\Maps_HGSS.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
   <data name="Maps_OR_EN" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\strings\en\Maps_OR.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
   </data>
   <data name="Maps_OR_FR" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\strings\fr\Maps_OR.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
+  <data name="Maps_OR_CHS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\strings\chs\Maps_OR.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
   </data>
   <data name="Maps_Pt_EN" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\strings\en\Maps_Pt.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
@@ -238,17 +271,26 @@
   <data name="Maps_Pt_FR" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\strings\fr\Maps_Pt.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
   </data>
+  <data name="Maps_Pt_CHS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\strings\chs\Maps_Pt.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
   <data name="Maps_RS_EN" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\strings\en\Maps_RS.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
   </data>
   <data name="Maps_RS_FR" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\strings\fr\Maps_RS.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
   </data>
+  <data name="Maps_RS_CHS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\strings\chs\Maps_RS.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
   <data name="Maps_XY_EN" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\strings\en\Maps_XY.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
   </data>
   <data name="Maps_XY_FR" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\strings\fr\Maps_XY.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
+  <data name="Maps_XY_CHS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\strings\chs\Maps_XY.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
   </data>
   <data name="versionsDE" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\strings\de\versions.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
@@ -270,6 +312,9 @@
   </data>
   <data name="versionsKR" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\strings\kr\versions.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
+  <data name="versionsCHS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\strings\chs\versions.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
   </data>
   <data name="m0s" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images\minisprites_s\0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -5011,6 +5056,9 @@
   <data name="encounter_options_FR" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\strings\fr\encounter_options.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
   </data>
+  <data name="encounter_options_CHS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\strings\chs\encounter_options.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
   <data name="m710s_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images\minisprites_s\710-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -5052,6 +5100,9 @@
   </data>
   <data name="honeyTreesLocationsKR" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\strings\kr\honeyTreesLocations.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
+  <data name="honeyTreesLocationsCHS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\strings\chs\honeyTreesLocations.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
   </data>
   <data name="b0" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images\balls\b0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -5136,6 +5187,9 @@
   </data>
   <data name="ballsFR" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\strings\fr\balls.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
+  <data name="ballsCHS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\strings\chs\balls.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
   </data>
   <data name="_201s_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images\sprites_s\201s-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -5236,11 +5290,17 @@
   <data name="MovesNames3FR" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\strings\fr\MovesNames3.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
   </data>
+  <data name="MovesNames3CHS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\strings\chs\MovesNames3.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
   <data name="MovesNames4EN" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\strings\en\MovesNames4.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
   </data>
   <data name="MovesNames4FR" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\strings\fr\MovesNames4.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
+  <data name="MovesNames4CHS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\strings\chs\MovesNames4.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
   </data>
   <data name="MovesNames5EN" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\strings\en\MovesNames5.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
@@ -5248,11 +5308,17 @@
   <data name="MovesNames5FR" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\strings\fr\MovesNames5.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
   </data>
+  <data name="MovesNames5CHS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\strings\chs\MovesNames5.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
   <data name="MovesNames6EN" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\strings\en\MovesNames6.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
   </data>
   <data name="MovesNames6FR" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\strings\fr\MovesNames6.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
+  <data name="MovesNames6CHS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\strings\chs\MovesNames6.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
   </data>
   <data name="_0" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images\sprites\0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -10066,11 +10132,17 @@
   <data name="Maps_C_FR" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\strings\fr\Maps_C.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
   </data>
+  <data name="Maps_C_CHS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\strings\chs\Maps_C.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
   <data name="Maps_GS_EN" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\strings\en\Maps_GS.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
   </data>
   <data name="Maps_GS_FR" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\strings\fr\Maps_GS.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
+  <data name="Maps_GS_CHS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\strings\chs\Maps_GS.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
   </data>
   <data name="SilverSlots" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\data\SilverSlots.dat;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -10105,6 +10177,9 @@
   <data name="formsSuMoKR" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\strings\kr\formsSuMo.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
   </data>
+  <data name="formsSuMoCHS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\strings\chs\formsSuMo.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
   <data name="PokemonInfo7" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\data\PokemonInfo7.dat;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -10113,6 +10188,9 @@
   </data>
   <data name="Maps_SuMo_FR" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\strings\fr\Maps_SuMo.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
+  <data name="Maps_SuMo_CHS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\strings\chs\Maps_SuMo.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
   </data>
   <data name="M_Location_0" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\data\Moon\M_Location_0.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -11824,6 +11902,9 @@
   <data name="Maps_HGSS_SafariFR" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\strings\fr\Maps_HGSS_Safari.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
   </data>
+  <data name="Maps_HGSS_SafariCHS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\strings\chs\Maps_HGSS_Safari.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
   <data name="_103s_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images\sprites_s\103s-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -11994,6 +12075,9 @@
   </data>
   <data name="Maps_USUM_FR" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\strings\fr\Maps_USUM.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
+  <data name="Maps_USUM_CHS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\strings\chs\Maps_USUM.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
   </data>
   <data name="UM_Location_0" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\data\UltraMoon\UM_Location_0.bin;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -12219,6 +12303,9 @@
   </data>
   <data name="formsUSUM_FR" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\strings\fr\formsUSUM.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
+  <data name="formsUSUM_CHS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\strings\chs\formsUSUM.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
   </data>
   <data name="formsUSUM_IT" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\strings\it\formsUSUM.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>

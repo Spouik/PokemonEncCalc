@@ -24,6 +24,9 @@ namespace PokemonEncCalc
                 case 2:
                     lblAboutFR.Visible = true;
                     break;
+                case 8:
+                    lblAboutCHS.Visible = true;
+                    break;
                 default: break;
             }
         }
