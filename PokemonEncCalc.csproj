@@ -576,6 +576,12 @@
     <None Include="Resources\strings\kr\pokemon.txt" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\strings\chs\pokemon.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\strings\cht\pokemon.txt" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\MegasData.txt" />
   </ItemGroup>
   <ItemGroup>
@@ -600,12 +606,26 @@
     <None Include="Resources\strings\kr\forms.txt" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\strings\chs\forms.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\strings\cht\forms.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\strings\cht\interface.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\strings\chs\interface.txt" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\strings\fr\interface.txt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\strings\en\interface.txt" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\strings\cht\formsUSUM.txt" />
+    <None Include="Resources\strings\chs\formsUSUM.txt" />
     <None Include="Resources\strings\kr\formsUSUM.txt" />
     <None Include="Resources\strings\jp\formsUSUM.txt" />
     <None Include="Resources\strings\it\formsUSUM.txt" />
@@ -613,12 +633,20 @@
     <None Include="Resources\strings\es\formsUSUM.txt" />
     <None Include="Resources\strings\de\formsUSUM.txt" />
     <None Include="Resources\strings\en\formsUSUM.txt" />
+    <None Include="Resources\strings\cht\Maps_USUM.txt" />
+    <None Include="Resources\strings\chs\Maps_USUM.txt" />
     <None Include="Resources\strings\fr\Maps_USUM.txt" />
     <None Include="Resources\strings\en\Maps_USUM.txt" />
+    <None Include="Resources\strings\cht\Maps_HGSS_Safari.txt" />
+    <None Include="Resources\strings\chs\Maps_HGSS_Safari.txt" />
     <None Include="Resources\strings\fr\Maps_HGSS_Safari.txt" />
     <None Include="Resources\strings\en\Maps_HGSS_Safari.txt" />
+    <None Include="Resources\strings\cht\Maps_SuMo.txt" />
+    <None Include="Resources\strings\chs\Maps_SuMo.txt" />
     <None Include="Resources\strings\fr\Maps_SuMo.txt" />
     <None Include="Resources\strings\en\Maps_SuMo.txt" />
+    <None Include="Resources\strings\cht\formsSuMo.txt" />
+    <None Include="Resources\strings\chs\formsSuMo.txt" />
     <None Include="Resources\strings\kr\formsSuMo.txt" />
     <None Include="Resources\strings\jp\formsSuMo.txt" />
     <None Include="Resources\strings\it\formsSuMo.txt" />
@@ -626,10 +654,22 @@
     <None Include="Resources\strings\de\formsSuMo.txt" />
     <None Include="Resources\strings\fr\formsSuMo.txt" />
     <None Include="Resources\strings\en\formsSuMo.txt" />
+    <None Include="Resources\strings\cht\Maps_GS.txt" />
+    <None Include="Resources\strings\cht\Maps_C.txt" />
+    <None Include="Resources\strings\chs\Maps_GS.txt" />
+    <None Include="Resources\strings\chs\Maps_C.txt" />
     <None Include="Resources\strings\fr\Maps_GS.txt" />
     <None Include="Resources\strings\fr\Maps_C.txt" />
     <None Include="Resources\strings\en\Maps_GS.txt" />
     <None Include="Resources\strings\en\Maps_C.txt" />
+    <None Include="Resources\strings\cht\MovesNames6.txt" />
+    <None Include="Resources\strings\cht\MovesNames5.txt" />
+    <None Include="Resources\strings\cht\MovesNames4.txt" />
+    <None Include="Resources\strings\cht\MovesNames3.txt" />
+    <None Include="Resources\strings\chs\MovesNames6.txt" />
+    <None Include="Resources\strings\chs\MovesNames5.txt" />
+    <None Include="Resources\strings\chs\MovesNames4.txt" />
+    <None Include="Resources\strings\chs\MovesNames3.txt" />
     <None Include="Resources\strings\fr\MovesNames6.txt" />
     <None Include="Resources\strings\fr\MovesNames5.txt" />
     <None Include="Resources\strings\fr\MovesNames4.txt" />
@@ -642,8 +682,12 @@
     <None Include="Resources\strings\en\MovesNames5.txt" />
     <None Include="Resources\strings\en\MovesNames4.txt" />
     <None Include="Resources\strings\en\MovesNames3.txt" />
+    <None Include="Resources\strings\cht\balls.txt" />
+    <None Include="Resources\strings\chs\balls.txt" />
     <None Include="Resources\strings\fr\balls.txt" />
     <None Include="Resources\strings\en\balls.txt" />
+    <None Include="Resources\strings\cht\honeyTreesLocations.txt" />
+    <None Include="Resources\strings\chs\honeyTreesLocations.txt" />
     <None Include="Resources\strings\kr\honeyTreesLocations.txt" />
     <None Include="Resources\strings\jp\honeyTreesLocations.txt" />
     <None Include="Resources\strings\it\honeyTreesLocations.txt" />
@@ -1723,6 +1767,8 @@
     <Content Include="Resources\images\minisprites_s\2.png" />
     <Content Include="Resources\images\minisprites_s\20.png" />
     <Content Include="Resources\images\minisprites_s\200.png" />
+    <None Include="Resources\strings\cht\encounter_options.txt" />
+    <None Include="Resources\strings\chs\encounter_options.txt" />
     <None Include="Resources\strings\fr\encounter_options.txt" />
     <None Include="Resources\strings\en\encounter_options.txt" />
     <None Include="Resources\images\minisprites_s\201-1.png" />
@@ -4200,6 +4246,30 @@
     <None Include="Resources\strings\fr\Maps_FRLG.txt" />
     <None Include="Resources\strings\fr\Maps_E.txt" />
     <None Include="Resources\strings\fr\Maps_RS.txt" />
+    <None Include="Resources\strings\cht\Maps_AS.txt" />
+    <None Include="Resources\strings\cht\Maps_OR.txt" />
+    <None Include="Resources\strings\cht\Maps_XY.txt" />
+    <None Include="Resources\strings\cht\Maps_B2W2.txt" />
+    <None Include="Resources\strings\cht\Maps_BW.txt" />
+    <None Include="Resources\strings\cht\Maps_HGSS.txt" />
+    <None Include="Resources\strings\cht\Maps_Pt.txt" />
+    <None Include="Resources\strings\cht\Maps_DP.txt" />
+    <None Include="Resources\strings\cht\Maps_FRLG.txt" />
+    <None Include="Resources\strings\cht\Maps_E.txt" />
+    <None Include="Resources\strings\cht\Maps_RS.txt" />
+    <None Include="Resources\strings\chs\Maps_AS.txt" />
+    <None Include="Resources\strings\chs\Maps_OR.txt" />
+    <None Include="Resources\strings\chs\Maps_XY.txt" />
+    <None Include="Resources\strings\chs\Maps_B2W2.txt" />
+    <None Include="Resources\strings\chs\Maps_BW.txt" />
+    <None Include="Resources\strings\chs\Maps_HGSS.txt" />
+    <None Include="Resources\strings\chs\Maps_Pt.txt" />
+    <None Include="Resources\strings\chs\Maps_DP.txt" />
+    <None Include="Resources\strings\chs\Maps_FRLG.txt" />
+    <None Include="Resources\strings\chs\Maps_E.txt" />
+    <None Include="Resources\strings\chs\Maps_RS.txt" />
+    <None Include="Resources\strings\cht\versions.txt" />
+    <None Include="Resources\strings\chs\versions.txt" />
     <None Include="Resources\strings\kr\versions.txt" />
     <None Include="Resources\strings\jp\versions.txt" />
     <None Include="Resources\strings\it\versions.txt" />

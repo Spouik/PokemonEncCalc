@@ -162,6 +162,18 @@ namespace PokemonEncCalc
                     FormNamesCurrentLang.AddRange(Properties.Resources.formsKR.Split(new[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries));
                     FormNamesCurrentLangSuMo.AddRange(Properties.Resources.formsSuMoKR.Split(new[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries));
                     break;
+                case 8:
+                    NamesCurrentLang.AddRange(Properties.Resources.pokemonCHS.Split(new[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries));
+                    FormNamesCurrentLang.AddRange(Properties.Resources.formsCHS.Split(new[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries));
+                    FormNamesCurrentLangSuMo.AddRange(Properties.Resources.formsSuMoCHS.Split(new[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries));
+                    controlNames = Properties.Resources.interfaceCHS;
+                    break;
+                case 9:
+                    NamesCurrentLang.AddRange(Properties.Resources.pokemonCHT.Split(new[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries));
+                    FormNamesCurrentLang.AddRange(Properties.Resources.formsCHT.Split(new[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries));
+                    FormNamesCurrentLangSuMo.AddRange(Properties.Resources.formsSuMoCHT.Split(new[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries));
+                    controlNames = Properties.Resources.interfaceCHT;
+                    break;
                 default:
                     break;
             }
@@ -233,6 +245,18 @@ namespace PokemonEncCalc
                     moveNamesGen4.AddRange(Properties.Resources.MovesNames4FR.Split(new[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries));
                     moveNamesGen5.AddRange(Properties.Resources.MovesNames5FR.Split(new[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries));
                     moveNamesGen6.AddRange(Properties.Resources.MovesNames6FR.Split(new[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries));
+                    break;
+                case 8:
+                    moveNamesGen3.AddRange(Properties.Resources.MovesNames3CHS.Split(new[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries));
+                    moveNamesGen4.AddRange(Properties.Resources.MovesNames4CHS.Split(new[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries));
+                    moveNamesGen5.AddRange(Properties.Resources.MovesNames5CHS.Split(new[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries));
+                    moveNamesGen6.AddRange(Properties.Resources.MovesNames6CHS.Split(new[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries));
+                    break;
+                case 9:
+                    moveNamesGen3.AddRange(Properties.Resources.MovesNames3CHT.Split(new[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries));
+                    moveNamesGen4.AddRange(Properties.Resources.MovesNames4CHT.Split(new[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries));
+                    moveNamesGen5.AddRange(Properties.Resources.MovesNames5CHT.Split(new[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries));
+                    moveNamesGen6.AddRange(Properties.Resources.MovesNames6CHT.Split(new[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries));
                     break;
                 default:
                     break;

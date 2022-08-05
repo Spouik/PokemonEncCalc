@@ -378,6 +378,8 @@ namespace PokemonEncCalc
             p.NameES = Properties.Resources.pokemonES.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[p.NatID - 1];
             p.NameJP = Properties.Resources.pokemonJP.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[p.NatID - 1];
             p.NameKR = Properties.Resources.pokemonKR.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[p.NatID - 1];
+            p.NameCHS = Properties.Resources.pokemonCHS.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[p.NatID - 1];
+            p.NameCHT = Properties.Resources.pokemonCHT.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[p.NatID - 1];
 
             // Pokémon Form name
 
@@ -390,6 +392,8 @@ namespace PokemonEncCalc
                 p.FormNameES = Properties.Resources.formsUSUM_ES.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[p.NatID - 1];
                 p.FormNameJP = Properties.Resources.formsUSUM_JP.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[p.NatID - 1];
                 p.FormNameKR = Properties.Resources.formsUSUM_KR.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[p.NatID - 1];
+                p.FormNameCHS = Properties.Resources.formsUSUM_CHS.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[p.NatID - 1];
+                p.FormNameCHT = Properties.Resources.formsUSUM_CHT.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[p.NatID - 1];
 
             }
             else if(p is PokemonSuMo)
@@ -401,6 +405,8 @@ namespace PokemonEncCalc
                 p.FormNameES = Properties.Resources.formsSuMoES.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[p.NatID - 1];
                 p.FormNameJP = Properties.Resources.formsSuMoJP.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[p.NatID - 1];
                 p.FormNameKR = Properties.Resources.formsSuMoKR.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[p.NatID - 1];
+                p.FormNameCHS = Properties.Resources.formsSuMoCHS.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[p.NatID - 1];
+                p.FormNameCHT = Properties.Resources.formsSuMoCHT.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[p.NatID - 1];
             }
             else
             {
@@ -411,6 +417,8 @@ namespace PokemonEncCalc
                 p.FormNameES = Properties.Resources.formsES.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[p.NatID - 1];
                 p.FormNameJP = Properties.Resources.formsJP.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[p.NatID - 1];
                 p.FormNameKR = Properties.Resources.formsKR.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[p.NatID - 1];
+                p.FormNameCHS = Properties.Resources.formsCHS.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[p.NatID - 1];
+                p.FormNameCHT = Properties.Resources.formsCHT.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[p.NatID - 1];
             }
         }
 
@@ -427,6 +435,8 @@ namespace PokemonEncCalc
             p.NameES = Properties.Resources.pokemonES.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[p.NatID - 1];
             p.NameJP = Properties.Resources.pokemonJP.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[p.NatID - 1];
             p.NameKR = Properties.Resources.pokemonKR.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[p.NatID - 1];
+            p.NameCHS = Properties.Resources.pokemonCHS.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[p.NatID - 1];
+            p.NameCHT = Properties.Resources.pokemonCHT.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[p.NatID - 1];
 
             // Pokémon Form name
 
@@ -441,6 +451,8 @@ namespace PokemonEncCalc
                 p.FormNameES = Properties.Resources.formsUSUM_ES.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[formID];
                 p.FormNameJP = Properties.Resources.formsUSUM_JP.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[formID];
                 p.FormNameKR = Properties.Resources.formsUSUM_KR.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[formID];
+                p.FormNameCHS = Properties.Resources.formsUSUM_CHS.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[formID];
+                p.FormNameCHT = Properties.Resources.formsUSUM_CHT.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[formID];
             }
 
             else if (p is PokemonSuMo)
@@ -453,6 +465,8 @@ namespace PokemonEncCalc
                 p.FormNameES = Properties.Resources.formsSuMoES.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[formID];
                 p.FormNameJP = Properties.Resources.formsSuMoJP.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[formID];
                 p.FormNameKR = Properties.Resources.formsSuMoKR.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[formID];
+                p.FormNameCHS = Properties.Resources.formsSuMoCHS.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[formID];
+                p.FormNameCHT = Properties.Resources.formsSuMoCHT.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[formID];
             }
             else
             {
@@ -464,6 +478,8 @@ namespace PokemonEncCalc
                 p.FormNameES = Properties.Resources.formsES.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[formID];
                 p.FormNameJP = Properties.Resources.formsJP.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[formID];
                 p.FormNameKR = Properties.Resources.formsKR.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[formID];
+                p.FormNameCHS = Properties.Resources.formsCHS.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[formID];
+                p.FormNameCHT = Properties.Resources.formsCHT.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)[formID];
             }
 
             
