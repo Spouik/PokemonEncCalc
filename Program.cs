@@ -11,7 +11,7 @@ namespace PokemonEncCalc
     static class Program
     {
 
-        internal const string VERSION = "5.13";
+        internal const string VERSION = "6.0 ALPHA 0";
         internal const Version STARTING_VERSION = Version.Gold;
 
         /// <summary>
