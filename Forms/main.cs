@@ -2091,5 +2091,17 @@ namespace PokemonEncCalc
             updateBlockNumber();
             loadSlotData();
         }
+
+        private void nudLevelRepel_Click(object sender, EventArgs e)
+        {
+            // Sélectionne toute la réponse dans NumericUpDown
+            NumericUpDown answerBox = sender as NumericUpDown;
+
+            if (answerBox != null)
+            {
+                int lengthOfAnswer = answerBox.Value.ToString().Length;
+                answerBox.Select(0, lengthOfAnswer);
+            }
+        }
     }
 }
